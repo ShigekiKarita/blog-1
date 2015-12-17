@@ -1,0 +1,58 @@
+﻿@using Hinoki.Core
+@using Hinoki.Models
+@model Hinoki.Areas.Admin.Models.VMArticleDetail
+
+@section styles
+{
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/admin")
+}
+
+@Html.Breadcrumbs(Model.BreadcrumbItems)
+
+<h1 class="page-header">記事編集</h1>
+@using (Html.BeginForm("Update", "Article", new { id = Model.Id }, FormMethod.Post, new { role = "form" }))
+{
+    <div id="title-text-box-frame" class="form-group">
+        @Html.LabelFor(m => m.Title)
+        @Html.TextBoxFor(m => m.Title, new { @class = "text-box form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Format)
+        @Html.DropDownListFor(m => m.Format, Model.FormatList, new { @class = "form-control" })
+    </div>
+    <div id="body-text-area-frame" class="form-group">
+        @Html.LabelFor(m => m.Body)
+        @Html.TextAreaFor(m => m.Body, 12, 80, new { @class = "text-area form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CategoryId)
+        @Html.DropDownListFor(m => m.CategoryId, Model.CategoryList, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.OpenDateTime)
+@*        @Html.EditorFor(m => m.OpenDateTime.DateTime, "DateTime")*@
+        @Html.TextBoxFor(m => m.OpenDateTime.Value, new { @class = "form-control, date-edit-filed", @Value = (Model.OpenDateTime.Value == null ? "" : Model.OpenDateTime.ToDateTimeString("yyyy年MM月dd日 hh時mm分")) })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CloseDateTime)
+        @Html.TextBoxFor(m => m.CloseDateTime.Value, new { @class = "form-control, date-edit-filed", @Value = (Model.CloseDateTime.Value == null ? "" : Model.CloseDateTime.ToDateTimeString("yyyy年MM月dd日 hh時mm分")) })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.PublicStatus)
+        @Html.DropDownListFor(m => m.PublicStatus, Model.PublicStatusList, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-default">更新</button>
+    <button type="reset" class="btn btn-default">元に戻す</button>
+    <a href="@Url.Action("Index", "Article")" class="btn btn-default">中止して記事一覧に戻る</a>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/article-editor")
+@*$(document).ready(function () {
+   $('.date').datepicker({ dateFormat: "yy-mm-dd" });
+});*@
+}

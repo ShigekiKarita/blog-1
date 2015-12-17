@@ -1,0 +1,13 @@
+﻿$base-background-color : #f7f3ea;
+$card-background-color : #fff;
+
+$blockquote-bg-color : #e9e9e9;
+
+$initial-font-size: 62.5%; // htmlで指定することで各ブラウザのフォントサイズを10pxにする
+
+$base-font-color:#000;
+
+@mixin fontSize($size: 14) {
+    font-size: $size + px;
+    font-size: ($size / 10)  + rem;
+}

@@ -1,0 +1,79 @@
+﻿@model Hinoki.Models.VMArticle
+@using Hinoki.Core
+@using Hinoki.Helper
+
+
+@section ogp_meta
+{
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="@Model.PublicArticle.Title">
+    <meta property="og:url" content="@Url.Action("Index", "Article", new { id = @Model.PublicArticle.Id }, Request.Url.Scheme)">
+    @*<meta property="og:site_name" content="@Model.PageTitle">*@
+}
+
+@section twitter_meta
+{
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="@Url.Action("Index", "Article", new { id = @Model.PublicArticle.Id }, Request.Url.Scheme)">
+    <meta name="twitter:title" content="@Model.PublicArticle.Title">
+    <meta name="twitter:description" content="@Model.PublicArticle.GetDescriptionText()">
+    <meta name="twitter:site" content="@string.Format(@"@hiroakit")">
+}
+
+@section styles
+{
+    @Styles.Render("~/Content/article")
+    <link rel="stylesheet" href="~/Content/styles.css">
+}
+
+@section SideBar
+{
+    @*@Html.Action("Ad", "SideBar")*@
+    @Html.Action("Categories", "SideBar")
+    @Html.Action("Articles", "SideBar")
+    @*@Html.Action("AdsenseLong", "SideBar")*@
+}
+
+<div class="mdl-grid entries">
+    <article class="entry">
+        <header class="entry-header">
+            <h1>@Model.PublicArticle.Title</h1>
+            <span class="entry-header-meta entry-date"><i class="zmdi zmdi-time"></i>@string.Format(" {0:yyyy年MM月dd日}", Model.PublicArticle.OpenDate)</span>
+            <span class="entry-header-meta entry-category"> | <i class="zmdi zmdi-folder"></i> @Html.ActionLink(Model.PublicArticle.Category.Name, "Category", "Archive", new { id = Model.PublicArticle.Category.Id }, null)</span>
+            @Html.ArticleTags(Model.PublicArticle.Tags, "| タグ: ")
+        </header>
+        <div class="entry-content">
+            @Html.Raw(Model.PublicArticle.Body)
+        </div>
+        <footer class="entry-footer">
+            @*<div id="entry-footer-adsense" class="adsense">
+                <a href="http://px.a8.net/svt/ejp?a8mat=2HDRES+78RVQQ+50+2HQGAP" target="_blank">
+                    <img border="0" width="468" height="60" alt="" src="http://www22.a8.net/svt/bgt?aid=150127876438&wid=001&eno=01&mid=s00000000018015072000&mc=1">
+                </a>
+                <img border="0" width="1" height="1" src="http://www15.a8.net/0.gif?a8mat=2HDRES+78RVQQ+50+2HQGAP" alt="">
+            </div>*@
+            @if (Model.IsEnabledComment && Model.IsEnabledDisqus)
+                {
+                <div id="disqus_thread"></div>
+                }
+        </footer>
+    </article>
+</div>
+@section scripts
+{
+    @if (Model.IsEnabledComment && Model.IsEnabledDisqus)
+    {
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'hiroakit-blog'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    }
+}

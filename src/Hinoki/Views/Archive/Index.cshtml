@@ -1,0 +1,49 @@
+﻿@model Hinoki.Models.VMArchive
+@using Hinoki.Core
+
+@section styles
+{
+    @Styles.Render("~/Content/archive")
+}
+
+@section SideBar
+{
+    @*@Html.Action("Ad", "SideBar")*@
+    @Html.Action("Categories", "SideBar")
+    @Html.Action("Articles", "SideBar")
+    @*@Html.Action("AdsenseLong", "SideBar")*@
+}
+
+<article id="archive">
+    <header class="page-header">
+        <h1 class="page-title">@string.Format("{0}年{1}月の記事", Model.Year, Model.Month)</h1>
+    </header>
+    @Html.Partial("_Articles", Model.PublicArticles)
+    <footer class="page-footer">
+        <!-- dispAd(300x250)forArticleFooter -->
+        @*<div class="adsense">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:250px"
+                 data-ad-client="ca-pub-4552984317282166"
+                 data-ad-slot="9828406807"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>*@
+    </footer>
+</article>
+<nav style="text-align:center">
+    <ul class="pagination">
+        @if (Math.Ceiling(((double)Model.TotalArticleCount / (double)Model.L)) > (double)Model.P)
+        {
+            <li>@Html.ActionLink("前のページ", "Index", "Archive", new { p = (Model.P + 1), l = Model.L }, null)</li>
+        }
+
+        @if (Model.P > 1)
+        {
+            <li>@Html.ActionLink("次のページ", "Index", "Archive", new { p = (Model.P - 1), l = Model.L }, null)</li>
+        }
+    </ul>
+</nav>

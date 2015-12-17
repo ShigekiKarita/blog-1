@@ -1,0 +1,1 @@
+sqlcmd -U sa -P hiroaki -S "HIROAKI-PC\SQLEXPRESS" -i %1

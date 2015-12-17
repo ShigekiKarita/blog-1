@@ -1,0 +1,13 @@
+*.suo
+
+src/*/[Bb]in/
+test/*/[Bb]in/
+[Oo]bj/
+
+pkg/
+*.pdb
+*.mdf
+*.ldf
+
+# Emacs
+*~

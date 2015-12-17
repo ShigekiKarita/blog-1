@@ -1,0 +1,34 @@
+﻿@using Hinoki.Core
+@using Hinoki.Models
+@model Hinoki.Models.VMHome
+
+@section styles
+{
+    @Styles.Render("~/Content/article")
+    <link rel="stylesheet" href="~/Content/styles.css">
+}
+
+@section SideBar
+    {
+        @*@Html.Action("Ad", "SideBar")*@
+        @Html.Action("Categories", "SideBar")
+        @Html.Action("Articles", "SideBar")
+        @*@Html.Action("AdsenseLong", "SideBar")*@
+    }
+
+<div class="mdl-grid entries">
+    @Html.Partial("_Articles", Model.PublicArticles)
+    @*<nav style="text-align:center">
+            <ul class="pagination">
+                @if ((Model.TotalArticleCount / Model.L) > Model.P)
+                {
+                    <li>@Html.ActionLink("前のページ", "Index", "Home", new { p = (Model.P + 1), l = Model.L }, null)</li>
+                }
+
+                @if (Model.P > 1)
+                {
+                    <li>@Html.ActionLink("次のページ", "Index", "Home", new { p = (Model.P - 1), l = Model.L }, null)</li>
+                }
+            </ul>
+        </nav>*@
+</div>

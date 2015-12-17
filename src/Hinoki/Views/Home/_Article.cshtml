@@ -1,0 +1,17 @@
+﻿@model Article
+@using Hinoki.Core
+@using Hinoki.Helper
+
+<article class="entry">
+    <div class="">
+        <header class="entry-header">
+            <h1>@Html.ActionLink(Model.Title, "Index", "Article", new { id = Model.Id }, null)</h1>
+            <span class="entry-header-meta entry-date"><i class="zmdi zmdi-time"></i>@string.Format(" {0:yyyy年MM月dd日}", Model.OpenDate)</span>
+            <span class="entry-header-meta entry-category"> | <i class="zmdi zmdi-folder"></i> @Html.ActionLink(Model.Category.Name, "Category", "Archive", new { id = Model.Category.Id }, null)</span>
+            @Html.ArticleTags(Model.Tags, "| タグ: ")
+        </header>
+        <div class="entry-content">
+            @Html.Raw(Model.Body)
+        </div>
+    </div>
+</article>

@@ -1,0 +1,12 @@
+﻿@using Hinoki.Core
+@model IEnumerable<Category>
+
+<div class="sidebar-item">
+    <h4>カテゴリ</h4>
+    <ul>
+        @foreach (Category category in Model)
+        {
+            <li>@Html.ActionLink(string.Format("{0} ({1})",category.Name, category.Count), "Category", "Archive", new { id = category.Id }, null)</li>
+        }
+    </ul>
+</div>

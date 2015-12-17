@@ -1,0 +1,36 @@
+﻿@model Hinoki.Models.VMError
+
+@section styles
+{
+    @Styles.Render("~/Content/article")
+}
+
+@section SideBar
+{
+    @*@Html.Action("Ad", "SideBar")*@
+    @Html.Action("Categories", "SideBar")
+    @Html.Action("Articles", "SideBar")
+    @*@Html.Action("AdsenseLong", "SideBar")*@
+}
+
+<article class="entry">
+    <header class="entry-header">
+        <h1>お探しのページは見つかりませんでした</h1>
+    </header>
+    <div class="entry-content">
+        <p>@Html.ActionLink("トップページに戻る", "Index", "Home")</p>
+    </div>
+    <footer class="entry-footer">
+        <div id="entry-footer-adsense" class="adsense">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- dispAd(300x250)forArticleFooter -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:250px"
+                 data-ad-client="ca-pub-4552984317282166"
+                 data-ad-slot="9828406807"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </footer>
+</article>

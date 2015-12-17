@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95997AD9-7D6F-4929-B864-73C259BC0D66}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hinoki.Core</RootNamespace>
+    <AssemblyName>Hinoki.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MarkdownSharp">
+      <HintPath>..\..\lib\MarkdownSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Article.cs" />
+    <Compile Include="ArticleCount.cs" />
+    <Compile Include="ArticleFetcher.cs" />
+    <Compile Include="ArticleFormat.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Db\HNKTagSql.cs" />
+    <Compile Include="Db\HNKBlogConfigSql.cs" />
+    <Compile Include="Db\HNKSql.cs" />
+    <Compile Include="HNKDateTime.cs" />
+    <Compile Include="Db\HNKArticleSqlQuery.cs" />
+    <Compile Include="HNKTagFetcher.cs" />
+    <Compile Include="CategoryFetcher.cs" />
+    <Compile Include="Db\HNKTagResource.cs" />
+    <Compile Include="CategoryResource.cs" />
+    <Compile Include="Db\HNKArticleResource.cs" />
+    <Compile Include="BlogConfig.cs" />
+    <Compile Include="Db\HNKBlogConfigFetcher.cs" />
+    <Compile Include="Db\HNKBlogConfigManager.cs" />
+    <Compile Include="Db\HNKBlogConfigResource.cs" />
+    <Compile Include="DataResource.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicStatus.cs" />
+    <Compile Include="Db\HNKSqlCommandHelper.cs" />
+    <Compile Include="Diagnostics\AzureLog.cs" />
+    <Compile Include="Diagnostics\LogBase.cs" />
+    <Compile Include="HNKTag.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

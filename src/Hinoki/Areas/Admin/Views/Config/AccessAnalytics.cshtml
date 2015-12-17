@@ -1,0 +1,28 @@
+﻿@using Hinoki.Areas.Admin.Helper
+@model Hinoki.Areas.Admin.Models.VMConfigAccessAnalytics
+
+@section styles
+{
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/admin")
+}
+
+@Html.Breadcrumbs(Model.BreadcrumbItems)
+
+<h1 class="page-header">アクセス解析</h1>
+@using (Html.BeginForm("AccessAnalytics", "Config", FormMethod.Post, new { role = "form" }))
+{
+    <div id="title-text-box-frame" class="form-group">
+        @Html.LabelFor(m => m.GoogleAnalytics)
+        @Html.TextBoxFor(m => m.GoogleAnalytics, new { @class = "text-box form-control" })
+    </div>
+    <button type="submit" class="btn btn-default">保存</button>
+    <button type="reset" class="btn btn-default">やり直す</button>
+    <a href="@Url.Action("Index", "Config")" class="btn btn-default">中止して設定ページのトップに戻る</a>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+}

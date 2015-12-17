@@ -1,0 +1,65 @@
+﻿@using Hinoki.Core
+@using Hinoki.Models
+@using Hinoki.Areas.Admin.Helper
+@model Hinoki.Areas.Admin.Models.VMArticleList
+
+@section styles
+{
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/admin")
+}
+
+@Html.Breadcrumbs(Model.BreadcrumbItems)
+
+<h1 class="page-header">記事一覧</h1>
+@using (Html.BeginForm("Search", "Article", null, FormMethod.Post, new { @class = "navbar-form pull-left", role = "search" }))
+{
+    <div class="input-group">
+        @Html.TextBoxFor(m => m.CriteriaKeyword, new { @class = "form-control", @placeholder = "検索" })
+        <div class="input-group-btn">
+            <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </div>
+    </div>
+}
+
+<nav style="text-align:center">
+    @Html.Pagination(Model.TotalArticleCount, Model.L, Model.P)
+</nav>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>題名</th>
+                <th>公開ステータス</th>
+                <th>更新日時</th>
+                <th>公開開始日時</th>
+                <th>公開終了日時</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Article item in Model.Articles)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@Html.ActionLink(item.Title, "Detail", "Article", new { id = item.Id }, null)</td>
+                    <td>@item.PublicStatus.ToString()</td>
+                    <td>@string.Format("{0:yyyy年MM月dd日 hh時mm分}", item.UpdateDate)</td>
+                    <td>@string.Format("{0:yyyy年MM月dd日 hh時mm分}", item.OpenDate)</td>
+                    <td>@string.Format("{0:yyyy年MM月dd日 hh時mm分}", item.CloseDate)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<nav style="text-align:center">
+    @Html.Pagination(Model.TotalArticleCount, Model.L, Model.P)
+</nav>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+}

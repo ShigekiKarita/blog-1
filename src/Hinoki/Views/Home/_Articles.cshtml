@@ -1,0 +1,8 @@
+﻿@using Hinoki.Core
+@model IEnumerable<Article>
+
+@foreach (Article item in Model)
+{
+    @Html.Partial("_Article", item)
+    <div class="hr"><hr /></div>
+}

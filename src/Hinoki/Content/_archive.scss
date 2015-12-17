@@ -1,0 +1,42 @@
+﻿.page-header {
+    h1{
+        text-align:center;
+    }
+}
+
+#archive {
+    background-color:#fff;
+    border:1px solid #c8c8c8;
+
+    .page-header {
+        margin-bottom:1rem;
+    }
+
+    .entry-header {
+        .entry-title {
+            line-height:1.2;
+        }
+        
+        .entry-date {
+            margin:0;
+        }       
+    }
+    
+    .container {
+    }
+
+    .entry {
+        margin-bottom:1rem;
+    }
+
+    .entry::after {
+        clear:both;
+        content:" ";
+        display:block;
+    }
+
+    .adsense {
+        width:300px;
+        margin:2rem auto 1rem;
+    }
+}

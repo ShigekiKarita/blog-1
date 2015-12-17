@@ -1,0 +1,43 @@
+﻿@using Hinoki.Core
+@using Hinoki.Models
+@using Hinoki.Areas.Admin.Helper
+@model Hinoki.Areas.Admin.Models.VMCategoryDetail
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section styles
+{
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/admin")
+}
+
+@Html.Breadcrumbs(Model.BreadcrumbItems)
+
+<h1 class="page-header">詳細</h1>
+@using (Html.BeginForm("Update", "Category", new { id = Model.Id }, FormMethod.Post, new { role = "form" }))
+{
+    <div id="title-text-box-frame" class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "text-box form-control" })
+    </div>
+    <div id="title-text-box-frame" class="form-group">
+        @Html.LabelFor(m => m.NameYomi)
+        @Html.TextBoxFor(m => m.NameYomi, new { @class = "text-box form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.PublicStatus)
+        @Html.DropDownListFor(m => m.PublicStatus, Model.PublicStatusList, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-default">更新</button>
+    <button type="reset" class="btn btn-default">元に戻す</button>
+    <a href="@Url.Action("Index", "Category")" class="btn btn-default">中止してカテゴリ一覧に戻る</a>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+}

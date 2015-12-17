@@ -1,0 +1,21 @@
+﻿@using Hinoki.Areas.Admin.Helper
+@model Hinoki.Areas.Admin.Models.VMDashboard
+
+@section styles
+{
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/admin")
+}
+
+@Html.Breadcrumbs(Model.BreadcrumbItems)
+
+<h1 class="page-header">概要</h1>
+<ul>
+    <li>@Html.ActionLink("記事一覧", "Index", "Article")</li>
+</ul>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+}

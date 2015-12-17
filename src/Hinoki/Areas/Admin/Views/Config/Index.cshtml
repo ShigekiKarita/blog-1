@@ -1,0 +1,21 @@
+﻿@using Hinoki.Areas.Admin.Helper
+@model Hinoki.Areas.Admin.Models.VMConfigBase
+
+@section styles
+{
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/admin")
+}
+
+@Html.Breadcrumbs(Model.BreadcrumbItems)
+
+<h1 class="page-header">設定</h1>
+<ul>
+    <li>@Html.ActionLink("アクセス解析", "AccessAnalytics", "Config")</li>
+</ul>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+}

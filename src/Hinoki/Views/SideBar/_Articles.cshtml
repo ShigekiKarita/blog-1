@@ -1,0 +1,12 @@
+﻿@using Hinoki.Core
+@model IEnumerable<ArticleCount>
+
+<div class="sidebar-item">
+    <h4>過去の記事</h4>
+    <ul>
+        @foreach (ArticleCount item in Model)
+        {
+            <li>@Html.ActionLink(string.Format("{0:yyyy年M月} ({1})", item.DateTime, item.Count), "Index", "Archive", new { year = item.DateTime.Year, month = item.DateTime.Month }, null)</li>
+        }
+    </ul>
+</div>

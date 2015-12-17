@@ -1,0 +1,48 @@
+﻿@using Hinoki.Core
+@using Hinoki.Models
+@using Hinoki.Areas.Admin.Helper
+@model Hinoki.Areas.Admin.Models.VMCategoryList
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section styles
+{
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/admin")
+}
+
+@Html.Breadcrumbs(Model.BreadcrumbItems)
+
+<h1 class="page-header">カテゴリ一覧</h1>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>題名</th>
+                <th>更新日時</th>
+                <th>所属記事数</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Category item in Model.Categoris)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@Html.ActionLink(item.Name, "Detail", "Category", new { id = item.Id }, null)</td>
+                    <td>@item.UpdateDate</td>
+                    <td>@item.Count</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+}

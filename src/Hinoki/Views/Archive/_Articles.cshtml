@@ -1,0 +1,26 @@
+﻿@using System.Collections.Generic
+@using System.Linq
+@using Hinoki.Core
+@model List<Article>
+
+<div class="container">
+    @if (Model.Count > 0)
+    {
+        foreach (Article article in Model)
+        {
+            <div class="entry">
+                <div class="entry-header">
+                    <p class="entry-date">@article.OpenDate.ToString("yyyy年M月d日")</p>
+                    <h2 class="entry-title">@Html.ActionLink(article.Title, "Index", "article", new { id = article.Id }, null)</h2>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div>
+            <p>該当する記事がありませんでした。</p>
+            <p><a href="@Url.Action("Index", "Home")">ホームに戻る</a></p>
+        </div>
+    }
+</div>

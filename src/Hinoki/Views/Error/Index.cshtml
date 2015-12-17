@@ -1,0 +1,16 @@
+﻿@model Hinoki.Models.VMError
+
+@section styles
+{
+    @Styles.Render("~/Content/base")
+}
+
+@section SideBar
+{
+    @*@Html.Action("Ad", "SideBar")*@
+    @Html.Action("Categories", "SideBar")
+    @Html.Action("Articles", "SideBar")
+    @*@Html.Action("AdsenseLong", "SideBar")*@
+}
+
+<h2>エラーが発生しました</h2>

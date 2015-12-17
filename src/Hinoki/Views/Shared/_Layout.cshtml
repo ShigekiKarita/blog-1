@@ -1,0 +1,68 @@
+﻿@using Hinoki.Models
+@model Hinoki.Models.VMBase
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Model.PageTitle</title>
+    @*<meta name="description" content="hiroakiの日記">*@
+    <meta name="keywords" content="hiroakiの日記,ASP.NET MVC,Mac,Emacs,ブログ">
+    <link rel="alternate" type="application/rss+xml" href="@Url.Action("Rss", "Feed", null, Request.Url.Scheme)" title="RSS" />
+    <link rel="alternate" type="application/atom+xml" href="@Url.Action("Atom", "Feed", null, Request.Url.Scheme)" title="Atom" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.1/css/material-design-iconic-font.min.css">
+    @RenderSection("ogp_meta", required: false)
+    @RenderSection("twitter_meta", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/mdl/material")
+    <link rel="stylesheet" href="~/Content/mdl/material.min.css">
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <div class="mdl-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">@Html.ActionLink("hiroakiの日記", "Index", "Home", new { area = "" }, new { @style = "color:#fff;text-decoration:none;" })</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    @*<a class="mdl-navigation__link" href="">プロフィール</a>
+                    <a class="mdl-navigation__link" href="">過去の記事</a>*@
+                    <a class="mdl-navigation__link" href="https://github.com/hiroakit">GitHub</a>
+                    <a class="mdl-navigation__link" href="http://www.hiroakit.com/feed/rss">RSS</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">@Html.ActionLink("hiroakiの日記", "Index", "Home", new { area = "" }, new { @style = "color:#fff;text-decoration:none;" })</span>
+            <nav class="mdl-navigation">
+                @*<a class="mdl-navigation__link" href="">プロフィール</a>*@
+                @*<a class="mdl-navigation__link" href="">過去の記事</a>*@
+                <a class="mdl-navigation__link" href="https://github.com/hiroakit">GitHub</a>
+                <a class="mdl-navigation__link" href="http://www.hiroakit.com/feed/rss">RSS</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            @RenderBody()
+            <footer id="site-footer" class="demo-footer mdl-mini-footer">
+                <div class="mdl-mini-footer--left-section">
+                    @*<ul class="mdl-mini-footer--link-list">
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Privacy and Terms</a></li>
+                            <li><a href="#">User Agreement</a></li>
+                        </ul>*@
+                </div>
+                @RenderSection("SideBar", required: false)
+                <p>&copy; 2008 - @DateTime.Now.Year hiroakit.com</p>
+            </footer>
+        </main>
+    </div>
+    @*<nav id="sidebar">
+            @RenderSection("SideBar", required: false)
+        </nav>*@
+    @RenderSection("scripts", required: false)
+    <script language="javascript" src="@Url.Action("GoogleAnalytics", "Home", null, Request.Url.Scheme)"></script>
+</body>
+</html>
