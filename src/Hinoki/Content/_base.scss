@@ -90,20 +90,25 @@ p {
 }
 
 #site-footer {
-    /*max-width:1024px;*/
     margin:0 auto;
-    padding:0 1rem 1rem;
+    padding:1rem 0 1rem 1rem;
     text-align:center;
 
     p {
         font-size:1.4rem;
         margin:0;
+        width: 100%;
     }
 
     .container {
         padding:1rem 0;
         background-color:$card-background-color;
         border:1px solid #c8c8c8;
+    }
+
+    .sidebar-item {
+        width:200px;
+        float:left;
     }
 }
 

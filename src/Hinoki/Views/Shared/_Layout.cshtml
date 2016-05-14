@@ -47,14 +47,9 @@
         <main class="mdl-layout__content">
             @RenderBody()
             <footer id="site-footer" class="demo-footer mdl-mini-footer">
-                <div class="mdl-mini-footer--left-section">
-                    @*<ul class="mdl-mini-footer--link-list">
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Privacy and Terms</a></li>
-                            <li><a href="#">User Agreement</a></li>
-                        </ul>*@
+                <div style="display: block; width: 500px; text-align: left; margin: 0 auto;">
+                    @RenderSection("SideBar", required: false)
                 </div>
-                @RenderSection("SideBar", required: false)
                 <p>&copy; 2008 - @DateTime.Now.Year hiroakit.com</p>
             </footer>
         </main>

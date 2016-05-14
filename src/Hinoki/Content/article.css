@@ -1,4 +1,5 @@
-﻿html {
+﻿@charset "UTF-8";
+html {
   font-size: 62.5%; }
 
 body {
@@ -74,17 +75,20 @@ p {
     color: #000; }
 
 #site-footer {
-  /*max-width:1024px;*/
   margin: 0 auto;
-  padding: 0 1rem 1rem;
+  padding: 1rem 0 1rem 1rem;
   text-align: center; }
   #site-footer p {
     font-size: 1.4rem;
-    margin: 0; }
+    margin: 0;
+    width: 100%; }
   #site-footer .container {
     padding: 1rem 0;
     background-color: #fff;
     border: 1px solid #c8c8c8; }
+  #site-footer .sidebar-item {
+    width: 200px;
+    float: left; }
 
 #main {
   float: left;
@@ -150,20 +154,17 @@ ul.pagination {
 
 @media (min-width: 748px) and (max-width: 1034px) {
   #sidebar {
-    margin-left: 0; }
- }
+    margin-left: 0; } }
 
 @media (max-width: 747px) {
   #main {
     float: none;
     width: 100%; }
-
   #sidebar {
     float: none;
     clear: both;
     width: 100%;
-    margin-left: 0; }
- }
+    margin-left: 0; } }
 
 .entries {
   max-width: 1024px; }
@@ -212,7 +213,8 @@ ul.pagination {
   .entry-content h1, .entry-content h2 {
     border-bottom: 1px solid #c8c8c8; }
   .entry-content > pre {
-    overflow-x: scroll; }
+    overflow-x: scroll;
+    border: 1px solid #ccc; }
   .entry-content blockquote {
     padding: 1rem;
     border: 1px solid #bbb;
@@ -232,4 +234,3 @@ ul.pagination {
   text-align: center;
   margin: 2rem auto 1rem; }
 
-/*# sourceMappingURL=article.css.map */

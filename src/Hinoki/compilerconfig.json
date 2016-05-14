@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "Content/article.css",
+    "inputFile": "Content/article.scss"
+  },
+  {
+    "outputFile": "Content/admin.css",
+    "inputFile": "Content/admin.scss"
+  },
+  {
+    "outputFile": "Content/archive.css",
+    "inputFile": "Content/archive.scss"
+  }
+]

@@ -280,6 +280,10 @@
     <Content Include="Content\mdl\material.min.css.map" />
     <Content Include="Scripts\mdl\material-1.0.0.min.js.map" />
     <Content Include="Content\_variables.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
