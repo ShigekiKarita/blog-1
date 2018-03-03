@@ -1,0 +1,9 @@
+baseURL = "http://www.hiroakit.com"
+languageCode = "ja-JP"
+title = "Hiroaki ENDOH"
+
+[permalinks]
+  posts = "/:year/:month/:filename/"
+  
+[params]
+  subtitle = ""
