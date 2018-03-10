@@ -1,0 +1,45 @@
+#+TITLE: HugoとOrg-modeでブログを書く
+#+AUTHOR: Hiroaki ENDOH
+#+DATE: 2018-03-03
+#+DRAFT: false
+#+TAGS: Hugo blog
+#+OPTIONS: \n:t
+
+* はじめに
+
+振り返ると色々とブログ(サービス or ツール)を切り替えてきました。<br/>
+ブログを切り替える際に、原則として記事を捨てるやり方を採用しています(笑)
+
+1. 手打ちHTML
+2. ブロッサムだかブルッサムだか
+3. Movable Type
+4. WordPress
+5. WordPress.com
+6. はてなダイヤリー
+7. はてなブログ
+8. 自作ブログエンジン (ASP.NET MVC)
+9. Hugo & Org-mode & Azure WebApps & Azure CDN & Onedrive
+10. Hugo & Org-mode & netlify & GitHub
+
+現在は上記10でやっています。
+
+* Hugoとnetlifyの流れ
+
+1. Org-modeのフォーマットで記事を書く
+2. HugoでHTMLに変換する
+3. その内容をgit commit && git push
+4. netlifyが反応して、サーバーに記事が展開される
+
+* セットアップ
+
+macOSでやっています。<br/>
+HugoはHomebrew経由でインストールが可能です。
+
+#+BEGIN_SRC sh
+$ brew install hoge
+#+END_SRC
+
+そのほかはこんな感じです。
+
+- Org-modeはEmacsに組み込まれているので、Emacsをインストールします。
+- netlifyは色々とやりましたが、画面の指示に従えばできました。

@@ -1,0 +1,5 @@
+[context.production.environment]
+  HUGO_VERSION = "0.37" # See https://www.netlify.com/blog/2017/04/11/netlify-plus-hugo-0.20-and-beyond/
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.37" # See https://www.netlify.com/blog/2017/04/11/netlify-plus-hugo-0.20-and-beyond/
