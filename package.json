@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiroakit/blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hiroakit/blog/issues"
+  },
+  "homepage": "https://github.com/hiroakit/blog#readme",
+  "devDependencies": {
+    "textlint": "^10.1.4",
+    "textlint-rule-preset-ja-technical-writing": "^2.0.0",
+    "textlint-rule-preset-japanese": "^4.0.0"
+  }
+}
