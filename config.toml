@@ -3,7 +3,7 @@ languageCode = "ja-JP"
 title = "Hiroaki ENDOH"
 
 [permalinks]
-  posts = "/:year/:month/:filename/"
+  post = "/:year/:month/:filename/"
   
 [params]
   subtitle = ""
