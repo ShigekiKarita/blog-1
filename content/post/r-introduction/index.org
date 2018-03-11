@@ -1,0 +1,288 @@
+#+TITLE: Rで統計学入門 記録1 
+#+AUTHOR: Hiroaki ENDOH
+#+DATE: 2018-03-11
+#+DRAFT: false
+#+TAGS: 統計学 R
+
+* はじめに
+
+タイトルに統計学入門とありますが、何か新しいことを覚えようかなと思い、近くの本屋でぶらぶらしていたら、データサイエンティスト養成読本 (2016年の第2版) のこの辺りを読み始め、気がついたら購入していたので、記録をつけることにしました。
+
+- 特集1 第1章 Rで統計解析をはじめよう
+- 特集2 第1章 Rによるマーケティング分析
+
+読み進めていくと、いくつか理解が追いつかない部分があったので、以下の資料で補うことにしました。
+
+- [[https://www.library.osaka-u.ac.jp/doc/TA_2014_01.pdf][統計用言語Rの使い方]]
+
+* インストール
+
+MacにRとR Studioをインストールします。私のmacOS環境は以下の通りです。
+
+#+BEGIN_SRC sh
+$ sw_vers
+ProductName:	Mac OS X
+ProductVersion:	10.12.6
+BuildVersion:	16G1212
+
+$ echo $SHELL
+/usr/local/bin/zsh
+
+$ zsh --version
+zsh 5.3.1 (x86_64-apple-darwin16.6.0)
+#+END_SRC
+
+RとR Studioのインストーラーを以下から入手します。
+
+- [[https://cran.r-project.org/bin/macosx/][R]] (執筆当時、R-3.4.3.pkg を使用しました。MD5: d51d0869f3cbe0d782eede113897393a)
+- [[https://www.rstudio.com/products/rstudio/download/#download][R Studio]] (執筆当時、RStudio 1.1.423 - Mac OS X 10.6+ (64-bit) を使用しました。MD5: 3e3e3db076b44f3c5276eb008614b4cf)
+
+必須ではありませんが、配布サイトがインストーラーのハッシュを掲載していますので、ダウンロードしたファイルのハッシュを以下のように取得すれば照らし合わすことができます。
+
+#+BEGIN_SRC sh
+$ openssl md5 ./RStudio-1.1.423.dmg
+$ openssl md5 ./R-3.4.3.pkg
+#+END_SRC
+
+インストール自体は画面の指示に従って進めます。
+
+** zshユーザーの場合
+ちなみに、zshを利用している場合は、zshビルドインのrとRのコマンドラインrが名前衝突します。
+以下のコマンドでzshのrを無効にするといいと思います。
+
+#+BEGIN_SRC sh
+$ which r
+r: shell built-in command
+
+$ disable r
+
+$ which r
+/usr/local/bin/r
+
+$ r --version
+R version 3.4.3 (2017-11-30) -- "Kite-Eating Tree"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+#+END_SRC
+* R Studioの基本的な使い方
+
+ファイル作成と保存 (最初はこれすらわからなかった)
+
+1. File > New File > R Script で新規のRファイルを作る
+2. File > Save as... でRファイルを保存する
+
+次に簡単なコードを書きます。<br/>
+範囲選択をしてRunボタンを押すと、処理が実行されます。
+
+#+BEGIN_SRC r
+# コード
+a <- 3
+b <- 2
+a+b
+
+# 結果
+> a <- 3
+> b <- 2
+> a+b
+[1] 5
+#+END_SRC
+
+ビルドインの関数がいくつかある様子。
+
+- max: 最大値
+- mean: 平均値
+- var: 分散
+- min: 最小値
+
+#+BEGIN_SRC r
+# コード
+a <- c(1,2,3,4,5)
+max(a)
+mean(a)
+var(a)
+min(a)
+
+# 結果
+> a <- c(1,2,3,4,5)
+> max(a)
+[1] 5
+> mean(a)
+[1] 3
+> var(a)
+[1] 2.5
+> min(a)
+[1] 1
+#+END_SRC
+
+* 例題1 アイスコーヒーの注文数を予測しよう
+
+[[https://www.library.osaka-u.ac.jp/doc/TA_2014_01.pdf][統計用言語Rの使い方]]で取り上げている次の例題を使い、線形回帰をして図を出力するところまで進めます。
+
+- 「アイスコーヒーの注文数を予測しよう」<br/> [[http://markezine.jp/article/detail/16164][http://markezine.jp/article/detail/16164]]
+
+線形回帰そのものについては下記を参照ください。
+
+- [[http://blogs.teradata.com/international/ja/hhg9/][線形回帰分析とは｜マーケターのための データマイニング・ヒッチハイクガイド９ - International Blog]]
+
+** 散布図の出力
+
+#+BEGIN_SRC r
+# データ (「懐かしの「y=ax+b」でアイスコーヒーの注文数を予測しよう　散布図、分析ツールで求める単回帰式 (1/8)：MarkeZine（マーケジン）」 http://markezine.jp/article/detail/16164)
+temperature <- c(22,23,23,24,24,25,25,26,26,27,27,28,29,32,28,24,31,31,32,33,33,34,34,35,35)
+coffee <- c(300,310,320,330,320,330,310,320,310,340,360,350,360,400,370,310,360,390,390,400,410,450,460,440,480)
+
+# 図の描画
+plot(temperature,coffee,
+     xlim=c(22,35), ylim=c(300,480),
+     main="coffee and temperature",
+     pch=17) # http://cse.naro.affrc.go.jp/takezawa/r-tips/r/53.html
+#+END_SRC
+
+上の処理で出力されたのが次の散布図です。
+
+[[file:./coffee-temperture_01.png]]
+
+** 回帰直線の追加 (線形回帰分析)
+
+今回のコーヒーと気温を以下の数式で表してみます。
+
+# \begin
+#   {\rm coffee} = a \times \ {\rm temperature} + b
+# \end
+
+[[file:./coffee-temperture_02.png]]
+
+Rのコードでこのように出力できます。
+
+#+BEGIN_SRC r
+# コード
+lm(coffee~temperature)
+
+# 結果
+> lm(coffee~temperature)
+
+Call:
+lm(formula = coffee ~ temperature)
+
+Coefficients:
+(Intercept)  temperature  
+      30.21        11.76 
+#+END_SRC
+
+ということなので、こうなります。
+
+[[file:./coffee-temperture_03.png]]
+
+なので、先ほどの散布図にこのようなに直線が引けます。 (この線を回帰直線と呼ぶようです) 
+
+[[file:./coffee-temperture_04.png]]
+
+#+BEGIN_SRC r
+#上図を出力するためのコード
+prd <- lm(coffee~temperature)
+abline(prd)
+#+END_SRC
+* 例題2 体重と身長
+
+さて、ここからデータサイエンティスト養成読本の「特集1 第1章 Rで統計解析をはじめよう」の身長と体重を例題として用います。
+
+データは以下からダウンロードできます。男女の身長と体重があります。
+
+- http://gihyo.jp/book/2016/978-4-7741-8360-2/support (P.30　body_sample.csv)
+
+** データをCSVで読み込む
+例題1ではデータは直打ちでした。<br/>
+ここではCSVからデータを読み込みます。
+
+#+BEGIN_SRC r
+# コード
+body_data <- read.csv("body_sample.csv", header = T, stringsAsFactors = F)
+head(body_data)
+summary(body_data)
+
+# 結果
+> head(body_data)
+  id gender height weight
+1  1      M 157.67  64.82
+2  2      M 178.76  72.38
+3  3      M 161.95  64.52
+4  4      M 162.26  63.35
+5  5      M 167.95  68.76
+6  6      M 165.59  66.40
+> summary(body_data)
+       id           gender              height          weight     
+ Min.   :  1.0   Length:400         Min.   :135.5   Min.   :31.44  
+ 1st Qu.:100.8   Class :character   1st Qu.:152.4   1st Qu.:50.93  
+ Median :200.5   Mode  :character   Median :158.2   Median :57.78  
+ Mean   :200.5                      Mean   :158.4   Mean   :58.16  
+ 3rd Qu.:300.2                      3rd Qu.:163.9   3rd Qu.:65.53  
+ Max.   :400.0                      Max.   :181.5   Max.   :78.99  
+#+END_SRC
+
+** 図に起こす
+
+今回の体重と身長を以下の数式で表してみます。
+
+[[file:./human-weight-height_01.png]]
+
+上の図は以下のコードで出力しています。
+
+#+BEGIN_SRC r
+install.packages("ggplot2") # 初回だけでいいと思いますが調べがついていないです
+library(ggplot2)
+
+ggplot(body_data, aes(x = height, y = weight, col = gender)) + 
+  geom_point() + theme_bw(16) + geom_smooth(method = "lm")
+#+END_SRC
+
+** 線形回帰
+
+前述のコードに geom_smooth(method = "lm") がありますが、これの調査をしておらず、<br/>
+前例1の方法で分析してみたいと思います。
+
+#+BEGIN_SRC r
+# コード
+men <- body_data[body_data$gender=="M",]
+lm(men$weight~men$height)
+
+female <- body_data[body_data$gender=="F",]
+lm(female$weight~female$height)
+
+# 結果
+> lm(men$weight~men$height)
+
+Call:
+lm(formula = men$weight ~ men$height)
+
+Coefficients:
+(Intercept)   men$height  
+   -49.8518       0.7055
+
+> lm(female$weight~female$height)
+
+Call:
+lm(formula = female$weight ~ female$height)
+
+Coefficients:
+  (Intercept)  female$height  
+     -87.3478         0.9005  
+#+END_SRC
+
+体重と身長の関係はweight = a x height +b になりますが、<br/>
+以上の実行結果から、男女各々の体重と身長の関係は以下のようになります。
+
+- 男性: weight = 0.7055 x height + (-49.8518)
+- 女性: weight = 0.9005 x height + (-87.3478)
+
+* まとめ
+この記事では以下のことを学習しました。
+
+- R Studioの環境構築
+- R Studioの基本操作
+- 線形回帰 (浅め)
+- 図が出て楽しい
+
+次回は以下について学習したいと思います。
+
+- 相関関係 (R) 
+- 回帰モデル (ロジスティック回帰)
