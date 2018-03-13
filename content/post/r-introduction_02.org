@@ -1,0 +1,56 @@
+#+TITLE: Rで統計学入門 記録2
+#+AUTHOR: Hiroaki ENDOH
+#+DATE: 2018-03-13
+#+DRAFT: false
+#+TAGS: 統計学 R
+
+* はじめに
+
+前回は以下の学習をしました。
+
+- R Studioの環境構築
+- R Studioの基本操作
+- 線形回帰 (浅め)
+
+今回は相関係数について学習します。
+
+* 相関係数
+
+データサイエンティスト養成読本 (2016年の第2版) の「特集1 第1章 Rで統計解析をはじめよう」によると、
+2つの変数の相関の度合いを表す相関係数があります。この値の意味するところは以下のようになっています。
+
+#+BEGIN_QUOTE
+|r| = 0.7 ~ 1   : 強い相関あり     
+|r| = 0.4 ~ 0.7 : やや相関あり     
+|r| = 0 ~ 0.2   : ほとんど相関なし 
+#+END_QUOTE
+
+前回の「例題2 体重と身長」を使って相関係数を求めてみます。
+
+#+BEGIN_SRC 
+# コード
+body_data <- read.csv("body_sample.csv", header = T, stringsAsFactors = F)
+men <- body_data[body_data$gender=="M",]
+female <- body_data[body_data$gender=="F",]
+
+cor(body_data$height, body_data$weight)
+cor(men$height, men$weight)
+cor(female$height, female$weight)
+
+# 結果
+> cor(body_data$height, body_data$weight)
+[1] 0.8928748
+> cor(men$height, men$weight)
+[1] 0.863457
+> cor(female$height, female$weight)
+[1] 0.9173599
+#+END_SRC
+* まとめ
+この記事では以下のことを学習しました。
+
+- 相関関係
+
+次回は多変量解析の1つ？であるロジスティック回帰を学ぼうと思っていたのですが、以下の記事で「[[https://www.amazon.co.jp/dp/4130420658][統計学入門]]」の存在を知り、この本のP43に多変量解析は本書の範囲を超えるといった旨の記載があったので、別の内容を学習する予定です。
+
+- [[http://cocodrips.hateblo.jp/entry/2017/05/14/180014][1ヶ月で統計学入門したので「良かった本」と「学んだこと」のまとめ]]
+
