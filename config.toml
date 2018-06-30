@@ -1,6 +1,7 @@
 baseURL = "http://www.hiroakit.com"
 languageCode = "ja-JP"
 title = "Hiroaki ENDOH"
+theme = "kiss"
 
 [permalinks]
   post = "/:year/:month/:filename/"
