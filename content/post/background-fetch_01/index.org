@@ -1,0 +1,131 @@
+#+TITLE: Background fetch
+#+AUTHOR: Hiroaki ENDOH
+#+DATE: 2018-10-29
+#+DRAFT: false
+#+TAGS: iOS Swift
+
+XcodeのCapabilitiesに ~Background fetch~ (下図の青枠部分) がありますが、これについて理解を深めたいと思います。
+
+[[file:./fig_01.png]]
+
+* Background fetchとは
+
+まずAppleはBackground fetchに関する以下の文書を公開しています。
+
+- [[https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW56][App Programming Guide for iOS - Fetching Small Amounts of Content Opportunistically]]
+- [[https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle/preparing_your_app_to_run_in_the_background/updating_your_app_with_background_app_refresh][Updating Your App with Background App Refresh]]
+
+上記の1つ目の文書では以下のようにBackground fetchを解説しています。定期的にコンテンツを確認する必要があるようなアプリでは有効かもしれません。
+
+#+BEGIN_QUOTE
+Apps that need to check for new content periodically can ask the system to wake them up so that they can initiate a fetch operation for that content. 
+出典: App Programming Guide for iOS - Fetching Small Amounts of Content Opportunistically
+#+END_QUOTE
+
+ただ、Background fetchはその「定期的」にというところについては保証はしておらず、システムがバランスを見てフェッチをすると説明があります。
+
+#+BEGIN_QUOTE
+Enabling this mode is not a guarantee that the system will give your app any time to perform background fetches. The system must balance your app’s need to fetch content with the needs of other apps and the system itself. After assessing that information, the system gives time to apps when there are good opportunities to do so.
+出典: App Programming Guide for iOS - Fetching Small Amounts of Content Opportunistically
+#+END_QUOTE
+
+そのため、 ~Background fetch~ は処理可能な時にやってくれればいいな (e.g., 最新のトレンド情報のダウンロードなど) といったような興味関心は高いが重要ではない情報を取得するなどの処理において有効で、毎時に必ず処理をさせないとアプリの動作が成り立たないような場合には不向きだと私は思います。
+
+例えば、 ~Background fetch~ の用例としてWWDC 2013のセッション [[https://developer.apple.com/videos/play/wwdc2013/204/][What's New with Multitasking]] 25:30では下記をあげています。
+
+[[file:./fig_02.png]]
+
+また、同セッションの36:05では以下のように ~Background fetch~ を説明しています。
+
+[[file:./fig_03.png]]
+
+* 実装方法
+
+[[https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle/preparing_your_app_to_run_in_the_background/updating_your_app_with_background_app_refresh][Updating Your App with Background App Refresh]]に大まかにやることが書いてあります。サンプルのソースコードも載っています。
+以下はそのコードを転記したものです。
+
+#+BEGIN_SRC swift
+func application(_ application: UIApplication,
+                 didFinishLaunchingWithOptions launchOptions:
+                 [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+   // Override point for customization after application launch.
+        
+   // Fetch data once an hour.
+   UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
+
+   // Other initialization…
+   return true
+}
+    
+func application(_ application: UIApplication, 
+                 performFetchWithCompletionHandler completionHandler:
+                 @escaping (UIBackgroundFetchResult) -> Void) {
+   // Check for new data. 
+   if let newData = fetchUpdates() {
+      addDataToFeed(newData: newData)
+      completionHandler(.newData)
+   }
+   completionHandler(.noData)
+}
+#+END_SRC
+
+上記のコードでは以下の実装がされています。
+
+1. ~UIApplication.shared.setMinimumBackgroundFetchInterval~ の設定
+2. UIApplicationDelegateの ~performFetchWithCompletionHandler~ を実装
+
+**** UIApplication.shared.setMinimumBackgroundFetchInterval
+
+ ~UIApplication.shared.setMinimumBackgroundFetchInterval(3600)~ とありますが、このメソッドはアプリが別のバックグラウンドのフェッチ処理が開始されるまでの最小間隔(秒, ~TimeInterval~) で設定します。
+
+ですので、この3600の場合は前回のフェッチ処理から少なくとも1時間は間隔を空けるという意味で、1時間毎にフェッチ処理をするというわけではありません。24時間待たないとフェッチ処理が実行されないこともあります。
+
+上のコードでは具体的な数値を指定していますがUI Kitは以下の定数を提供しています。
+
+| 定数名                                      | 説明                                             |
+| [[https://developer.apple.com/documentation/uikit/uiapplication/1623100-setminimumbackgroundfetchinterva][UIApplicationBackgroundFetchIntervalMinimum]] | システム (OS?) がサポートする最小のフェッチ間隔  |
+| [[https://developer.apple.com/documentation/uikit/uiapplication/1623023-backgroundfetchintervalnever][UIApplicationBackgroundFetchIntervalNever]] | フェッチ操作を発生させないのに十分なフェッチ間隔 |
+
+**** performFetchWithCompletionHandler
+
+ ~performFetchWithCompletionHandler~ はシステムが呼び出します。このメソッド内ではバックグラウンド時に処理させたい内容を記述します。処理時間を10秒から30秒までに収めるのが良いとされています (根拠不明)。処理の最後に ~completionHandler~ を呼ぶ必要があります。
+
+* デバッグ方法
+
+前述の通り、 ~Background fetch~ のフェッチのタイミングはわかりません。デバッグ時にもそれでは困りますからXcodeのDebug > Simulate Background Fetch は利用してフェッチされたとアプリに伝えることができます。
+
+[[file:./fig_04.png]]
+
+
+試しに、前述のAppleのサンプルコードを使ったアプリを実機にインストールして動作を確認します。
+Console.appにログが出力できるようにしておきます。
+
+#+BEGIN_SRC txt
+21:11:41.181096 +0900 MyApp [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is inactive, launchOptions: [:]
+21:11:41.471603 +0900 MyApp [Debug] [main] [AppDelegate.swift:80] applicationDidBecomeActive > 
+#+END_SRC
+
+Background Fetchの設定が終わるとConsole.appにこういったログが出ます。
+
+#+BEGIN_SRC txt
+23:02:48.939842 +0900 dasd Submitted Activity: com.apple.fetch.com.hiroakit.MyApp:9C0F99 <private>
+#+END_SRC
+
+そして、performFetchWithCompletionHandlerが呼ばれ、処理が完了するとこのログが出ます。
+
+#+BEGIN_SRC txt
+01:02:14.281226 +0900 MyApp [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+01:02:14.389329 +0900 assertiond [MyApp:1663] Mutating assertion reason from finishTask to finishTaskAfterBackgroundContentFetching
+#+END_SRC
+
+また、エンドユーザーがアプリをキル (ホームボタンを2回押してアプリを上にスワイプ) した場合は、以下のメッセージがConsole.appに出力されます。
+
+#+BEGIN_SRC txt
+22:56:52.815064 +0900 dasd CANCELED: com.apple.fetch.com.hiroakit.MyApp:6D674C <private>!
+#+END_SRC
+
+* まとめ
+
++ フェッチの最小間隔は指定できますが、フェッチの実行タイミングは指定できません
++ フェッチが始まると10秒から30秒までの間に処理を終わらす必要があるとされていますが根拠は明らかではありません
++ 上記の理由から、フェッチで取得しようとしている情報が取得ができていなくても大丈夫なようにアプリを設計する必要があります
