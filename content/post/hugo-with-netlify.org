@@ -2,7 +2,7 @@
 #+AUTHOR: Hiroaki ENDOH
 #+DATE: 2018-03-03
 #+DRAFT: false
-#+TAGS: Hugo blog
+#+TAGS: Hugo Netlify blog
 #+OPTIONS: \n:t
 
 * はじめに
@@ -19,11 +19,11 @@
 7. はてなブログ
 8. 自作ブログエンジン (ASP.NET MVC)
 9. Hugo & Org-mode & Azure WebApps & Azure CDN & Onedrive
-10. Hugo & Org-mode & netlify & GitHub
+10. Hugo & Org-mode & Netlify & GitHub
 
 現在は上記10でやっています。
 
-* Hugoとnetlifyの流れ
+* HugoとNetlifyの流れ
 
 1. Org-modeのフォーマットで記事を書く
 2. HugoでHTMLに変換する
@@ -43,3 +43,24 @@ $ brew install hoge
 
 - Org-modeはEmacsに組み込まれているので、Emacsをインストールします。
 - netlifyは色々とやりましたが、画面の指示に従えばできました。
+
+** Google Analytics
+
+HugoはGoogle Analyticsのテンプレートを持っています。
+
+#+BEGIN_SRC go
+{{ template "_internal/google_analytics_async.html" . }}
+#+END_SRC
+
+もし、採用しているテーマに上記の記述があれば、設定ファイル (ここではconfig.toml) に ~googleAnalytics~ にトラッキングIDを記述するだけでセットアップが完了します。
+
+#+BEGIN_SRC sh
+$ emacs config.toml
+
+# config.tomlに googleAnalytics を追加する
+baseURL = "your base url"
+title = "your hugo site title"
+googleAnalytics = "トラッキングID"
+
+[params]
+#+END_SRC
