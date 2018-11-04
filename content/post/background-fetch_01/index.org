@@ -129,3 +129,9 @@ Background Fetchの設定が終わるとConsole.appにこういったログが�
 + フェッチの最小間隔は指定できますが、フェッチの実行タイミングは指定できません
 + フェッチが始まると10秒から30秒までの間に処理を終わらす必要があるとされていますが根拠は明らかではありません
 + 上記の理由から、フェッチで取得しようとしている情報が取得ができていなくても大丈夫なようにアプリを設計する必要があります
+
+* 参考資料
+
+- [[https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW56][App Programming Guide for iOS - Fetching Small Amounts of Content Opportunistically]]
+- [[https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle/preparing_your_app_to_run_in_the_background/updating_your_app_with_background_app_refresh][Updating Your App with Background App Refresh]]
+- [[https://developer.apple.com/videos/play/wwdc2013/204/][WWDC 2013 What's New with Multitasking]]
