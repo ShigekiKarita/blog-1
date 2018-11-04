@@ -10,28 +10,23 @@ XcodeのCapabilitiesに ~Background fetch~ (下図の青枠部分) がありま�
 
 * Background fetchとは
 
-まずAppleはBackground fetchに関する以下の文書を公開しています。
-
-- [[https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW56][App Programming Guide for iOS - Fetching Small Amounts of Content Opportunistically]]
-- [[https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle/preparing_your_app_to_run_in_the_background/updating_your_app_with_background_app_refresh][Updating Your App with Background App Refresh]]
-
-上記の1つ目の文書では以下のようにBackground fetchを解説しています。定期的にコンテンツを確認する必要があるようなアプリでは有効かもしれません。
+Appleは [[https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW56][App Programming Guide for iOS - Fetching Small Amounts of Content Opportunistically]] でBackground fetchを以下のように紹介しています。定期的にコンテンツを確認する必要があるようなアプリでは有効かもしれません。
 
 #+BEGIN_QUOTE
 Apps that need to check for new content periodically can ask the system to wake them up so that they can initiate a fetch operation for that content. 
-出典: App Programming Guide for iOS - Fetching Small Amounts of Content Opportunistically
+出典: [[https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW56][App Programming Guide for iOS - Fetching Small Amounts of Content Opportunistically]] 
 #+END_QUOTE
 
-ただ、Background fetchはその「定期的」にというところについては保証はしておらず、システムがバランスを見てフェッチをすると説明があります。
+ただ、Background fetchはその「定期的」にというところについては保証はしておらず、システムがバランスを見てフェッチをすると説明が続いています。
 
 #+BEGIN_QUOTE
 Enabling this mode is not a guarantee that the system will give your app any time to perform background fetches. The system must balance your app’s need to fetch content with the needs of other apps and the system itself. After assessing that information, the system gives time to apps when there are good opportunities to do so.
-出典: App Programming Guide for iOS - Fetching Small Amounts of Content Opportunistically
+出典: [[https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW56][App Programming Guide for iOS - Fetching Small Amounts of Content Opportunistically]] 
 #+END_QUOTE
 
 そのため、 ~Background fetch~ は処理可能な時にやってくれればいいな (e.g., 最新のトレンド情報のダウンロードなど) といったような興味関心は高いが重要ではない情報を取得するなどの処理において有効で、毎時に必ず処理をさせないとアプリの動作が成り立たないような場合には不向きだと私は思います。
 
-例えば、 ~Background fetch~ の用例としてWWDC 2013のセッション [[https://developer.apple.com/videos/play/wwdc2013/204/][What's New with Multitasking]] 25:30では下記をあげています。
+例えば、 ~Background fetch~ の用例としてWWDC 2013のセッション [[https://developer.apple.com/videos/play/wwdc2013/204/][What's New with Multitasking]] (25:30) では具体例を以下のように述べています。
 
 [[file:./fig_02.png]]
 
@@ -74,11 +69,13 @@ func application(_ application: UIApplication,
 1. ~UIApplication.shared.setMinimumBackgroundFetchInterval~ の設定
 2. UIApplicationDelegateの ~performFetchWithCompletionHandler~ を実装
 
+コーディングに入る前にXcodeのCapabilitiesに ~Background fetch~ をONにしておきます。
+
 **** UIApplication.shared.setMinimumBackgroundFetchInterval
 
  ~UIApplication.shared.setMinimumBackgroundFetchInterval(3600)~ とありますが、このメソッドはアプリが別のバックグラウンドのフェッチ処理が開始されるまでの最小間隔(秒, ~TimeInterval~) で設定します。
 
-ですので、この3600の場合は前回のフェッチ処理から少なくとも1時間は間隔を空けるという意味で、1時間毎にフェッチ処理をするというわけではありません。24時間待たないとフェッチ処理が実行されないこともあります。
+ですので、この3600の場合は前回のフェッチ処理から少なくとも1時間は間隔を空けるという意味で、1時間毎にフェッチ処理をするというわけではありません。24時間待たないとフェッチ処理が実行されないこともあります。(後述の「Background fetchの実行タイミング」を参照)
 
 上のコードでは具体的な数値を指定していますがUI Kitは以下の定数を提供しています。
 
@@ -97,7 +94,7 @@ func application(_ application: UIApplication,
 [[file:./fig_04.png]]
 
 
-試しに、前述のAppleのサンプルコードを使ったアプリを実機にインストールして動作を確認します。
+試しに前述のAppleのサンプルコードを使ったアプリを実機にインストールして動作を確認します。
 Console.appにログが出力できるようにしておきます。
 
 #+BEGIN_SRC txt
@@ -124,8 +121,164 @@ Background Fetchの設定が終わるとConsole.appにこういったログが�
 22:56:52.815064 +0900 dasd CANCELED: com.apple.fetch.com.hiroakit.MyApp:6D674C <private>!
 #+END_SRC
 
+* Background fetchの実行タイミング
+
+「24時間待たないとフェッチ処理が実行されないこともあります」と述べましたが、アプリにログを仕込みBackground fetchがいつ実行されるのか確認してみました。
+
+以下の状況で採取できたログです。
+
+- 28日19時から翌日2時という時間帯でアプリをデバッグ実行していた
+- アプリケーションは29日の午前中にはアプリをホームボタンを押してアプリスイッチャー？でプロセスをキルした
+
+以下のログからBackground fetchは19時から翌日2時の時間帯に実行されていることがわかります。
+
+#+BEGIN_SRC txt
+-- ** ** ** --
+2018-10-29 19:25:05.406 [Info] > MyApp Version: 1.0 Build: 1 PID: 3634
+2018-10-29 19:25:05.406 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-10-29 19:25:05.444 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-10-29 19:25:05.448 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-10-29 19:25:05.568 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-29 19:35:30.696 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-29 19:43:12.772 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-29 21:01:37.929 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-29 21:09:46.785 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-29 22:47:11.125 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-29 22:55:41.236 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+-- ** ** ** --
+2018-10-30 00:18:34.926 [Info] > MyApp Version: 1.0 Build: 1 PID: 3861
+2018-10-30 00:18:34.926 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-10-30 00:18:34.949 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-10-30 00:18:34.952 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-10-30 00:18:35.031 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 00:28:02.364 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 01:18:14.264 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 01:31:08.027 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 01:49:04.158 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 01:56:52.817 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+-- ** ** ** --
+2018-10-30 19:30:08.932 [Info] > MyApp Version: 1.0 Build: 1 PID: 4899
+2018-10-30 19:30:08.932 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-10-30 19:30:08.943 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-10-30 19:30:08.947 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-10-30 19:30:08.981 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 19:37:43.063 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 19:45:49.483 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 19:53:37.541 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 21:02:24.018 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 21:10:41.350 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 22:44:30.491 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 22:52:11.947 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-30 22:56:18.155 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+-- ** ** ** --
+2018-10-31 00:14:46.279 [Info] > MyApp Version: 1.0 Build: 1 PID: 5349
+2018-10-31 00:14:46.279 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-10-31 00:14:46.302 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-10-31 00:14:46.305 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-10-31 00:14:46.432 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-31 00:23:48.008 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+-- ** ** ** --
+2018-10-31 01:16:28.601 [Info] > MyApp Version: 1.0 Build: 1 PID: 5446
+2018-10-31 01:16:28.601 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-10-31 01:16:28.638 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-10-31 01:16:28.642 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-10-31 01:16:28.755 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-31 01:24:13.349 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-31 02:06:33.825 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+-- ** ** ** --
+2018-10-31 19:19:39.017 [Info] > MyApp Version: 1.0 Build: 1 PID: 6829
+2018-10-31 19:19:39.017 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-10-31 19:19:39.052 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-10-31 19:19:39.059 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-10-31 19:19:39.315 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-31 19:28:39.584 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-31 19:36:31.353 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-31 19:46:42.527 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+-- ** ** ** --
+2018-10-31 21:03:48.255 [Info] > MyApp Version: 1.0 Build: 1 PID: 7050
+2018-10-31 21:03:48.255 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-10-31 21:03:48.268 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-10-31 21:03:48.271 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-10-31 21:03:48.330 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-10-31 21:13:06.858 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+-- ** ** ** --
+2018-11-01 19:25:54.004 [Info] > MyApp Version: 1.0 Build: 1 PID: 8364
+2018-11-01 19:25:54.004 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-11-01 19:25:54.046 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-11-01 19:25:54.126 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-11-01 19:25:54.443 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-01 19:34:58.677 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-01 19:49:24.111 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-01 20:56:24.998 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-01 21:03:56.731 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+-- ** ** ** --
+2018-11-01 22:42:28.030 [Info] > MyApp Version: 1.0 Build: 1 PID: 8533
+2018-11-01 22:42:28.030 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-11-01 22:42:28.049 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-11-01 22:42:28.051 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-11-01 22:42:28.101 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-01 22:50:41.573 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-02 00:15:16.383 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-02 00:23:25.081 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-02 01:12:35.428 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-02 01:23:47.880 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-02 02:11:50.440 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+-- ** ** ** --
+2018-11-02 19:26:46.920 [Info] > MyApp Version: 1.0 Build: 1 PID: 9566
+2018-11-02 19:26:46.920 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-11-02 19:26:46.940 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-11-02 19:26:46.945 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-11-02 19:26:47.079 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-02 19:36:23.698 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-02 19:46:44.880 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-02 19:54:49.379 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-02 20:57:47.740 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-02 22:44:51.140 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-02 22:53:48.308 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-03 00:13:10.338 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-03 01:14:49.791 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-03 01:24:01.585 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-03 02:05:18.213 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-03 02:14:27.294 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+-- ** ** ** --
+2018-11-03 19:19:00.938 [Info] > MyApp Version: 1.0 Build: 1 PID: 10401
+2018-11-03 19:19:00.938 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-11-03 19:19:00.972 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-11-03 19:19:00.978 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-11-03 19:19:01.119 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-03 19:30:48.459 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-03 19:38:24.244 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-03 19:46:47.648 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+-- ** ** ** --
+2018-11-03 21:01:00.256 [Info] > MyApp Version: 1.0 Build: 1 PID: 10536
+2018-11-03 21:01:00.256 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-11-03 21:01:00.270 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-11-03 21:01:00.273 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-11-03 21:01:00.390 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+-- ** ** ** --
+2018-11-03 22:41:41.486 [Info] > MyApp Version: 1.0 Build: 1 PID: 10707
+2018-11-03 22:41:41.486 [Info] > XCGLogger Version: 6.1.0 - Level: Debug
+2018-11-03 22:41:41.509 [Info] > XCGLogger appending log to: file:///var/mobile/Containers/Data/Application/8FCD9D25-3958-47BC-A7D5-DF9606D9B47F/Documents/logs/app.log
+2018-11-03 22:41:41.514 [Debug] [main] [AppDelegate.swift:31] application(_:didFinishLaunchingWithOptions:) > Application state is background, launchOptions: [:]
+2018-11-03 22:41:41.750 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-03 22:53:42.933 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-04 00:17:27.723 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-04 00:25:31.428 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-04 01:27:09.105 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+2018-11-04 01:59:35.555 [Debug] [main] [AppDelegate.swift:55] application(_:performFetchWithCompletionHandler:) > Application state is background.
+#+END_SRC
+
+Background fetchは24時間後には実行されるようです。またアプリを使っている時間帯をOSが覚えているように思えます。
+
 * まとめ
 
 + フェッチの最小間隔は指定できますが、フェッチの実行タイミングは指定できません
 + フェッチが始まると10秒から30秒までの間に処理を終わらす必要があるとされていますが根拠は明らかではありません
++ フェッチは24時間後に実行される (少なくとも24時間以内に実行される保証はない)
 + 上記の理由から、フェッチで取得しようとしている情報が取得ができていなくても大丈夫なようにアプリを設計する必要があります
+
+* 参考資料
+
+- [[https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW56][App Programming Guide for iOS - Fetching Small Amounts of Content Opportunistically]]
+- [[https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle/preparing_your_app_to_run_in_the_background/updating_your_app_with_background_app_refresh][Updating Your App with Background App Refresh]]
+- [[https://developer.apple.com/videos/play/wwdc2013/204/][WWDC 2013 What's New with Multitasking]]
