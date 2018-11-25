@@ -5,6 +5,10 @@
 #+TAGS: Hugo Netlify blog
 #+OPTIONS: \n:t
 
+Hugoが ~Org-mode~ をサポートしました。 ~Markdown~ から乗り換えの時期がやってきました。
+
+# more
+
 * はじめに
 
 振り返ると色々とブログ(サービス or ツール)を切り替えてきました。<br/>
@@ -77,3 +81,9 @@ googleAnalytics = "トラッキングID"
 
 [params]
 #+END_SRC
+** シェアボタン
+
+下記が参考になります。
+
+- [[https://aakira.app/blog/2018/08/share/][Hugoで作ったサイトにシェアボタンを足した | AABrain]]
+  
