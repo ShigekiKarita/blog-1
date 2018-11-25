@@ -1,4 +1,4 @@
-baseURL = "http://www.hiroakit.com"
+baseURL = "https://www.hiroakit.com"
 languageCode = "ja-JP"
 title = "Hiroaki ENDOH"
 theme = "kiss"
@@ -9,3 +9,12 @@ googleAnalytics = "UA-10216886-3"
   
 [params]
   subtitle = ""
+[params.info]
+  homeTitle = "Hiroaki ENDOH"
+  enableSocial = true
+
+[params.social]
+  twitter = "hiroakit"
+
+[params.assets]
+  customCSS = ["custom.css"]
