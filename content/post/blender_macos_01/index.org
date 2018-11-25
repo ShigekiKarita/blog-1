@@ -4,11 +4,11 @@
 #+DRAFT: false
 #+TAGS: Blender macOS Emacs
 
+先日「ポケットモンスター Let's Go! イーブイ」が発売開始されましたが、Blenderも次バージョンの2.8でEEVEEをリリースする旨が [[https://wiki.blender.org/wiki/Reference/Release_Notes/2.80][Blender 2.80 Release Notes]] に載っています。
+
+# more
+
 ** Emacsの環境
-
-先日「ポケットモンスター Let's Go! イーブイ」が発売開始されましたが、Blenderも次バージョンの2.8でEEVEEをリリースする予定になっています。
-
-- [[https://wiki.blender.org/wiki/Reference/Release_Notes/2.80][Blender 2.80 Release Notes]]
 
 私はピカチュウ版を買いましたが、ゲームをし続ける技量は既になく、気分転換にBlenderのコードリーディングをしています。このコードリーディングはちょっとした出来心で始めたのですが、ふと気がつくと ~init.el~ には以下を追記していました。
 
@@ -51,13 +51,13 @@ $ make
 1. M-x helm-ag
 2. Patternを問われるので、eevee と入力する
 
-その結果が下図になりますが、2526件ヒットしています。ポケモンをやっていることも考えると全てに目を通すのは困難です。
+その結果が下図になりますが、2526件ヒットしています。
 
 [[file:./fig_helm-ag_00.png]]
 
-ポケモンをやっていることも考えると全てに目を通すのは困難です。
+しかし、ポケモンをやっていることも考えると全てに目を通すのは困難です。
 
-どれから見れば良いのかわかりませんが、ファイル名にエンジンと書いてあるぐらいでしょうから中核を成していそうな ~eevee_engine.c~ を開きます。
+どれから見れば良いのかわかりませんが、ファイル名にエンジンと書いてあるぐらいですから中核を成していそうな ~eevee_engine.c~ を開きます。
 
 [[file:./fig_helm-ag_01.png]]
 
