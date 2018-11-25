@@ -8,6 +8,8 @@ XcodeのCapabilitiesに ~Background fetch~ (下図の青枠部分) がありま�
 
 [[file:./fig_01.png]]
 
+# more
+
 * Background fetchとは
 
 Appleは [[https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW56][App Programming Guide for iOS - Fetching Small Amounts of Content Opportunistically]] でBackground fetchを以下のように紹介しています。定期的にコンテンツを確認する必要があるようなアプリでは有効かもしれません。
