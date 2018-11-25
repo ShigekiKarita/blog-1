@@ -1,0 +1,161 @@
+#+TITLE: BlenderのソースコードをEmacsで読む
+#+AUTHOR: Hiroaki ENDOH
+#+DATE: 2018-11-24
+#+DRAFT: false
+#+TAGS: Blender macOS Emacs
+
+** Emacsの環境
+
+先日「ポケットモンスター Let's Go! イーブイ」が発売開始されましたが、Blenderも次バージョンの2.8でEEVEEをリリースする予定になっています。
+
+- [[https://wiki.blender.org/wiki/Reference/Release_Notes/2.80][Blender 2.80 Release Notes]]
+
+私はピカチュウ版を買いましたが、ゲームをし続ける技量は既になく、気分転換にBlenderのコードリーディングをしています。このコードリーディングはちょっとした出来心で始めたのですが、ふと気がつくと ~init.el~ には以下を追記していました。
+
+#+BEGIN_SRC elisp
+;; helm-ag or ripgrep
+(setq helm-ag-base-command "rg -S --vimgrep --no-heading")
+(global-set-key (kbd "C-x g g") 'helm-ag)
+#+END_SRC
+
+どうした事でしょう。 ~ripgrep~ をEmacsから実行するために ~helm-ag~ をインストールし設定を追加していたのです。この設定をし終えた頃にトキワの森を通過した記憶があります。
+
+ちなみに私は以下の環境でEmacsを動かしています。
+
+#+BEGIN_SRC sh
+$ sw_vers
+ProductName:	Mac OS X
+ProductVersion:	10.13.6
+BuildVersion:	17G3025
+
+$ emacs -nw # GNU Emacs 26.1
+#+END_SRC
+
+** EEVEEをどこから読み始めるべきか
+
+普段はSwiftかShell Scriptぐらいしか読み書きしないものですから、Cのソースコードは未知領域でして、さてどこから読み始めるべきでしょうかと考えるわけです。
+
+とりあえず何の意味もなくビルドをしてみるかと思い、数分Google検索をして [[https://wiki.blender.org/wiki/Building_Blender/Mac][Building Blender/Mac]] を見つけ、ビルドを成功させます。
+
+#+BEGIN_SRC sh
+$ mkdir ~/blender-build
+$ cd ~/blender-build
+$ git clone http://git.blender.org/blender.git
+$ cd blender
+$ make update
+$ make
+#+END_SRC
+
+ビルド成功後、Emacsでblenderのsourceディレクトリに移動して以下の操作をします。
+
+1. M-x helm-ag
+2. Patternを問われるので、eevee と入力する
+
+その結果が下図になりますが、2526件ヒットしています。ポケモンをやっていることも考えると全てに目を通すのは困難です。
+
+[[file:./fig_helm-ag_00.png]]
+
+ポケモンをやっていることも考えると全てに目を通すのは困難です。
+
+どれから見れば良いのかわかりませんが、ファイル名にエンジンと書いてあるぐらいでしょうから中核を成していそうな ~eevee_engine.c~ を開きます。
+
+[[file:./fig_helm-ag_01.png]]
+
+色々とincludeされていますがファイル冒頭の段階で次の2点が気になりました。
+
+1. defineされた ~EEVEE_ENGINE~
+2. static関数の ~eevee_engine_init~ 
+
+例えば、defineされている ~EEVEE_ENGINE~ は何に使っているのだろうと思ったとして、Emacsで以下の操作をします。
+
+1. M-x helm-ag
+2. Patternを問われるので、EEVEE_ENGINE と入力する
+
+上の結果が下図です。
+
+[[file:./fig_helm-ag_02.png]]
+
+どうやら ~eevee_engine.c~ の474行目にさらに情報がありそうです。開いてみます。
+
+#+BEGIN_SRC c
+RenderEngineType DRW_engine_viewport_eevee_type = {
+	NULL, NULL,
+	EEVEE_ENGINE, N_("Eevee"), RE_INTERNAL | RE_USE_SHADING_NODES | RE_USE_PREVIEW,
+	NULL, &DRW_render_to_image, NULL, NULL, NULL, NULL,
+	&EEVEE_render_update_passes,
+	&draw_engine_eevee_type,
+	{NULL, NULL, NULL}
+};
+#+END_SRC
+
+~DRW_engine_viewport_eevee_type~ という変数が宣言されていますが、これは誰が参照しているのでしょうか。Emacsで以下の操作をします。
+
+1. M-x helm-ag
+2. Patternを問われるので ~DRW_engine_viewport_eevee_type~ と入力する
+
+上の結果が下図です。
+
+[[file:./fig_helm-ag_03.png]]
+
+この図から以下のように見えます。
+
+1. draw_manager.cとeevee_materials.cで参照されている
+2. eevee_engine.hでDRW_engine_viewport_eevee_typeをexternしているとわかる
+
+ところで ~DRW_engine_viewport_eevee_type~ の型である ~RenderEngineType~ は何者なのでしょうか。Emacsで以下の操作をします。
+
+1. M-x helm-ag
+2. Patternを問われるので、RenderEngineType と入力する
+
+上の結果が下図です。
+
+[[file:./fig_helm-ag_04.png]]
+
+これを見て私は以下のように思いました。
+
+1. RenderEngineTypeという型がある
+2. RenderEngineTypeという構造体がある
+
+そこで ~typedef struct~ をしているコードを探すことにしました。Emacsで以下の操作をします。
+
+1. M-x helm-ag
+2. Patternを問われるので、RenderEngineType と入力する
+3. 検索結果でPatternを問われるので typedef struct と入力する
+
+上の結果が下図です。
+
+[[file:./fig_helm-ag_05.png]]
+
+~RE_engine.h~ に ~RenderEngineType~ の定義があります。開いてみます。
+
+#+BEGIN_SRC c
+// blender/render/extern/include/RE_engine.h
+typedef struct RenderEngineType {
+	struct RenderEngineType *next, *prev;
+
+	/* type info */
+	char idname[64]; // best keep the same size as BKE_ST_MAXNAME                                                                                        
+	char name[64];
+	int flag;
+
+	void (*update)(struct RenderEngine *engine, struct Main *bmain, struct Depsgraph *depsgraph);
+	void (*render)(struct RenderEngine *engine, struct Depsgraph *depsgraph);
+	void (*bake)(struct RenderEngine *engine, struct Depsgraph *depsgraph,
+                     struct Object *object, const int pass_type,
+                     const int pass_filter, const int object_id, const struct BakePixel *pixel_array, const int num_pixels,
+                     const int depth, void *result);
+
+	void (*view_update)(struct RenderEngine *engine, const struct bContext *context);
+        void (*view_draw)(struct RenderEngine *engine, const struct bContext *context);
+
+	void (*update_script_node)(struct RenderEngine *engine, struct bNodeTree *ntree, struct bNode *node);
+        void (*update_render_passes)(struct RenderEngine *engine, struct Scene *scene, struct ViewLayer *view_layer);
+
+	struct DrawEngineType *draw_engine;
+
+	/* RNA integration */
+        ExtensionRNA ext;
+} RenderEngineType;
+#+END_SRC
+
+さて、ここから更に読み進めていきたいところですが、この辺で。
