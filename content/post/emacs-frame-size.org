@@ -1,0 +1,29 @@
+#+TITLE: Terminal.appで開いたEmacsでフレームのサイズを変更する
+#+AUTHOR: Hiroaki ENDOH
+#+DATE: 2016-05-29T21:00:00+09:00
+#+DRAFT: false
+#+TAGS: Emacs macOS
+
+Emacs.appでフレームのサイズを調整したい場合はマウス操作で可能ですが、Terminal.appでEmacsを開いている場合にはできません。キーボード操作だけで済ます必要があります。
+
+# more 
+
+キーボードだけでフレームサイズを変更するには以下のコマンドを使います。
+
+| コマンド                    | キー                     |
+|-----------------------------+--------------------------|
+| enlarge-window              | Ctrl-x^                  |
+| shrink-window               | N/A (初期状態では未設定) |
+| enlarge-window-horizontally | Ctrl-x}                  |
+| shrink-window-horizontally  | Ctrl-x{                  |
+
+ただし、[[http://tototoshi.hatenablog.com/entry/20100831/1283266135][enlarge/shrink-window - tototoshi の日記]] と同じ意見で、標準のキーバインドのままで、そのコマンドを繰り返し実行するのは辛く感じました。
+
+そこで修飾キーと矢印キーの組み合わせに対してコマンドを割り当ててみたのですが動かず。調べてみると、Terminal.appの環境設定からプロファイルを開き、キーボードに設定を追加する必要があるとわかりました。以下の記事が参考になります。
+
+- [[http://d.hatena.ne.jp/nishiohirokazu/20130205/1360071049][リモートのEmacsでもC-upでbackward-paragraphしたい→必要なのはTerminal.appの設定だった - 西尾泰和のはてなダイアリー]]
+- [[http://peccu.hatenablog.com/entry/2015/08/15/000000][Macのターミナル.appでCtrl+カーソルキーを使う - @peccul is peccu]]
+
+以下の記事にあるようにキーバインディングはglobal-mapよりもlocal-mapの方が優先されますので、メジャーモードによってはグローバルに割り当てたキーバインディングを上書きするかもしれません。その場合は各メジャーモードのhookでlocalをunset-keyすることを検討します。
+
+- [[http://emacs.g.hatena.ne.jp/kiwanami/20110606/1307385847][キーマップの lookup 順序について - はてなグループEmacs@kiwanami - Emacsグループ]]
