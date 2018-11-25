@@ -4,7 +4,11 @@ date = "2015-06-13T20:30:00+09:00"
 tags = [ "macOS", "launchd"]
 +++
 
-macOSで決まった時刻にプログラムを実行させたいので、UNIXやLinuxのcron、Windowsのタスクスケジューラに相当する機能がないか調べた。Mac Developer Libraryを覗くと、Scheduling Timed Jobsにジョブに関する記述があり、まとめると以下のようになる。
+macOSで決まった時刻にプログラムを実行させたいので、UNIXやLinuxのcron、Windowsのタスクスケジューラに相当する機能がないか調べた。
+
+<!--more-->
+
+Mac Developer Libraryを覗くと、Scheduling Timed Jobsにジョブに関する記述があり、まとめると以下のようになる。
 
 - プログラムを定時実行させる場合は、launchdジョブとcronジョブが使える
 - 好ましいのはlaunchdのジョブを使うことである。cronは非推奨だ

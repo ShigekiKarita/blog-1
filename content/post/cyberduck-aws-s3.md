@@ -1,11 +1,13 @@
 +++
 title = "CyberduckでAWS S3にファイルをアップロード"
 date = "2016-06-19T06:30:00+09:00"
-tags = [ "aws", "s3", "cyberduck" ]
+tags = [ "aws", "s3", "cyberduck", "macOS" ]
 +++
 
 [Cyberduck](https://cyberduck.io/index.ja.html)を使えば、フォルダ構造を維持して、AWS S3にファイルをアップロードできる。
 ファイルのアップロード自体はAWS S3のフロントエンドのウェブページで出来るが、フォルダ構造は自分で作る必要があり、やや手間がかかる。
+
+<!--more-->
 
 <p style="text-align:center;">
 <img style="max-width:60%" src="https://c5.staticflickr.com/9/8880/27571840164_47841c9457_z.jpg" alt="AWS S3のフロントエンドのウェブページ" title="AWS S3のフロントエンドのウェブページ">
