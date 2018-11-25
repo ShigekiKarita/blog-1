@@ -3,7 +3,8 @@ languageCode = "ja-JP"
 title = "Hiroaki ENDOH"
 theme = "kiss"
 googleAnalytics = "UA-10216886-3"
-  
+Paginate = 5
+
 [permalinks]
   post = "/:year/:month/:filename/"
   
