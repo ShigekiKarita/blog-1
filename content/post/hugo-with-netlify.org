@@ -44,6 +44,12 @@ $ brew install hoge
 - Org-modeはEmacsに組み込まれているので、Emacsをインストールします。
 - netlifyは色々とやりましたが、画面の指示に従えばできました。
 
+** favicon
+
+以下が詳しいです。
+
+- [[https://xn--v6q832hwdkvom.com/post/hugo_favicon/][Hugoでfaviconをつけよう · 竹内電設.com]]
+
 ** Google Analytics
 
 HugoはGoogle Analyticsのテンプレートを持っています。
