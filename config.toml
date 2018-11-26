@@ -9,7 +9,7 @@ Paginate = 5
   post = "/:year/:month/:filename/"
   
 [params]
-  subtitle = ""
+
 [params.info]
   homeTitle = "Hiroaki ENDOH"
   enableSocial = true
