@@ -1,0 +1,34 @@
+#+TITLE: Google Authenticatorと機種変更
+#+AUTHOR: Hiroaki ENDOH
+#+DATE: 2016-11-23
+#+DRAFT: false
+#+TAGS: Google Authenticator iOS
+
+先日、新しいスマートフォンを入手したので古い端末から環境を移行している。
+その中で、Google Authenticatorの移行は特殊だったので、備忘録を残す。
+
+# more
+
+特殊な点は以下の通り。
+
+- バックアップからリストアしてもGoogle Authenticatorの設定は復元できない
+- 新しい端末に切り替える場合は、その端末とウェブサービスを関連付ける必要がある
+
+** Google Authenticatorとは
+
+Google AuthenticatorはGoogleが提供するiOS/Android向けアプリケーションで、
+ワンタイムパスワードを生成してくれる。
+
+例えば、Googleアカウント、Microsoftアカウント、GitHubアカウントの認証では、2段階認証を有効にすると、ワンタイムパスワードの入力が必須となるのだが、そのワンタイムパスワードはGoogle Authenticatorが生成したワンタイムパスワードを使う。
+
+Google Authenticatorでワンタイムパスワードを生成するためには、事前にウェブサービスと端末を関連付ける必要がある。関連付けの方法については、下記が詳しい。
+
+- [[http://www.atmarkit.co.jp/ait/articles/1411/26/news120.html][Tech TIPS：「Google Authenticator」アプリとiPhone／iPadで2段階認証を実現する - ＠IT]]
+
+* 機種変更したらもう一度関連付け
+
+先述の通り、Google Authenticatorは事前にウェブサービスと端末を関連付ける必要がある。 そのため、新しい端末に切り替える場合は、その端末で関連付けをしなければならない。
+
+なお、下記の記事の通り、Google Authenticatorの設定はiTunesやiCloudでバックアップしても残らないので、 新しい端末に設定を引き継がせることはできない。
+
+- [[http://www.atmarkit.co.jp/ait/articles/1412/12/news136.html#ngrestore][Tech TIPS：iPhone／Androidで使っているGoogle Authenticator（認証システム）を別の端末に移行させる - ＠IT]]
