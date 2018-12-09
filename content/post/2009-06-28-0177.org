@@ -1,4 +1,4 @@
-#+TITLE: "iPhoneを手に入れました"
+#+TITLE: iPhoneを手に入れました
 #+DATE: 2009-06-28T21:13:54+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

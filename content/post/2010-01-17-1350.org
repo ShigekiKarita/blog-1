@@ -1,4 +1,4 @@
-#+TITLE: "about:configを利用したFirefoxの設定"
+#+TITLE: about:configを利用したFirefoxの設定
 #+DATE: 2010-01-17T22:30:15+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

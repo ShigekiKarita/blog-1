@@ -1,4 +1,4 @@
-#+TITLE: "Mac OS X Snow Leopard でディスクイメージを作成する"
+#+TITLE: Mac OS X Snow Leopard でディスクイメージを作成する
 #+DATE: 2010-04-11T11:29:28+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

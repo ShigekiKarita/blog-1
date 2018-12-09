@@ -1,4 +1,4 @@
-#+TITLE: "Oracle to buy Sun"
+#+TITLE: Oracle to buy Sun
 #+DATE: 2009-05-16T23:27:21+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

@@ -1,4 +1,4 @@
-#+TITLE: "CSS Hack: Only for Opera 9"
+#+TITLE: CSS Hack: Only for Opera 9
 #+DATE: 2009-05-07T01:02:41+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

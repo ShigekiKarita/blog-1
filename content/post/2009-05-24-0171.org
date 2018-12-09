@@ -1,7 +1,7 @@
-#+TITLE: "UbuntuとSSH"
+#+TITLE: UbuntuとSSH
 #+DATE: 2009-05-24T13:24:40+09:00
 #+DRAFT: false
-#+TAGS: 過去記事インポート
+#+TAGS: 過去記事インポート Ubuntu
 
 <h4>SSH</h4>
 <p>Ubuntuがインストールされたサーバーマシンをクライアントマシンから操作する設定を行います。<br />(ちなみにこのクライアントはIntel Macです)</p>

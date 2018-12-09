@@ -1,4 +1,4 @@
-#+TITLE: "C言語入門してみた　Part1"
+#+TITLE: C言語入門してみた　Part1
 #+DATE: 2009-04-19T12:25:30+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

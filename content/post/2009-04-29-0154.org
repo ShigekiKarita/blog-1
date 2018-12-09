@@ -1,4 +1,4 @@
-#+TITLE: "FamilyMart: ミニシュー"
+#+TITLE: FamilyMart: ミニシュー
 #+DATE: 2009-04-29T11:09:51+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

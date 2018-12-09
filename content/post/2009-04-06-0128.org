@@ -1,4 +1,4 @@
-#+TITLE: "shaderman(セットアップ編)"
+#+TITLE: shaderman(セットアップ編)
 #+DATE: 2009-04-06T12:40:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

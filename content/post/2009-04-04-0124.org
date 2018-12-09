@@ -1,4 +1,4 @@
-#+TITLE: "Photoshop Lightroom 2 を体験してみた"
+#+TITLE: Photoshop Lightroom 2 を体験してみた
 #+DATE: 2009-04-04T01:50:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

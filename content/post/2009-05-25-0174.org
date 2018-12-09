@@ -1,7 +1,7 @@
-#+TITLE: "UbuntuとRedmine"
+#+TITLE: UbuntuとRedmine
 #+DATE: 2009-05-25T20:28:54+09:00
 #+DRAFT: false
-#+TAGS: 過去記事インポート
+#+TAGS: 過去記事インポート Ubuntu
 
 <h4>Redmine</h4>
 <p><img src="http://www.hiroakit.com/blog/photo/photo_090526_01.jpg" alt="" /></p>

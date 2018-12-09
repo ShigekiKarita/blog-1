@@ -1,4 +1,4 @@
-#+TITLE: "Firefoxは</li>の後に があるとページが崩れる。"
+#+TITLE: Firefoxは</li>の後に があるとページが崩れる。
 #+DATE: 2009-02-16T12:54:56+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

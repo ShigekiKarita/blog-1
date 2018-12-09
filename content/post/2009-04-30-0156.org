@@ -1,4 +1,4 @@
-#+TITLE: "Movable Type のエントリーIDを変更する"
+#+TITLE: Movable Type のエントリーIDを変更する
 #+DATE: 2009-04-30T11:28:11+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

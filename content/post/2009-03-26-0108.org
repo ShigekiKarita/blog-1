@@ -1,4 +1,4 @@
-#+TITLE: "mental ray 5日目"
+#+TITLE: mental ray 5日目
 #+DATE: 2009-03-26T09:20:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

@@ -1,4 +1,4 @@
-#+TITLE: "Microsoftと2019年"
+#+TITLE: Microsoftと2019年
 #+DATE: 2009-03-09T21:00:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

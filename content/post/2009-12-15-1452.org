@@ -1,4 +1,4 @@
-#+TITLE: "TOEICを受けようと思う"
+#+TITLE: TOEICを受けようと思う
 #+DATE: 2009-12-15T15:47:33+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

@@ -1,7 +1,7 @@
-#+TITLE: "MySQLの文字コードを変更する"
+#+TITLE: MySQLの文字コードを変更する
 #+DATE: 2009-07-26T16:14:41+09:00
 #+DRAFT: false
-#+TAGS: 過去記事インポート
+#+TAGS: 過去記事インポート MySQL
 
 <h3><!--more-->状況</h3>
 Ubuntu Server 8.10

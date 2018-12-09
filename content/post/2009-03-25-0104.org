@@ -1,7 +1,7 @@
-#+TITLE: "RenderManについて調べてみた Part1"
+#+TITLE: RenderManについて調べてみた Part1
 #+DATE: 2009-03-25T01:00:00+09:00
 #+DRAFT: false
-#+TAGS: 過去記事インポート
+#+TAGS: 過去記事インポート RenderMan
 
 <h4>高価過ぎるRenderMan<br /></h4>
 <p>前に<a href="http://www.pixar.com/jp/renderman/whats.html" target="_blank">RenderMan</a>の販売価格を調べて、学生が買えるようなソフトではないって書きました。</p>

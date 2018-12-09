@@ -1,4 +1,4 @@
-#+TITLE: "明日はSIGGRAPH ASIA 2009に行ってきます"
+#+TITLE: 明日はSIGGRAPH ASIA 2009に行ってきます
 #+DATE: 2009-12-16T22:13:28+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

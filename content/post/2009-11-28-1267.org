@@ -1,4 +1,4 @@
-#+TITLE: "WindowsからMacに完全に乗り換えるとしたら"
+#+TITLE: WindowsからMacに完全に乗り換えるとしたら
 #+DATE: 2009-11-28T03:01:43+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

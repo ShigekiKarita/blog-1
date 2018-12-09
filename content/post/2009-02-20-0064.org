@@ -1,4 +1,4 @@
-#+TITLE: "Discover Foam City"
+#+TITLE: Discover Foam City
 #+DATE: 2009-02-20T12:30:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

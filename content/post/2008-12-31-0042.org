@@ -1,4 +1,4 @@
-#+TITLE: "Opera 9.6"
+#+TITLE: Opera 9.6
 #+DATE: 2008-12-31T02:55:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

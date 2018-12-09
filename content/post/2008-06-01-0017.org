@@ -1,4 +1,4 @@
-#+TITLE: "mina"
+#+TITLE: mina
 #+DATE: 2008-06-01T08:58:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

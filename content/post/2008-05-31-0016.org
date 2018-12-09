@@ -1,4 +1,4 @@
-#+TITLE: "Mozilla Party JP 9.0"
+#+TITLE: Mozilla Party JP 9.0
 #+DATE: 2008-05-31T09:45:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

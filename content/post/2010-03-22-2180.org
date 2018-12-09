@@ -1,4 +1,4 @@
-#+TITLE: "八王子の Restaurant Termini に行ってきました"
+#+TITLE: 八王子の Restaurant Termini に行ってきました
 #+DATE: 2010-03-22T00:36:23+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

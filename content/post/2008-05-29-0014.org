@@ -1,4 +1,4 @@
-#+TITLE: "BornDigital CG Study Group"
+#+TITLE: BornDigital CG Study Group
 #+DATE: 2008-05-29T10:19:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

@@ -1,4 +1,4 @@
-#+TITLE: "Ubuntu と apt-cache"
+#+TITLE: Ubuntu と apt-cache
 #+DATE: 2008-03-01T12:09:01+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート Ubuntu Linux

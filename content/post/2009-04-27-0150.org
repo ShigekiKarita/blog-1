@@ -1,4 +1,4 @@
-#+TITLE: "Illustratorで名刺10枚印刷"
+#+TITLE: Illustratorで名刺10枚印刷
 #+DATE: 2009-04-27T01:29:02+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

@@ -1,7 +1,7 @@
-#+TITLE: "Ubuntuでネットワーク上の共有ファイルを消されないようにする"
+#+TITLE: Ubuntuでネットワーク上の共有ファイルを消されないようにする
 #+DATE: 2009-06-28T20:55:50+09:00
 #+DRAFT: false
-#+TAGS: 過去記事インポート
+#+TAGS: 過去記事インポート Ubuntu
 
 <h4>chattr</h4>
 <pre>$ sudo chattr -R +i /home/samba/public/ //制限をかける

@@ -1,4 +1,4 @@
-#+TITLE: "Mnet “Magic Studios” "
+#+TITLE: Mnet “Magic Studios”
 #+DATE: 2009-12-13T12:48:31+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

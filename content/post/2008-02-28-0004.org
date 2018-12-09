@@ -1,4 +1,4 @@
-#+TITLE: "hiroakit blog"
+#+TITLE: hiroakit blog
 #+DATE: 2008-02-28T02:30:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

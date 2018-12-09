@@ -1,4 +1,4 @@
-#+TITLE: "Ubuntu と Vim"
+#+TITLE: Ubuntu と Vim
 #+DATE: 2009-04-26T01:07:57+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート Ubuntu Linux

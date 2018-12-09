@@ -1,4 +1,4 @@
-#+TITLE: "Visual Studio 2005 C++でM_PI"
+#+TITLE: Visual Studio 2005 C++でM_PI
 #+DATE: 2009-05-02T23:13:29+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

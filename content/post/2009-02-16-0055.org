@@ -1,4 +1,4 @@
-#+TITLE: "Movable Type 4.1 から 4.23 へ"
+#+TITLE: Movable Type 4.1 から 4.23 へ
 #+DATE: 2009-02-16T05:58:29+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

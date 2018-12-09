@@ -1,4 +1,4 @@
-#+TITLE: "Do you like Firefox ?"
+#+TITLE: Do you like Firefox ?
 #+DATE: 2009-04-02T09:12:58+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

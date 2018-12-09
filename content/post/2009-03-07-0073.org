@@ -1,4 +1,4 @@
-#+TITLE: "MIGUEL A. SALEK"
+#+TITLE: MIGUEL A. SALEK
 #+DATE: 2009-03-07T12:19:25+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

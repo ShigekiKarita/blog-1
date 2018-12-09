@@ -1,4 +1,4 @@
-#+TITLE: "Ubuntu 8.04 と nVidia と envy"
+#+TITLE: Ubuntu 8.04 と nVidia と envy
 #+DATE: 2008-08-18T12:12:05+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート Ubuntu Linux

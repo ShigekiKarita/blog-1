@@ -1,4 +1,4 @@
-#+TITLE: "Pixar と アカデミー賞"
+#+TITLE: Pixar と アカデミー賞
 #+DATE: 2009-03-08T00:30:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

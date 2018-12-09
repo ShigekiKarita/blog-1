@@ -1,4 +1,4 @@
-#+TITLE: "NVIDIA - Speak Visual"
+#+TITLE: NVIDIA - Speak Visual
 #+DATE: 2009-03-08T11:30:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

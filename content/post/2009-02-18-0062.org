@@ -1,4 +1,4 @@
-#+TITLE: "Ubuntu (Linux) の基本的なコマンド"
+#+TITLE: Ubuntu (Linux) の基本的なコマンド
 #+DATE: 2009-02-18T22:05:25+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート Ubuntu Linux

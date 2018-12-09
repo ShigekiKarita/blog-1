@@ -1,4 +1,4 @@
-#+TITLE: "High-Defの規格にどう対応するか"
+#+TITLE: High-Defの規格にどう対応するか
 #+DATE: 2009-09-25T23:29:33+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

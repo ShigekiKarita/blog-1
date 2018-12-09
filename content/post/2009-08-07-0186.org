@@ -1,7 +1,7 @@
-#+TITLE: "After Effects 講習会やりました"
+#+TITLE: After Effects 講習会やりました
 #+DATE: 2009-08-07T12:25:38+09:00
 #+DRAFT: false
-#+TAGS: 過去記事インポート
+#+TAGS: 過去記事インポート AfterEffects
 
 先日、学内限定ではありますがAfter Effects講習会を実施しました。今回は学内にある団体intebroの1年生を対象に一日に3時間もの貴重な時間を、かつ2日間もいただいての講習会です。参加者は計13名でした。<!--more-->
 <p style="text-align: center;"><img class="aligncenter" src="http://www.hiroakit.com/blog/photo/photo_090804_01.jpg" alt="" /></p>

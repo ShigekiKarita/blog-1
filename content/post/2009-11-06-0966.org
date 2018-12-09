@@ -1,4 +1,4 @@
-#+TITLE: "Pixar Intro Parodyから繋ぎを考えてみる"
+#+TITLE: Pixar Intro Parodyから繋ぎを考えてみる
 #+DATE: 2009-11-06T12:48:43+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

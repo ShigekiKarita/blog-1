@@ -1,4 +1,4 @@
-#+TITLE: "Autodesk NAB 2008 レビュー"
+#+TITLE: Autodesk NAB 2008 レビュー
 #+DATE: 2008-06-11T19:20:55+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

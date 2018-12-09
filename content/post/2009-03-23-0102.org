@@ -1,4 +1,4 @@
-#+TITLE: "Ubuntu 8.10 と C言語"
+#+TITLE: Ubuntu 8.10 と C言語
 #+DATE: 2009-03-23T05:40:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート Ubuntu Linux

@@ -1,4 +1,4 @@
-#+TITLE: "Vancouver Film School"
+#+TITLE: Vancouver Film School
 #+DATE: 2008-03-05T12:30:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

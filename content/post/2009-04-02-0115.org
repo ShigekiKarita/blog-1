@@ -1,4 +1,4 @@
-#+TITLE: "Intuous 4 Release"
+#+TITLE: Intuous 4 Release
 #+DATE: 2009-04-02T10:15:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

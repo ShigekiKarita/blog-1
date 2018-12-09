@@ -1,7 +1,7 @@
-#+TITLE: "映画「Matrix」におけるFreeBSDとRenderMan"
+#+TITLE: 映画「Matrix」におけるFreeBSDとRenderMan
 #+DATE: 2010-01-11T15:59:40+09:00
 #+DRAFT: false
-#+TAGS: 過去記事インポート
+#+TAGS: 過去記事インポート RenderMan
 
 <a href="http://www.jp.freebsd.org/event/matsuri2001/" target="_blank">オープンソースまつり 2001 in 秋葉原</a>という記事に興味深いことが載っています。
 <blockquote>32台のデュアルプロセッサのFreeBSDシステムがワーナーブラザーズフィルムの映画「The Matrix」の中で多数の特殊効果を生み出すために使われました。&lt;中略&gt;「The Matrix」製作に実際にメインで使用されたFreeBSDを利用したシステムでは、Linux用レンダリングソフトPixar's RendermanをFreeBSDのLinuxモード上で使用しました。</blockquote>

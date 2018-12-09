@@ -1,4 +1,4 @@
-#+TITLE: "Ubuntu 8.10 の画面解像度の設定"
+#+TITLE: Ubuntu 8.10 の画面解像度の設定
 #+DATE: 2009-02-18T12:33:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート Ubuntu Linux

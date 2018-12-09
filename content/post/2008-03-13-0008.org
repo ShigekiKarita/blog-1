@@ -1,4 +1,4 @@
-#+TITLE: "Ubuntu 8.04 と Hotkey と Command"
+#+TITLE: Ubuntu 8.04 と Hotkey と Command
 #+DATE: 2008-03-13T13:00:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート Ubuntu Linux

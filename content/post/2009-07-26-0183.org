@@ -1,7 +1,7 @@
-#+TITLE: "MySQLのパスワード変更（緊急時）"
+#+TITLE: MySQLのパスワード変更（緊急時）
 #+DATE: 2009-07-26T15:44:19+09:00
 #+DRAFT: false
-#+TAGS: 過去記事インポート
+#+TAGS: 過去記事インポート MySQL
 
 <h3>状況</h3>
 <p>Ubuntu Server 8.10<br />MySQL 5.0</p>

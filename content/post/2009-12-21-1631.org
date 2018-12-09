@@ -1,4 +1,4 @@
-#+TITLE: "Objectifiedって知ってますか"
+#+TITLE: Objectifiedって知ってますか
 #+DATE: 2009-12-21T01:07:05+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

@@ -1,4 +1,4 @@
-#+TITLE: "XMP ToolKit SDK のサンプルをコンパイル"
+#+TITLE: XMP ToolKit SDK のサンプルをコンパイル
 #+DATE: 2009-04-03T11:30:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

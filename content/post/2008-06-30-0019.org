@@ -1,4 +1,4 @@
-#+TITLE: "IMC Tokyo 2008"
+#+TITLE: IMC Tokyo 2008
 #+DATE: 2008-06-30T19:23:52+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

@@ -1,4 +1,4 @@
-#+TITLE: "Gmail をバックアップして Google Apps に統合"
+#+TITLE: Gmail をバックアップして Google Apps に統合
 #+DATE: 2010-03-31T23:52:27+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

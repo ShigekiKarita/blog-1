@@ -1,4 +1,4 @@
-#+TITLE: "Night of the Werehog"
+#+TITLE: Night of the Werehog
 #+DATE: 2009-03-08T01:50:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

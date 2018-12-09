@@ -1,4 +1,4 @@
-#+TITLE: "Transformers Revenge of the Fallen Theatrical"
+#+TITLE: Transformers Revenge of the Fallen Theatrical
 #+DATE: 2009-05-03T00:44:42+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

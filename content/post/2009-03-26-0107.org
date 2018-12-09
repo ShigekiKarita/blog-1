@@ -1,4 +1,4 @@
-#+TITLE: "Ubuntu 8.10 と Adobe Reader"
+#+TITLE: Ubuntu 8.10 と Adobe Reader
 #+DATE: 2009-03-26T09:10:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート Ubuntu Linux

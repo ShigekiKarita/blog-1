@@ -1,4 +1,4 @@
-#+TITLE: "Terminator Salvation"
+#+TITLE: Terminator Salvation
 #+DATE: 2009-05-02T23:22:55+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

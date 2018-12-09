@@ -1,4 +1,4 @@
-#+TITLE: "Movable Type 4.23 で再構築がおかしい"
+#+TITLE: Movable Type 4.23 で再構築がおかしい
 #+DATE: 2009-02-16T22:01:02+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

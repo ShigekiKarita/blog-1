@@ -1,4 +1,4 @@
-#+TITLE: "最近みたWEBページ part11"
+#+TITLE: 最近みたWEBページ part11
 #+DATE: 2009-03-08T02:59:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

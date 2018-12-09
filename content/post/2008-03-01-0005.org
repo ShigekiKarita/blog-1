@@ -1,4 +1,4 @@
-#+TITLE: "Ubuntu と apt-get"
+#+TITLE: Ubuntu と apt-get
 #+DATE: 2008-03-01T12:00:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート Ubuntu Linux

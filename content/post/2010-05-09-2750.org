@@ -1,4 +1,4 @@
-#+TITLE: "Microsoft Office 2010はすごく期待できる"
+#+TITLE: Microsoft Office 2010はすごく期待できる
 #+DATE: 2010-05-09T19:38:26+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

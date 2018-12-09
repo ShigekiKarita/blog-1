@@ -1,4 +1,4 @@
-#+TITLE: "3ds max 8 en linux (virtualbox)"
+#+TITLE: 3ds max 8 en linux (virtualbox)
 #+DATE: 2009-02-19T22:06:52+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

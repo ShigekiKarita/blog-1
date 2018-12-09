@@ -1,4 +1,4 @@
-#+TITLE: "High-Defコンテンツを初めて作りました"
+#+TITLE: High-Defコンテンツを初めて作りました
 #+DATE: 2009-09-24T18:15:14+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

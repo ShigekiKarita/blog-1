@@ -1,4 +1,4 @@
-#+TITLE: "RED Digital Cinema Camera"
+#+TITLE: RED Digital Cinema Camera
 #+DATE: 2008-05-19T18:43:53+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

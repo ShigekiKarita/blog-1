@@ -1,4 +1,4 @@
-#+TITLE: "Ubuntu (Linux) の圧縮と解凍コマンド"
+#+TITLE: Ubuntu (Linux) の圧縮と解凍コマンド
 #+DATE: 2009-03-25T00:05:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート Ubuntu Linux

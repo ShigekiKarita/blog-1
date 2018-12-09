@@ -1,4 +1,4 @@
-#+TITLE: "Liquid(コンパイル編): Part 3"
+#+TITLE: Liquid(コンパイル編): Part 3
 #+DATE: 2009-04-03T02:45:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

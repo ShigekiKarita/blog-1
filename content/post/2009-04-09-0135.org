@@ -1,7 +1,7 @@
-#+TITLE: "RenderManのシェーディング言語"
+#+TITLE: RenderManのシェーディング言語
 #+DATE: 2009-04-09T11:45:00+09:00
 #+DRAFT: false
-#+TAGS: 過去記事インポート
+#+TAGS: 過去記事インポート RenderMan
 
 <h4>RenderManのシェーディング言語</h4>
 <p>RISpec を見ながら気長にやっていこうと思います。</p>

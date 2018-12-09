@@ -1,4 +1,4 @@
-#+TITLE: "choucream and custard pudding"
+#+TITLE: choucream and custard pudding
 #+DATE: 2008-10-25T08:21:32+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

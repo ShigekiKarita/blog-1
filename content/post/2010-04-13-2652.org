@@ -1,4 +1,4 @@
-#+TITLE: "Internet Explorer 8 に last-child は非対応"
+#+TITLE: Internet Explorer 8 に last-child は非対応
 #+DATE: 2010-04-13T23:58:51+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

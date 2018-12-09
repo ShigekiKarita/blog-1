@@ -1,4 +1,4 @@
-#+TITLE: "Visual Studio 2005: warning C4996"
+#+TITLE: Visual Studio 2005: warning C4996
 #+DATE: 2009-04-03T07:00:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

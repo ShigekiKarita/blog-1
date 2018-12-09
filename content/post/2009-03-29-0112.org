@@ -1,4 +1,4 @@
-#+TITLE: "mental ray 6日目： MetaSL"
+#+TITLE: mental ray 6日目： MetaSL
 #+DATE: 2009-03-29T12:20:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

@@ -1,4 +1,4 @@
-#+TITLE: "Transformers"
+#+TITLE: Transformers
 #+DATE: 2008-10-02T10:06:57+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

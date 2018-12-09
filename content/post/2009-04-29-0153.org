@@ -1,4 +1,4 @@
-#+TITLE: "Gimpで画像縮小"
+#+TITLE: Gimpで画像縮小
 #+DATE: 2009-04-29T10:52:28+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

@@ -1,4 +1,4 @@
-#+TITLE: "Partly Cloudy - Clip"
+#+TITLE: Partly Cloudy - Clip
 #+DATE: 2009-05-03T00:34:18+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

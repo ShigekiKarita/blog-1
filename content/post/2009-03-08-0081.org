@@ -1,4 +1,4 @@
-#+TITLE: "ScanSnap S300 FI-S300"
+#+TITLE: ScanSnap S300 FI-S300
 #+DATE: 2009-03-08T01:30:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート

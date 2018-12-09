@@ -1,4 +1,4 @@
-#+TITLE: "YAMAHA Design"
+#+TITLE: YAMAHA Design
 #+DATE: 2009-03-07T15:50:00+09:00
 #+DRAFT: false
 #+TAGS: 過去記事インポート
