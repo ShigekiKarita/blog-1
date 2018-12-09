@@ -1,0 +1,47 @@
+#+TITLE: "RED vs. Canon 5D Mark II"
+#+DATE: 2009-03-08T12:50:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>RED ONE と Canon 5D Mark II の比較<br /></h4>
+<ul>
+<li><a href="http://nrkbeta.no/red-vs-canon-5d-mkii-del-1/" target="_blank">RED vs. Canon 5D MkII del 1</a></li>
+<li><a href="http://nrkbeta.no/red-vs-canon-5d-mark-ii-del-2/" target="_blank">RED vs. Canon 5D Mark II - del 2</a></li>
+</ul>
+<p>この2つの記事では、"RED ONE"という4Kサイズの映像がとれるビデオカメラと、Canonが発売している"Canon 5D Mark II"というカメラを比較しています。</p>
+<p>(ただ、言語が日本語ではなく、ましてや英語でもないので、全く読めません。どこの言語かもわからない。ヨーロッパ系だってことは映像や画像を見て想像するんですが･･････)</p>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="512" height="347" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="allowscriptaccess" value="always" />
+<param name="allowFullScreen" value="true" />
+<param name="quality" value="high" />
+<param name="FlashVars" value="file=http://video.nrkbeta.no/media/filer/videofiler/Master1.mp4&amp;width=512&amp;height=347&amp;usefullscreen=true&amp;plugins=yourlytics-1&amp;yourlytics.callback=http://video.nrkbeta.no/record_stats/%s/" />
+<param name="src" value="http://video.nrkbeta.no/embed2/129/?start=0" /><embed type="application/x-shockwave-flash" width="512" height="347" src="http://video.nrkbeta.no/embed2/129/?start=0" flashvars="file=http://video.nrkbeta.no/media/filer/videofiler/Master1.mp4&amp;width=512&amp;height=347&amp;usefullscreen=true&amp;plugins=yourlytics-1&amp;yourlytics.callback=http://video.nrkbeta.no/record_stats/%s/" quality="high" allowfullscreen="true" allowscriptaccess="always"></embed>
+</object>
+</p>
+<p class="nrkbeta_video_text" style="text-align: center;"><a href="http://video.nrkbeta.no/diverse/canon-5d-mk-ii-vs-red-one-del-1-av-2/">Se videoen p&aring; NRKbeta video</a> &ndash; <a href="http://video.nrkbeta.no/media/filer/videofiler/Master1.mp4">Direktelink til denne videoen</a></p>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="512" height="347" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="allowscriptaccess" value="always" />
+<param name="allowFullScreen" value="true" />
+<param name="quality" value="high" />
+<param name="FlashVars" value="file=http://video.nrkbeta.no/media/filer/videofiler/REDvsCanon_del2.mp4&amp;width=512&amp;height=347&amp;usefullscreen=true&amp;plugins=yourlytics-1&amp;yourlytics.callback=http://video.nrkbeta.no/record_stats/%s/" />
+<param name="src" value="http://video.nrkbeta.no/embed2/130/?start=0" /><embed type="application/x-shockwave-flash" width="512" height="347" src="http://video.nrkbeta.no/embed2/130/?start=0" flashvars="file=http://video.nrkbeta.no/media/filer/videofiler/REDvsCanon_del2.mp4&amp;width=512&amp;height=347&amp;usefullscreen=true&amp;plugins=yourlytics-1&amp;yourlytics.callback=http://video.nrkbeta.no/record_stats/%s/" quality="high" allowfullscreen="true" allowscriptaccess="always"></embed>
+</object>
+</p>
+<p class="nrkbeta_video_text" style="text-align: center;"><a href="http://video.nrkbeta.no/diverse/red-vs-canon-5d-mkii-del-2/">Se videoen p&aring; NRKbeta video</a> &ndash; <a href="http://video.nrkbeta.no/media/filer/videofiler/REDvsCanon_del2.mp4">Direktelink til denne videoen</a></p>
+<h4>では、一体どこが凄いのか</h4>
+<p>そんなの僕にはわかりません(笑<br />紹介した記事の言語が日本語でもないので、なおさらです。<br />まぁ、ただ、画像を見ればなんとなくならば、察することができそうですよね。</p>
+<p>(画像をコピーしてこのブログに貼り付けるのはまずいかな、と思ってURLだけ記載します)</p>
+<h5>コントラストとカラー<br /></h5>
+<ul>
+<li>この画像はCanon 5D Mark II<br /><a href="http://nrkbeta.no/wp-content/uploads/2008/12/canon-wide-570x320.jpg" target="_blank">http://nrkbeta.no/wp-content/uploads/2008/12/canon-wide-570x320.jpg</a></li>
+<li>この画像はRED ONE<br /><a href="http://nrkbeta.no/wp-content/uploads/2008/12/red-wide-570x320.jpg" target="_blank">http://nrkbeta.no/wp-content/uploads/2008/12/red-wide-570x320.jpg</a></li>
+</ul>
+<p>Canon 5D Mark II の方が好みだなぁ･･････。RED ONE の方だと、ちょっと画像が荒く感じられます。スチールカメラのCanon 5D Mark II の方が色の量も多いし、きれいに感じます。</p>
+<h5>低照度下での撮影<br /></h5>
+<ul>
+<li>この画像はCanon 5D Mark II<br /><a href="http://nrkbeta.no/wp-content/uploads/2008/12/canon-natt-570x320.jpg" target="_blank">http://nrkbeta.no/wp-content/uploads/2008/12/canon-natt-570x320.jpg</a></li>
+<li>この画像はRED ONE<br /><a href="http://nrkbeta.no/wp-content/uploads/2008/12/red-natt-570x320.jpg" target="_blank">http://nrkbeta.no/wp-content/uploads/2008/12/red-natt-570x320.jpg</a></li>
+</ul>
+<p>低照度下でなら、スチールの方が強いのかな。</p>

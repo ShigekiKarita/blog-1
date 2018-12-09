@@ -1,0 +1,13 @@
+#+TITLE: "メモ：分散バージョン管理とか含む"
+#+DATE: 2008-03-22T18:17:44+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>やりたいことメモ</h4>
+<ol>
+<li>ノートPCのboot.iniをいじる。（ubuntuがブートメニューに表示されなくなってしまったので）</li>
+<li><a href="http://phpspot.org/blog/archives/2008/03/itunesjavascrip.html" target="_blank">ProtoFlow</a>:iTunesのカバーフロー風ＵＩをJavaScriptで実現</li>
+<li><a href="http://opensource.adobe.com/wiki/display/flexsdk/Coding%20Conventions" target="_blank">Flex SDK coding conventions and best practices</a>:Flex SDK のドキュメント</li>
+<li><a href="http://python.matrix.jp/modules/mercurial.html" target="_blank">Mercurial</a>:Pythonで分散バージョン管理</li>
+<li><a href="http://web-marketing.zako.org/web-tools/woopra-free-web-tracking-analysis-tool.html" target="_blank">Woopra</a>:無料アクセス解析ツール</li>
+</ol>

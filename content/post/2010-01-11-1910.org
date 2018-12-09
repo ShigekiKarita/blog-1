@@ -1,0 +1,12 @@
+#+TITLE: "映画「Matrix」におけるFreeBSDとRenderMan"
+#+DATE: 2010-01-11T15:59:40+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<a href="http://www.jp.freebsd.org/event/matsuri2001/" target="_blank">オープンソースまつり 2001 in 秋葉原</a>という記事に興味深いことが載っています。
+<blockquote>32台のデュアルプロセッサのFreeBSDシステムがワーナーブラザーズフィルムの映画「The Matrix」の中で多数の特殊効果を生み出すために使われました。&lt;中略&gt;「The Matrix」製作に実際にメインで使用されたFreeBSDを利用したシステムでは、Linux用レンダリングソフトPixar's RendermanをFreeBSDのLinuxモード上で使用しました。</blockquote>
+<a href="http://www.amazon.co.jp/gp/product/B002M2DWS6?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=B002M2DWS6" target="_blank">マトリックス</a>でRendermanが使用されていたことはPixarのサイトに掲載されていたので知っていましたが、マトリックスを製作したManex Visual Effects社がFreeBSDでRendermanを使っていたというのは初耳でした。しかも、興味深いことに"<span style="color: #800000;"><strong>FreeBSDのLinuxモード</strong></span>"を使用しているという点です。FreeBSDに関するドキュメント"FreeBSD ハンドブック"ではこれを<a href="http://www.freebsd.org/doc/ja/books/handbook/linuxemu.html" target="_blank">Linux バイナリ互換機能</a>と表現しています。
+<blockquote>簡単に言ってしまえば、この機能により全ての Linux アプリケーションの 90% が修正なしに FreeBSD 上で起動できます。 この中には Star Office や Linux 版の Netscape、Adobe Acrobat、RealPlayer 5 と 7、 VMWare、Oracle、WordPerfect、Doom、Quake などがあります。 また、ある状況においては Linux バイナリを Linux で動かすよりも FreeBSD で動かすほうが良いパフォーマンスが出るという報告もあります。</blockquote>
+「Linux で動かすよりも FreeBSD で動かすほうが良いパフォーマンスが出る」と書かれていますが、そもそもManex Visual Effects社においてRenderManをFreeBSD上で動かそうと思ったのは「既存のSGIシステムでは能力が足りない」からだそうです。そして「最速のSGI R10kシステムよりもメインのFreeBSDマシンの方が処理性能が上だった」そうです。Manex社の上級システム管理者であるCharles Henrich氏がこれを述べています。
+
+つまり、RenderManはSGI(IRIX)とLinuxよりもFreeBSDで動かした方がパフォーマンス面で良い結果が得られる可能性があると。FreeBSDの必要性をひしひしを感じてきました。早くテストしたいですね。

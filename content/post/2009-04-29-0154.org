@@ -1,0 +1,19 @@
+#+TITLE: "FamilyMart: ミニシュー"
+#+DATE: 2009-04-29T11:09:51+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>FamilyMartは化け物です</h4>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090429_01.png" alt="photo_090429_01.png" /></p>
+<p>解禁令(?)が出されたので久しぶりにシュークリーム食べました。</p>
+<p>ひとくちサイズのシュークリームが10個入っています。<br />この10個食べるだけで世の中の嫌なことの約30％を忘れられます。</p>
+<p>ごめん、うそだ。<br />正確には15%ぐらいだと思う。</p>
+<p>最近のコンビニってすごいですね。<br /> こんなにおいしいものが158円だなんて。</p>
+<p>ちなみに、このシュークリームを食べてるときにみた映像がこれ。</p>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="555" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/kkk8--v1uic" /><embed type="application/x-shockwave-flash" width="555" height="350" src="http://www.youtube.com/v/kkk8--v1uic"></embed>
+</object>
+</p>
+<p>全部で13話あるみたい。<br />まだちょっとしか見れていないけど要チェックですね。</p>
+<p>最後に、シュークリームを作った人は天才だよ、うん。</p>

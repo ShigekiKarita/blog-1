@@ -1,0 +1,25 @@
+#+TITLE: "ハードディスクを丸ごと新しいハードディスクへコピー"
+#+DATE: 2010-01-10T14:14:56+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+先日、ハードディスクの中身を丸ごと新しいハードディスクへコピーしました。1台のハードディスクをマスター版として、新しく用意した3つのハードディスクへコピーするのですが、マスター版にはOSやソフトウェア、それに関する設定ファイルが入っていたのです。
+<h4><strong>コピーする方法として3種ほど検討しました。</strong></h4>
+<p style="padding-left: 30px;">1) 手動によるコピー&amp;ペースト
+2) 「<a href="http://www.amazon.co.jp/gp/product/B001JKMQ6G?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=B001JKMQ6G" target="_blank">HD革命/CopyDrive</a>」のようなソフトウェアを使いコピーする
+3) 「<a href="http://www.amazon.co.jp/gp/product/B000YASMR4?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=B000YASMR4" target="_blank">これdo台</a>」のようなハードウェアを使用してコピーする
+<h5 style="padding-left: 30px;">1) 手動によるコピー&amp;ペースト</h5>
+<p style="padding-left: 30px;">これはジョークですね。</p>
+<p style="padding-left: 30px;">マスター・ブート・レコード、その中でも特にパーティション・テーブルをコピーできない方法は使えません。</p>
+
+<h5 style="padding-left: 30px;">2) 「HD革命/CopyDrive」のようなソフトウェアを使いコピーする</h5>
+<p style="padding-left: 30px;">フリーソフトに「<a href="http://www.easeus.com/disk-copy/" target="_blank">EASEUS Disk Copy</a>」というのがあるそうですが、市販されているものだけを見ます。</p>
+<p style="padding-left: 60px;">1)<a href="http://www.amazon.co.jp/gp/product/B001JKMQ6G?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=B001JKMQ6G" target="_blank"> HD革命/CopyDrive</a></p>
+<p style="padding-left: 60px;">2) <a href="http://www.amazon.co.jp/gp/product/B002L0PPFW?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=B002L0PPFW" target="_blank">Acronis True Image Home 2009</a></p>
+<p style="padding-left: 30px;">ソフトウェアがいつも使える状態ならば上記の商品で解決すると思います。しかしながら、ハードディスクをコピーするだけのためにパソコンを占有するのはいささか具合が悪いです。CPUやMemoryを他のところへ回した方が良いのではないかと考えてしまいます。</p>
+<p style="padding-left: 30px;">それにパソコンを占有するのが許されるのであれば、<a href="http://it.kndb.jp/entry/show/id/1155" target="_blank">UbuntuのHDDを換装し容量UPする - Knowledge Database IT</a>みたいにLinux等でddコマンドを使った方が簡単そうです。新しいソフトウェアの使い方を覚えるのはCG系のソフトウェアだけで十分です(笑</p>
+<p style="padding-left: 30px;">最後に、これらのソフトウェアがWindowsのみに対応しているという点です。今後、その他のOSを扱うことを考えたら、この方法に時間はあまり避けたくありません。可能な限り1つのやり方が幅広くカバーできる、そんな方法を求めたいです。</p>
+
+<h5 style="padding-left: 30px;">3) 「これdo台」を始めとしたハードウェアを使用してコピーする</h5>
+<p style="padding-left: 30px;"><a href="http://www.amazon.co.jp/gp/product/B000YASMR4?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=B000YASMR4" target="_blank">これdo台</a>はとても簡単で便利です。ボタンを数回押すだけで済みます。<a href="http://210.166.209.243/support/faq/copymode_mapro.html" target="_blank">これDO台マスター、プロのコピーモードについて</a>で詳しい使い方が載っています。また、利用経験がある人が<a href="http://blog.xe.bz/archives/50473266.html" target="_blank">AKIBA de: これdo台MASTERってどうよ？</a>でその感想を写真付きで書いています。</p>
+<p style="padding-left: 30px;">今度、個人用に買おう。便利すぎます。</p>

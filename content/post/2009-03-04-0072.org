@@ -1,0 +1,20 @@
+#+TITLE: "最近みたWEBページ part10"
+#+DATE: 2009-03-04T12:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<ul>
+<li><a rel="bookmark" href="http://blog.fooooo.com/archives/157" target="_blank">日本でもIEのブラウザ市場シェア減少続く――84.2％に（Fooooo調べ）</a></li>
+<li><a href="http://www.gamenews.ne.jp/archives/2009/01/post_4462.html" target="_blank">年齢階層別の金融資産保有割合をグラフ化してみる</a></li>
+<li><a href="http://www.j-cast.com/2009/02/07035270.html" target="_blank">おカネあるのに使わない高齢者　それが若者の低賃金を生む</a></li>
+<li><a href="http://dancex2.cocolog-nifty.com/weblog/2009/01/post-ada6.html" target="_blank">バニシング・ポイント</a></li>
+<li><a href="http://it.nikkei.co.jp/digital/column/gamescramble.aspx?n=MMITew000030012009" target="_blank">「テクニカルアーティスト」というゲーム開発の新職種　ＧＤＣを読む（１）</a></li>
+<li><a href="http://it.nikkei.co.jp/digital/news/index.aspx?n=MMITew000006022009&amp;landing=Next" target="_blank">「スクリプト」で差がついた日米ゲーム開発の生産性　ＧＤＣを読む（２）</a></li>
+<li><a href="http://www.apple.com/jp/news/2009/feb/24safari.html" target="_blank">アップル、Safari 4を発表 &mdash; 世界最速、最も革新的なブラウザ</a></li>
+<li><a href="http://japan.cnet.com/news/media/story/0,2000056023,20388810,00.htm" target="_blank">アップル、Safari 4を発表--Cover Flow、Tabs on Topなど多数の新機能</a></li>
+<li><a href="http://www.itmedia.co.jp/news/articles/0902/25/news020.html" target="_blank">Apple、&ldquo;4倍速い&rdquo;「Safari 4」のパブリック&beta;版を提供開始</a></li>
+<li><a href="http://journal.mycom.co.jp/news/2009/02/25/002/index.html" target="_blank">アップル「Safari 4」の&beta;提供開始 - Nitroエンジンで高速化</a></li>
+<li><a href="http://www.atmarkit.co.jp/news/200902/25/safari.html" target="_blank">Google ChromeとiTunesのUIも取り込む 米アップル、Safari 4ベータを発表</a></li>
+<li><a href="http://japan.cnet.com/marketing/story/0,3800080523,20388815,00.htm" target="_blank">「Safari 4」を速攻ベンチマーク--JavaScriptの実行速度はChromeに迫る</a></li>
+<li><a href="http://netafull.net/macosx/029458.html" target="_blank">「Safari 4」ベータ版をインストールしてみたら超速い！</a></li>
+</ul>

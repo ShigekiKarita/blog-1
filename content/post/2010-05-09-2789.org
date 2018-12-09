@@ -1,0 +1,16 @@
+#+TITLE: "Outlook2003とMsmapi32.dll"
+#+DATE: 2010-05-09T18:59:34+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+この前, 以前は使っていたMicrosoft Office Outlook 2003 をまた使ってみようと思ったんですね. そしたら, こんなウィンドウが出てきてちょっとびっくりです. 日本語版のWindows XP上でです.<!--more-->
+
+<a rel="attachment wp-att-2791" href="http://www.hiroakit.com/blog/archives/2789/photo_20100509_02"><img class="alignright  size-large wp-image-2791" title="photo_20100509_02" src="http://www.hiroakit.com/blog/photo/photo_20100509_02-640x75.png" alt="photo_20100509_02" width="640" height="75" /></a>
+<blockquote>Microsoft Office Outlook を起動できません。MAPI32.DLL  は壊れているか、バージョンが間違っています。この問題は、他のメッセージ  ソフトウェアをインストールしたことによって発生した可能性があります。Outlook を再インストールしてください。</blockquote>
+そういえば, 以前 Office 2007 を試しにインストールした記憶があります.
+
+<a href="http://msdn.microsoft.com/ja-jp/library/cc392381.aspx" target="_blank">ロケールIDが1041</a>になっているので, C:\Program Files\Common Files\System\Msmapi\1041 を開きます.
+
+Msmapi32.dll というファイルがあれば, それを名称変更します.  "削除すればOKだった"ケース かもしれませんが, "削除しなくてもOKだった"ケースだと恐ろしいのでファイル削除はやめます. この後にOutlookを起動すると問題なく動作します.
+
+詳しくは「<a href="http://support.microsoft.com/kb/926196/ja" target="_blank">Outlook 2003 を起動するとエラー メッセージ "MAPI32.DLL は壊れているか、バージョンが間違っています" が表示される</a>」でどうぞ.

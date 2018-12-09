@@ -1,0 +1,12 @@
+#+TITLE: "Vancouver Film School"
+#+DATE: 2008-03-05T12:30:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>すごいよ！</h4>
+<a href="http://www.vfs.com/">Vancouver Film School(VFS)</a>の作品を見ました。
+率直な感想は「すごい！！」という言葉に尽きます。
+
+たとえば、特に戦車が出てくるこの作品。
+
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="555" height="355" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="wmode" value="transparent" /><param name="src" value="http://www.youtube.com/v/dEnu6nGS8gI" /><embed type="application/x-shockwave-flash" width="555" height="355" src="http://www.youtube.com/v/dEnu6nGS8gI" wmode="transparent"></embed></object>

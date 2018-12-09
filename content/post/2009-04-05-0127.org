@@ -1,0 +1,26 @@
+#+TITLE: "Liquid(セットアップ編): Part 1"
+#+DATE: 2009-04-05T12:32:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>コンパイルができた(？)ので実際に使ってみる</h4>
+<p><a href="http://www.hiroakit.com/blog/2009/04/post_76.html" target="_blank">Liquid(コンパイル編): Part 1</a> でプラグインは読み込んだけど、そこで止まってた。なので、今回はその続き。セットアップに色々とすることがあるみたいなので、まずはそこからやっていきます。</p>
+<h4>環境変数を設定する(Windows)<br /></h4>
+<p>Mayaのプラグインを置く場所は標準で決まってるけど、そこまで行くためには、何回もフォルダをクリックしないといけなくて、それがものすごく面倒に感じました。環境変数を使うと変更できるみたいなので、それをしてプラグインを置く場所を初期設定の所から変更してみました。Liquidの設置場所は D:\plugins\Liquid\ です。(他にも設定すること沢山あったけど、とりあえず)</p>
+<p>この環境変数、設定する際に共通した部分を先に定義しておくと後が楽なことに気がつきました。<br />どういうことかというと、例えば、変数名を LIQUIDHOME としたものを新規につくります。変数値は次のとおり。</p>
+<pre>D:\plugins\Liquid</pre>
+<p>すると、%LIQUIDHOME% と記述すれば D:\plugins\Liquid\ と同じようにWindowsが解釈するみたいです。これで D:\plugins\Liquid の部分で変更したくなったら、LIQUIDHOME に修正を加えるだけで %LIQUIDHOME% が含まれているパス全てに変更が行き渡ります。（でも、たぶん一番利点が出てくるのは見易くなることだと思うんですよね。Windowsの環境変数を設定する際のあのウィンドウ。拡大できないんでしょうか・・・、見づらいよ）</p>
+<h4>結果</h4>
+<p>環境変数を設定した結果、こんな風になりました。</p>
+<p><strong>LIQUIDHOME</strong></p>
+<pre>D:\plugins\Liquid</pre>
+<p><strong>LIQUID_GLOBALS_OVERRIDE</strong></p>
+<pre>%LIQUIDHOME%\renderers</pre>
+<p><strong>MAYA_PLUG_IN_PATH</strong></p>
+<pre>%LIQUIDHOME%\bin\generic</pre>
+<p><strong>MAYA_SCRIPT_PATH</strong></p>
+<pre>%LIQUIDHOME%\mel</pre>
+<p><strong>PATH</strong></p>
+<pre>%LIQUIDHOME%\bin\generic</pre>
+<p><strong>XBMLANGPATH</strong></p>
+<pre>%LIQUIDHOME%\icons</pre>

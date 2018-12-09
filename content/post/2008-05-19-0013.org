@@ -1,0 +1,8 @@
+#+TITLE: "RED Digital Cinema Camera"
+#+DATE: 2008-05-19T18:43:53+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>RED ONE<br /></h4>
+<p><a href="http://www.red.com/">RED Digital Cinema Camera</a>は<a class="keyword" href="http://d.hatena.ne.jp/keyword/Oakley">Oakley</a>の創業者が設立したものです。<br />（僕は知りませんでしたが、サングラスメーカーとして有名だそうです）</p>
+<p>この会社がNAB2007で発表した4Kシネマカメラ"<strong><span class="highlight">RED ONE</span></strong>"が、いま注目されています。<br /><br />映画監督ピーター・ジャクソンがプロトタイプを使って短編映画「Crossing the Line」を作ったこと、Final Cut Pro 2 を出したAppleがCMに起用したという背景もあり、その勢いは止まりません。さらに$17,500という価格で4Kシネマカメラ手に入るという衝撃がさらなる拍車をかけると思います。<br /><br />僕よりも詳しいネットの方がいましたのでご紹介いたします。<br /><a href="http://d.hatena.ne.jp/zahrky/20070525/p1">気になるカメラ - RED ONE - そこにはなにがある</a><br /><br />また、2009年に出荷される予定の別のシリーズ<strong>SCARLET</strong>は3Kの映像を撮ることができる模様です。正確な情報を持ってはいないのですが、$3,000を切る価格になるのではないか、という噂です。<br /><br />30万で3Kの映像を撮ることができる、僕はこの大きな魅力に注目しています。<br /><br />なお、このRED Digital Cinema Camera社のTed Schilowitz氏の講演が6月11日から13日かけて開かれるIMC TOKYO 2008 において開かれますので、僕は行ってみます。</p>

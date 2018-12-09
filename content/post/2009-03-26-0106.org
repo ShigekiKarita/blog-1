@@ -1,0 +1,48 @@
+#+TITLE: "RenderManについて調べてみた Part2"
+#+DATE: 2009-03-26T09:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>RenderManについて調べてみた</h4>
+<p>どういったことができるのか、どういった仕組みなのかをどこから探っていけばいいのかを簡単にですが調べてみました。どうやら、3点を抑える必要があるようです。</p>
+<ul>
+<li><a href="#RISpec">RISpec</a></li>
+<li><a href="#RIB">RIB</a></li>
+<li><a href="#RSL">RSL</a></li>
+</ul>
+<h4><a name="RISpec"></a>RISpec(RenderMan Interface Specification)</h4>
+<p>RenderManのインターフェース仕様のことのようです。<br />詳しいことは<a href="https://renderman.pixar.com/products/rispec/index.htm" target="_blank">RenderMan - Developers Corner - RI Specs</a> に書いてあるみたい。<a href="https://renderman.pixar.com/products/rispec/index.htm" target="_blank"><br /></a></p>
+<h4><a name="RIB"></a>RIB(RenderMan Interface Bytestream)</h4>
+<p>RenderManにおける3次元形状情報のことを指すみたいです。<br />前回の、<a href="http://www.hiroakit.com/blog/2009/03/post_64.html" target="_blank">Ubuntu 8.10 と Pixie(RenderMan) インストール編</a>でも出てきました。</p>
+<pre># minimal.rib : minimal rib file<br />Display "minimal.tiff" "file" "rgba"<br />Projection "perspective" <br />WorldBegin<br />	Translate 0 0 2<br />	Sphere 1 -1 1 360<br />WorldEnd<br /></pre>
+<h5>1行目</h5>
+<p>コメントアウトは "#" でするみたい。</p>
+<h5>2行目</h5>
+<p>DIsplayでは結果の保存方法を指定するみたい。</p>
+<ul>
+<li>1番目の項目はファイル名について</li>
+<li>上記の例だと "minimal.tiff" をファイル名と指定しています。</li>
+<li>2番目の項目は結果の出力方法について</li>
+<li>結果を "file" として保存する指定にしているみたい。これを "framebuffer" とも指定できるみたいで、そうすると画面に直接表示されるみたいです。</li>
+<li>3番目の項目は保存するデータの種類について</li>
+<li>"rgba" となっているので、赤緑青と不透明度(アルファチャンネル)の指定できるみたい。</li>
+</ul>
+<h5>3行目</h5>
+<p>Projectionによって、投影方法を指定できるようです。ここで投影方法を指定しない場合は、平行投影 ("orthographic")が適応されるみたいです。例だと、透視投影("perspective")を指定してますね。</p>
+<p>なお、投影方法だけを指定しているらしく、カメラは原点に存在していてZ軸正方向を向いているようです。</p>
+<h5>4?7行目</h5>
+<p>WorldBeing・・・WorldEndの中に物体の形や色などの情報を指定するようです。WorldBeginは様々な設定が終了し描画準備を始めることを示していて、対するWorldEndは3次元形状の設定が終わり、結果を出力することを示すようです。</p>
+<p>この部分のことをワールドブロックと呼ぶようです。</p>
+<p>もうちょっと調べないとダメですね。情報が少なすぎる。</p>
+<h4><a name="RSL"></a>RSL(Renderman Shading Language)</h4>
+<p class="r">RenderManのシェーディング言語のことのようです。<a href="http://en.wikipedia.org/wiki/RenderMan_Shading_Language" target="_blank">Wikipedia</a> には"The Language syntax is C-like"とありますね。それから、シェーダーをクラスとして記述できるみたいです。</p>
+<ul>
+<li><a href="http://www.ousam.com/blog/2008/09/02/524" target="_blank">* little things of mine *: RSL 2.0</a></li>
+<li><a href="http://www.fundza.com/rman_shaders/oop/intro/index.html" target="_blank">RSL - Introduction to Shader Objects</a></li>
+</ul>
+<h4 class="r">メモとして</h4>
+<p class="r"><a class="l" onmousedown="return clk(this.href,'','','res','3','')" href="http://www.smartcg.com/tech/cg/courses/RMan/notes/Class02/Class02.html">Class 2: Intro' to shader writing: <em>RSL</em> (<em>RenderMan</em> Shading Language)</a></p>
+<p><a href="http://accad.osu.edu/~smay/RManNotes/" target="_blank">RManNotes</a></p>
+<p><a href="http://lucille.sourceforge.net/docs/japanese/tutorial/tutorial1.html" target="_blank">RenderMan 入門 | 初めてのレンダリング</a></p>
+<p><a href="http://www.netlaputa.ne.jp/~fukuma/CG/RenderMan.html" target="_blank">RenderManについて</a></p>
+<p><a href="http://wiki.livedoor.jp/m_riho/d/RenderMan%a4%ce%a4%aa%ca%d9%b6%af%28%a5%b7%a5%a7%a1%bc%a5%c0%b8%c0%b8%ec%a4%c8%a4%cf%29#content_1" target="_blank">RenderManのお勉強(シェーダ言語とは)</a></p>

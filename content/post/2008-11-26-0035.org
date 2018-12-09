@@ -1,0 +1,35 @@
+#+TITLE: "FlashDevelop Install"
+#+DATE: 2008-11-26T07:50:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>FlashDevelop</h4>
+<p>FlashDevelopは、Flash ActionScript 用の統合開発環境です。<br /> 補完機能のとても優秀でコーディング作業がスムーズになります。<br /> 早速、インストールします。</p>
+<h4>インストール手順</h4>
+<p>1) MicroSoft .Net Framework 2.0 のインストール<br /> 2) JDK 6 のインストール<br /> 3) Flex 3 SDK のインストール<br /> 4) FlashDevelop 3.0.0 をインストール</p>
+<h4>Microsoft .NET Framework Version 2.0</h4>
+<ul>
+<li><a href="http://www.microsoft.com/downloads/details.aspx?displaylang=ja&amp;FamilyID=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5">.NET Framework Version 2.0 再頒布可能パッケージ (x86)</a></li>
+</ul>
+<p>案内に従いインストールします。</p>
+<p>&nbsp;</p>
+<h4>JDK 6</h4>
+<ul>
+<li><a href="http://java.sun.com/javase/downloads/index.jsp">Java SE Downloads</a></li>
+</ul>
+<p>Flex SDK のコンパイルにはJDKが必須なためインストールします。<br /> 案内に従いインストールします。(今回はJDK 6 Update 10 でした)</p>
+<h4>Flex 3 SDK</h4>
+<ul>
+<li><a href="http://www.adobe.com/products/flex/flexdownloads/index.html">Adobe - Download Adobe Flex 3</a></li>
+</ul>
+<p>解凍を C ドライブの直下にします。フォルダ名を flex とします</p>
+<p>その後、環境変数に以下を追加します。</p>
+<pre><p>;C:\flex\bin</p></pre>
+<h4>FlashDevelop 3.0.0</h4>
+<ul>
+<li><a href="http://www.flashdevelop.org/community/">FlashDevelop.org :: Index</a></li>
+</ul>
+<p>案内に従いインストールします。(今回はFlashDevelop 3.0.0 Beta9です)</p>
+<p>&nbsp;</p>
+<h5>Flex SDK</h5>
+<p>メニューから[ツール]&rarr;[プログラム設定]を開き、「Plugins」内の「AS3Context」を選択します。 右に表示される設定の中の「AS3」の中に「Flex SDK Location」で、「Flex3 SDK」をインストールしたディレクトリを指定します。</p>

@@ -1,0 +1,32 @@
+#+TITLE: "Firefoxは</li>の後に があるとページが崩れる。"
+#+DATE: 2009-02-16T12:54:56+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>本題に入る前に</h4>
+<p>このブログの一番下にページのナビゲーターがあります。<br /> 前まではIE以外で閲覧した場合、崩れた状態が表示されたのですが<br /> 今回修正が完了しました。</p>
+<h4>Firefoxは&lt;/li&gt;の後に&amp;nbsp;があると崩れる。</h4>
+<h5>実際に見る</h5>
+<p>このデモをIE6で見ると、きれいに数字が横に並んでいます。<br /> しかし、Firefoxで見た場合、ずれていることが確認できます。</p>
+<ul>
+<li><a href="http://www.hiroakit.com/blog/testLayout_before.html" target="_blank">デモ</a></li>
+</ul>
+<h5>ソースを見る</h5>
+<p>ソースは以下のとおりです。<br /> (&lt;/li&gt;の後に空白があることを確認してください。)</p>
+<p><textarea class="html" name="code">&lt;html&gt; &lt;head&gt;   &lt;style type="text/css"&gt;   &lt;!--   #navigator ul li{     float: left;     height: 25px;     margin: 3px;     font-size: 12px;     line-height: 25px;     display: inline;   }   --&gt;   &lt;/style&gt; &lt;/head&gt; &lt;body&gt;   &lt;div id="navigator"&gt;     &lt;ul&gt;       &lt;li&gt;&lt;span&gt;&lt;a href="*"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&nbsp;       &lt;li&gt;&lt;span&gt;&lt;a href="*"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&nbsp;       &lt;li&gt;&lt;span&gt;&lt;a href="*"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&nbsp;       &lt;li&gt;&lt;span&gt;&lt;a href="*"&gt;4&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&nbsp;       &lt;li&gt;&lt;span&gt;&lt;a href="*"&gt;5&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&nbsp;     &lt;/ul&gt;   &lt;/div&gt; &lt;/body&gt; &lt;/html&gt; </textarea></p>
+<p>&lt;li&gt;をCSS で float: left; して横並びさせ、数字の間隔を margin で空けています。</p>
+<h4>何故、&lt;/li&gt;の後に&amp;nbsp;があるのか。</h4>
+<p>おそらく&lt;/li&gt;の後に&amp;nbsp;を書く人は、まずいないと思います。今回、僕が&lt;/li&gt;の後に&amp;nbsp;を置いてしまったのは、Movable Type でページ分割をする際に必要となった <a href="http://www.skyarc.co.jp/engineerblog/entry/2642.html" target="_blank">PageBute</a> の説明をきちんと読んでいなかったからです。</p>
+<blockquote>
+<p>&lt;$MTPageLists$&gt;     各ページへのリンクを指定します。<br /> delim="*"<br /> MTPageListsのアトリビュートです。ページ番号とページ番号の間の区切りの指定が可能です。指定しない場合は &amp;nbsp; が入ります。</p>
+</blockquote>
+<h4>修正方法</h4>
+<p>&lt;/li&gt;の後に&amp;nbsp;を入れなければ、この問題は回避できます。</p>
+<ul>
+<li><a href="http://www.hiroakit.com/blog/testLayout_after.html" target="_blank">デモ</a></li>
+</ul>
+<p>ですので、今回のケースでは PageBute の解説にあった「delim を指定しないと &amp;nbsp; が入る」といったところを何とかすればいいことになります。</p>
+<h5>修正前 (Movable Type 上でのコード)</h5>
+<p><textarea class="html" name="code">&lt;div id="navigator"&gt;   &lt;ul&gt;     &lt;MTIfPageBefore&gt;       &lt;$MTPageBefore delim="前"$&gt;     &lt;/MTIfPageBefore&gt;     &lt;$MTPageLists link_start="&lt;li&gt;&lt;span&gt;" link_close="&lt;/span&gt;&lt;/li&gt;"$&gt;     &lt;MTIfPageNext&gt;       &lt;$MTPageNext delim="次"$&gt;     &lt;/MTIfPageNext&gt;   &lt;/ul&gt; &lt;/div&gt; </textarea></p>
+<h5>修正後 (Movable Type 上でのコード)</h5>
+<p><textarea class="html" name="code">&lt;div id="navigator"&gt;   &lt;ul&gt;     &lt;MTIfPageBefore&gt;       &lt;$MTPageBefore delim="前"$&gt;     &lt;/MTIfPageBefore&gt;     &lt;$MTPageLists delim="" link_start="&lt;li&gt;&lt;span&gt;" link_close="&lt;/span&gt;&lt;/li&gt;"$&gt;     &lt;MTIfPageNext&gt;       &lt;$MTPageNext delim="次"$&gt;     &lt;/MTIfPageNext&gt;   &lt;/ul&gt; &lt;/div&gt; </textarea></p>

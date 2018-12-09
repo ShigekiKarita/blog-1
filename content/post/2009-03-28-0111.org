@@ -1,0 +1,20 @@
+#+TITLE: "Ubuntu と Cutter"
+#+DATE: 2009-03-28T12:49:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>UbuntuでCutterを使う</h4>
+<h5>Cutterって何なの？</h5>
+<p>RenderManのテキストエディタみたいです。英語なので詳しいところまでは読み取れませんが、Vimとかemacsではなくて、Cutterを使って書いていく方法も出てきたわけですね。</p>
+<p><a href="http://www.fundza.com/cutter/about/index.html" target="_blank">Cutter About</a></p>
+<blockquote>
+<p>Cutter was originally intended to be a RenderMan text editor that 			would enable users to conveniently create, edit, render and compile  			rib documents and shading language source code files. Since its 			introduction in 2001 I have added many "RenderMan savvy" features  			to Cutter to ensure it is a self contained environment. 			<br /> <br /> In addition to being tightly coupled to Rib and RSL it has also evolved 			into a useful text editor for a number of other scripting and  			programming languages such as Tcl, Mel, Python, Perl, Vfl, Ifd, Html, Shake, 			C, CPP and Java.</p>
+</blockquote>
+<p>あと、ここには引用した文章には書いてないのですが、Cutterで mi (mental ray) を書いていく方法もあるみたいです。(ShakeってApple が出している Shake の言語のことかな。)</p>
+<p><a href="http://www.fundza.com/cutter/mental_ray/about.html" target="_blank">Cutter Integration with mental ray</a></p>
+<h5>Cutterをダウンロードします。</h5>
+<p>"Cutter Text Editor" と書かれている周辺に&nbsp;Download v5.5.5  [22 jan '09] とあるので、そこからダウンロードします。(時期によってバージョンが変わっているかもしれません)</p>
+<h4>Cutterをインストール</h4>
+<p>インストールといっても、<a href="http://www.fundza.com/cutter/installation/installation.html" target="_blank">Cutter Installation</a>を見る限りだとファイルを置くだけのようです。ダウンロードしたCutterと同じディレクトリに run.txt というファイルを<a href="http://www.fundza.com/cutter/installation/installation.html" target="_blank">Cutter Installation</a> からダウンロードします。その後、ファイル名を run.txt から .txt に変更します。次にパーミションを変更します。</p>
+<pre>$ chmod 777 run<br /></pre>
+<p>ターミナルから run というファイルがあるところで ./run と打ち込むと起動します。</p>

@@ -1,0 +1,17 @@
+#+TITLE: "DreamWeaver"
+#+DATE: 2008-04-06T15:26:50+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>最近、DreamWeaverを使うことになりました。</h4>
+<p>やはり、今までは愛用していたAptanaとは違いますね。<br />似た部分も勿論ありますが、ちゃんと使えるようになるため頑張りたいところ。</p>
+<h5>まずはショートカットキーを覚える</h5>
+<p>新しいソフトを使うことになった場合、できる限りホットキーを使うよう心がけています。<br />今回、DreamWeaverの記事を見つけることができたのでご紹介します。</p>
+<ul>
+<li><a href="http://www.adobe.com/jp/devnet/dreamweaver/articles/dw10seminar_kondo_codeview.html">もうテキストエディタには戻れない</a><a href="http://www.adobe.com/jp/devnet/dreamweaver/articles/dw10seminar_kondo_codeview.html" target="_blank"></a></li>
+</ul>
+<p>ひとまずは以下のホットキーを覚えることにしました。</p>
+<blockquote>
+<p>Ctrl + g<br />行を指定して移動<br /><br />Ctrl + Alt +&nbsp; ]<br />インデントの挿入<br /><br />Ctrl + Alt +&nbsp; [<br />インデントの削除<br /><br />Ctrl + [<br />親タグを選択する<br /><br />Ctrl + Alt + i<br />画像の挿入<br /><br />Ctrl + T<br />タグで括る</p>
+</blockquote>
+<p>無駄なキータイピングを極力減らして、多くTry &amp; Errorできるようがんばって覚えます。</p>

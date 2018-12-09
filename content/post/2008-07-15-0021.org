@@ -1,0 +1,6 @@
+#+TITLE: "最近みたWEBページ part2"
+#+DATE: 2008-07-15T19:41:08+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<p><a href="http://www.ironfactory.jp/">アイロン</a><br />怒ってるときに検索していたら遭遇しました。<br />このサイトのおかげか、ストレスとおさらばできました。<br /><br /> <a href="http://www.afpbb.com/article/environment-science-it/it/2415865/3112275">インターネットに重大な脆弱性が見つかる、各社が共同でパッチを作成</a><br />OSとかブラウザとかではなく、インターネットに脆弱性とのこと。<br />英語がもうちょっと読めれば、ことの詳細がわかるんでしょうが、いかんせんちょっと。。。<br /><br /><a href="http://www.anchorsystems.jp/anchor/ashp/peggy/pegindex.html">Peggyの紹介</a><br />テキストエディタを発見しました。<br />いままでTerapadをメインに使ってきましたが、乗り換えようか検討中です。<br /><br /><a href="http://www.hachiga.com/">hachiga.com</a><br />これまた偶然遭遇しました。</p>

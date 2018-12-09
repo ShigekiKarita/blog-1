@@ -1,0 +1,6 @@
+#+TITLE: "WebKit と Acid3"
+#+DATE: 2008-09-28T09:04:39+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<p><a href="http://www.itmedia.co.jp/enterprise/articles/0809/27 /news010.html">WebKitが「Acid3」に満点で合格</a><br /><br />おー！！<br />これには感動しました。</p>

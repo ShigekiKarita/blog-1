@@ -1,0 +1,144 @@
+#+TITLE: "XMP: Extensible Metadata Platform"
+#+DATE: 2009-04-03T07:45:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>XMP について調べてみた</h4>
+<p>Adobe の技術の一つみたいです。</p>
+<ul>
+<li><a href="http://www.adobe.com/devnet/xmp/" target="_blank">Adobe XMP Developer Center</a></li>
+</ul>
+<h5>ダウンロードしたもの</h5>
+<p>計7点(「いらねぇだろ、これ」みたいのもあるかもしれないけど)</p>
+<ul>
+<li><a href="http://download.macromedia.com/pub/developer/xmp/sdk/XMP-Toolkit-SDK-4.4.2.zip" target="_blank">XMP Toolkit SDK</a></li>
+<li><a class="icon pdf-file" href="http://www.adobe.com/devnet/xmp/pdfs/XMP-Toolkit-SDK-Overview.pdf" target="_blank">XMP Toolkit SDK Overview</a></li>
+<li><a href="http://www.adobe.com/devnet/xmp/pdfs/xmp_public_patent_license.pdf" target="_blank">XMP Specification Public Patent License</a></li>
+<li><a class="icon pdf-file" href="http://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart1.pdf" target="_blank">Part 1, Data and Serialization Models</a></li>
+<li><a class="icon pdf-file" href="http://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart2.pdf" target="_blank">Part 2, Standard Schemas</a></li>
+<li><a class="icon pdf-file" href="http://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart3.pdf" target="_blank">Part 3, Storage in Files</a></li>
+<li><a class="icon pdf-file" href="http://www.adobe.com/devnet/xmp/pdfs/DynamicMediaXMPPartnerGuide.pdf" target="_blank">Partners Guide to XMP for Dynamic Media</a></li>
+</ul>
+<h4>で、これらはいったい何なの？</h4>
+<h5>XMPでできること</h5>
+<p>メタデータを付けたり、抽出したりすることができるみたい。</p>
+<p><a href="http://www.adobe.com/jp/enterprise/xmp.html" target="_blank">アドビの法人向けソリューション：XMP</a></p>
+<ul>
+<li>ワークグループの目的に合わせて調整できるので、メディアをより効率的に管理し自動化できる</li>
+<li>既存および将来のテクノロジ投資を保護する</li>
+<li>実装したものを全面的に活用、拡張およびカスタマイズできる</li>
+<li>データをXML表示できるため、ユーザにもXMLベースのシステムにも理解できる</li>
+<li>ワークフローの全体にわたってメタデータを保持する</li>
+</ul>
+<p>ページのタイトルが 法人向けソリューション となっているけれども気にしない(笑</p>
+<h5><span class="icon pdf-file">XMP Toolkit SDK ？</span></h5>
+<p>どうやら、XMP Toolkit SDK には XMPCore というのと XMPFiles というライブラリが入っているみたいです。</p>
+<blockquote>
+<p>The XMP Toolkit SDK contains two libraries, XMPCore and XMPFiles.</p>
+</blockquote>
+<h6>XMPCore ： 主に構文解析をする役割を担ってる？</h6>
+<blockquote>
+<p>This library supplies an API for parsing, manipulating, and serializing metadata, according to the XMP　data model and regardless of the file format of the data it describes. The XMPCore API is provided by　the classes XMPMeta, XMPIterator, and XMPUtils; a complete API Reference is available in both HTML　and Javadoc.</p>
+</blockquote>
+<h6>XMPFiles ： XMPCoreにデータを渡す係？</h6>
+<blockquote>
+<p>This library supplies an API for locating, adding, or updating the XMP metadata in a file. The API allows　you to retrieve the entire XMP Packet, which you can then pass to the XMPCore component in order to　manipulate the individual XMP properties.</p>
+</blockquote>
+<p>英語は本当によくわからない(笑</p>
+<h5>Embedding XMP Metadata in Application Files<br />(XMPを埋め込めるアプリケーションのファイル ?)</h5>
+<p><a href="http://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart2.pdf" target="_blank">XMPSpecificationPart2.pdf</a> に書いてありました</p>
+<h6>Image formats</h6>
+<ul>
+<li>DNG (Digital Negative)</li>
+<li>GIF (Graphic Interchange Format)</li>
+<li>JPEG</li>
+<li>JPEG 2000</li>
+<li>PNG (Portable Network Graphics)</li>
+<li>TIFF (Tagged Image File Format)</li>
+</ul>
+<h6>Dynamic media formats</h6>
+<ul>
+<li>ASF (WMA, WMV)</li>
+<li>AVI</li>
+<li>FLV (Flash Video)</li>
+<li>MOV (QuickTime)</li>
+<li>MP3</li>
+<li>MPEG-2</li>
+<li>MPEG-4</li>
+<li>SWF (Flash)</li>
+<li>WAV</li>
+</ul>
+<h6>Video package formats</h6>
+<ul>
+<li>AVCHD</li>
+<li>P2</li>
+<li>Sony HDV (High Definition Video)</li>
+<li>XDCAM EX</li>
+<li>XDCAM FAM</li>
+<li>XDCAM SAM</li>
+</ul>
+<h6>Adobe application formats</h6>
+<ul>
+<li>AI (Adobe Illustrator)</li>
+<li>INDD, INDT (Adobe InDesign)</li>
+<li>PSD (Adobe Photoshop)</li>
+</ul>
+<h6>Markup formats</h6>
+<ul>
+<li>HTML</li>
+<li>XML</li>
+</ul>
+<h6>Document formats</h6>
+<ul>
+<li>PDF</li>
+<li>PS, EPS (PostScript and Encapsulated PostScript)</li>
+<li>UCF (Universal Container Format)</li>
+</ul>
+<p>OpenEXR は・・・、ないですよね(笑<br />それから、AVCHD や P2 はなんとなく聞いたことあるんだけど、<br />XDCAM っていうのは初めて聞いた名称です。あとで調べてみよっと。</p>
+<h5>ソフトウェアが理解しないファイルでもメタデータを付けられる</h5>
+<p><a href="http://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart3.pdf" target="_blank">XMPSpecificationPart3.pdf</a> にこんなことが書いてありました。</p>
+<blockquote>
+<p>The XMP packet wrapper can enable the use of embedded XMP by software that does not understand the format of the file. The packet wrapper is not the sole aspect of embedding XMP in a file. The entire XMP packet must still be placed in the file as an appropriate component of the file&rsquo;s structure.</p>
+</blockquote>
+<p>さっき列挙したファイルフォーマット以外でもメタデータを付けられるということでしょうか。<br />英語は全然わからない。読めないのって結構痛手ですよね・・・・・・。</p>
+<pre class="xml">&lt;?xpacket begin="byte-order marker" id="W5M0MpCehiHzreSzNTczkc9d"?&gt;<br /><br />... the serialized XMP as described above: ...<br /><br />&lt;?xpacket end="w"?&gt; </pre>
+<p>xpacketっていうのを使えば良いみたいです。</p>
+<h4>で、これらを使って何がしたいの？</h4>
+<p>とりあえず、僕がやりたいのはファイルに5W1Hなメタデータを付けることだけです。</p>
+<h6>例えば、レンダリングかけたときとか<br /></h6>
+<ul>
+<li><strong>いつ(when)</strong></li>
+<p>いつレンダリングを始めて、いつレンダリングが終わったのか。</p>
+<li><strong>なにを(what)</strong></li>
+<p>どのファイルをレンダリングしたのか。(どのショットなのか)</p>
+<li><strong>だれが(who)</strong></li>
+<p>だれが行ったのか。(どの工程段階の人がレンダリングをかけたのか)</p>
+<li><strong>どこで(where)</strong></li>
+<p>どのマシン(IPでもホストでもいいけど)で書き出されたモノなのか。もしも、ネットワークでやったなら、そのキュー(ジョブ)を投げた場所はどこからなのか。会社なのか、はたまたVPNで繋いだ回線（たとえば自宅から）なのかどうか。</p>
+<li><strong>なぜ(why)</strong></li>
+<p>レンダリングかけた理由が、Fluidなどを確認するために行ったものなのか、アニメーションのテスト(プレイブラストでいいのかもしれないけど)なのか、コンポジット用に使うために行ったのかとか。</p>
+<li><strong>どのように(how)</strong></li>
+<p>ネットワーク使ってレンダリングしたのか、それともローカルでやったのかとか。使ったソフトウェア(Mayaなのか3dsMaxなのかXSIなのか、はたまたHoudiniなのか。それとレンダラーはMental ray なのか RenderManなのかV-Rayなのか、Maxwellなのか。）スキャンラインでやったのか、レイトレーシングでやったんか、ライトはいくつ使ったのとか、カメラはいくつあるのとか、役者はだれ？とか</p>
+</ul>
+<h6>例えば、データを相手にZipで渡すときとか<br /></h6>
+<ul>
+<li><strong>いつ(when)</strong></li>
+<p>いつファイルを集めて、それをZipに圧縮したのか。<br />そして、それをいつ相手に送信したのか。(あるいは、いつそれを受け取ったのか。)</p>
+<li><strong>なにを(what)</strong></li>
+<p>どのファイルをZipに圧縮したのか。<br />どのファイルを相手に送ったのか。</p>
+<li><strong>だれが(who)</strong></li>
+<p>だれが行ったのか。<br />あるいは、誰に渡したのか。(外部なのか、自分たちのチーム内なのか)</p>
+<li><strong>どこで(where)</strong></li>
+<p>どのマシン(IPでもホストでもいいけど)で書き出されたモノなのか。もしも、ネットワークでやったなら、そのキュー(ジョブ)を投げた場所はどこからなのか。会社なのか、はたまたVPNで繋いだ回線（たとえば自宅から）なのかどうか。</p>
+<li><strong>なぜ(why)</strong></li>
+<p>相手にどうしてファイルを送信するのか。</p>
+<li><strong>どのように(how)</strong></li>
+<p>メールで送ったのか、ネットにあるファイル送信サービスみたいのを使ったのか、あるいはサーバーからダウンロードしてくださいとお願いしたのか、それともSkype、インスタントメッセンジャーなどで送信したのか、はたまたUSBとかHDDでお菓子+アルファ形式で渡したのか(笑</p>
+</ul>
+<p>プライベートな情報もちょっと入ってしまうのかなぁ。そこは避けたいけど・・・・・・。<br />そもそも、できんのかよ？ってところですよね(笑<br />難しそうですね・・・。</p>
+<h4>とりあえず、環境構築整える</h4>
+<p>でも色々と問題が・・・。いっぱい揃える必要あるっぽい。<br />色々試しながら、揃えていこうと思います。</p>
+<p>一応、Windows, Max OS X, Linux で開発できるみたいですね。<br />(全く試してないのでなんとも言えないですが、おそらく・・・)</p>
+<pre>D:.<br />├─build<br />│&nbsp; ├─gcc3.2<br />│&nbsp; │&nbsp; ├─i80386linux<br />│&nbsp; │&nbsp; └─sparcsolaris<br />│&nbsp; ├─vsnet8<br />│&nbsp; └─xcode2<br />│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─XMPToolkitSDK.xcodeproj<br />├─docs<br />│&nbsp; └─API<br />├─java<br />│&nbsp; ├─XMPCore<br />│&nbsp; │&nbsp; ├─docs<br />│&nbsp; │&nbsp; │&nbsp; ├─com<br />│&nbsp; │&nbsp; │&nbsp; │&nbsp; └─adobe<br />│&nbsp; │&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─xmp<br />│&nbsp; │&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─class-use<br />│&nbsp; │&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─options<br />│&nbsp; │&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; │&nbsp; └─class-use<br />│&nbsp; │&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─properties<br />│&nbsp; │&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─class-use<br />│&nbsp; │&nbsp; │&nbsp; ├─index-files<br />│&nbsp; │&nbsp; │&nbsp; └─resources<br />│&nbsp; │&nbsp; └─src<br />│&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─com<br />│&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─adobe<br />│&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─xmp<br />│&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─impl<br />│&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; │&nbsp; └─xpath<br />│&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─options<br />│&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─properties<br />│&nbsp; └─XMPCoreCoverage<br />│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─src<br />│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─samples<br />├─public<br />│&nbsp; └─include<br />│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─client-glue<br />├─samples<br />│&nbsp; ├─build<br />│&nbsp; │&nbsp; ├─gcc3.2<br />│&nbsp; │&nbsp; ├─vsnet8<br />│&nbsp; │&nbsp; └─xcode2<br />│&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─XMPSamples.xcodeproj<br />│&nbsp; ├─intermediate<br />│&nbsp; │&nbsp; ├─CustomSchema<br />│&nbsp; │&nbsp; │&nbsp; └─windows<br />│&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─Release<br />│&nbsp; │&nbsp; ├─DumpFile<br />│&nbsp; │&nbsp; │&nbsp; └─windows<br />│&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─Release<br />│&nbsp; │&nbsp; ├─DumpMainXMP<br />│&nbsp; │&nbsp; │&nbsp; └─windows<br />│&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─Release<br />│&nbsp; │&nbsp; ├─DumpScannedXMP<br />│&nbsp; │&nbsp; │&nbsp; └─windows<br />│&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─Release<br />│&nbsp; │&nbsp; ├─ModifyingXMP<br />│&nbsp; │&nbsp; │&nbsp; └─windows<br />│&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─Release<br />│&nbsp; │&nbsp; ├─ReadingXMP<br />│&nbsp; │&nbsp; │&nbsp; └─windows<br />│&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─Release<br />│&nbsp; │&nbsp; ├─XMPCommand<br />│&nbsp; │&nbsp; │&nbsp; └─windows<br />│&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─Release<br />│&nbsp; │&nbsp; ├─XMPCoreCoverage<br />│&nbsp; │&nbsp; │&nbsp; └─windows<br />│&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─Release<br />│&nbsp; │&nbsp; ├─XMPFilesCoverage<br />│&nbsp; │&nbsp; │&nbsp; └─windows<br />│&nbsp; │&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─Release<br />│&nbsp; │&nbsp; └─XMPIterations<br />│&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─windows<br />│&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─Release<br />│&nbsp; ├─source<br />│&nbsp; │&nbsp; ├─common<br />│&nbsp; │&nbsp; ├─dumpfile<br />│&nbsp; │&nbsp; └─xmpcommand<br />│&nbsp; ├─target<br />│&nbsp; │&nbsp; └─windows<br />│&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─release<br />│&nbsp; └─testfiles<br />├─source<br />│&nbsp; ├─common<br />│&nbsp; ├─XMPCore<br />│&nbsp; └─XMPFiles<br />│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─FileHandlers<br />│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─FormatSupport<br />└─third-party<br />&nbsp;&nbsp;&nbsp; ├─expat<br />&nbsp;&nbsp;&nbsp; ├─MD5<br />&nbsp;&nbsp;&nbsp; ├─QTDevWin<br />&nbsp;&nbsp;&nbsp; └─zlib</pre>
+<p>third-party というフォルダが気になります。<br />たぶん、ライブラリ揃えてください、ってことだと思うんですね。</p>
+<p id="entry_title">よくわからないけども、とりあえず samples で試していこうと思います。<br />続きは <a href="../../blog/2009/04/post_81.html">XMP ToolKit SDK のサンプルをコンパイル</a> から<a href="../../blog/2009/04/post_81.html">。<br /></a></p>

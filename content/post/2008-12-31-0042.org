@@ -1,0 +1,33 @@
+#+TITLE: "Opera 9.6"
+#+DATE: 2008-12-31T02:55:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<p>いつもネットをみるときは大抵 Firefox を使っています。<br /> ただ、実のところ Opera もちょくちょく使っています。<br /> 日常で2つも使うのってどうなのだろうとは思うのですけど、<br /> ページによっては Opera で見たいときがあります。<br /> また、あの独特のスクロール感が大好きなんです。</p>
+<h4>Opera upgrade<br /></h4>
+<p>そんな Opera を先日アップグレードしました。<br /> 新しくなったOperaのバージョン 9.6 。<br /> 完了すると<a href="http://portal.opera.com/upgrade/">このページ</a>に飛びました。</p>
+<p>&nbsp;</p>
+<h4>Opera 9.6 の印象的なフォント</h4>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_081231_01.png" alt="photo_081231_01.png" /></p>
+<p>ページを最初に見たとき、ある部分に目が行きました。<br /> Opera 9.6 という大きなタイトルのフォントです(笑<br /> とても気になりました。特に" 9 "という文字が印象的です。</p>
+<p>&nbsp;</p>
+<h4>調べてみた</h4>
+<p>そこで、どんなフォントを使っているのかと自分なりに調べてみました。</p>
+<h5>探すフォントは2つ</h5>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_081231_02.png" alt="photo_081231_02.png" /></p>
+<p>まず、" Opera "の部分と" 9.6 "の部分ではフォントが違うと思いました。<br /> なので、それぞれに分けて考えることにしました。異なるフォントが必要です。</p>
+<p>&nbsp;</p>
+<h4>試しに作ってみた</h4>
+<h5>使用したフォント</h5>
+<ul>
+<li>" Opera "の部分 &rarr; Myriad Pro</li>
+<li>" 9.6 "の部分 &rarr; Adobe Garamond</li>
+<p>&nbsp;</p>
+</ul>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_081231_03.png" alt="photo_081231_03.png" /></p>
+<p>&nbsp;</p>
+<h5>比較</h5>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_081231_04.png" alt="photo_081231_04.png" /></p>
+<p>&nbsp;</p>
+<h4>Conclusion</h4>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_081231_05.png" alt="photo_081231_05.png" /></p>

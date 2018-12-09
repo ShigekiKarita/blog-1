@@ -1,0 +1,43 @@
+#+TITLE: "Ubuntu と Vim"
+#+DATE: 2009-04-26T01:07:57+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>Vimのインストール</h4>
+今まで、テキストエディタの gedit を使っていましたが、Vimを使っていきたいと思います。Vimの詳しいところは分からないけど、とりあえず使う。端末で Vim を起動させてみたけど、ネットで調べてみるとUbuntuの初期状態で入っているものは、ちょっと違うVimらしいです。
+<ul>
+	<li><a href="http://d.hatena.ne.jp/over80/20080723/1216827490" target="_blank">玉虫色に染まれ！: Ubuntu の vim を快適にする</a></li>
+</ul>
+<blockquote>Ubuntuは、デフォルトでviがインストールされています。しかし、これの実体は最低限の機能のみを持った vim-tiny(/usr/bin/vim.tiny) なので、シンタックスの色付けや、カーソルキーのサポートなどが含まれておらず、今一つ使い勝手が良くありません。</blockquote>
+ーということです。
+なので、標準的なVimを用意します。
+<pre>$ sudo apt-get install vim</pre>
+インストールはこれで終了です。
+次へ進みます。vimの設定です。
+<h4>Vimの設定 - .vimrc -</h4>
+.vimrcというのは、Vimを使う際に行番号を表示させるかなどの設定が記述されたファイルです。これはホームディレクトリに用意します。((もしかしたら、違う方法ありそうだけど
+
+下記のところを参考に.vimrcのブレンド品を作成しました。
+<ul>
+	<li> <a href="http://d.hatena.ne.jp/h-yano/20060729/1154202835" target="_blank">今日とは違う明日: .vimrc設定メモ</a></li>
+	<li><a href="http://snoop.to/bbbs/logs/20081127220227.html" target="_blank">MeMoGaKi: Ubuntuデスクトップ用.vimrc</a></li>
+</ul>
+<h4>Vimのプラグイン</h4>
+Vimをさらに使いやすくするためプラグインを用います。
+まずは、プラグインを格納するためのディレクトリを作成します。
+<pre>$mkdir -p ~/.vim/plugin</pre>
+ディレクトリができたら、autocomplpop.vim というプラグインをダウンロードします。
+<ul>
+	<li><a href="http://www.vim.org/scripts/script.php?script_id=1879" target="_blank">vim online: autocomplpop.vim</a></li>
+</ul>
+autocomplpop.vimの設定は次のURLを参考にしました。
+<ul>
+	<li><a href="http://blog.blueblack.net/item_164" target="_blank">ナレッジエース: autocomplpop.vimでリアルタイムにキーワード補完</a></li>
+</ul>
+それと、もっとプラグインについて知りたいと思って調べていたら見つけました。今日はやらないけれども、今度詳しくチェックしてみたい。
+<ul>
+	<li><a href="http://d.hatena.ne.jp/masa138/20090404/1238846535" target="_blank">orz blog: Ubuntu を使いやすくする計画 その3</a></li>
+</ul>
+<h4><span style="color: #993366;">追記(2009年10月09日)</span></h4>
+<a href="http://vim-users.jp">Vim-users.jp</a>というサイトがあるそうです。
+コメントしてくださったujmさん、ありがとうございます。

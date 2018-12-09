@@ -1,0 +1,40 @@
+#+TITLE: "shaderman(セットアップ編)"
+#+DATE: 2009-04-06T12:40:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>shaderman</h4>
+<p><a href="http://code.google.com/p/shaderman/" target="_blank">shaderman</a> というのに挑戦してみる。</p>
+<p>Renderman SL と書いてあるし、画像を見る限り、シェーダーを組み立てるのを視覚的にできるみたい。線で繋いだりするらしいけど、それって Quartz Composer みたいにできるのかな。だとしたら面白そうです。これを使っていくためには、Python, ctypes, wxPython, PyOpenGL　が必要らしいですが、とりあえずダウンロードしてディレクトリ構造を確認してみる。</p>
+<pre>D:.<br />├─core<br />├─examples<br />├─mako<br />└─modes<br />&nbsp;&nbsp;&nbsp; ├─Particles<br />&nbsp;&nbsp;&nbsp; │&nbsp; └─nodes<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─forces<br />&nbsp;&nbsp;&nbsp; ├─PIL<br />&nbsp;&nbsp;&nbsp; │&nbsp; └─nodes<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─Image<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─ImageDraw<br />&nbsp;&nbsp;&nbsp; ├─Renderman SL<br />&nbsp;&nbsp;&nbsp; │&nbsp; └─nodes<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─color_patterns<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─diffuse<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─fractal<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─math<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─noises<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─sl_math<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─specular<br />&nbsp;&nbsp;&nbsp; ├─SLcomp<br />&nbsp;&nbsp;&nbsp; │&nbsp; └─nodes<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─color<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─porter_duff<br />&nbsp;&nbsp;&nbsp; └─Unix<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─nodes</pre>
+<p>とりあえず、Python, ctypes, wxPython, PyOpenGL を用意するか。</p>
+<h4>準備する<br /></h4>
+<p><a href="http://flower-yuyu.spaces.live.com/Blog/cns!450AF866DCAF7E3A!283.entry" target="_blank">【PyOpenGL】 とりあえずインストール</a> という記事に沿ってやってみました。</p>
+<h5>Python</h5>
+<p>Python2.5.1をインストールします。<br /><a href="http://www.python.jp/Zope/download/pythoncore" target="_blank">http://www.python.jp/Zope/download/pythoncore</a> に行くと手に入る</p>
+<h5>ctypes</h5>
+<p>ctypes って何なのかが全くわからなかったので、そこを調べることから始めた。<br /><a href="http://www.python.jp/doc/release/lib/module-ctypes.html" target="_blank">http://www.python.jp/doc/release/lib/module-ctypes.html</a> にこう書いてあった。</p>
+<blockquote>
+<p>バージョン 2.5 で 新たに追加 された仕様です。</p>
+<p>ctypesはPythonのための外部関数ライブラリです。このライブラリは Cと互換性のあるデータ型を提供し、動的リンク/共有ライブラリ内の関数呼び出しを可能にします。動的リンク/共有ライブラリを純粋なPythonでラップするために使うことができます。</p>
+</blockquote>
+<p>つまり、2.5.1 をいれたことによって、もうこれは準備できているということ？<br />とりあえず、進める。</p>
+<h5>wxPython</h5>
+<p>僕がダウンロードしたのは wxPython2.8-win32-unicode-2.8.9.2-py25.exe です。<br />インストール方法はこれを起動させてボタンをぽちぽち押すだけ。</p>
+<p><a href="http://www.wxpython.org/download.php#binaries" target="_blank">wxPython Download</a> <span>(URL追記)</span></p>
+<p>ちなみに、一番最後に Compile Python .py files to .pyc と聞かれます。どういう意味があるのかよくわかりませんが僕はチェックしました。(コンパイルするんだとは思うんですけど</p>
+<h5>PyOpenGL: ez_setup.py を使って setuptools のインストール<br /></h5>
+<p>後で setup.py というのを使うんですが、その前段階として ez_setup.py を使ってsetuptools というものをインストールする必要があるみたいです。</p>
+<p>コマンドコロンプトで以下のように入力すると、</p>
+<pre>python ez_setup.py</pre>
+<p>setuptools がインストールされます。<br />(develop というのは Cドライブに僕が勝手に作ったフォルダです。)</p>
+<pre>Downloading http://pypi.python.org/packages/2.5/s/setuptools/setuptools-0.6c9-py<br />2.5.egg<br />Processing setuptools-0.6c9-py2.5.egg<br />Copying setuptools-0.6c9-py2.5.egg to c:\develop\python25\lib\site-packages<br />Adding setuptools 0.6c9 to easy-install.pth file<br />Installing easy_install-script.py script to C:\develop\python25\Scripts<br />Installing easy_install.exe script to C:\develop\python25\Scripts<br />Installing easy_install-2.5-script.py script to C:\develop\python25\Scripts<br />Installing easy_install-2.5.exe script to C:\develop\python25\Scripts<br /><br />Installed c:\develop\python25\lib\site-packages\setuptools-0.6c9-py2.5.egg<br />Processing dependencies for setuptools==0.6c9<br />Finished processing dependencies for setuptools==0.6c9</pre>
+<h5>PyOpenGL: setup.py の実行<br /></h5>
+<p>PyOpenGL を <a href="http://sourceforge.net/projects/pyopengl/">http://sourceforge.net/projects/pyopengl/</a> から入手します。<br /> 僕は PyOpenGL-3.0.0.zip をダウンロードしました。</p>
+<p>コマンドコロンプトで PyOpenGL-3.0.0.zip を解凍したフォルダに移動して、以下のように実行。<br />インストールのログを残したい場合は python setup.py install &gt; result.txt とすると、その過程(長文)が result.txt に保存されます。</p>
+<pre>python setup.py install</pre>
+<p>すると、python25\Lib\site-packages\OpenGL\ ができているはずです。</p>
+<p>そして、glut.dll 32 （glut-3.7.6-bin.zip）をダウンロードしてきてPathが通っている箇所(例えば、system32 とか)に入れます。 <a href="http://www.xmission.com/~nate/glut.html" target="_blank">http://www.xmission.com/~nate/glut.html</a></p>
+<h4>shaderman の起動<br /></h4>
+<p>prototype.py というのをクリックすると、ようやく起動できた。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090406_01.png" alt="" /></p>

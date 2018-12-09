@@ -1,0 +1,27 @@
+#+TITLE: "Intuous 4 Release"
+#+DATE: 2009-04-02T10:15:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>決戦は金曜日<br /></h4>
+<p>明日、Intuous 4 が発売開始です。</p>
+<ul>
+<li><a href="http://www.wacom.co.jp/corporate/news_detail.php?id=209" target="_blank">高性能プロフェッショナルグラフィックス用ペンタブレット「Intuos4」発売</a></li>
+</ul>
+<blockquote>
+<p>これまでに、全世界でシリーズ通算約260万台を販売し、プロフェッショナルの現場からはデファクトスタンダードツールとして高い信頼を受けています。</p>
+</blockquote>
+<p>すごいよ、Wacom ！<br />ちなみに、プレスリリースにはこんなことも書いてあった。</p>
+<blockquote>
+<p>本製品は、発売後の1年間に全世界で50万台の販売を目指します。</p>
+</blockquote>
+<h4>ラインナップ</h4>
+<p>http://intuos.jp/ より</p>
+<p><strong>Small</strong><br />外寸：　約309&times;208&times;12mm<br />価格：　22,800円(オープン)<br /> <br /><strong>Medium </strong><br />外寸：　約370&times;254&times;12mm<br />価格：　32,800円(オープン)<br /> <br /><strong>Large</strong><br />外寸：　約474&times;320&times;14mm<br />価格：　42,800円(オープン)<br /> <strong><br /> Extra Large </strong><br />外寸：　約623&times;462&times;28mm<br />価格：　84,800円(オープン)</p>
+<h4>Intuos4のすごそうなところ</h4>
+<ul>
+<li>右利き／左利きどちらでも自然に使える上下対称のデザイン</li>
+<li>ファンクションキーの天面に傾きを持たせることで、指先を見なくてもキーの識別が容易</li>
+</ul>
+<p>こういうのって確かユニバーサルデザインって言うんでしたよね。</p>
+<p>今度、実際に触ってみよー。<span>左利き</span>として！<br />僕はこのままIntuos3ユーザーであり続けるだろうけども(笑</p>

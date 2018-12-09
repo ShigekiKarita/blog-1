@@ -1,0 +1,22 @@
+#+TITLE: "開花屋に行ってみました"
+#+DATE: 2010-03-31T20:20:49+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<a rel="attachment wp-att-2410" href="http://www.hiroakit.com/blog/archives/2409/photo_20100331_02"><img class="size-full wp-image-2410 alignright" title="photo_20100331_02" src="http://www.hiroakit.com/blog/photo/photo_20100331_02.jpg" alt="photo_20100331_02" width="165" height="243" /></a>前の話なんですが, <a href="http://www.kaikaya.com/" target="_blank">開花屋</a>というお店に行ってきました. ( 居酒屋に分類されるのかな? ) とてもにぎやかなところです. 日本人以外もたくさんいます. <a href="http://www.kaikaya.com/gallery/board.php" target="_blank">開花屋のウェブサイトにあるギャラリー</a>を見るとその様子がわかります.
+
+お店に入ったときは, 金曜日ということもあってとても混んでいました. 予約もできるようなので, ぜったいに訪れたいときは事前に確認したほうがいいかもしれません.
+
+
+<div class="shopInfo">
+<dl class="shopInfo"><dt>店名</dt> <dd>開花屋</dd> <dt>住所</dt> <dd>渋谷区円山町23-7</dd> <dt>電話</dt> <dd>03-3770-0878</dd> <dt>営業</dt> <dd>11:30～14:00  (ランチタイム)
+18:00～23:30</dd> <dt>交通</dt> <dd>京王井の頭神泉駅より徒歩2分</dd></dl></div>
+<p>料理がすごくおいしい.
+<a href="http://www.kaikaya.com/recipe.html" target="_blank">驚くことにお店で食べた料理の一部のレシピがウェブサイトに載っています</a>.</p>
+
+<a rel="attachment wp-att-2417" href="http://www.hiroakit.com/blog/archives/2409/photo_20100331_03"><img class="alignleft size-medium wp-image-2417" title="photo_20100331_03" src="http://www.hiroakit.com/blog/photo/photo_20100331_03-300x175.jpg" alt="photo_20100331_03" width="300" height="175" /></a>
+<ul>
+	<li>まぐろのカマのスペアリブ</li>
+	<li>小魚のカラッ揚げ</li>
+	<li>帆立のリゾットおこげ</li>
+</ul>

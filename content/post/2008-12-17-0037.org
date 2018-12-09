@@ -1,0 +1,37 @@
+#+TITLE: "Relaunched blog"
+#+DATE: 2008-12-17T09:41:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Relaunched blog</h4>
+<p>ブログをリニューアルしました。<br /> 今回はかなりの部分を変えました。</p>
+<ul>
+<li>フォント</li>
+<li>2カラム</li>
+<li>ページ分割</li>
+<li>日付</li>
+<li>見出し</li>
+</ul>
+<p>細微な部分はまだ調整が幾つか必要ですが、大体はできあがりました。</p>
+<h5>フォント</h5>
+<p>ブログのフォントを変更しました。<br /> 以前は、ブログタイトルを Helvetica, Arial に指定していました。<br /> 今回は、それらを Georgia, Times New Roman に変更しました。<br /> それと同様に、本文もGeorgia, Times New Roman に変更しました。</p>
+<h5>2カラム</h5>
+<p>レイアウトを2段組のものに変更しました。<br /> 以前は、カテゴリーや月々のアーカイブを下段においていました。<br /> 今回は、それらを右に移してナビゲートしやすくすることを狙いました。</p>
+<h5>ページ分割</h5>
+<p>エントリーの表示数制限をなくしました。<br /> 以前は、Movable Type でエントリー数を3つまで表示するように設定していました。<br /> 今回は、PageBute というプラグインを使って分割し、下段にナビゲーションを表示しました。</p>
+<h5>日付</h5>
+<p>記事投稿日が目立つよう位置を変えました。<br /> 以前は、投稿日を目立たない位置に配置していました。<br /> 今回は、記事のタイトルの左に配置することで投稿日の存在感を上げました。</p>
+<h5>見出し</h5>
+<p>記事に見出しを付けるようにしました。<br /> 以前は、一部小見出しを使ってはいましたが、ほぼ皆無でした。<br /> 今回は、見出しとなる&lt;h4&gt;タグ&lt;h5&gt;タグにCSSを当てて、見やすさの改善を図りました。</p>
+<h4>抱えている問題</h4>
+<ul>
+<li>Internet Explore 6</li>
+<p><span style="text-decoration: line-through;">右上の検索フォームが正しい位置にない。</span> <span>修正しました。</span></p>
+<p><span style="text-decoration: line-through;">各々のページに移動すると、右メニューの背景が崩れる。</span> <span>修正しました。</span></p>
+<li>Internet Explore 6, Internet Explorer 7, Safari</li>
+<p><span style="text-decoration: line-through;">CSSでフォントを Georgia に指定しているのに、そうならない。</span><span>修正しました。</span></p>
+<li>Firefox, Opera, Safari</li>
+<p><span style="text-decoration: line-through;">下段のページナビゲーションのレイアウトが崩れている。</span><span>修正しました。</span></p>
+</ul>
+<p>&nbsp;</p>
+<p><span style="text-decoration: line-through;">近いうちに修正が必要ですね。</span><span>修正完了。</span><br /> 修正する項目の中で一番厄介だったものは "下段のページナビゲーションのレイアウトが崩れている。" でした。詳しいところは<a href="http://www.hiroakit.com/blog/2009/02/post_12.html" target="_blank">Firefoxは&lt;/li&gt;の後に&amp;があるとページが崩れる。</a></p>

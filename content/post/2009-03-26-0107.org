@@ -1,0 +1,18 @@
+#+TITLE: "Ubuntu 8.10 と Adobe Reader"
+#+DATE: 2009-03-26T09:10:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>入っていないことに気がついた<br /></h4>
+<p><a href="https://renderman.pixar.com/products/rispec/index.htm" target="_blank">RenderMan - Developers Corner - RI Specs</a> にあるPDFをたまたま保存じゃなくて、そのままクリックしたときにふと気がつきました。このUbuntu には Adobe Reader が入ってない。</p>
+<p>一応、PDF自体は読めます。ただ、Adobe Reader がいいです。<br />特に何か理由があるわけじゃなく個人的に Adobe Reader って名前が好きなだけです。</p>
+<h4>Adobe Reader のインストール</h4>
+<h5>Synaptic パッケージマネージャーで探す</h5>
+<p>直接、Adobeのサイトへ行って、debパッケージをダウンロードするってのも手だと思います。ただ、今回は Synaptic パッケージマネージャーを使います。</p>
+<p>adobe reader で検索をかけて、以下の2つをインストールします。</p>
+<ul>
+<li><span class="highlight">"adobe</span><span class="highlight">reader</span>-jpn" </li>
+<li>"<span class="highlight">adobe</span><span class="highlight">reader</span>-jpn-ipamonafont" (これは別に入れなくても平気です。お好みで)</li>
+</ul>
+<h5>インストーラーを起動させる</h5>
+<p>Ubuntu 上部メニューにあるアプリケーションからオフィスにいくとInstallerがあります。これを起動させます。後は、指示に従ってクリックしていくだけです。</p>

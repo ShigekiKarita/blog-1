@@ -1,0 +1,65 @@
+#+TITLE: "about:configを利用したFirefoxの設定"
+#+DATE: 2010-01-17T22:30:15+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<p style="text-align: left;">最近はFirefoxも歳を取ったのだろうかと思わずにいられないご時世です。</p>
+<p style="text-align: left;">この記事ではFirefoxの表示速度(アドオンやそれらを利用したFirefoxのカスタマイズも含めたもの)についての設定方法ではありません。Firefoxを利用しているときのクリック回数やタイピング数を減らすことで作業速度を上げ、その結果として自宅に帰ってテレビを表示する速度を早くする方法についてです。</p>
+<p style="text-align: left;">Firefoxの設定を行う前に<span style="color: #800000;">prefs.js</span>のバックアップを行います。</p>
+
+<blockquote>
+<p style="text-align: left;">Windows XP or Vista or 7<span style="color: #c0c0c0;"> (%APPDATA% is shorthand, which depends on your  user account name.)</span>
+%APPDATA%\Mozilla\Firefox\Profiles\&lt;profile folder&gt;
+
+<p style="text-align: left;">Mac OS X
+~/Library/Application Support/Firefox/Profiles/xxxxxxxx.default/
+
+Linux
+~/.mozilla/firefox/xxxxxxxx.default/</blockquote>
+<p style="text-align: left;">さて、Firefoxの設定はabout:configに手を加えることで変更可能です。</p>
+<p style="text-align: center;"><a rel="attachment wp-att-1949" href="http://www.hiroakit.com/blog/archives/1350/20100117_01"><img class="size-full wp-image-1949     aligncenter" title="20100117_01" src="http://www.hiroakit.com/blog/photo/20100117_01.png" alt="20100117_01" width="648" height="256" /></a></p>
+
+ロケーションバーにabout:configと入力しEnterをおします。そうすると警告文が表示されます。細心の注意を払わないといけないほどの高度なことはしませんが、「細心の注意を払って使用する」ボタンをおします。
+<p style="text-align: center;"><a rel="attachment wp-att-1954" href="http://www.hiroakit.com/blog/archives/1350/20100117_02"><img class="size-full wp-image-1954 aligncenter" title="20100117_02" src="http://www.hiroakit.com/blog/photo/20100117_02.png" alt="20100117_02" width="648" height="185" /></a></p>
+<p style="text-align: left;">その後、たくさんの文字が並んでいる画面をFirefoxは表示します。ここでさまざまある項目の中から任意のものを選択し設定を行います。フィルタに任意の項目名を入力すると素早く見つけることが可能です。</p>
+<p style="text-align: left;">下記にいくつかの項目を例として挙げます。変更はFirefoxの再起動後に適用されます。</p>
+
+<ul style="text-align: left;">
+	<li><strong>検索バーで使用する検索エンジンをGoogle.comに変更</strong>
+browser.search.defaultenginename
+変更前: Google
+変更後: Google.com
+※これを行うためには"<a onclick="window.external.AddSearchProvider('http://www.hiroakit.com/distribute/firefox/googlecom.xml');" href="../../distribute/firefox/googlecom.xml">googlecom.xml</a>"を押し、検索エンジンの追加が必要です。
+※追加した検索エンジンは検索バー左にあるアイコンを押すと出る検索バーの管理から削除できます。</li>
+</ul>
+<ul style="text-align: left;">
+	<li><strong>ロケーションバーで動作する検索エンジンの設定</strong>
+keyword.URL
+初期値: http://www.google.co.jp/search?ie=UTF-8&amp;oe=UTF-8&amp;sourceid=navclient&amp;gfns=1&amp;q=
+Google: http://www.google.com/search?ie=UTF-8&amp;q=
+Yahoo!: http://search.yahoo.co.jp/search?ei=UTF-8&amp;p=</li>
+</ul>
+<ul style="text-align: left;">
+	<li><strong>戻るないし進むボタンを通して移動できる 最大数値</strong>
+browser.sessionhistory.max_entries</li>
+</ul>
+<ul style="text-align: left;">
+	<li><strong>検索バーを使用した結果を新しいタブで開く</strong>
+browser.search.openintab
+true : Enterキーを押すと、検索結果を新しいタブで表示します。
+true : Enterキーを押すと、検索結果を現在のタブに表示します。</li>
+</ul>
+<ul style="text-align: left;">
+	<li><strong>BackSpaceボタンを押した時のアクションの決定</strong>
+browser.backspace_action
+0 - ページの履歴を戻ります（Windows と MAC では標準）。
+1 - ページをスクロールアップします（Linux では標準）。
+2 - 何もしません。</li>
+</ul>
+<ul style="text-align: left;">
+	<li><strong>ソースコードを愛用しているエディタで使用</strong>
+view_source.editor.external: 値をtrueに変更します。
+view_source.editor.path: 値を自分の好きなエディタへの絶対パスに変更します。
+
+Mac OS XでCotEditor を使いたい場合は /Applications/coteditor/CotEditor.app/Contents/MacOS/CotEditor などとします。</li>
+</ul>

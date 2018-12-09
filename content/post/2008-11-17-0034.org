@@ -1,0 +1,22 @@
+#+TITLE: "最近みたWEBページ part6"
+#+DATE: 2008-11-17T11:25:06+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<ul>
+<li> <a href="http://journal.mycom.co.jp/articles/2008/11/14/hansamuvfx/index.html"> VFXスーパーバイザー・小坂一順 </a> </li>
+</ul>
+<blockquote>
+<p>とにかくやってみることです</p>
+</blockquote>
+<p>仲間内でも、とりあえず手を動かせ！ってよく言われた・・・。懐かしいです。</p>
+<p>&nbsp;</p>
+<ul>
+<li> <a href="http://journal.mycom.co.jp/articles/2008/10/31/yoshiurakanntoku/index.html"> 世界無料配信アニメ『イヴの時間』で話題の新鋭クリエイター・吉浦康裕 </a> </li>
+</ul>
+<p>この記事で初めて『イブの時間』を知りました。Yahoo!動画で見れるようなので、今度見てみようと思います。</p>
+<p>&nbsp;</p>
+<ul>
+<li> <a href="http://journal.mycom.co.jp/news/2008/11/12/026/index.html">アドビ、「Adobe Creative Suite 4」発表記念セミナー開催</a> </li>
+</ul>
+<p>プログラム要チェック。</p>

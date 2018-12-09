@@ -1,0 +1,98 @@
+#+TITLE: "海外企業の四半期決算の時期"
+#+DATE: 2010-05-09T23:49:18+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+最近, 海外企業の四半期決算と新商品を発表する時期の関係を調べています.
+単純に, 決算を把握しておけばどの時期に新商品が出るか推測できるだろうという考えです.
+
+公開会社, つまり上場企業の場合, 3ヶ月単位の期間で行う四半期決算を行っています. 各4つに分けるこの期間は第1四半期, 第2四半期, 第3四半期, 第4四半期と呼び, Q1, Q2, Q3, Q4とも称します. この期間は各企業によって異なりますが,  Investor Relations（IR情報） を公開しているため, 四半期決算がいつなのかをインターネットを使い簡単に調べることができます. 例えば, Appleは10月から12月が第1四半期ですが, Microsoftの場合は7月から9月が第1四半期です.
+
+各企業は各四半期にそれなりの大きな製品を発表します. 例えば, Appleの場合だと2010年度第1四半期に Magic Mouse, Intel Core i5 あるいは Intel Core i7 搭載の iMac, Mac Book のアップデート製品を発売しています. 同年度第2四半期には Aperture 3, iPad を発表しています. このとき, iPad は発表しただけで製品は売らずに, 同年度第3四半期まで引っ張った後に発売し, 次の四半期決算を見据えて WWDC を6月7日に開きます. 他にも, Microsoft の場合では2010年度第4四半期を4月から6月としていますが. この期間中の6月17日（木）にはMicrosoft Office 2010を出します.
+<table border="0"><caption style="text-align: center;">各上場企業の四半期決算時期</caption>
+<tbody>
+<tr>
+<td></td>
+<td>Q1</td>
+<td>Q2</td>
+<td>Q3</td>
+<td>Q4</td>
+</tr>
+<tr>
+<td><a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/" target="_blank">Adobe</a></td>
+<td>12-2</td>
+<td>3-5</td>
+<td>6-8</td>
+<td>9-11</td>
+</tr>
+<tr>
+<td><a href="http://ir.amd.com/phoenix.zhtml?c=74093&amp;p=quarterlyearnings " target="_blank">AMD</a></td>
+<td>1-3</td>
+<td>4-6</td>
+<td>7-9</td>
+<td>10-12</td>
+</tr>
+<tr>
+<td><a href="http://www.apple.com/pr/" target="_blank">Apple</a></td>
+<td>10-12</td>
+<td>1-3</td>
+<td>4-6</td>
+<td>7-9</td>
+</tr>
+<tr>
+<td><a href="http://usa.autodesk.com/adsk/servlet/pc/index?siteID=123112&amp;id=14224310" target="_blank">Autodesk</a></td>
+<td>2-4</td>
+<td>5-7</td>
+<td>8-10</td>
+<td>11-1</td>
+</tr>
+<tr>
+<td><a href="http://h30261.www3.hp.com/phoenix.zhtml?c=71087&amp;p=quarterlyEarnings" target="_blank">Hewlett-Packard</a></td>
+<td>11-1</td>
+<td>2-4</td>
+<td>5-7</td>
+<td>8-10</td>
+</tr>
+<tr>
+<td><a href="http://www.intc.com/results.cfm" target="_blank">Intel</a></td>
+<td>1-3</td>
+<td>4-6</td>
+<td>7-9</td>
+<td>10-12</td>
+</tr>
+<tr>
+<td><a href="http://www.microsoft.com/msft/earnings/default.mspx" target="_blank">Microsoft</a></td>
+<td>7-9</td>
+<td>10-12</td>
+<td>1-3</td>
+<td>4-6</td>
+</tr>
+<tr>
+<td><a href="http://phx.corporate-ir.net/phoenix.zhtml?c=116466&amp;p=irol-IRHome" target="_blank">NVIDIA</a></td>
+<td>11-1</td>
+<td>2-4</td>
+<td>5-7</td>
+<td>8-10</td>
+</tr>
+<tr>
+<td><a href="http://www.oracle.com/corporate/investor_relations/index.html" target="_blank">ORACLE</a></td>
+<td>7-9</td>
+<td>10-12</td>
+<td>1-3</td>
+<td>4-6</td>
+</tr>
+<tr>
+<td><a href="http://www.redhat.com/about/news/prarchive/2009/" target="_blank">Red Hat</a></td>
+<td>2-4</td>
+<td>5-7</td>
+<td>8-10</td>
+<td>11-1</td>
+</tr>
+<tr>
+<td><a href="http://www.vmware.com/company/news/releases/" target="_blank">VMware</a></td>
+<td>1-3</td>
+<td>4-6</td>
+<td>7-9</td>
+<td>10-12</td>
+</tr>
+</tbody></table>

@@ -1,0 +1,29 @@
+#+TITLE: "RenderManについて調べてみた Part1"
+#+DATE: 2009-03-25T01:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>高価過ぎるRenderMan<br /></h4>
+<p>前に<a href="http://www.pixar.com/jp/renderman/whats.html" target="_blank">RenderMan</a>の販売価格を調べて、学生が買えるようなソフトではないって書きました。</p>
+<p><a href="http://www.borndigital.co.jp/software/price/renderman.html" target="_blank">ボーンデジタル:RenderMan 販売価格</a></p>
+<ul>
+<li><strong>RenderMan Studio</strong><strong> </strong>￥294,000 </li>
+<li><strong>RenderMan Pro Server</strong><strong> </strong>￥525,000</li>
+</ul>
+<p>でも、もうちょっと調べてみると色々なことが分かりました。</p>
+<h4>RenderMan互換ソフトウェア</h4>
+<p>どうやら、Pixar が開発しているRenderManは正式には"PhotoRealistic RenderMan"と呼ばれているみたいです。略称として"PRMan"とも言うそうです。</p>
+<p>一番調べてみて興味深かったのは、Pixar 製以外(RenderMan互換ソフトウェア)のものがあるという点でした。その中にはオープンソースらしきものも見つかりました。</p>
+<p>商用のもの</p>
+<ul>
+<li><a href="http://www.3delight.com/" target="_blank">3Delight</a></li>
+<li><a href="http://www.sitexgraphics.com/" target="_blank">AIR</a></li>
+</ul>
+<p>商用ではなさそうなもの</p>
+<ul>
+<li><a href="http://www.renderpixie.com/" target="_blank">Pixie</a></li>
+<li><a href="http://www.dctsystems.co.uk/RenderMan/angel.html" target="_blank">Angel</a></li>
+<li><a href="http://www.aqsis.org/" target="_blank">Aqsis</a></li>
+<li><a href="http://www.bmrt.org/" target="_blank">BMRT</a>(今はもう配布していないみたい)</li>
+</ul>
+<p>もしかして、もしかすると、勉強できる環境を手に入るのじゃないかと期待大です。</p>

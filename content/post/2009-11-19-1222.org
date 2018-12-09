@@ -1,0 +1,31 @@
+#+TITLE: "プロモーションビデオ制作についての講習会しました"
+#+DATE: 2009-11-19T00:55:37+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+今日は大学でちょっとした講習会を行いました。内容はゲーム制作において行う出展時向けのプロモーションビデオ制作についての概要と実際に行った事の報告です。<!--more-->
+<p style="text-align: center;"><a rel="attachment wp-att-1221" href="http://www.hiroakit.com/blog/archives/1222/photo_091118_01"><img class="size-full wp-image-1221 aligncenter" title="photo_091118_01" src="http://www.hiroakit.com/blog/photo/photo_091118_01.jpg" alt="photo_091118_01" width="720" height="482" /></a></p>
+
+今回は30分近くも話せるというなんとも素晴らしいものでした。終了したときに時間を確認すると5分超過してしまったのが残念でしたが、自分が伝えたいことは伝えたので役目を果たせたと思っています。ただ、やはり満足できなかった部分もありました。(大半が個人的にマネをしたい人のことがマネできなかっただけですけれども)
+<ul>
+	<li>講習会というのだから実際にパソコンを用いて作業風景を見せながら説明したかったがそれができなかった</li>
+	<li>発表時間が超過してしまった関係で質問時間を設けることができなかったこと</li>
+	<li>スタッフをバンドメンバー紹介みたいにきちんとできなかったこと</li>
+	<li>書籍ももうちょっと紹介したかったな
+<ul>
+	<li>デジタル色彩表現</li>
+	<li>モーションタイポグラフィ</li>
+	<li>color ＆ type  色と文字の基本原理と応用事例</li>
+	<li>Color Guide International 国際版色の手帖</li>
+	<li>Design Rule Index デザイン, 新・100の法則</li>
+</ul>
+</li>
+</ul>
+なお、当日の講習会で使用した資料などは以下からダウンロードできます。
+
+(下記の資料のダウンロードは自由ですが再配布は基本的に不可です)
+<ul>
+	<li><a href="http://www.hiroakit.com/workshop/workshop_gp_2009_pv_distribute.pdf">テキスト(PDF, 1MB): 東京ゲームショウ向けPV制作</a></li>
+	<li><a href="http://www.hiroakit.com/workshop/workshop_gp_2009_pv_sampleVideo_vconte.mp4">サンプルビデオA(MP4, 7MB): Vコンテと完成品の比較</a></li>
+	<li><a href="http://www.hiroakit.com/workshop/workshop_gp_2009_pv_sampleVideo_font.mp4">サンプルビデオB(MP4, 25MB): フォントによる雰囲気の違い</a></li>
+</ul>

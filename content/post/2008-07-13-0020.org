@@ -1,0 +1,6 @@
+#+TITLE: "最近みたWEBページ part1"
+#+DATE: 2008-07-13T19:29:58+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<p><a href="http://netafull.net/apple/014562.html">センスのいい、美しいデザインの履歴書:Part 2 | コリス</a><br />そろそろ履歴書に何を書くかを考えて練習とかしたほうがいいかな、と思ったときに検索したら引っかかった。<br /><br /><a href="http://www.koikikukan.com/archives/2006/11/17-015033.php">小粋空間: IE7 の CSS ハック</a><br />2008年、つまり今年の夏頃にIE8ベータ版がでるとのことですが、どのみちCSSハックを検討しなきゃいけないだろうな、と考えつつ、IE7のハックを探していたら引っかかったページ。<br /><br /><a href="http://netafull.net/apple/014562.html">[N] 実はAppleは潰れかけていたという話</a><br />iPhoneの行列をTVの中継でみてたら、「欲しい！」という衝動に駆られました。自分もビックウェーブに乗るべきなのだろうか！と真剣に問いかけてみた。その結果、MacBookを買うために貯金することを選びました。<br /><br /><a href="http://komin1.cool.ne.jp/retouch/caribration.htm">モニターキャリブレーション</a><br />左のモニターと右のモニターの色が明らかに違うことを放りっぱなしにしておくのはどうだろう、と思い検討してみました。キャリブレーションの知識を整理することもふまえてこのページを見てました。<br /><br /><a href="http://www.shinjukupiccadilly.com/campaign.html">新宿ピカデリー</a><br />メンバーカードを手に入れることを決定しました。</p>

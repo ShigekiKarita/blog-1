@@ -1,0 +1,12 @@
+#+TITLE: "Safari 4 beta (Win)"
+#+DATE: 2009-03-22T12:20:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Safari 4 beta のインストール<br /></h4>
+<p>先日、Safari 4 beta をインストールしてみました。</p>
+<h4>Develop の表示<br /></h4>
+<p>ひとまず、行ったことは Web Inspector を使えるようにしたこと。Safari 4 beta のブックマークメニューバーには Firebug Lite が初期の状態から登録されてはいますので、それを使うのもいいかなと思いましたが、今回はWeb Inspectorでいきます。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090322_01.png" alt="" /></p>
+<p>Safari上部にあるメニューのEditからPreferencesをクリックしウィンドウを表示させます。そのウィンドウにある Advanced タブをクリックして&ldquo;Show Develop menu in bar&rdquo;にチェックを入れます。</p>
+<p>すると、初期状態のSafari上部メニューには出ていなかった Develop という項目が現れます。そこをクリックして、"Show Web Inspector" を押せばウィンドウが出てきます。</p>

@@ -1,0 +1,25 @@
+#+TITLE: "Terminator Salvation"
+#+DATE: 2009-05-02T23:22:55+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Terminator Salvation</h4>
+<p>ターミネータのゲームがXboxで出るみたいです。</p>
+<ul>
+<li><a href="http://xbox360.ign.com/dor/objects/14219352/terminator-salvation-the-future-begins/videos/terminatorsal_trl_041309.html" target="_blank">IGN Video: Terminator Salvation Xbox 360 Trailer</a></li>
+</ul>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="433" height="360" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="flashvars" value="object_ID=14219352&amp;downloadURL=http://xbox360movies.ign.com/xbox360/video/article/974/974591/terminator_trl_actionattack_042009_flvlowwide.flv&amp;allownetworking=&quot;all%&quot;" />
+<param name="src" value="http://videomedia.ign.com/ev/ev.swf" /><embed type="application/x-shockwave-flash" width="433" height="360" src="http://videomedia.ign.com/ev/ev.swf" flashvars="object_ID=14219352&amp;downloadURL=http://xbox360movies.ign.com/xbox360/video/article/974/974591/terminator_trl_actionattack_042009_flvlowwide.flv&amp;allownetworking=&quot;all%&quot;"></embed>
+</object>
+</p>
+<ul>
+<li><a href="http://xbox360.ign.com/dor/objects/14219352/terminator-salvation-the-future-begins/videos/terminatorsal_trl_cinematic_033009.html" target="_blank">IGN Video: Terminator Salvation Xbox 360Trailer - Cinematic Trailer </a></li>
+</ul>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="433" height="360" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="flashvars" value="object_ID=14219352&amp;downloadURL=http://xbox360movies.ign.com/xbox360/video/article/968/968040/terminatorsal_trl_cinematic_033009_flvlowwide.flv&amp;allownetworking=&quot;all%&quot;" />
+<param name="src" value="http://videomedia.ign.com/ev/ev.swf" /><embed type="application/x-shockwave-flash" width="433" height="360" src="http://videomedia.ign.com/ev/ev.swf" flashvars="object_ID=14219352&amp;downloadURL=http://xbox360movies.ign.com/xbox360/video/article/968/968040/terminatorsal_trl_cinematic_033009_flvlowwide.flv&amp;allownetworking=&quot;all%&quot;"></embed>
+</object>
+</p>

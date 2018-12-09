@@ -1,0 +1,37 @@
+#+TITLE: "ジョン・ワーノックが若い"
+#+DATE: 2009-05-05T01:22:34+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>初期のころのIllustratorを紹介している映像を発見しました。</h4>
+<p>Photoshop, Illustrator, Flash, After Effects などの製品を持つAdobe Systems。今となっては、ここの製品が存在していなかったらどうなっていたんだろうと考えてしまうほど重要なものです。なかったらなかったで、それまた面白い展開になっていたかもしれないけど、1982年にPostScriptの将来性をジョン・ワーノックのようにイメージできた人はそういないんじゃないかなとも思います。</p>
+<h5>1</h5>
+<p>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="555" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/vXndWd2E5-I" /><embed type="application/x-shockwave-flash" width="555" height="350" src="http://www.youtube.com/v/vXndWd2E5-I"></embed>
+</object>
+</p>
+<h5>2</h5>
+<p>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="555" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/i24DA0ev_lE" /><embed type="application/x-shockwave-flash" width="555" height="350" src="http://www.youtube.com/v/i24DA0ev_lE"></embed>
+</object>
+</p>
+<h5>3</h5>
+<p>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="555" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/TptUKgdnrHI" /><embed type="application/x-shockwave-flash" width="555" height="350" src="http://www.youtube.com/v/TptUKgdnrHI"></embed>
+</object>
+</p>
+<h5>4</h5>
+<p>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="555" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/mEA0KJFcP_I" /><embed type="application/x-shockwave-flash" width="555" height="350" src="http://www.youtube.com/v/mEA0KJFcP_I"></embed>
+</object>
+</p>
+<h5>5</h5>
+<p>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="555" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/Rc58Z6DLoto" /><embed type="application/x-shockwave-flash" width="555" height="350" src="http://www.youtube.com/v/Rc58Z6DLoto"></embed>
+</object>
+</p>

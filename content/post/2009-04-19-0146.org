@@ -1,0 +1,8 @@
+#+TITLE: "和暦西暦対応表"
+#+DATE: 2009-04-19T13:55:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>参考までに</h4>
+<p>たまに和暦西暦の対応があっているのか不安になります。<br />参考までに以下のURLが役立ちます。</p>
+<p><a href="http://www.kumamotokokufu-h.ed.jp/kumamoto/bungaku/wa_seireki.html" target="_blank">和暦西暦対応表</a></p>

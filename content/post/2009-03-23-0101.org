@@ -1,0 +1,96 @@
+#+TITLE: "Ubuntu 8.10 インストール"
+#+DATE: 2009-03-23T03:20:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>Ubuntu 8.10 のインストール</h4>
+<p>前回は、思いっきり失敗しましたが、今回はうまくインストールできました。下記のURLからUbuntu 8.10のisoファイルをダウンロードしてCDに焼きました。それとサポート期限日も下記のURLでチェックしました。2010年4月までサポートされるみたいです。</p>
+<ul>
+<li><a href="http://www.ubuntulinux.jp/products/JA-Localized/download" target="_blank">Ubuntu Desktop 日本語 Remix CDのダウンロード</a></li>
+</ul>
+<p><a href="http://www.ubuntu.com/getubuntu/download" target="_blank">こっち</a>ではなく、このUbuntuを選んだのはきれいなフォントが同梱されているからです。</p>
+<h4>ターミナル(端末)の設定</h4>
+<h5>起動するためのショートカット設定</h5>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090323_01.png" alt="" /></p>
+<p>Alt + F2 で gconf-editor を起動させ、左側にあるメニューの "apps" から "metacity" の中の "global-keybinding" へ行き、"run-command-gnome-terminal" の "Value" に割り当てたいキーを入力します。(僕はF12にしました)</p>
+<h5>文字色と背景色(透過度)の設定</h5>
+<p>ターミナルを起動させ、メニューバーの"編集"から"プロファイルの設定"にある"色"を選択します。"システムのテーマ色を使用する"のチェックを外し、組み込みのスキームは"黒字に緑色文字"などします。(気分がMatrixだったので、僕はそうしました)引き続き、背景のタブをクリックして、透過な画像にするを選択して透過度を調節します。</p>
+<h5>変更前</h5>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090323_02.png" alt="" /></p>
+<h5>変更後</h5>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090323_03.png" alt="" /></p>
+<h4>下部メニューバー(パネル)を自動的に隠すように設定する</h4>
+<p>下にあるメニューバーが常に表示されていると、Firefoxのステータスバーなどが隠れてしまい見えなくなることがあります。それを回避するため、自動的に隠すようにします。</p>
+<p>Alt + F2 から gconf-editor で "apps" から "panel" の中の "toplevels" に移動します。さらに、その中の "bottom_panel_screen" の値を変更していきます。</p>
+<ol style="padding-left: 30px;">
+<li>auto_hideにチェックを入れる</li>
+<li>auto_hide_sizeの値を0に変更</li>
+<li>hide_delayの値を0に変更</li>
+<li>unhide_delayの値を0に変更</li>
+</ol>
+<h4>Mozilla Firefox の設定</h4>
+<h5>BackSpaceキーへ割り当てる動作の設定<br /></h5>
+<p>アドレスバーに"about:config"と入力します。次に"細心の注意を払って使用する"をクリックします。その後、現れたフィルタ欄 に"browser.backspace_action"と入力します。値の欄をダブルクリックして0, 1, 2 のいずれかの値を入れます。それぞれの値の意味は次の通り。</p>
+<p style="padding-left: 30px;">値が"0"の場合 : ページを戻す(前の履歴へ)<br />値が"1"の場合：下から上へスクロールする<br />値が"2"の場合：反応しない</p>
+<ul>
+</ul>
+<h5>Flash Player (プラグイン)のインストール</h5>
+<ul>
+<li><a href="https://forums.ubuntulinux.jp/viewtopic.php?pid=2927#p2927" target="_blank">Ubuntu日本語フォーラム: Flash Player 9が組み込めない。</a></li>
+</ul>
+<blockquote>
+<p>Synapticパッケージマネージャから、"flashplugin-nonfree"というパッケージを検索していんストールするか、ターミナルから "sudo apt-get install flashplugin-nonfree"と入力して、Enter。</p>
+</blockquote>
+<p>ーとありましたので、Synaptci パッケージマネージャからインストールします。その後、Firefoxを再起動しYouTubeなどの動画共有サイトで映像が再生されるかを確認します。僕は、この方法で成功しました。</p>
+<h5>Add-on "Firebug"</h5>
+<ul>
+<li><a href="https://addons.mozilla.org/ja/firefox/addon/1843" target="_blank">Firefox Add-ons:Firebug<br /></a></li>
+</ul>
+<blockquote>
+<p>Firebug は、Web ページを閲覧中にクリック一つで使える豊富な開発ツールを Firefox に統合します。あなたはあらゆる Web ページの CSS、HTML、及び JavaScript をリアルタイムに編集、デバッグ、またはモニタすることが出来ます。</p>
+</blockquote>
+<p>"Firefoxへインストール"ボタンを押してインストールします。</p>
+<h5>デスクトップにアイコンを表示させる</h5>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090323_04.png" alt="" /></p>
+<p>Windowsでいうところの、"マイコンピュータ"、"マイドキュメント"、"マイネットワーク"、"ゴミ箱" を表示させます。Alt + F2 で gconf-editor を起動させます。</p>
+<p>"apps" から "nautilus" の "desktop" を選択し、<br />"computer_icon_visible"、"home_icon_visible"、<br />"computer_icon_visible"、"trash_icon_visible"にチェックを入れます。</p>
+<h4>不必要なアプリケーションのアンインストール</h4>
+<p>Synaptic パッケージマネージャー を起動します。Ctrl + F 押して検索し、アンインストールする項目を右クリックします。削除指定あるいは完全削除指定のどちらかを選びます。</p>
+<ul>
+<li><a href="https://wiki.ubuntulinux.jp/UbuntuTips/Application/HowToSearchOrInstallOrRemovePackagesWithSynaptic" target="_blank">Ubuntu Japanese Wiki: GUIでアプリケーションを検索・インストール・削除するには(Synaptic編)</a></li>
+</ul>
+<h5>削除指定</h5>
+<blockquote>
+<p>パッケージは削除するが設定ファイルは残す。パッケージを再インストールした場合以前の設定が適用される。</p>
+</blockquote>
+<h5>完全削除指定</h5>
+<blockquote>
+<p>パッケージを設定ファイルを含め削除する。パッケージを再インストールした場合初期設定が適用される。</p>
+</blockquote>
+<h5>Tracker</h5>
+<ul>
+<li><a href="http://www.k5.dion.ne.jp/~r-f/sicklylife/memo/i_use_ubuntu_810/first_setting.html#tracer" target="_blank">Ubuntuをインストールした直後に行う設定（8.10 Intrepid Ibex編）</a></li>
+</ul>
+<blockquote>
+<p>日本語への対応具合がイマイチだし、放っておくとCPUとメモリを使いまくって邪魔なので削除。デスクトップ検索を利用したいならBeagleをインストールした方が良い。</p>
+</blockquote>
+<p>とあったので、削除。関連性のあるものも同時に削除</p>
+<h5>Ekiga Phone</h5>
+<p>インターネット電話(？)です。僕はどちらかとSkype派です。<br />Synaptic パッケージマネージャー で ekiga と検索し削除します。</p>
+<h5>Evolution</h5>
+<p>メーラー(その他たくさん)です。僕はWindowsで"Mozilla Thunderbird"を使っています。<br />今回は"Evolution"にはお休みしてもらい、使用するソフトをWindowsと同じにします。</p>
+<p>ただし、この作業は下手すると、Ubuntu自体の上下のメニューバー(パネル)が消えてしまう危険性(面倒な事になるかもしれません)があります。まだ慣れていない人は、もうしばらく経ってからチャレンジした方がいいかもしれません。</p>
+<ul>
+<li><a href="http://ubuntukanamemo.blog94.fc2.com/blog-category-6.html" target="_blank">かなめとUbuntu ソフトウェア: お前が原因かEvolution！</a></li>
+</ul>
+<p>Synaptic パッケージマネージャー で evolution と検索し削除します。この際、依存しているものも自動的に選択されますが、アンインストールされる項目に"gnome-panel"があったら中止してください。Ubuntuの上下メニューバー(パネル)が消えてしまいます。<br />おそらく"evolution-data-server-common"を削除選択しない限り、"gnome-panel"がアンインストールされる項目に載ることはないと思います。</p>
+<h4>必要なアプリケーションのインストール</h4>
+<h5>Mozilla Thunderbird</h5>
+<p>メールソフトです。<br />Synaptic パッケージマネージャー から thunderbird で検索してインストールします。</p>
+<h5>gFTP</h5>
+<p>FTPクライアントです。<br />Synaptic パッケージマネージャー から gftp で検索してインストールします。<br />あるいは、端末で $sudo apt-get install gftp でインストールします。</p>
+<h5>Skype</h5>
+<p>Synaptic パッケージマネージャーのメニューにある"設定"から"レポジトリ"を選択します。その後、表示されたウィンドウの"サードパーティのソフトウェア"タブを選び、下部にある"追加"ボタンを選択します。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090323_05.png" alt="" /></p>
+<pre><a class="keyword" href="http://d.hatena.ne.jp/keyword/deb">deb</a> <a href="http://download.skype.com/linux/repos/debian/" target="_blank">http://download.skype.com/linux/repos/debian/</a> stable non-free</pre>
+<p>ーと入力します。</p>

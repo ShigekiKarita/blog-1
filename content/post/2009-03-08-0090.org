@@ -1,0 +1,52 @@
+#+TITLE: "Renamer"
+#+DATE: 2009-03-08T12:30:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4><img src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/moz-screenshot.jpg" alt="" />ファイル名一括変換<em><em></em></em></h4>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090308_03.png" alt="" /></p>
+<p>上記の画像に複数のTiff画像ファイルがあります。(少ない方らしいですよ？</p>
+<p>3dsMaxを始めとしたCGソフトでレンダリングをするときは画像の連番で書き出します。もちろん、QuickTimeなどの動画形式で出力することもできが、After Effects などを使ってお行うコンポジット作業が次に待っています。そのため、3dsMaxなどで動画形式に出力する必要性はほぼありません。(ただ、大量の画像ファイルがフォルダ内に並びますけど)</p>
+<p>レンダリングした後にファイル名の変更というのは、あまりしないのですが、コンポジット作業時にファイルの連番号名を映像の尺度(時間)を調整するために変えたくなることがあります。それも基本的にしちゃいけないと思うのだけれども、奇数番号の画像を削ったりすることで尺度を調整するのです。(さすがにフレームレートを変更したことはないけれども)</p>
+<p>いずれの場合にしろ、ファイル名を変更するときに一々F2を押して修正していたのでは時間がかかってしまうので、いままでは<a href="http://www.vector.co.jp/soft/winnt/util/se431120.html" target="_blank">ファイル名一括変更</a>というソフトを使っていました。名前を変えるだけのソフトでとてもシンプルです。難点があるとすれば、ファイル名をテキストファイルやエクセルファイルでリストとして書き出せないことぐらいで、それはコマンドコロンプトを使って出力すれば済む話なので特に困っていません･･････、とは言うものの一つのソフトで全部できればいいなぁと面倒に感じているのが本音です（笑</p>
+<p><textarea class="html" name="code">dir /b *.tiff &gt; tif_list.txt </textarea></p>
+<p>そこで、ファイル名が一括変更できるソフトウェアを探してみました。</p>
+<h4>国内編</h4>
+<p>ひとまず10個ぐらいリストアップしてみました。色々なソフトがあります。</p>
+<ul>
+<li><a href="http://www.forest.impress.co.jp/lib/sys/file/filerename/bkrename.html" target="_blank">bkrename</a></li>
+<li><a href="http://kurima.sakura.ne.jp/" target="_blank">E-Rename</a></li>
+<li><a href="http://www.vector.co.jp/soft/winnt/util/se456555.html" target="_blank">File Name Manager</a></li>
+<li><a href="http://hp.vector.co.jp/authors/VA014830/FlexRena/" target="_blank">Flexible Renamer</a></li>
+<li><a href="http://www.vector.co.jp/vpack/browse/pickup/pw5/pw005197.html" target="_blank">Namery</a></li>
+<li><a href="http://homepage3.nifty.com/higematsu/soft/pg218.html" target="_blank">Pack</a></li>
+<li><a href="http://www.teppi.com/article/2007/03/post_25.html" target="_blank">アイアンエクスプローラ</a></li>
+<li><a href="http://www.forest.impress.co.jp/lib/sys/file/filerename/allrename.html">お~瑠璃ね~む</a></li>
+<li><a href="http://www.vector.co.jp/soft/win95/util/se107236.html" target="_blank">カエ太郎</a></li>
+<li><a href="http://www.forest.impress.co.jp/lib/sys/file/filerename/bkrename.html" target="_blank">ファイル名変更君</a></li>
+</ul>
+<p><a href="http://www.forest.impress.co.jp/lib/sys/file/filerename/bkrename.html" target="_blank">bkrename</a>と<a href="http://kurima.sakura.ne.jp/" target="_blank">E-Rename</a>は操作方法がいまいち掴みづらく、<a href="http://www.vector.co.jp/soft/winnt/util/se456555.html" target="_blank">File Name Manager</a>は使っていてちょっと怖くかった。<a href="http://www.vector.co.jp/vpack/browse/pickup/pw5/pw005197.html" target="_blank">Namery</a>はソフトを起動した瞬間が、フレームを多用しているWEBサイトを連想させます。<a href="http://www.teppi.com/article/2007/03/post_25.html" target="_blank">アイアンエクスプローラ</a>はエクセルと連動しているからか、動作が鈍い感じを受けました。<a href="http://www.forest.impress.co.jp/lib/sys/file/filerename/allrename.html">お~瑠璃ね~む</a>はファイル名をリストとしてテキストファイルなどに書き出せたら最高でした。このソフトのGUIは目が疲れなくて結構好きです。<a href="http://www.vector.co.jp/soft/win95/util/se107236.html" target="_blank">カエ太郎</a>はチェックボックスが多いことに戸惑い、ファイル名変更後のプレビュー欄が変更前の欄の隣になく、端にあったことに疑問を抱いてしまった。でも、基本的に慣れるまでに時間がかかりそうってことだけなので、ソフトとしてはすごい重宝しそうに思えました。最後の<a href="http://www.forest.impress.co.jp/lib/sys/file/filerename/bkrename.html" target="_blank">ファイル名変更君</a>はリネームする項目というのがわかりやすくて便利そうに思えましたし、ファイル名の変更前と変更後のプレビューが見易かった。</p>
+<p>ただ、<a href="http://hp.vector.co.jp/authors/VA014830/FlexRena/" target="_blank">Flexible Renamer</a>は<a href="http://lepivot.com/diary/log/eid1423.html" target="_blank">Le pivot ＊ Diary: これはええです。 Flexible renamer</a>の記事のタイトルにあるとおり、結構操作できる範囲が広くて自由に名前を変えられそうでした。ただ、操作するまでに必要となること(覚える量)が多く感じました。</p>
+<blockquote>
+<p>でもその裏では、約２万枚の写真のリネーム作業が待っています。T_T そこで活躍するのがこの<a href="http://hp.vector.co.jp/authors/VA014830/english/FlexRena/" target="_blank">'Flexible renamer</a>'。使い勝手がよく、その名のとおりフレキシブルに設定可能です。</p>
+</blockquote>
+<p>ちょっと脱線するけれども、2万枚の写真ってすごいよね。デジタルだからいいけれども、実際にその枚数分の写真を目の前にして、それで各々の写真に名前付けてとか言われたら失神ですよ。</p>
+<h4>海外編</h4>
+<p>海外のものも調べている途中で3点ほど見つけたので紹介します。これらのソフトを試しに少しだけ使ってみたのですが、入力する情報や踏む手順が多かったように感じました。逆に言えば、正確にファイル名を変更したい場合は、こういったソフトウェアの方が良いのかもしれません。僕がしたいファイル名変更は個人内で収まることなので、これらのソフトは今回は見送りました。</p>
+<ul>
+<li><a href="http://aren.hulubulu.net/" target="_blank">Advanced Renamer</a></li>
+<li><a href="http://tinytools.objective-view.de/Tools/SpeedRenamer" target="_blank">SpeedRenamer</a></li>
+<li><a href="http://www.den4b.com/downloads.php?project=ReNamer" target="_blank">ReNamer</a></li>
+</ul>
+<h4>結論</h4>
+<p>「できるかぎりクリックする回数が少なくて、ファイル名変更までに踏む手順が少ないものを」という基準でソフトを選んだところ、<a href="http://homepage3.nifty.com/higematsu/soft/pg218.html" target="_blank">Pack</a>というソフトが一番それに近いモノでした。</p>
+<h5>理由<br /></h5>
+<ul>
+<li>クリックする回数が少なくて済む</li>
+<li>ファイル名変更前と変更後が確認しやすい</li>
+<li>偶数のファイルが選択できる（選択反転もあるので奇数のファイルも選択できる）</li>
+<li>テキストファイル、エクセルファイルに書き出せる</li>
+<li>QuickTimeに変換できる</li>
+</ul>
+<p>欠点とは捉えないけど、この<a href="http://homepage3.nifty.com/higematsu/soft/pg218.html" target="_blank">Pack</a>というソフトはタイムスタンプは変更出来ないみたいです。なので、<a href="http://hp.vector.co.jp/authors/VA014830/FlexRena/" target="_blank">Flexible Renamer</a>か<a href="http://www.vector.co.jp/soft/win95/util/se107236.html" target="_blank">カエ太郎</a>か<a href="http://www.forest.impress.co.jp/lib/sys/file/filerename/bkrename.html" target="_blank">ファイル名変更君</a>のどれからかサブのものとして選ぶことになりそうです。</p>
+<p>でも、タイムスタンプってどういうときに使うのだろう&hellip;&hellip;と考えたら必要ではない気もする。</p>

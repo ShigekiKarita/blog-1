@@ -1,0 +1,10 @@
+#+TITLE: "Perceptive Pixel"
+#+DATE: 2009-03-08T03:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>タッチインターフェース</h4>
+<p><a href="http://www.perceptivepixel.com/" target="_blank">Perceptive Pixel</a></p>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090308_02.png" alt="" /></p>
+<p>これすごいよね。こういうのをタッチインターフェースをFlashを使ってやる人もいるみたいですが、これはどうやってるのでしょうか。これも気になるところですが、MicorosoftのSurfaceも無視できない。</p>
+<p>みんな、どんどんタッチしていくようになるのかなぁ。</p>

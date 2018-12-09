@@ -1,0 +1,27 @@
+#+TITLE: "レミーのおいしいレストラン"
+#+DATE: 2009-05-02T22:55:10+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>レミーのおいしいレストラン</h4>
+<p>偶然見つけました。<br />ロゴを見る限りだと『レミーのおいしいレストラン』みたいですね。</p>
+<h5>1つめ</h5>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="555" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/PwnwayR425E&amp;fmt" /><embed type="application/x-shockwave-flash" width="555" height="350" src="http://www.youtube.com/v/PwnwayR425E&amp;fmt"></embed>
+</object>
+</p>
+<p>&nbsp;</p>
+<h5>2つめ<br /></h5>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="555" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/GNKdDQVfTW8&amp;fmt" /><embed type="application/x-shockwave-flash" width="555" height="350" src="http://www.youtube.com/v/GNKdDQVfTW8&amp;fmt"></embed>
+</object>
+</p>
+<p>&nbsp;</p>
+<h5>3つめ</h5>
+<p>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="555" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/h5Dmv-BZlac&amp;fmt" /><embed type="application/x-shockwave-flash" width="555" height="350" src="http://www.youtube.com/v/h5Dmv-BZlac&amp;fmt"></embed>
+</object>
+</p>

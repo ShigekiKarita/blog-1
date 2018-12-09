@@ -1,0 +1,35 @@
+#+TITLE: "マクドナルドの紙袋"
+#+DATE: 2009-01-10T03:50:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>" This is ECO STYLE. " by Mcdonalds</h4>
+<p>この前、久しぶりにマクドナルドでお持ち帰りした際に気がついたのですが、マクドナルドの紙袋が変わっていました。どうやら、簡易包装の一環で変更したみたいですね。</p>
+<ul>
+<li><a href="http://www.mcdonalds.co.jp/company/eco/campaign/vol01.html">This is ECO STYLE。 簡易包装、はじめます。 | 企業情報 | McDonald's Japan</a></li>
+<li><a href="http://www.mcd-holdings.co.jp/news/2008/company/20081125.html">ニュースリリース 2008.11.25</a></li>
+</ul>
+<p>上に挙げたリンク先のページを見てみると、去年の１２月にはもう始まっていたみたいです。<br />ニュースを見ていないこともあってか、全然知りませんでした(笑<br />僕が手に入れた紙袋以外のも、そのページに載っています。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090110_01.png" alt="photo_090110_01.png" /></p>
+<p>さて、この紙袋がかっこよかったので表面と裏面をスキャンしてみました。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090110_02.png" alt="photo_090110_02.png" /></p>
+<p>この紙袋の色、ほんと気に入ってます。手に持ったときの触感も気持ちいいんですしね。<br />小さいときだったので、あまり正しく記憶していないのですが、この紙を見ていると、<br />商店街で肉を包んでもらった時の紙と似てるような気がしてきます。</p>
+<p>表面には、" This is ECO STYLE. "<br /> 裏面には、" Premium Roast Coffee " と書いてあります。</p>
+<p>&nbsp;</p>
+<h4>On inquiry</h4>
+<p>どんなフォントが使われているのか調べてみました。<br /> まず、大まかな特徴を取り上げてみました。</p>
+<ul>
+<li>表面: " This is ECO STYLE. "</li>
+<p>san-serif である。<br />" . " も含めて文字が細長くなっている。</p>
+<li>裏面: " Premium Roast Coffee " </li>
+<p>" m " と " u " に特徴がある。</p>
+</ul>
+<p>&nbsp;</p>
+<h4>Conclusion</h4>
+<h5>表面</h5>
+<p>表面の文字は<span>" Helvetica " </span>じゃないかという結論に至りました。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090110_04_01.png" alt="photo_090110_04.png" /></p>
+<p>&nbsp;</p>
+<h5>裏面</h5>
+<p>表面の文字は<span>" Franklin Gothic " </span>じゃないかという結論に至りました。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090110_05.png" alt="photo_090110_05.png" /></p>

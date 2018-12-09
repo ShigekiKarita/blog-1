@@ -1,0 +1,12 @@
+#+TITLE: "Ubuntu 8.04 と Houdini Apprentice"
+#+DATE: 2008-08-25T15:13:57+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<p>Houdini Apprentice 9.5.170をUbuntu 8.04にインストールしました。<br />実際にはまだ触っていないのですが、今後テストしていきたいと思います。<br /><br />また、前回の続きとしてデュアルディスプレイ環境について書こうと思っていたのですが、どこかの設定でつまづいているらしく、先にHoudiniのインストールを行いました。インストールはとても簡単にできました。</p>
+<h4>Houdini について</h4>
+<p><a class="l" onmousedown="return clk(this.href,'','','res','1','')" href="http://www.sidefx.com/">Side Effects Software Inc.</a> の 3DCGソフトです。<br />３DCGソフトは他にもAutodeskのMayaや3dsMaxなどがあります。<br /><br />Houdiniはパーティクルあたりの機能が優れている、と聞いたことがあります。詳しいところはこれから探ろうと思っています。</p>
+<h4>Houdini の ダウンロード</h4>
+<p><a class="sidebar_link" href="http://www.sidefx.com/index.php?option=com_download&amp;task=apprentice&amp;Itemid=89&amp;Itemid=277">Houdini 9.5 Public Beta</a>をダウンロードします。こちらはいくつか制限があるものの無償です。制限については代理店である<a href="http://indyzone.jp/catalog/product_info.php?products_id=5298">インディーゾーン</a>さんのサイトを参考にしてください。<br /><br />ダウンロードページに移ったら、Ubuntu Linux 7.04を選択し、その下の問いに答えたら、ダウンロードボタンを押します。Ubuntu 8.04ですが、インストールには支障なさそうです。<br /><br />根拠はこちら。<a href="http://gofar2.iobb.net/%7Ehtaka/wordpress/archives/1628">LeaveBehind ? Blog Archive ? Houdini Apprentice:</a><br /></p>
+<h4>Houdini の インストール</h4>
+<p>ダウンロードしたファイルを展開(解凍)します。<br />ファイルの圧縮と展開方法については<a href="http://itpro.nikkeibp.co.jp/article/COLUMN/20060228/231198/">こちら</a>を参考にしました。<br />$ tar xzvf houdini-9.5.170-linux_i686_gcc4.1.tar.gz<br /><br />ファイルを展開したら、そのディレクトリに移動します。<br />インストールは次のようなやり方でできるはずです。<br />$ ./houdini.install<br /></p>

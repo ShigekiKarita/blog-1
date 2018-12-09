@@ -1,0 +1,41 @@
+#+TITLE: "明日はSIGGRAPH ASIA 2009に行ってきます"
+#+DATE: 2009-12-16T22:13:28+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+今、横浜で<a href="http://www.siggraph.org/asia2009/jp/" target="_blank">SIGGRAPH Asia 2009</a>が開かれていますが、明日それに行ってきます。<!--more-->
+
+お会いしたい方がいるので行くというのもあるのですが、かつ時間をくれるというので、すっごいワクワクしてます！
+<span style="color: #888888;">そういうこともあって今日寝られるかどうか凄く不安です。気分は小学校の遠足です。</span>
+
+明日、講演されているもので聞きたいなと思っているは以下のもの。
+<blockquote><strong>Going Procedural with Houdini</strong>
+<ul>
+	<li>10:00～12:00</li>
+	<li>Exhibition Hall B, Tech Talk Room 1</li>
+	<li>Side Effects Software</li>
+</ul>
+<strong>What's New With Pixar's Core Rendering Technology:RenderMan</strong>
+<ul>
+	<li>12:00～13:45</li>
+	<li>Exhibition Hall B, Tech Talk Room 1</li>
+	<li>Pixar Animation Studios</li>
+</ul>
+<strong>The Past, Present, and Future of  Previsualization</strong>
+<ul>
+	<li>14:30～15:45</li>
+	<li>Exhibition Hall B, Tech Talk Room 1</li>
+	<li>IMAGICA + The Third Floor</li>
+</ul>
+<strong>Integrating CUDA Into a Visual-Effects Pipeline</strong>
+<ul>
+	<li>16:30～18:00</li>
+	<li>Exhibition Hall B, Tech Talk Room 2</li>
+	<li>NVIDIA GK</li>
+</ul>
+</blockquote>
+SIGGRAPH Asia 2009が終わったら、その後は<a href="http://indyzone.jp/catalog/products/pixar/siggraph/asia2009/index.html" target="_blank">RenderMan ユーザーグループミーティング</a>に参加してきます。<a href="http://www.brillia-sst.jp/shortshorts/access/" target="_blank">Brillia SHORT SHORTS THEATER</a>で19:00 から21:15の2時間で、これまた非常に楽しみです。
+
+18日の<a href="http://www.pacifico.co.jp/visitor/info/annex.html" target="_blank">アネックスホール</a>で行われる<a href="http://indyzone.jp/catalog/products/houdini/siggraph/asia2009/" target="_blank">Houdini ユーザーミーティング in Japan</a>にも行ってきます。これも18:30～20:30までと内容が濃い2時間になりそうです。
+
+(それにしても、SIGGRAPH Asia 2009のサイトはお世辞にも使い勝手の良いとは思えません。案内がわかりづらいです。紹介されている講演そのものが面白そうに見えるだけに非常に残念です……)

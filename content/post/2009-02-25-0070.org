@@ -1,0 +1,20 @@
+#+TITLE: "METAL GEAR SOLID TOUCH"
+#+DATE: 2009-02-25T22:13:10+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>For iPhone, iPod Touch</h4>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090225_01.jpg" alt="" /></p>
+<ul>
+<li><a href="http://www.touch.konami.jp/mgst/jp/pc/index.html" target="_blank">"METAL GEAR SOLID TOUCH" OFFICIAL SITE<br /></a></li>
+</ul>
+<h4>トレイラー映像</h4>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="392" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="quality" value="high" />
+<param name="id" value="gtembed" />
+<param name="src" value="http://www.gametrailers.com/remote_wrap.php?mid=45726" /><embed id="gtembed" type="application/x-shockwave-flash" width="480" height="392" src="http://www.gametrailers.com/remote_wrap.php?mid=45726" quality="high"></embed>
+</object>
+</p>
+<p style="text-align: left;">ちょっとやってみたい！面白そうだ！</p>
+<p style="text-align: left;">KONAMI も App Store 使うのかぁ。<br />何か開発したいけども・・・、iPod Touch すら持ってない(泣</p>

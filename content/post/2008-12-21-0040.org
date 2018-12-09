@@ -1,0 +1,39 @@
+#+TITLE: "最近みたWEBページpart7"
+#+DATE: 2008-12-21T18:33:36+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<ul>
+<li> <a href="http://www.focal.co.jp/product/blackmagic/decklink_hd/index.html"> DeckLink HD </a> </li>
+</ul>
+<p>このフルデジタルでSD/HD 10bit非圧縮の入出力インターフェイスボードは何をするためのものなんでしょうか・・・。モニタリング環境を構築していただく事が可能です、とあります。</p>
+<p>&nbsp;</p>
+<ul>
+<li> <a href="http://www.alibaba.com/product-gs/211731888/Cat_Shape_USB_4_port_hub.html"> Cat Shape USB 4 port hub </a> </li>
+</ul>
+<p>猫型のUSBハブ、だそうです。<br /> 近いうちにUSBのポートを増やそうかなとは検討中です。</p>
+<p>&nbsp;</p>
+<ul>
+<li> <a href="http://www.cartoonbrew.com/classic/japanese-american-animation-artists-of-the-golden-age.html"> Japanese-American Animation Artists of the Golden Age </a> </li>
+</ul>
+<p>日系アメリカ人アニメーターに関する記事です。</p>
+<p>&nbsp;</p>
+<ul>
+<li> <a href="http://blogs.yahoo.co.jp/msz_006_c4/23192889.html">iTunesで音声ファイルのビットレートを変える</a> </li>
+</ul>
+<p>ビットレートのことを「一秒間にどれだけの情報が入っているか」という風に表現していました。<br /> とてもわかりやすい例え方でした。</p>
+<p>&nbsp;</p>
+<ul>
+<li> <a href="http://www.oshiete-kun.net/archives/2006/11/mp3ac3wavaoa_audio_extractor.html">動画から音声をMP3,AC3,WAVで抽出する「AoA Audio Extractor」</a> </li>
+</ul>
+<p>試していないのでわかりませんけども、動画から音声のみを切り離せるそうです。</p>
+<p>&nbsp;</p>
+<ul>
+<li> <a href="http://extension.sophia-it.com/content/.ac3">.ac3 エーシースリーとは</a> </li>
+</ul>
+<p>音声ファイルの一種で、ビデオ圧縮技術のDivXで圧縮されたファイルに付くそうです。<br /> 一般的にはドルピーデジタルとも呼ばれるそうです。</p>
+<p>&nbsp;</p>
+<ul>
+<li> <a href="http://extension.sophia-it.com/content/DivX">.divx ディーアイブイエックスとは</a> </li>
+</ul>
+<p>Project Mayoによって開発された映像圧縮技術、だそうです。</p>

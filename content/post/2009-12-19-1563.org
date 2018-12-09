@@ -1,0 +1,47 @@
+#+TITLE: "TOEICの勉強には何をすればいいか"
+#+DATE: 2009-12-19T23:40:40+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+この前の17日と18日でつくづく英語の必要性を感じました。頑張って声をかけたのは良いものの次に話したい言葉(文章?)が出てこなくてとてつもなく困りました。(あー、勿体ねぇ。聞き出したいことの半分も聞けなかった)<!--more-->
+
+さて、前回書いた「<a href="http://www.hiroakit.com/blog/archives/1476" target="_blank">1日に大体何時間ほどTOEICに割けるか</a>」の続きです。TOEICの試験は大きく分けてリスニングセクションとリーディングセクションの2つで、テストはリスニングから始まります。特に<strong>リスニングは45分間に100問</strong>出されます。英語の聞き取りに慣れていない状態で試験を迎えるのは辛そうです。リーディングでは75分間に100問です。こっちでは予め英作文の教材に載っているような例文、構文を頭に入れておく必要がありそうです。そうなってくると、次の6分野が必要になるだろうと思います。(TOEICテストそのものに慣れるために必要な模試などは、今のところ除く)
+<ul>
+	<li>発音</li>
+	<li>音読</li>
+	<li>英作文</li>
+	<li>英文法</li>
+	<li>精読(長文)</li>
+	<li>語彙</li>
+</ul>
+<h5 style="padding-left: 30px;">発音</h5>
+<p style="padding-left: 30px;">そこまで重要視しませんが、何よりも制限時間がある中で聞き間違えるというのは辛そうです。また発音記号がわからないために起こる「これはなんて読むの？」という事態を解消するためにも勉強する項目として挙げます。1日に多くて1時間ぐらいで1ヶ月少々ぐらいを目安に時間を割きます。やったことが「発音の仕方に若干の変化があればいいだろう」程度に思いながらやります。(決して消極的にやっていくわけではありません)</p>
+<p style="padding-left: 60px;">使用教材：<a href="http://www.amazon.co.jp/gp/product/4756145272?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4756145272">英語耳 発音ができるとリスニングができる（CD付き）</a></p>
+
+<h5 style="padding-left: 30px;">音読</h5>
+<p style="padding-left: 30px;">ここは一番時間を割きたい分野です。聞いたら口にしてを繰り返して、それを1日に2時間ぐらいはしようと思います。これは5ヶ月間ぐらいずっと続けるつもりです。電車の中や大学の中で、iPhoneを使って何かを聞きながらブツブツ言っていたら、間違いなくそれは僕でしょう。<span style="color: #800000;">ただ、100時間ぐらい聞いて変化が表れなかったら、TOEIC 対策の方法を一から見直します。</span></p>
+
+<p style="padding-left: 60px;">使用教材：<a href="http://www.amazon.co.jp/gp/product/4860661222?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4860661222">みるみる英語力がアップする音読パッケージトレーニング(CD BOOK)
+</a><span style="color: #ffffff;">使用教材：</span><a href="http://www.amazon.co.jp/gp/product/4860661222?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4860661222"></a><a href="http://www.amazon.co.jp/gp/product/4860661222?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4860661222">速読英単語1 必修編</a>
+<h5 style="padding-left: 30px;">英文法</h5>
+<p style="padding-left: 30px;">そこまで深いところまでやっていくわけではありませんが、文法の知識が全くないと英作文や文章読解で躓くどころか、音読のときにも困ってしまいます。逆を言えば、音読している時に不安を感じない程度まで行ったら、そこで英文法に時間を割くのは最小限に留めるか、止めようと思います。</p>
+
+<p style="padding-left: 60px;">使用教材：<a href="http://www.amazon.co.jp/gp/product/4860660056?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4860660056">英文法・語法のトレーニング 必修編</a>
+<span style="color: #ffffff;">使用教材：</span><a href="http://www.amazon.co.jp/gp/product/4879154075?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4879154075">英文法・語法のトレーニング (1)戦略編</a>
+<h5 style="padding-left: 30px;">英作文</h5>
+<p style="padding-left: 30px;">文法がきちんと把握できていれば「文章が作れる!」はずなんですよね。ただ、そんなうまい話があるはずがないので、ここで英文を作る練習をしてきちんと知識が定着したかを確かめます。</p>
+<p style="padding-left: 60px;">使用教材：<a href="http://www.amazon.co.jp/gp/product/4879152943?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4879152943">実戦編 英作文のトレーニング</a></p>
+
+<h5 style="padding-left: 30px;">精読</h5>
+<p style="padding-left: 30px;">ここは英文法と英作文がきちんとこなせていれば、さほど多く時間を必要としないだろうと思っています。時間を回したとしても10日から14日ぐらいにして、長文に慣れる程度でやっていきます。</p>
+<p style="padding-left: 60px;">使用教材:<a href="http://www.amazon.co.jp/gp/product/4010327723?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4010327723">英語長文問題精講</a></p>
+
+<h5 style="padding-left: 30px;">語彙</h5>
+<p style="padding-left: 30px;">上記の勉強をしていれば自然と入ってくるだろうと思い、あまり考えていません。しかしながら、不安が少しあるので、様子を見ながらやっていきます。使うとすれば、<a href="http://www.amazon.co.jp/gp/product/4900790052?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4900790052">DUO</a>や<a href="http://www.amazon.co.jp/gp/product/475741028X?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=475741028X">究極の英単語</a>あたりでしょうか。</p>
+
+<hr />
+<h4>最後に</h4>
+極端に言えば"PodcastでTEDを毎日聞いていても苦痛に感じない"といった状態を目指していけば良いのではなかろうかと思うのです。(まだ、そこまでのことを言えるわけではないですけれども)
+
+おそらく、英文法と英作文あたりでもう一冊ほど使うと思います。絶対量が足りません。
+オススメないし良さそうな書籍があったら教えてください。いや、推してください。

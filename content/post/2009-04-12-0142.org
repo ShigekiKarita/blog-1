@@ -1,0 +1,14 @@
+#+TITLE: "Mayaでオブジェクトの表示/非表示, MELでコネクション"
+#+DATE: 2009-04-12T12:40:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Mayaでオブジェクトの表示/非表示</h4>
+<ul>
+<li>ctrl+h 選択オブジェクトを非表示</li>
+<li>ctrl+Shift+h&nbsp; 最後に非表示にしたオブジェクトの表示</li>
+</ul>
+<h4>MELからコネクションする</h4>
+<p>コネクションエディタ以外で行う方法として、次のようなMELの使い方があるみたい。</p>
+<p><a href="http://me.autodesk.jp/wam/maya/docs/Maya2009/index.html?url=CSS_Toggle_the_visibility_of_joint_labels.htm,topicNumber=d0e315795" target="_blank">Autodesk Maya オンライン ヘルプ: connectAttr コマンド</a></p>
+<pre>connectAttr -f rearLeg_JOINT.message bindPose01.member[05]<br /></pre>

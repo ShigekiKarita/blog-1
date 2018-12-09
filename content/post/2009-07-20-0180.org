@@ -1,0 +1,60 @@
+#+TITLE: "FreeNASのインストール"
+#+DATE: 2009-07-20T20:10:19+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h3>やってみた</h3>
+<p>今日は前から気になっていたNASについて調べていました。<br />その中でFreeNASというのが面白そうだったので、これを使ってみることにしました。</p>
+<h3>FreeNASからのダウンロード</h3>
+<p>下記にアクセスしてファイルをダウンロードします。</p>
+<ul><li><a href="http://www.freenas.org/index.php?option=com_versions&amp;Itemid=51" target="_blank">FreeNAS</a></li></ul>
+<p>CDを用いてインストールしたい方はFreeNAS LiveCDをダウンロードし、ISOファイルをCDに焼きます。また、USBフラッシュメモリを用いてそれをOSとして使いたい場合はFreeNAS Imagesのファイルをダウンロードしてターミナルなどを使い以下のようにします。</p>
+<pre>// 以下の操作は全てMacです。
+$ diskutil list
+$ diskutil umount /dev/disk1
+$ gzip -cd FreeNAS-i386-embedded-0.686.4.3374.img | dd of=/dev/disk1 bs=16k
+$ diskutil umountDisk /dev/disk1
+</pre>
+<p>なお、今回はFreeNAS-i386-LiveCD-0.69.2.4700を使用し、CDからのインストールを行いました。</p>
+<h3>FreeNAS インストール</h3>
+<p>しばらくすると、以下のようなメッセージが表示されます。</p>
+<pre>Welcome to FreeNAS!
+1. Boot [default]
+2. Boot with ACPI disableed
+3. boot in Safe Mode
+4. Boot with verbose logging
+5. Escape to loader prompt
+6. Reboot</pre>
+<!--
+<pre>set hw.ata.ata_dma=0
+boot</pre>-->
+<p>またしばらくすると、下記のようなメッセージが表示されます。<br />
+この画面では9を押下してインストールへと移ります。</p>
+<pre>Console setup
+-------------
+1) Assign interfaces
+2) Set LAN IP address
+3) Reset WebGUI password
+4) Reset to factory defaults
+5) Ping host
+6) Shell
+7) Reboot system
+8) Shutdown system
+9) Install/Upgrade to hard drive/flash device, etc.</pre>
+<p>またしばらくすると、下記のようなメッセージが表示されます。<br />
+この画面では3を押下して次へと進み、要求されたことに答えます。</p>
+<pre>1) Install 'embedded' OS on HD/Flash/USB
+2) Install 'embedded' OS on HD/Flash/USB + data partition
+3) Install 'full' OS on HDD + data partition
+4) Upgrade 'embedded' OS from CDROM
+5) Upgrade 'full' OS from CDROM
+6) Upgrade and convert 'full' OS to 'embedded'
+</pre>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090720_01.jpg" alt="" /></p>
+<p>以上でインストールは終わりです。<br />
+次は、FreeNASの設定をします。</p>
+<h3>参考にしたページ</h3>
+<ul>
+<li><a href="http://www.thinkit.co.jp/article/80/4/" target="_blank">FreeNASでストレージ専用機の構築</a></li>
+<li><a href="http://freebsd.fkimura.com/FreeNAS-a0.html" target="_blank">FreeNASでiSCSIターゲット。Windows Vistaで試すメモ</a></li>
+</ul>

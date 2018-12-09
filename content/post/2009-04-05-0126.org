@@ -1,0 +1,68 @@
+#+TITLE: "Liquid(セットアップ編): Part 2"
+#+DATE: 2009-04-05T01:25:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>プラグインのロード</h4>
+<p>Maya を起動させて、プラグインマネージャを開く。</p>
+<pre>Windows &gt; Preferences &gt;Plugin  Manager </pre>
+<p>上部に liquid.mll があったのでその近くにあるチェックボックスをクリックして読み込んだ。<br />一応、Mayaの再起動した。(必要ないかもしれないけど)</p>
+<pre>Liquid 2.3.5 registered<br /></pre>
+<p>こんな感じのメッセージがウィンドウに表示されたので読み込みは成功しているみたい。</p>
+<h4>Liquid のメニュー</h4>
+<p>早速、新しく現れた Liquid のメニューを開いてみた。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090405_01.png" alt="photo_090405_01.png" /></p>
+<p>うん、わからないね(笑</p>
+<h4>プリセットファイル default.lg <br /></h4>
+<p>とりあえず思ったことは・・・、</p>
+<ul>
+<li>Render は レンダリングかける？</li>
+<li>Render Selected は　レンダラーを選ぶ？</li>
+</ul>
+<p>レンダラー選ばないといけないのかなって思って選択してみた。<br />そしたら、こんなウィンドウが出てきて、？？？の状態になった。</p>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090405_02.png" alt="photo_090405_02.png" /></p>
+<p>でも、すぐ怒られてるってことがわかった。<br />「default というプリセットファイルがないから！」<br />なので、プリセットを選んでくださいってことですよね、たぶん。</p>
+<p>使ってみたいレンダラーはプリセットファイルがないとダメだと。<br />ひとまず、Pixie を選択しました。(その後に、それをコピーして default とファイル名を変更）</p>
+<pre>Unknown option: "user"<br />Finished Rendering D:/lab/renderman/test/rib/untitled_perspShape.0001.rib<br /><br />[!] Rendering shadow maps... <br />[!] Rendering hero pass...<br />&nbsp;&nbsp;&nbsp; + 'D:/lab/renderman/test/rib/untitled_perspShape.0001.rib'<br /></pre>
+<p>勝手にレンダリングしたの？<br />レンダラー選んだだけのつもりだったんだけど・・・。<br />まぁ、いいや。何もシーン内にオブジェクトだしてなかったしね。</p>
+<p>ここで思ったのは・・・・・・、</p>
+<ul>
+<li>RIBファイル名の変更方法</li>
+<li>書き出されたRIBファイルの保存先の指定方法</li>
+<li>shadow maps と hero pass って何のことを指しているのか</li>
+</ul>
+<pre>[!] Rendering shadow maps... <br />[!] Rendering hero pass...</pre>
+<h4>設定方法はRender Settings<br /></h4>
+<p>通常のレンダリング設定で使うウィンドウでやっていくみたい。</p>
+<pre>Window &gt; Rendering Editors &gt; Render Settings</pre>
+<p>使用するレンダラを Liquid にします (Liquidってレンダラーなの？？？)<br />すると、Liquid というタブがある画面に切り替わります。</p>
+<p>さらに、下には Frame, File, Image, Display, Rays, Options, Job, Renderer, Fluid と沢山のタブがあります。</p>
+<p>Frame では Resolution ってところで 画像サイズを指定できるみたい。あと、Animation っていうチェックボックスがあったので、たぶんそれを選択すると 1-100 とかシークエンスの指定ができる野だろうと思います。他にも、モーションブラーとか被写界深度とかも設定できるみたい。(ひとまずは画像サイズのところ以外は飛ばす。)</p>
+<p>File タブで、さっきの untitled_perspShape.0001.rib となった理由がわかりました。 RIBファイル名はここで設定できるみたい。RIB Name の項目で RIB Basename と Include Camera Name があるのでそれをいじっていけば大丈夫そう。あとパディングもあるので、それも変更してと。（あとは飛ばす）</p>
+<p>Image はわからないので飛ばす。ひとまずは、あとは Display と Renderer のところ見れば平気か？（Fluid なんてまだ使わないし。）</p>
+<p>Display で framebuffer と書かれているところを発見。これを file に変えれば RIBファイルで Tiff にできるか。</p>
+<p>Renderer で Pixie のコマンドがずらっと並んでるのを見ました。<br />知らないコマンドが幾つかあった。 texmake ってなんだろう。。。<br />Make Texture ってことは Texture にするんだよね。。。<br />なんでだ？</p>
+<h4>とりあえず、やってみた。</h4>
+<h5>ファイルが生成された。<br /></h5>
+<ul>
+<li>RIBファイルは rib フォルダ</li>
+<li>RIBファイルからできる画像は rmanpix フォルダ。</li>
+</ul>
+<p>この辺は、File タブのなかに Directories という項目があったから指定できると思う。ただ、RIBファイル名が test_090405.01.rib となっていて、パディングの前の「.(ドット)」を何とかアンダーバーに変更したい。</p>
+<h5>生成された画像</h5>
+<p>生成されたものが下記の画像です。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090405_03.png" alt="photo_090405_03.png" /></p>
+<p>ご覧の通り真っ黒なんです。<br />なんでだろう・・・・・・？<br />マテリアルを別途割り当て直さないといけないとか？</p>
+<p>なにはともあれ、Liquid をなんとか動作させることはできました。<br />(実際に使えるようにならなきゃ意味ないでしょ！ってところは今後対応していこうと思います)</p>
+<p>&nbsp;</p>
+<p><span>追記</span></p>
+<p>LiquidSurface っていうのを割り当てれば真っ黒な状態から抜け出せることがわかりました。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090405_04.png" alt="photo_090405_04.png" /></p>
+<p>でも、新しい問題も発見。マテリアルの様子がHypershadeでわからない。<br />そして、Attribute Editor で LiquidSurface にある Preview ボタンを押すとエラーが出る。</p>
+<pre>Liquid Preview Swatch : (kFailure)</pre>
+<p>なんでだろう・・・って思って、</p>
+<p>何を思ったか、Render Settings で Liquid のプリセットを Pixie から Aqsis に変更した。<br />そしたら、コマンドコロンプトが一瞬現れて(赤い文字が一杯見えたｗ)、その後にAttribute Editor で 上の画像と同じようなものが プレビューされるようになった。ひとまずは前進してるのかな。</p>
+<p>プリセットファイルをPixieにして、マテリアルをプレビューしようとすると問題が発生するのって、<br />コンパイルしていたときに出てきた Pixie の部分でのトラブルが原因なのかな？<br />以前、謎だ(笑</p>
+<ul>
+<li><a href="http://www.hiroakit.com/blog/2009/04/post_78.html#pixie_error" target="_blank">Liquid(コンパイル編): Part 3</a></li>
+</ul>

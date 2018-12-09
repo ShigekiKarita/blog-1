@@ -1,0 +1,38 @@
+#+TITLE: "Ubuntu (Linux) の圧縮と解凍コマンド"
+#+DATE: 2009-03-25T00:05:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>Ubuntu(Linux)で圧縮、解凍するためのコマンド<br /></h4>
+<p>Ubuntu(Linux)では解凍のことを展開と表現することが多い気がします。Ubuntuを使う前はWindowsだったので、ここでは展開ではなく解凍としていきます。</p>
+<h4>zip</h4>
+<h5>解凍する場合<br /></h5>
+<pre>$ unzip 解凍したい.zip</pre>
+<h5>圧縮する場合</h5>
+<pre>$ zip 圧縮後のzipファイル名.zip 圧縮したいファイル名</pre>
+<p>ディレクトリ単位で圧縮をする場合は</p>
+<pre>$ zip -r 圧縮後のzipファイル名.zip 圧縮したいディレクトリ名<br /></pre>
+<h4>lzh</h4>
+<h5>解凍する場合</h5>
+<pre>$ lha e 解凍したい.lzh<br /></pre>
+<h5>圧縮する場合</h5>
+<pre>$ lha a 圧縮後のファイル名.lzh 圧縮したいファイル名<br /></pre>
+<h4>gz</h4>
+<h5>解凍する場合<br /></h5>
+<pre>$ gzip -dc gzip_file.gz gzip_file</pre>
+<h5>圧縮する場合</h5>
+<pre>$ gzip hoge</pre>
+<h4>tar, tgz<br /></h4>
+<h5>解凍する場合</h5>
+<pre>$ tar xzvf package.tar.gz</pre>
+<h5>圧縮する場合</h5>
+<pre>$ tar czvf package.tar.gz</pre>
+<p>tar の使い方はちょっと覚えづらいです。僕は下記の記事を覚え方の参考にしました。</p>
+<ul>
+<li><a href="http://d.hatena.ne.jp/teppeis/20080109/1199897258" target="_blank">ウォンビン ビール瓶。：tar コマンドの使い方とオプションの覚え方</a></li>
+</ul>
+<p>tar で解凍するときに、ディレクトリ(場所)を指定したい場合は "-C" をつけます。</p>
+<ul>
+<li><a href="http://www.itmedia.co.jp/help/tips/linux/l0418.html" target="_blank">ITmedia エンタープライズ : Linux Tips「tarでファイル解凍先ディレクトリを指定したい」<br /></a></li>
+</ul>
+<pre>$ tar xvzf linux-2.5.2.tar.gz -C /usr/src </pre>

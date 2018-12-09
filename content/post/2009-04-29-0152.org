@@ -1,0 +1,62 @@
+#+TITLE: "Ubuntu 9.04 インストール"
+#+DATE: 2009-04-29T01:19:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>Ubuntu 9.04をインストール</h4>
+<p>Ubuntu 9.04をインストールしてみました。<br />サポートは2010年10月までのようです。</p>
+<p>Ubuntu自体のインストールは特に問題なく進みました。以前入れた Ubuntu8.10 では / と /home とパーティションを分けていたので、/ の部分だけをフォーマットかけて Ubuntu9.04 のものをインストールしました。</p>
+<p>やっぱインストールにかかる時間はWindowsXPとは全然違いますね。<br />(最近10台ほどやったので、当分はWindowsXPのインストールはいいや)</p>
+<p>とりあえず、Ubuntuの設定です。</p>
+<h4>端末関係</h4>
+<h5>端末のショートカット設定</h5>
+<p>システム &gt; 設定 &gt; キーボード・ショートカット</p>
+<h5>端末の色設定</h5>
+<p>端末を起動させます。<br />編集 &gt; プロファイル で設定を行います。</p>
+<h4>ブートメニュー関係<br /></h4>
+<h5>menu.lstの修正</h5>
+<pre>$ sudo gedit /boot/grub/menu.lst</pre>
+<h4>Vim関係</h4>
+<h5>Vimのインストール</h5>
+<p>前は sudo apt-get install vim でやったけど、fullというやつもあるみたいです。</p>
+<pre>$ sudo apt-get install vim-full</pre>
+<h5>Vimのプラグイン</h5>
+<p>Vimをさらに使いやすくするためプラグインを用います。<br />まずは、プラグインを格納するためのディレクトリを作成します。</p>
+<pre>$mkdir -p ~/.vim/plugin</pre>
+<p>ディレクトリができたら、autocomplpop.vim というプラグインをダウンロードします。</p>
+<ul>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=1879" target="_blank">vim online: autocomplpop.vim</a></li>
+</ul>
+<h4>FTP関係<br /></h4>
+<h5>gFTPのインストール</h5>
+<pre>$ sudo apt-get install gftp<br /></pre>
+<h4>Skype関係<br /></h4>
+<h5>リポジトリの追加</h5>
+<pre>$ sudo gedit /etc/apt/sources.list</pre>
+<p>次の文を末尾に追記します。</p>
+<pre>deb http://download.skype.com/linux/repos/debian/ stable non-free</pre>
+<h5>Skypeのインストール<br /></h5>
+<pre>$ sudo apt-get install skype</pre>
+<h4>Java 関係<br /></h4>
+<h5>JRE(java)のインストール</h5>
+<p>特に難しいことはありません。</p>
+<pre>$ sudo apt-get install sun-java6-jre sun-java6-font sun-java6-plugin</pre>
+<p>その後、一応確認のために次のコマンドを使います。</p>
+<pre>$ sudo update-alternatives --config java<br />java を提供するプログラムが 1 つしかありません</pre>
+<p>ーと言われたので問題無し(複数ある場合はどれを使うのか聞かれます)</p>
+<p>NetBeans</p>
+<h4>Mozilla Firefox 関係</h4>
+<h5>BackSpaceキーで戻る</h5>
+<p>アドレスバーにabout:configと入力します。ページが変わったら、フィルタにbackspaceと入力してbrowser.backspace_actionの値を0に変更します。</p>
+<h5>Adobe Readerのインストール</h5>
+<p>Adobe Readerをインストールするためには2つのステップを踏みます。</p>
+<p>まずは、端末でインストーラーのインストール(?)を行います。</p>
+<pre>$ sudo apt-get install adobereader-jpn adobereader-jpn-ipamonafont</pre>
+<p>次に、アプリケーション&gt;オフィス&gt;Adobe Reader 9 Installerを起動させます</p>
+<h5>Adobe Flash Playerのインストール</h5>
+<p>今回は ubuntu-restricted-extras や flashplugin-nonfree ではなく、Adobeで<a href="http://get.adobe.com/jp/flashplayer/" target="_blank">Adobe Flash Playerのインストーラーを入手</a>します。Linux用.tar.gzファイルを選択してダウンロードします。<br />なお、Flash Playerのインストール作業中はブラウザを閉じておくのがベターです。</p>
+<pre>$ tar xfvz install_flash_player_10_linux.tar.gz<br />$ ./install_flash_player_10_linux/flashplayer-installer</pre>
+<p>すると</p>
+<pre>Copyright(C) 2002-2009 Adobe Macromedia Software LLC.  All rights reserved.<br />Adobe Flash Player 10 for Linux<br />Adobe Flash Player 10 will be installed on this machine.<br />You are running the Adobe Flash Player installer as a non-root user.<br />Adobe Flash Player 10 will be installed in your home directory.<br />Support is available at http://www.adobe.com/support/flashplayer/<br />To install Adobe Flash Player 10 now, press ENTER.<br />To cancel the installation at any time, press Control-C.</pre>
+<p>ーと出てくるので、聞かれたことに答えていきます。</p>
+<p>インストールが終わったらFirefoxを起動させます。アドレスバーに about:plugins と入れてきちんとFlash Playerが入っているかチェックします。libflashplayer.so というので検索をかけるのが一番早い確かめ方だと思います。</p>

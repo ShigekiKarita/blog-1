@@ -1,0 +1,31 @@
+#+TITLE: "hiroakit blog"
+#+DATE: 2008-02-28T02:30:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<p>新しくブログを設置しました。<br /> （時たま、全文英語で書く･･・・・・かもしれない。）</p>
+<h4>主に記載する事柄</h4>
+<p><span>変更しました。(2009.04.04)</span></p>
+<ul>
+<li>Diary</li>
+<li>Choucream</li>
+<p>&rarr; 糖分がないと、良い閃きはでないと思います。(2009.04.04)</p>
+<li>Memo</li>
+<p>&rarr; どのカテゴリに入れようか迷ったときの逃げ道。(2009.04.04)</p>
+<li><span style="text-decoration: line-through;">Flash</span></li>
+<p>&rarr; あまり書かなかったので削除しました。(2009.04.04)</p>
+<li><span style="text-decoration: line-through;">CG</span></li>
+<p>&rarr; 曖昧な部分があったので変更しました。(2009.04.04)<br />Liquid, RenderMan, Mental ray あたりを書いていければと思います。</p>
+<li><span style="text-decoration: line-through;">Web (すごい！というのを紹介するぐらい)</span></li>
+<p>&rarr; 曖昧な部分があったので変更しました。(2009.04.04)<br />Webのことを書くとすれば Xmp に関連することぐらいだと思います。</p>
+<li>Ubuntu <span style="text-decoration: line-through;">(かなり時たま)<br /></span></li>
+<p>&rarr; 気がついたら結構重要度高く設定してました。今後も書きます(2009.04.04)</p>
+<li><span style="text-decoration: line-through;">Python (恐らくあまり書かない)</span></li>
+<p>&rarr; あまりにも書かなかったので削除しました。(2009.04.04)</p>
+<li>Typography</li>
+<p>&rarr; Helveticaって綺麗だと思います。(2009.04.04)</p>
+</ul>
+<h4>記載する人物</h4>
+<p>学部4年生</p>
+<h4>注意事項</h4>
+<p>本ブログには、幾つか違うブログから移した記事があります。<br /> そのため、やや表現に癖のある記事もありますがご了承ください。</p>

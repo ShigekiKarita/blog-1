@@ -1,0 +1,17 @@
+#+TITLE: "TinyMCE-MTPlugin"
+#+DATE: 2009-02-16T21:59:45+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>InsertLinkの打開策を探していたら・・・</h4>
+<p>MT 4.23 にアップグレードしたら、うまく動作しなくなってしまった InsertLink 。その打開策を探していたら、TinyMCE-MTPlugin という面白い WYSIWYG エディタを発見しました。</p>
+<h4>TinyMCE-MTPlugin</h4>
+<p>TinyMCE-MTPlugin については、以下のサイトが詳しいです。</p>
+<ul>
+<li><a href="http://tec.toi-planning.net/mt/tinymce/about/" target="_blank">TinyMCE-MTPlugin とは</a></li>
+</ul>
+<p>インストールは大して難しくない、と僕は感じました。しいて挙げるとすれば、ファイルをアップロードするのがちょっと時間がかかったなという程度です。でも、これは使っているサーバーなどを初めとした環境によって左右されますから、なんとも言えません。僕はダウンロードしたzipファイルをそのままアップロードして、SSHでログインして解凍した後にファイル移動させました。</p>
+<h4>他にも、FCKeditor を見つけた</h4>
+<ul>
+<li> <a href="http://www.dakiny.com/archives/fckeditor/ajax_wysiwyg_editor_fckeditor_26/" target="_blank">今日のコラム：AjaxなWYSIWYGエディタ、FCKeditor 2.6 日本語版をリリースしたよ。 </a></li>
+</ul>

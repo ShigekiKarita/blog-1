@@ -1,0 +1,30 @@
+#+TITLE: "BARVIA-drome"
+#+DATE: 2009-02-25T08:12:12+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>BRAVIA-drome</h4>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="535" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/tkiQM7MXp-c" /><embed type="application/x-shockwave-flash" width="535" height="350" src="http://www.youtube.com/v/tkiQM7MXp-c"></embed>
+</object>
+</p>
+<p>Sony の Bravia の CM です。とてもZoetrope (ゾートロープ)っぽい作品ですね。</p>
+<p>渋谷のど真ん中とかに設置！</p>
+<p>・・・・・・、ムリだね、できないね(笑</p>
+<p>(頑張ればできるかもしれないけど)</p>
+<h4>Making</h4>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="535" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/mXsZ-Rf6fmg" /><embed type="application/x-shockwave-flash" width="535" height="350" src="http://www.youtube.com/v/mXsZ-Rf6fmg"></embed>
+</object>
+</p>
+<h4>Other<br /></h4>
+<p>ここに行けば、制作の様子が見れます。</p>
+<ul>
+<li><a href="http://motionflow.eu/" target="_blank">BRAVIA - World-first Motionflow 200Hz event</a></li>
+</ul>
+<p>ここに行けば、YouTube でもっとたくさん見ることが出来ます。</p>
+<ul>
+<li><a href="http://www.youtube.com/user/braviainmotion" target="_blank">http://www.youtube.com/user/braviainmotion</a></li>
+</ul>

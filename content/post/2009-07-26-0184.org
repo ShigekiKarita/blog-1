@@ -1,0 +1,31 @@
+#+TITLE: "MySQLの文字コードを変更する"
+#+DATE: 2009-07-26T16:14:41+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h3><!--more-->状況</h3>
+Ubuntu Server 8.10
+MySQL 5.0
+<pre>mysql&gt; status
+Server version:         5.0.51a-3ubuntu5.4 (Ubuntu)
+Protocol version:       10
+Connection:             Localhost via UNIX socket
+Server characterset:    latin1
+Db     characterset:    latin1
+Client characterset:    latin1
+Conn.  characterset:    latin1
+UNIX socket:            /var/run/mysqld/mysqld.sock</pre>
+<h3>作業内容</h3>
+<h4>/etc/mysql/my.cnfへの追記</h4>
+<pre>$ sudo vi /etc/mysql/my.cnf
+//下記の内容を追記します
+[client]
+default-character-set=utf8
+[mysqld]
+default-character-set=utf8
+skip-character-set-client-handshake</pre>
+<h4>MySQLの再起動</h4>
+<pre># /etc/init.d/mysql stop
+# /etc/init.d/mysql start</pre>
+<h3>参考URL</h3>
+<a href="http://d.hatena.ne.jp/kamicup/20080701/1214916434" target="_blank">Ubuntu Server セットアップ備忘録 (5) - MySQL サーバの設定変更 - kamicupの備忘録</a>

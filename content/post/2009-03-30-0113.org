@@ -1,0 +1,20 @@
+#+TITLE: "メモ"
+#+DATE: 2009-03-30T12:22:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>メモ<br /></h4>
+<p><a href="http://features.cgsociety.org/story_custom.php?story_id=4916" target="_blank">CGSociety: mental mill</a></p>
+<p><a href="http://www.shader.jp/xoops/html/modules/xfsection/article.php?articleid=25" target="_blank">Shader.jp: 第3回「mental mill」<br /></a></p>
+<p><a href="http://www.amazon.co.jp/Mental-Ray-Maya-3ds-Max/dp/0470008547" target="_blank">Mental Ray for Maya, 3ds Max, And XSI: A 3d Aretists Guide to Rendering</a></p>
+<p><a href="http://www.cisco.com/web/JP/product/hs/switches/cat4900/tech/introsc_wp.html" target="_blank">Cisco Systems: サーバ クラスタリングの概要</a></p>
+<p><a href="http://mikilab.doshisha.ac.jp/dia/research/report/2004/0803/002/report20040803002.html" target="_blank">Lustreファイルシステムの概要</a></p>
+<p><a href="http://www.itmedia.co.jp/enterprise/articles/0601/06/news032.html" target="_blank">ITmedia エンタープライズ: 「ハリー・ポッター」シリーズに投入されたLustre</a></p>
+<p><a href="http://www.mentalimages.com/products/mental-mill/artist-edition.html" target="_blank">mental images: Artist Edition</a></p>
+<p><a href="http://d.hatena.ne.jp/ecotam/20081123/1227450424" target="_blank">ecotam: 描写力</a></p>
+<p><a href="http://d.hatena.ne.jp/Hash/20090322/1237706116" target="_blank">ミームの死骸を待ちながら: 春から研究室に配属される理系新四年生のための心得</a></p>
+<p><a href="http://unity3d.com/unity/whats-new/unity-2.5" target="_blank">UNITY: What's New in Unity 2.5</a></p>
+<p><a href="http://news.walkerplus.com/2009/0210/11/" target="_blank">東京ウォーカー: 2/10「左利きの日」に&ldquo;左利きの悩み&rdquo;を考える</a></p>
+<p><a href="http://blog.n-i-agroinformatics.com/article/%E6%96%87%E5%8C%96%E3%81%AE%E5%80%A4%E6%AE%B5" target="_blank">株式会社日本情報化農業研究所、しゃちょうのにっき、かも日記。: 文化の値段</a></p>
+<p><a href="http://d.hatena.ne.jp/takerunba/20090310/p1" target="_blank">タケルンバ卿日記: 自己嫌悪スパイラル</a></p>
+<p><a href="http://mudadukai.jp/2009/02/jr-tokyo-gransta-karinto-nishikihorin.html" target="_blank">無駄遣い.jp: JR東京駅グランスタ「かりんとう専門店 日本橋錦豊琳」に並んできた</a></p>

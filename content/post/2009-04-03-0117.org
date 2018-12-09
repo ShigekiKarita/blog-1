@@ -1,0 +1,392 @@
+#+TITLE: "Liquid(コンパイル編): Part 2"
+#+DATE: 2009-04-03T02:20:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+コンパイル<!--more-->
+<h4>コンパイル：　１回目</h4>
+<p style="text-align: center;"><img class="aligncenter" src="http://www.hiroakit.com/blog/photo/photo_090403_02.png" alt="" width="555" height="402" /></p>
+
+とりあえず、x86 を win32 へ切り替える。
+<p style="text-align: center;"><img class="aligncenter" src="http://www.hiroakit.com/blog/photo/photo_090403_03.png" alt="" width="555" height="142" /></p>
+
+このとき、構成マネージャーって何だろうと思い、クリックしてみたらこんなウィンドウが開いた。
+<p style="text-align: center;"><img class="aligncenter" src="http://www.hiroakit.com/blog/photo/photo_090403_04.png" alt="" width="555" height="284" /></p>
+
+よくわからないけれども、とりあえずこれでコンパイルをしてみます。 ・・・・・・、どうやってコンパイルすれば良いのだろう。 “ソリューションのビルド”というやつでいいのだろうか。 とりあえず、それでやってみます。
+
+大量の文章がダラーって現れた。
+どうやら、失敗したみたいです。
+エラーの連続です。
+<h4>エラーの内容</h4>
+実際にやっているときはエラーについて、把握するのにとてつもなく時間がかかりました。
+でも、そんなに難しい事じゃなかったみたいです。主な問題はこんなものです。
+落ち着いて、1個ずつ確実にやっていこうと思います。
+<ol>
+	<li>$MAYA_LOCATION</li>
+	<li>'unistd.h': No such file or directory</li>
+	<li>'zlib.h': No such file or directory</li>
+	<li>'liqBoundingBoxLocator.h' No such file or directory</li>
+	<li>'liqRibCurvesData.h': No such file or directory</li>
+	<li>'liqRibCurvesData.cpp': No such file or directory</li>
+	<li>'liqBoundingBoxLocator.cpp': No such file or directory</li>
+	<li>'liqRibTranslator::othreshold' が 未定義の class 'MVector' で使用しています。</li>
+	<li>'getCreaseVertices' : 'MFnMesh' のメンバではありません。</li>
+</ol>
+<h5>1. $MAYA_LOCATION</h5>
+環境変数、パスのことみたいです。Mayaがどこにあるのかを示す必要があります。まずは Windows 自体に環境変数の設定をして、その後、Visual Studio にも設定する必要があります。
+
+Windowsに対しては (Windows キー ＋ Pause ボタンを押すと早いです。) システムプロパティから詳細設定のタブを開いて、下の方にある環境変数のボタンをクリックします。そしたら、システム環境変数の方の新規ボタンを押して次のように入力すればいいと思います。
+<pre>変数名　MAYA_LOCATION</pre>
+<pre>変数値　C:\Program Files\Autodesk\Maya○○</pre>
+Visual Studio に対しては 上部メニューのツールからオプションを選択します。するとウィンドウが現れるので、そこでプロジェクトおよびソリューションの中にあるVC++ディレクトリを選択します。その後、ディレクトリを表示するプロジェクトにある実行可能ファイル、インクルードファイル、ライブラリファイルの3点に対して設定を行います。
+
+実行可能ファイル
+<pre>$(MAYA_LOCATION)\bin</pre>
+インクルードファイル
+<pre>$(MAYA_LOCATION)\include</pre>
+ライブラリファイル
+<pre>$(MAYA_LOCATION)\ｌib</pre>
+この $MAYA_LOCATION問題はこれで解決するはずです。
+<h5>2. 'unistd.h': No such file or directory</h5>
+README.txt で書いてありましたよね(笑
+この問題に関する対策法はmenlogさんにありました。ありがとうございます。
+
+<a href="http://blog.taikomatsu.com/2008/01/29/windowsxp%E3%81%A7liquid%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB/" target="_blank">memlog: WindowsXPでLiquidのコンパイル</a>
+<blockquote>ほんで次はファイルが足りないらしいことが判明。
+readme.txtには、
+<em>if you want to compile the generic RIB library, you'll need to create an empty unistd.h
+in your MSVC standard include directory (due to the bison/flex file generator), and install zlib headers and libs.</em>
+と書いてあるので、とりあえず空のunistd.hをつくり、VC8のincludeディレクトリに突っ込みます。
+空なので、0kbです。中身は何もありません。空なので。</blockquote>
+<h5>3. 'zlib.h': No such file or directory</h5>
+これは<a href="http://www.winimage.com/zLibDll/" target="_blank">ZLIB DLL Home Page</a> からファイルを入手してコンパイルをしてファイルを用意する必要があります。ひとまずは zlib123.zip をダウンロードします。なお、解凍すると以下のようになります。
+<pre>D:.
+│  adler32.c
+│  algorithm.txt
+│  ChangeLog
+│  compress.c
+│  configure
+│  crc32.c
+│  crc32.h
+│  deflate.c
+│  deflate.h
+│  example.c
+│  FAQ
+│  gzio.c
+│  INDEX
+│  infback.c
+│  inffast.c
+│  inffast.h
+│  inffixed.h
+│  inflate.c
+│  inflate.h
+│  inftrees.c
+│  inftrees.h
+│  Makefile
+│  Makefile.in
+│  make_vms.com
+│  minigzip.c
+│  README
+│  trees.c
+│  trees.h
+│  uncompr.c
+│  zconf.h
+│  zconf.in.h
+│  zlib.3
+│  zlib.h
+│  zutil.c
+│  zutil.h
+│  
+├─amiga
+│      Makefile.pup
+│      Makefile.sas
+│      
+├─as400
+│      bndsrc
+│      compile.clp
+│      readme.txt
+│      zlib.inc
+│      
+├─contrib
+│  │  README.contrib
+│  │  
+│  ├─ada
+│  │      buffer_demo.adb
+│  │      mtest.adb
+│  │      read.adb
+│  │      readme.txt
+│  │      test.adb
+│  │      zlib-streams.adb
+│  │      zlib-streams.ads
+│  │      zlib-thin.adb
+│  │      zlib-thin.ads
+│  │      zlib.adb
+│  │      zlib.ads
+│  │      zlib.gpr
+│  │      
+│  ├─asm586
+│  │      match.S
+│  │      README.586
+│  │      
+│  ├─asm686
+│  │      match.S
+│  │      README.686
+│  │      
+│  ├─blast
+│  │      blast.c
+│  │      blast.h
+│  │      Makefile
+│  │      README
+│  │      test.pk
+│  │      test.txt
+│  │      
+│  ├─delphi
+│  │      readme.txt
+│  │      ZLib.pas
+│  │      ZLibConst.pas
+│  │      zlibd32.mak
+│  │      
+│  ├─dotzlib
+│  │  │  DotZLib.build
+│  │  │  DotZLib.chm
+│  │  │  DotZLib.sln
+│  │  │  LICENSE_1_0.txt
+│  │  │  readme.txt
+│  │  │  
+│  │  └─DotZLib
+│  │          AssemblyInfo.cs
+│  │          ChecksumImpl.cs
+│  │          CircularBuffer.cs
+│  │          CodecBase.cs
+│  │          Deflater.cs
+│  │          DotZLib.cs
+│  │          DotZLib.csproj
+│  │          GZipStream.cs
+│  │          Inflater.cs
+│  │          UnitTests.cs
+│  │          
+│  ├─infback9
+│  │      infback9.c
+│  │      infback9.h
+│  │      inffix9.h
+│  │      inflate9.h
+│  │      inftree9.c
+│  │      inftree9.h
+│  │      README
+│  │      
+│  ├─inflate86
+│  │      inffas86.c
+│  │      inffast.S
+│  │      
+│  ├─iostream
+│  │      test.cpp
+│  │      zfstream.cpp
+│  │      zfstream.h
+│  │      
+│  ├─iostream2
+│  │      zstream.h
+│  │      zstream_test.cpp
+│  │      
+│  ├─iostream3
+│  │      README
+│  │      test.cc
+│  │      TODO
+│  │      zfstream.cc
+│  │      zfstream.h
+│  │      
+│  ├─masm686
+│  │      match.asm
+│  │      
+│  ├─masmx64
+│  │      bld_ml64.bat
+│  │      gvmat64.asm
+│  │      gvmat64.obj
+│  │      inffas8664.c
+│  │      inffasx64.asm
+│  │      inffasx64.obj
+│  │      readme.txt
+│  │      
+│  ├─masmx86
+│  │      bld_ml32.bat
+│  │      gvmat32.asm
+│  │      gvmat32.obj
+│  │      gvmat32c.c
+│  │      inffas32.asm
+│  │      inffas32.obj
+│  │      mkasm.bat
+│  │      readme.txt
+│  │      
+│  ├─minizip
+│  │      ChangeLogUnzip
+│  │      crypt.h
+│  │      ioapi.c
+│  │      ioapi.h
+│  │      iowin32.c
+│  │      iowin32.h
+│  │      Makefile
+│  │      miniunz.c
+│  │      minizip.c
+│  │      mztools.c
+│  │      mztools.h
+│  │      unzip.c
+│  │      unzip.h
+│  │      zip.c
+│  │      zip.h
+│  │      
+│  ├─pascal
+│  │      example.pas
+│  │      readme.txt
+│  │      zlibd32.mak
+│  │      zlibpas.pas
+│  │      
+│  ├─puff
+│  │      Makefile
+│  │      puff.c
+│  │      puff.h
+│  │      README
+│  │      zeros.raw
+│  │      
+│  ├─testzlib
+│  │      testzlib.c
+│  │      testzlib.txt
+│  │      
+│  ├─untgz
+│  │      Makefile
+│  │      Makefile.msc
+│  │      untgz.c
+│  │      
+│  └─vstudio
+│      │  readme.txt
+│      │  
+│      ├─vc7
+│      │      miniunz.vcproj
+│      │      minizip.vcproj
+│      │      testzlib.vcproj
+│      │      zlib.rc
+│      │      zlibstat.vcproj
+│      │      zlibvc.def
+│      │      zlibvc.sln
+│      │      zlibvc.vcproj
+│      │      
+│      └─vc8
+│              miniunz.vcproj
+│              minizip.vcproj
+│              testzlib.vcproj
+│              testzlibdll.vcproj
+│              zlib.rc
+│              zlibstat.vcproj
+│              zlibvc.def
+│              zlibvc.sln
+│              zlibvc.vcproj
+│              
+├─examples
+│      fitblk.c
+│      gun.c
+│      gzappend.c
+│      gzjoin.c
+│      gzlog.c
+│      gzlog.h
+│      README.examples
+│      zlib_how.html
+│      zpipe.c
+│      zran.c
+│      
+├─msdos
+│      Makefile.bor
+│      Makefile.dj2
+│      Makefile.emx
+│      Makefile.msc
+│      Makefile.tc
+│      
+├─old
+│  │  descrip.mms
+│  │  Makefile.riscos
+│  │  README
+│  │  visual-basic.txt
+│  │  zlib.html
+│  │  
+│  └─os2
+│          Makefile.os2
+│          zlib.def
+│          
+├─projects
+│  │  README.projects
+│  │  
+│  └─visualc6
+│          example.dsp
+│          minigzip.dsp
+│          README.txt
+│          zlib.dsp
+│          zlib.dsw
+│          
+├─qnx
+│      package.qpg
+│      
+└─win32
+ DLL_FAQ.txt
+ Makefile.bor
+ Makefile.emx
+ Makefile.gcc
+ Makefile.msc
+ VisualC.txt
+ zlib.def
+ zlib1.rc</pre>
+コンパイルの方法は、projects/visualc6 にあるREADME.txtに従います。
+<blockquote>This project builds the zlib binaries as follows:
+
+* Win32_DLL_Release\zlib1.dll       DLL build
+* Win32_DLL_Debug\zlib1d.dll        DLL build (debug version)
+* Win32_DLL_ASM_Release\zlib1.dll   DLL build using ASM code
+* Win32_DLL_ASM_Debug\zlib1d.dll    DLL build using ASM code (debug version)
+* Win32_LIB_Release\zlib.lib        static build
+* Win32_LIB_Debug\zlibd.lib         static build (debug version)
+* Win32_LIB_ASM_Release\zlib.lib    static build using ASM code
+* Win32_LIB_ASM_Debug\zlibd.lib     static build using ASM code (debug version)</blockquote>
+今回、ASMというやつは意味がよくわからなかったので飛ばしました。
+
+コンパイルが完了したら、<a href="http://blog.taikomatsu.com/2008/01/29/windowsxp%E3%81%A7liquid%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB/">memlog: WindowsXPでLiquidのコンパイル</a>の記事に書かれているようにファイルを移動させます。
+<blockquote>ほんでzlibのコンパイルが通ったら、system32にzlib1.dllを、includeパスが通っているところにzlib.h、zconf.hを、libパスが通っているところにzdll.libとzlib1.expをコピーします。</blockquote>
+なお、僕のやり方だと zdll.lib は生成されませんでした。生成されなかったzdll.lib は [ruby-dev:28209] 1.8.4 lib/zlib extconf.rb for win32 の本文にあるリンクを通じて zlib123-dll.zipをダウンロードし、そこ から入手しました。
+ちなみに、zlib123-dll.zip を解凍すると、次のようになります。
+<pre>D:.
+│  DLL_FAQ.txt
+│  README.txt
+│  USAGE.txt
+│  zdll.txt
+│  zlib1.dll
+│  
+├─include
+│      zconf.h
+│      zlib.h
+│      
+├─lib
+│      zdll.exp
+│      zdll.lib
+│      zlib.def
+│      
+└─test
+ example_d.exe
+ minigzip_d.exe
+ testzlib_d.exe
+ untgz_d.exe</pre>
+<h5>4. 'liqBoundingBoxLocator.h' No such file or directory
+5. 'liqRibCurvesData.h': No such file or directory
+6. 'liqRibCurvesData.cpp': No such file or directory
+7. 'liqBoundingBoxLocator.cpp': No such file or directory</h5>
+4～7については、似たようなことが下記のURL先に書いてありました。
+<ul>
+	<li><a href="http://sourceforge.net/forum/forum.php?thread_id=2608878&amp;forum_id=214928" target="_blank">SourceForge.net: Liquid: Maya Rendering Translator: Open Discussion:</a></li>
+</ul>
+どうやら、SVNからファイルをダウンロードしないといけないようです。僕はSVNでアクセスの仕方がわからなかったので、<a href="http://liquidmaya.svn.sourceforge.net/viewvc/liquidmaya/branches/animalia/trunk/" target="_blank">ここ</a>から取ってきました。ファイルを探すときには、ブラウザのCtrl + F が活躍すると思います。ファイルの保存先は、SVNの所と同じようにします。
+<h5>'liqRibTranslator::othreshold' が 未定義の class 'MVector' で使用しています。</h5>
+liqRibTranslator.h に #include &lt;maya/MVector.h&gt; を付け足すだけで解決しました。
+<h5>'getCreaseVertices' : 'MFnMesh' のメンバではありません。</h5>
+これが一番時間を食いました。正確にはこういったエラーでした。
+<pre>liqRibSubdivisionData.cpp(309) : error C2039: 'getCreaseVertices' : 'MFnMesh' のメンバではありません。</pre>
+<pre>liqRibSubdivisionData.cpp(488) : error C2039: 'getCreaseVertices' : 'MFnMesh' のメンバではありません。</pre>
+PDFファイルの Maya2008 の 解説書(?)　を見るまで全く原因(と意味)がわかりませんでした。
+<pre> http://images.autodesk.com/apac_japan_main/files/maya2008_whatsnew.pdf</pre>
+この解決方法は、LiquidがMaya2008に対応する前のソースコードを手に入れることだと考えて、SVNでファイルをダウンロードしました。ダウンロードしたファイルは<a href="http://liquidmaya.svn.sourceforge.net/viewvc/liquidmaya/branches/rsp/trunk/src/liqRibSubdivisionData.cpp?revision=716&amp;view=markup" target="_blank">これ</a>です。
+
+<a href="http://www.hiroakit.com/blog/archives/119" target="_blank">Liquid(コンパイル編): Part 3へ続く</a>

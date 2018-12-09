@@ -1,0 +1,17 @@
+#+TITLE: "リンク先を別ウィンドウで表示させる"
+#+DATE: 2009-02-15T11:53:11+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>リンク先が同じウィンドウで開いてしまう</h4>
+<p>今まで投稿してきた記事の中にはリンクが貼ってあるものがあります。<br /> そのリンク先に移動する際、同じウィンドウで開いてしまう状況でした。</p>
+<p>現在は、この点は改善されています。<br /> リンク先は別ウィンドウで見られるようになりました。</p>
+<h4>InsertLink</h4>
+<p>このブログは Movable Type を使っています。記事作成の際にボタン操作でリンクのURLは簡単に貼ることができます。</p>
+<p><textarea class="html" name="code">&lt;a href="*"&gt;&lt;/a&gt; </textarea></p>
+<p>しかし、このボタン操作だけだとリンク移動の際は同じウィンドウに表示されるままです。別ウィンドウに表示するのに必要な target="_blank" までは設定されないからです。この部分は手動でやる必要があります。しかし、それは極めて面倒な作業です。</p>
+<p><textarea class="html" name="code">&lt;a href="*" target="_blank"&gt;&lt;/a&gt; </textarea></p>
+<ul>
+<li><a href="http://www.h-fj.com/blog/archives/2008/01/02-111800.php" target="_blank">リンクの挿入をより便利にするプラグイン(MT4.1/MTOS専用版)</a></li>
+</ul>
+<p>これを使うことによって、リンク先を別のウィンドウで表示する target="_blank" を Movable Type 上で簡単に挿入することが可能になりました。</p>

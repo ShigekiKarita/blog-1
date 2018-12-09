@@ -1,0 +1,36 @@
+#+TITLE: "mental ray 初日"
+#+DATE: 2009-02-14T02:51:08+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>mental ray の本を借りてきた。</h4>
+<p>mental ray の本が、大学の図書館にあったので借りてきました。<br /> (大学の図書館にあるだなんて結構ビックリしています)</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090214_01.png" alt="photo_090214_01.png" /></p>
+<p>この本の値段を見れば理解されると思います。</p>
+<ul>
+<li><a href="http://www.amazon.co.jp/gp/product/4939007227?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4939007227" target="_blank">RENDERING WITH MENTAL RAY</a></li>
+<li><a href="http://www.amazon.co.jp/gp/product/4939007294?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4939007294" target="_blank">PROGRAMMING MENTAL RAY (mentalray Handbooks)</a></li>
+</ul>
+<p>ゆっくりと確実に一個一個消化しながら読んでいこうと思います。</p>
+<h4>mental ray って何？</h4>
+<p>mental ray というのは mental image 社が開発した高性能なレンダリングエンジンです。<br />これを使うと、より写真に近い(フォトリアルな)絵を書き出すことが可能です。</p>
+<p>実際に mental ray を使っている企業の一例です。(<a href="http://www.nvidia.co.jp/object/mental_images_jp.html" target="_blank">NVIDIAのこの記事</a>を参考にしました。)</p>
+<ul>
+<li>Buf Compagnie</li>
+<li>Digital Domain</li>
+<li>DreamWorks Animation</li>
+<li>Lucasfilm</li>
+<li>Sony Pictures Imageworks</li>
+<li>Rainmaker</li>
+<li>The Mill</li>
+<li>The Moving Picture Company</li>
+<li>The Orphanage</li>
+</ul>
+<p>mental image 社の HP の Gallery ページに実際に使われたシーンが掲載されています。</p>
+<ul>
+<li><a href="http://www.mentalimages.com/gallery/motion-pictures.html" target="_blank">mental images: Motion Pictures</a></li>
+</ul>
+<h4>どうして mental ray に注目したの？</h4>
+<p>第一に、前回書いた<a href="http://www.hiroakit.com/blog/2009/02/post_08.html" target="_blank">2009年の技術目標</a>で、mental rayの知識が必要だとわかったため。<br /> 第二に、3dsMaxやMaya、XSIに標準装備されて、業界標準であるように思えたため。</p>
+<h4>この mental ray の本</h4>
+<p>洋書なんです。<br /> 大丈夫かなぁ･･････(笑</p>

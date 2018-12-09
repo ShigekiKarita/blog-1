@@ -1,0 +1,12 @@
+#+TITLE: "Internet Explorer 8 に last-child は非対応"
+#+DATE: 2010-04-13T23:58:51+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+記事名のとおりなのですが, MSDN を確認すると対応していないと書いてあります.
+
+<a href="http://msdn.microsoft.com/ja-jp/library/cc351024%28VS.85%29.aspx">CSS  に関する互換性と Internet Explorer</a>
+<ul>
+	<li>first-child は使える</li>
+	<li>last-child は使えない</li>
+</ul>

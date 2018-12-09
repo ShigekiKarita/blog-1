@@ -1,0 +1,26 @@
+#+TITLE: "CAFFE SOLARE"
+#+DATE: 2009-01-09T01:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>気になるフォント</h4>
+<p>CAFFE SOLARE カフェ ソラーレというお店のサイトを見つけました。</p>
+<ul>
+<li><a href="http://www.pronto.co.jp/solare/index.shtml">CAFFE SOLARE カフェ ソラーレ</a></li>
+</ul>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090108_01.png" alt="photo_090108_01.png" /></p>
+<p>一番最初に目がいったのはナビゲーションメニューのフォントでした。<br /> いや、正確に言えば、このケーキだったような気もしますが(笑<br /> このケーキ、とても美味しそうです。すごく食べたいですよ。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090108_02.png" alt="photo_090108_02.png" /></p>
+<p>ナビゲーションメニューのフォントというのは、ちょうどこの囲ってある部分の所です。<br /> " E " にとても特徴があります。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090108_03.png" alt="photo_090108_03.png" /></p>
+<p>よく見てみると、Ｅの他にも L, P, A に特徴があることがわかりました。</p>
+<p>&nbsp;</p>
+<h4>調べてみました</h4>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090108_04.png" alt="photo_090108_04.png" /></p>
+<p>調べてみると、" <span>Bauhaus</span> "というフォントではないかという結論に至りました。</p>
+<p>&nbsp;</p>
+<h4>試しに作ってみた</h4>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090108_05.png" alt="photo_090108_05.png" /></p>
+<p>&nbsp;</p>
+<h4>Conclusion</h4>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090108_06.png" alt="photo_090108_06.png" /></p>

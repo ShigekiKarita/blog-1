@@ -1,0 +1,29 @@
+#+TITLE: "Discover Foam City"
+#+DATE: 2009-02-20T12:30:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Sony United Kingdom</h4>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="535" height="340" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://campaign.odw.sony-europe.com/flashprojects/dime/foamcity/phase2/videos/player.swf?clip=dime" /><embed type="application/x-shockwave-flash" width="535" height="340" src="http://campaign.odw.sony-europe.com/flashprojects/dime/foamcity/phase2/videos/player.swf?clip=dime"></embed>
+</object>
+</p>
+<p>Sony United Kingdom の映像です。</p>
+<ul>
+<li><a href="http://www.sony.co.uk/hub/id/1204803096998" target="_blank">Discover Foam City</a></li>
+</ul>
+<p>こっちには写真が掲載されています。</p>
+<ul>
+<li><a href="http://www.sony.co.uk/hub/resource/block/2" target="_blank">Welcome to Sony&rsquo;s blogging page</a></li>
+</ul>
+<p>Sony の商品ってあまり好きじゃないんだけど、この映像をみたら「あ、いいかも」って思えた。こういう優しいテイストの映像って好きです。作ってみたいなぁ・・・、これ。どうやって作ってるんだろ。</p>
+<h4>Making of</h4>
+<p><span>追記: 2009.02.22</span> メイキング映像を見つけました。</p>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="535" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/yDr7ipfFbNQ&amp;fmt" /><embed type="application/x-shockwave-flash" width="535" height="350" src="http://www.youtube.com/v/yDr7ipfFbNQ&amp;fmt"></embed>
+</object>
+</p>
+<p>コメントの情報を元に調べてみると、<a href="http://www.hla.net/" target="_blank">HLA</a> を始めとして <a href="http://www.bste.co.uk/projects.shtml" target="_blank">BSTE</a> などが作ったみたいです。</p>
+<p><a href="http://www.fallon.co.uk/#/work/dime-foam-city.html" target="_blank">Fallon London</a> というHPにも載っていて、Fallon London も関わっているみたいです。</p>

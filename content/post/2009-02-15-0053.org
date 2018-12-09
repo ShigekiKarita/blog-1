@@ -1,0 +1,48 @@
+#+TITLE: "ブログ上にソースコードを表示する"
+#+DATE: 2009-02-15T21:52:19+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>ブログ上にソースコードを表示する</h4>
+<p>ブログでソースコードを表示したいなと思って調べてみました。</p>
+<ul>
+<li><a href="http://blog.37to.net/2007/06/syntax_highlighter/" target="_blank">あなたのソースコードを彩る、Syntax Highlighterまとめ</a></li>
+</ul>
+<p>色々と紹介されている中から、"<a href="http://code.google.com/p/syntaxhighlighter/" target="_blank">dp.SyntaxHighlighter</a>" と "<a href="http://softwaremaniacs.org/soft/highlight/en/" target="_blank">Highlight.js</a>" に注目しました。</p>
+<h4>dp.SyntaxHighlighter</h4>
+<h5>主な特徴</h5>
+<ul>
+<li>プログラム毎に色を変えて表示できる。</li>
+<li>各コードに行番号を付けることができる。</li>
+<li>"copy to clipboard" をクリックで公開しているコードが取得できる。</li>
+<li>"view plain" をクリックで公開しているコードを別画面に表示できる。</li>
+<li>"print" をクリックで公開しているコードを印刷できる。</li>
+</ul>
+<h5>例えばこんな感じに</h5>
+<ul>
+<li><a href="http://code.google.com/p/syntaxhighlighter/" target="_blank">http://code.google.com/p/syntaxhighlighter/</a></li>
+</ul>
+<h4>Highlight.js</h4>
+<h5>主な特徴</h5>
+<ul>
+<li>プログラム毎に色を変えて表示できる。</li>
+<p>対応している言語はこちら &rarr; <a href="http://code.google.com/p/syntaxhighlighter/wiki/Languages" target="_blank">Supported languages</a></p>
+<li>RenderMan の ソースコードが表示できる。</li>
+<li>MEL (Maya Embedded Language) が表示できる</li>
+</ul>
+<h5>例えばこんな感じに</h5>
+<ul>
+<li><a href="http://softwaremaniacs.org/media/soft/highlight/test.html" target="_blank">http://softwaremaniacs.org/media/soft/highlight/test.html</a></li>
+</ul>
+<h4>結論はdp.SyntaxHighlighter</h4>
+<p><textarea class="html" name="code">&lt;html&gt; &lt;head&gt; &lt;/head&gt; &lt;body&gt; &lt;h2&gt;見栄え&lt;/h2&gt; &lt;p&gt;なかなかいい感じです。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; </textarea></p>
+<h5>理由</h5>
+<p>こんな感じ。</p>
+<ul>
+<li>各コードに行番号が付けれるため。</li>
+<li>"view plain" で別画面に表示できるため。</li>
+<li>RenderMan はもっと後に勉強しようと思ったため。</li>
+<li>当分、3dsMaxを使うため、Maya(MEL) は保留したい。</li>
+</ul>
+<h5>ただ......</h5>
+<p>ActionScript はどうしよう(笑</p>

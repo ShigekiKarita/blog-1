@@ -1,0 +1,13 @@
+#+TITLE: "Mayaで2点間の距離を表示させる方法"
+#+DATE: 2009-04-13T01:55:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>2点間の距離を表示させる方法</h4>
+<p>Mayaで2点間の距離ってどうやって表示させるんだろうって思って調べてみた。MELのdistanceDimensionコマンドを使ったらできるみたいだけど、できればGUIで簡単に済ませたい。そしたら、もうやってる人がいました。</p>
+<ul>
+<li><a href="http://hm2studio.exblog.jp/10343642/" target="_blank">weblog_hm2STUDIO: フォーカスのコントロール</a></li>
+</ul>
+<p>仮に、Maya上に球体Aと球体Bがある状態だとして、Create-&gt; Measure Tool-&gt;Distance Tool を実行します。始点と終点をひとまずはテキトーにクリックします。すると、新しくlocatorが２つとdistanceDimension が1つ作成されます。</p>
+<p>この状態から、球体Aとlocatorの順で選択します。その後、Constrain-&gt;Pointを実行します。球体Bの方も同様に行います。</p>
+<p>すると、距離が画面上に(おそらくほぼ)的確な値が表示されると思います。</p>

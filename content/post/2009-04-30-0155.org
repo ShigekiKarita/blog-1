@@ -1,0 +1,42 @@
+#+TITLE: "Firefoxが頻繁にクラッシュする"
+#+DATE: 2009-04-30T08:41:31+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Firefoxの最新版がでました</h4>
+<ul>
+<li><a href="http://amigomr.dw.land.to/blog/article.php?id=982" target="_blank">migomr の徒然日記 : Firefox 3.0.10</a></li>
+</ul>
+<blockquote>
+<p>当初予定では、もっと先だと思われていた Firefox 3.0.10 が緊急にリリースされました（リリースノート。1 件のセキュリティ問題（「最高」ランク）と、安定性に関わる重大な問題の修正となっていますが、修正されたすべてのバグ を見る限り、どちらも、クラッシュにつながる問題です。そもそも、前の 3.0.9 での修正が悪影響を及ぼしてクラッシュするようになっていたとのことですから、そのために、緊急にリリースされることになったようです。当然のことながら、すべてのユーザに速やかなアップデートをお勧めします。</p>
+</blockquote>
+<p>とりあえず、Firefoxをアップデートしましょう。<br />これで、クラッシュが多発する原因がなくなれば嬉しいですね。</p>
+<h4>Firefoxのクラッシュ多発<br /></h4>
+<p>友人に、Firefoxがよくクラッシュするという話を聞いたので調べてみました。<br />今回の「Firefoxがクラッシュする」というのは、このウィンドウが出てくるケースの場合です。<br />((ちなみに、僕はFirefox 3.0.9 を使っていますがクラッシュが頻発することはまだありません。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090430_01.png" alt="" /></p>
+<p>なお、これ以外にもウィンドウタイトルが "firefox.exe" となって出てくる場合があります。これはどちらかというとFirefoxよりもOS側に問題があるものでこれは割愛します。</p>
+<h4>クラッシュする大きな理由<br /></h4>
+<p>さて、Firefoxがクラッシュする理由について考えてみました。<br />とりあえず、原因となりそうなものに大きく分けてみました。<a href="http://support.mozilla.com/ja/kb/Firefox+%E3%81%8C%E3%82%AF%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%81%99%E3%82%8B#__3" target="_blank"><br /></a>(<a href="http://support.mozilla.com/ja/kb/Firefox+%E3%81%8C%E3%82%AF%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%81%99%E3%82%8B#__3" target="_blank">Firefox がクラッシュする</a> という記事を参考にしながら)</p>
+<ul>
+<li>最新の Firefox を使っていない</li>
+<li>問題の拡張機能やテーマを使っている</li>
+<li>問題を抱えている古いプラグインを使っている</li>
+<li>ウィルスとスパイウェアなどにPCが感染している</li>
+</ul>
+<h4>クラッシュした時刻</h4>
+<p>クラッシュした時刻をチェックします。URLに about:crashes と入力します。<br />時刻を調べる理由は、調子が悪くなり始めた日を知るためです。</p>
+<p>ただ、これはプラグイン、アドオンをインストールした日にちがわからないと全く意味がありません。</p>
+<h4>クラッシュするアドオン</h4>
+<p>僕はほとんどアドオンを入れることがないので、アドオンの詳しいところはわかりません。<br />もしかしたら、あなたの使っているアドオンがFirefoxのクラッシュの原因かもしれません。<br />下記のURLをチェックしてみてください。</p>
+<ul>
+<li>http://kb.mozillazine.org/Problematic_extensions</li>
+<li>http://mozilla-remix.seesaa.net/article/54501267.htm</li>
+</ul>
+<h4>クラッシュするタイミング</h4>
+<p>クラッシュするタイミングがわかっていれば、解決するのが幾分と楽かもしれません。<br /><a href="http://support.mozilla.com/ja/kb/Firefox+%E3%81%8C%E3%82%AF%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%81%99%E3%82%8B#__3" target="_blank">Firefox がクラッシュする</a> に書いてあったものから紹介します。</p>
+<ul>
+<li>Firefox の起動直後: <a class="wiki" title="Firefox crashes when you open it" href="http://support.mozilla.com/ja/kb/Firefox+crashes+when+you+open+it">Firefox crashes when you open it</a></li>
+<li>特定のページを見た直後: <a class="wiki" title="Firefox crashes when loading certain pages" href="http://support.mozilla.com/ja/kb/Firefox+crashes+when+loading+certain+pages">Firefox crashes when loading certain pages</a></li>
+<li>ファイルのダウンロード時: <a class="wiki" title="This article covers the situation where Firefox displays a message about crashing when you try to download files or save images.    If you are experiencing crashes when you are just browsing the inte" href="http://support.mozilla.com/ja/kb/Firefox+crashes+when+trying+to+download+a+file">Firefox crashes when trying to download a file</a></li>
+<li>Firefox を終了しようとした時: <a class="wiki" title="Firefox crashes when you exit it" href="http://support.mozilla.com/ja/kb/Firefox+crashes+when+you+exit+it">Firefox crashes when you exit it</a></li>
+</ul>

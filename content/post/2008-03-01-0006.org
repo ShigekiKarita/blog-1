@@ -1,0 +1,12 @@
+#+TITLE: "Ubuntu と apt-cache"
+#+DATE: 2008-03-01T12:09:01+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>apt-cache</h4>
+apt-cacheも忘れていたので、ついでにおさらい。
+<h5>コマンド:</h5>
+gencaches - パッケージ情報を収集、更新する
+show パッケージ名 - パッケージ情報を表示する
+showpkg パッケージ名 - パッケージの依存関係などを表示する
+search キーワード - キーワードを元にパッケージを検索する

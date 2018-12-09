@@ -1,0 +1,14 @@
+#+TITLE: "VMware ESXi に FreeNAS で iSCSI"
+#+DATE: 2009-07-21T02:06:21+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h3>やってみたい</h3>
+<p>FreeNASをインストールしたので、次はこのリンク先で言っているようなことをしてみたい。</p>
+<ul>
+<li><a href="http://blog.nabe.jp/archives/000105.html" target="_blank">VMware ESXiにCentOS 5をインストールする（１） ?バーチャルマシンの設定</a>
+</li>
+</ul>
+<blockquote><p>ESXi ServerからNASをNFSマウントしているときはダウンロードしたISOイメージを直接指定できます。</p></blockquote>
+<p>とりあえずは<a href="http://freebsd.fkimura.com/FreeNAS-a0.html" target="_blank">FreeNASでiSCSIターゲット。Windows Vistaで試すメモ</a>、<a href="http://d.hatena.ne.jp/rodoyan/20081020/1224486222" target="_blank">FreeNASの設定まとめ - rodoyan's 技術メモ</a>と<a href="http://ynigi.com/esxi_iscsi.aspx" target="_blank">VMWare ESXi ServerでiSCSIを利用する</a>に書いてあるところまでやって、iSCSIを使えるようにはできました。問題はここからどう進めば良いのかってこと。何から手を出せばいいのだろうか。</p>
+<p>ひとまず、大学を出て自宅に戻ろう</p>

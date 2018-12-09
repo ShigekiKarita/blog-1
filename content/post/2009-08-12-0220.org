@@ -1,0 +1,28 @@
+#+TITLE: "blog changeover"
+#+DATE: 2009-08-12T00:55:10+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+今年の夏は冷夏と言われていますが、そんな最中にMovable TypeからWordPressに変更しました。<!--more-->
+<p style="text-align: center;"><a rel="attachment wp-att-240" href="http://www.hiroakit.com/blog/archives/220/blogchangeover-2"><img class="aligncenter size-large wp-image-240" title="blogchangeover" src="http://www.hiroakit.com/blog/photo/blogchangeover-640x480.jpg" alt="blogchangeover" width="640" height="480" /></a></p>
+
+Movable Typeからブログソフトウェアを変更するときにSerene BachやNucleus、はたまたblosxomも検討しました。短期間ではありますが試験運用してみた結果、次の理由から今後はWordpressで書いていくことに決めました。
+<ul>
+	<li>Movable Typeのように再構築という長時間待つ必要がないところがいい</li>
+	<li>WordPressの公式オンラインマニュアルであるWordPress Codexがいい</li>
+	<li>Movable TypeよりWordPressのインターフェースが落ち着いていて心地いい</li>
+</ul>
+Movable Typeもそうですが、ブログソフトウェアで一番嫌いなのはアップデート、アップグレードをしなければならないところです。Movable Typeを使っていた頃でのアップデート、アップグレードする際にDBや記事のバックアップを取るのは数分で終わるようなことなので面倒なこととは感じてはいません。嫌いな理由はそういったところ以外にあります。例えば、次のバージョンにプラグインが対応していなかったり、適応させているテーマ（スキン）が対応していなかったりといったために発生するエラーでスムーズに進まない部分です。Movable Typeを使っていたこの経験を生かして、WordPressではプラグインのインストールなどのカスタマイズは控えていこうと思います。
+
+今回はそういったこともあり、レイアウトに力を入れるのではなく色にこだわることにしました。色にこだわると言っても、最近になって知った日本色を使うだけですが、日本独自の色をまとまている本から印象に残った色を選びました。外回りの背景には砂色を使い(内回りの背景の白は#FFFFFFです)、ヘッダーには薄桜という色を使いました。a:hoverの部分には白花色を使っています。文字は紫黒を選び、薄い部分は鉛色でそれ以外の文字(リンク部分)は青を選んでいます。
+<ul>
+	<li>砂色(C0　M4　 Y19　K14, #DCD3B2)</li>
+	<li>薄桜(C0　M6　 Y4　K1, #FDEFF2)</li>
+	<li>白花色(C3　M1　 Y0　K6, #E8ECEF)</li>
+	<li>紫黒(C4　M15　 Y0　K81, #２E２９３０)</li>
+	<li>鉛色(C2　M1　 Y0　K51,#7B7c7D)</li>
+	<li>青(C100 M31　 Y0　K15, #0095D9)</li>
+</ul>
+日本色を今回使ってみて、今までの私の色選びがあまりにも未熟なものであると感じました。しかし、そう思うと同時に色の世界はとても興味深いものだとも感じています。カラーチャートの本が欲しくなりました。
+
+勉強したい。

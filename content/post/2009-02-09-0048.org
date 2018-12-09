@@ -1,0 +1,39 @@
+#+TITLE: "最近みたWEBページ part8"
+#+DATE: 2009-02-09T21:45:43+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/next49/20090204/p1">因果関係と相関関係がごっちゃになっている</a></li>
+<p><a href="http://www.amazon.co.jp/gp/product/4794214642?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4794214642">文明崩壊 滅亡と存続の命運を分けるもの</a>、いまだに読んでない。</p>
+<br /><br />
+<li><a href="http://blog.livedoor.jp/borndigital/archives/711906.html">WOWOW:「ハリウッドで生きる 日本人」</a></li>
+<p><a href="http://www.wowow.co.jp/documentary/quest/lineup/index.html#area15">「クエスト~探究者たち~」ハリウッドで生きる日本人</a><br /> WOWOW 191ch　放送：2月15日(日) 午前10:00</p>
+<blockquote>
+<p>出演者は、2008年第80回アカデミー賞科学技術賞を受賞した映画のVFXの最先端で活躍する坂口亮氏（デジタルドメイン）と、第79回、第80回と2年連続アカデミー賞メイクアップ賞部門にノミネートされた特殊メイクのスペシャリスト辻一弘氏（シノベーションスタジオ）のお二人です。ハリウッドのスタジオでの日々の仕事の様子が映し出される貴重なドキュメントです。</p>
+</blockquote>
+<br /><br />
+<li><a href="http://www.nullartless.com/diary/2008/12/paris_jeff_koons_in_chateau_de.html">Jeff Koons in ヴェルサイユ宮殿（Cha^teau de Versailles）</a></li>
+<p>ヴェルサイユ宮殿、人生で一度は行ってみたいね。<br /> できれば、こういう面白いことをやっているときに。</p>
+<br /><br />
+<li><a href="http://www.famitsu.com/game/news/1221226_1124.html">3D開発ツール大手メーカー、オートデスクのキーパーソンが語る、「クリエーターのビジョンを形にするのがツールの役割」</a></li>
+<p>AutodeskにXSIが加わって、だいぶ経ちました。<br /> そういえば、CATについて全然情報を集めてない。</p>
+<br /><br />
+<li><a href="http://harvardmedblog.blog90.fc2.com/blog-entry-307.html">やりたいことは特にない、でも自分を育ててくれる人と働きたい</a></li>
+<blockquote>
+<p>自分を育ててくれると感じられた上司が、たまたま眼科医であったので、眼科医になった。<br /> 何科でもよかった、することは何でもよかった。</p>
+</blockquote>
+<p>ちょうど僕も就職活動な時期です。<br /> 正直なところ、この部分はとても共感します。<br /> 自分探しをするよりも、こっちの方が重要な気がする。<br /> 断言できないのが、とても残念でならないけれども。</p>
+<br /><br />
+<li><a href="http://d.hatena.ne.jp/fromdusktildawn/20081118/p1#seemore">ネットに時間を使いすぎると人生が破壊される。人生を根底から豊かで納得のいくものにしてくれる良書２５冊を紹介 </a></li>
+<blockquote>
+<p>ネットに割り当てる時間配分を間違えなければ、ネットは人生を豊かにし、自分の未来を切り開く力をくれます。</p>
+</blockquote>
+<p>僕は、ネットに時間を使いすぎた人間ですね(笑<br /> 確かに、本を読んでいた方が良かったかもしれないと思います。<br /> 断片的な情報よりも、まとまった情報を手に入れて知識を補強しなきゃね。<br /> 気がついたときは、「まだ遅くはない」と他人から教わったので実行しないとね。</p>
+<br /><br />
+<li><a href="http://dancex2.cocolog-nifty.com/weblog/2009/01/post-0651.html">ロックンロールの自殺者</a></li>
+<blockquote>
+<p>僕が聞いていたのは、「聞きたかったから」ではなかった。まったく反対に、聞きたくなかったからである。質問だか答だか知らないけど、聞きたくないことを聞かずに済ませるために、僕は、それとは別のことを聞いていた。</p>
+</blockquote>
+<p>最近、はまって読んでいる『ぼくのWeblog』というブログ。<br /> とても読みやすい文量で、それでいてとても興味深いです。</p>
+</ul>

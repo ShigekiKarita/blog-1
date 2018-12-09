@@ -1,0 +1,16 @@
+#+TITLE: "Ubuntu 8.04 と nVidia と envy"
+#+DATE: 2008-08-18T12:12:05+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<p>envyを使ってnVidiaのドライバーをUbuntu 8.04 にインストールしました。<br /><br />Ubuntu 8.04 32bit<br />QuadroFX560<br />Memory 2GB<br />DualDisplay（片方、中古品でよくわからないメーカーで解像度は1280*1024。片方はI-O DATAさんのLCD-AD222XBで解像度が1680*1050）<br /><br />実はもっと簡単にできる方法があるみたいです。<br />ただ、今回はenvy を試してみようと思い試してみました。<br /></p>
+<h4>xorg.conf のバックアップ</h4>
+<p>私はXの設定にどこかでいつも失敗します。<br />後戻りが簡単にできるようにバックアップを取ります。<br />$ sudo cp /etc/X11/xorg.conf /etc/X11/xorg.conf_backup<br /><br />万が一、Xの設定で失敗した場合は次の通りにして元に戻します。<br />$ sudo cp /etc/X11/xorg.conf_backup /etc/X11/xorg.conf<br /></p>
+<h4>envyのインストール</h4>
+<p>envyはnVidiaドライバーのインストールを手軽にできるアプリケーションです。なお、ATIも対応しているようなのですが、こちらは試していません。<br /><br />私のOSはUbuntu 8.04ですので、envyng を使います。（envyは今回が初めてのインストールなので、apt-get remove envy などは一切しませんでした。envyについて詳しくは<a href="http://albertomilone.com/envyngfaq.html#A">こちら</a>）<br /><br />$ sudo apt-get install envyng - gtk<br />$ sudo apt-get install envyng - qt<br /> $ sudo apt-get install envyng - core<br /> <br />以上でインストール完了です。<br /></p>
+<h4>envyの起動</h4>
+<p>$ sudo envyng -t<br /><br />上記のように入力すると起動します。後はコンソール画面に指示に従います。<br />私の場合は、nVidiaのドライバーをインストールするため、1を選択しました。<br />その後は、経過を確認し、最後に再起動をするかどうかを聞かれるので、Yを選択します。<br /></p>
+<h4>Ubuntuの再起動<br /></h4>
+<p>Ubuntuを再起動させているときに、nVidiaのロゴが表示されるかを確認します。確認できた場合は、ひとまずnVidiaのドライバーがうまくインストールされています。もしも、確認できなかった場合は、なんらかの方法で解決する必要があります。<br /></p>
+<h4>xorg.conf (液晶ディスプレイと)の調整<br /></h4>
+<p>Ubuntu 8.04 を使っていて、かつディスプレイ解像度が1680*1050だった場合は恐らく問題が発生します。片方は映りはするものの解像度が適切ではなく、そして一方は全く映らず、ずっと真っ暗になっていると思います。私の場合はそういった問題が起こりました。現在、解決中です。<br /><br />現段階で参考にしようと思っているサイトは次のところです。<br /><a href="http://hiruandon.net/article.php?story=20070315212626373">ひるあんどん - ubuntu でNVIDIAドライバと解像度設定</a><br /><a href="http://water20.blog2.fc2.com/blog-entry-335.html">備忘ブログ Ubuntu 7.10 + nVidia で 1680x1050</a></p>

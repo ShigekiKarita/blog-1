@@ -1,0 +1,17 @@
+#+TITLE: "SugarSync使ってみた"
+#+DATE: 2009-06-28T20:48:57+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>SugarSync</h4>
+<p><a href="http://www.sugarsync.com/" target="_blank">SugarSync</a>が<a href="http://d.hatena.ne.jp/frnk/" target="_blank">frnk*blog</a>さんの「<a href="http://d.hatena.ne.jp/frnk/20090626/1245987497" target="_blank">Dropboxを超えた？オンラインストレージ「SugarSync」CommentsAdd Star</a>」で紹介されていたので試しに使ってみました。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090628_01.png" /></p>
+<p>結構操作が簡単で使いやすいですね。<br/>今度からこれ使っていこうと思います。</p>
+<h5>iPhoneから閲覧できる!</h5>
+<p>SugarSync for iPhoneを使えばiPhoneからもアクセスできます。</p>
+<ul><li><a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=288491637&amp;mt=8" target="_blank">SugarSync for iPhone</a></li>
+</ul>
+<h4>百聞は一見にしかず</h4>
+<p>もし、ご興味があれば登録してみてください。<br />
+無償版のものであればどなたでも試すことができます。</p>
+<ul><li><a href="https://www.sugarsync.com/referral?rf=dh3e5oxsehi28" target="_blank">SugarSync2GB(無償)版</a></li></ul>

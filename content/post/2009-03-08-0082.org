@@ -1,0 +1,24 @@
+#+TITLE: "Night of the Werehog"
+#+DATE: 2009-03-08T01:50:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Night of the Werehog</h4>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090308_01.png" alt="" /></p>
+<p>ちょっと時期として、取り上げるのは遅い感じがするけれども、<a href="http://www.sega.com/sonicunleashed/notw/us/" target="_blank">Night of the Werehog</a> は凄い。セガのVE研というところが作ったのだけれども、海外プロダクションの技術に負けてない。勿論、アニメーションとしての面白さもあって、ラストシーンは結構好きです。</p>
+<p>(余談ですが、映像がブログに貼り付けられなかった。面白いアニメーションということもあって、それにはちょっと残念だった。)</p>
+<h4>VE研</h4>
+<p>VE研ってあまり、ネットで検索しても情報があまり出てこない。出てきてもPythonのPDFで、中の様子とかを想像できるような記事もあまりない。</p>
+<p>でも、あった。</p>
+<ul>
+<li> <a href="http://www.sonicteam.co.jp/SonicWorldAdventure/hamidashi/nigth_of_the_werehogve.html" target="_blank">『Night Of The Werehogを、VE研からハミだし！(前編)』 </a></li>
+<li><a href="http://www.sonicteam.co.jp/SonicWorldAdventure/hamidashi/nigth_of_the_werehogve_1.html" target="_blank">『Night Of The Werehogを、VE研からハミだし！(後編)』 </a></li>
+</ul>
+<h4>CGWORLD</h4>
+<p>この前、CGWORLDを見たら特集が組まれていたので読みました。</p>
+<ul>
+<li><a href="http://www.wgn.co.jp/store/dat/4128/" target="_blank">CGWORLD 2009年4月号 vol.128</a></li>
+</ul>
+<h4>Autodesk 3Dcember</h4>
+<p>以前 <a href="https://www.info-event.jp/autodesk/3december/" target="_blank">Autodesk 3Dcember</a> というイベントに行った時に、VE研の宮本 佳さんがNight of the Werehogのメイキングをプレゼンを見ることが出来たけれども、とても面白かった。おそらく、Keynoteを使っていたと思います。肝心のプレゼンについては、とてもわかりやすくて見入ってしまうぐらい。ストーリーボードを壁一面に並べてある様子の写真をプレゼンの中で見ることが出来たのだけど、そういうのを学生のうちにやっておきたいねって思った。</p>
+<p>まぁ、ただやりたいだけで特にこれといった目的が無いので、周りから資源の無駄遣いとか言われそうで怖いけども、やりたいものはやりたいので仕方ない(笑</p>

@@ -1,0 +1,24 @@
+#+TITLE: "CSS Hack: Only for Opera 9"
+#+DATE: 2009-05-07T01:02:41+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Opera 9 だけにCSSハック</h4>
+<p>Opera 9 だけにCSSを割り当てます。<br />
+方法は以下の通りです。</p>
+<p><textarea class="html" name="code">opera:not(\*|*) {
+display:none;
+}</textarea></p>
+<p>operaのところを #id名あるいは .class名 に置き換えて使ってください。</p>
+<h4>補足: Opera 9のCSSセレクタ</h4>
+<p>Operaの仕様を見てみます。</p>
+<ul>
+<li><a href="http://jp.opera.com/docs/specs/opera9/css/" target="_blank">Opera 9 の CSS サポート</a></li>
+</ul>
+<p> セレクタに Negation pseudo-class :not() というのがあります。<br />
+日本語でいうと否定擬似クラスと言うみたいですが、:not()と略したいですね。</p>
+<p>さて、この:not() はCSS 3から出てきたもので <a href="http://www.w3.org/TR/css3-selectors/#negation" target="_blank">W3C: Selectors Level 3</a> に書かれています。英語が苦手な僕には詳しい部分はわかりませんが、指定した条件と一致しない要素に限ってCSSを当てることができます。</p>
+<p>ちなみにCSS 3セレクタ対応具合は次のサイトでもチェックできます。(精度はわかりません)</p>
+<ul>
+<li><a href="http://www.css3.info/selectors-test/" target="_blank">CSS3.info</a></li>
+</ul>

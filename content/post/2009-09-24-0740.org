@@ -1,0 +1,22 @@
+#+TITLE: "High-Defコンテンツを初めて作りました"
+#+DATE: 2009-09-24T18:15:14+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<p style="text-align: left;">この前までHigh-Defコンテンツの制作をしていました。<!--more-->全て初めてのことだらけで終始混乱してばかりでしたが、たくさんの方々のご支援、ご協力の甲斐あって、無事に作品が完成しました。一重に皆様のお陰です。心から感謝します。</p>
+<p style="text-align: center;"><a rel="attachment wp-att-950" href="http://www.hiroakit.com/blog/archives/740/photo_090924_01-2"><img class="size-full wp-image-950 aligncenter" title="photo_090924_01" src="http://www.hiroakit.com/blog/photo/photo_090924_01.jpg" alt="photo_090924_01" width="640" height="480" /></a></p>
+
+制作した映像は本日から開催されている<a href="http://tgs.cesa.or.jp/index.html" target="_blank">東京ゲームショウ2009</a>向けのプロモーションビデオです。ゲームスクールコーナの6-N16にある東京工科大学のブースで"PlayStation3"を用いて大型液晶ディスプレイ上に映し出されます。なお、この映像は"東京工科大学 インタラクティブゲーム制作 東京ゲームショウ2009 特設ページ"に最適化されたサイズのものであればウェブ上で閲覧可能です。
+<p style="padding-left: 30px;"><a href="http://www.teu.ac.jp/clab/game/2009/game.html" target="_blank">東京工科大学 インタラクティブゲーム制作 東京ゲームショウ2009 特設ページ: ゲーム作品紹介</a></p>
+
+出展されている4作品の内、ゆめみびと、RecurREnce、MAGNUSPIRITUSの計3作品を8月10日から9月20日にかけて制作いたしました。顔合わせ、たたき台を起こすために字コンテ(文字のみで粗編のものを私はそのように称しています)を作り、絵コンテを作り、実際のゲームプレイ動画の撮影、Autodesk Maya, Adobe After Effects, Apple Final Cut Proなどを用いて書き出しまでを含めた制作を行い、Apple QuickTime Pro, Microsoft Windows Media Encoderでエンコードと様々な作業を経て完成に至りました。(工程数としてはそれほど多くはありません)
+<p style="text-align: center;"><a rel="attachment wp-att-755" href="http://www.hiroakit.com/blog/archives/740/photo_090924_01"><img class="size-large wp-image-755 aligncenter" title="photo_090924_01" src="http://www.hiroakit.com/blog/photo/photo_090924_01-640x480.png" alt="photo_090924_01" width="640" height="480" /></a></p>
+
+以前、このブログに書いた<a href="http://www.hiroakit.com/blog/archives/290" target="_blank">町田で打ち合わせ</a>はこのコンテンツに関する打ち合わせでした。いま、思い返せばこの時から問題続きだったような気がします。山積みとなっている問題をどう解消していくか悩みに悩みました。
+
+ここ数日は、このプロモーションビデオ制作の際に気づいたこと、学んだことなどを中心に書いていきます。
+<ul>
+	<li><strong></strong><strong><a title="“High-Defの規格にどう対応するか” を編集する" href="post.php?action=edit&amp;post=800">High-Defの規格にどう対応するか</a></strong></li>
+	<li><strong></strong><strong><a title="“High-Defコンテンツの制作期間は顔合わせで決めます” を編集する" href="post.php?action=edit&amp;post=844">High-Defコンテンツの制作期間は顔合わせで決めます</a></strong></li>
+	<li><strong></strong><strong><a title="“High-Defコンテンツ用ゲームプレイ動画のキャプチャ” を編集する" href="post.php?action=edit&amp;post=873">High-Defコンテンツ用ゲームプレイ動画のキャプチャ</a></strong></li>
+</ul>

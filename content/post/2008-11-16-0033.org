@@ -1,0 +1,37 @@
+#+TITLE: "最近みたWEBページ part5"
+#+DATE: 2008-11-16T01:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<ul>
+<li> <a href="http://www.itmedia.co.jp/enterprise/articles/0811/14/news012.html"> 神奈川の生徒個人情報が漏えい、日本IBMが確認 </a> </li>
+</ul>
+<p>最初から"個人情報は漏れるもの"と考えて、仮に漏れたとしても大丈夫っていう状況を作るようにした方がいい気がするなぁ・・・・・・。個人情報の全てをうまく守ろうとするのは結構厳しい気がします。</p>
+<p><br /></p>
+<ul>
+<li> <a href="http://www.itmedia.co.jp/enterprise/articles/0811/13/news037.html"> GoogleのログインページにXSSの脆弱性 </a> </li>
+</ul>
+<p>セキュリティ系の話って本当むずかしい。</p>
+<p><br /></p>
+<ul>
+<li> <a href="http://www.itmedia.co.jp/enterprise/articles/0811/14/news023.html"> Mozilla、Firefoxブラウザの更新版を公開 </a> </li>
+</ul>
+<p>先のGoogleのログインページにも出てきましたが、Firefoxもクロスサイトスクリプティング（XSS）関連の話です。ちなみに、Firefox 2のサポートは今年12月中旬で打ち切りです。</p>
+<p><br /></p>
+<ul>
+<li> <a href="http://www.itmedia.co.jp/enterprise/articles/0811/14/news024.html"> Google Chromeの開発者向けアップデートが公開 </a> </li>
+</ul>
+<blockquote>
+<p>&beta;版のWebブラウザ「Google Chrome」のアップデート版となるバージョン0.4.154.18を開発者向けに公開した。</p>
+</blockquote>
+<p>開発者向けに公開されました。</p>
+<p><br /></p>
+<ul>
+<li><a href="http://www.itmedia.co.jp/enterprise/articles/0811/14/news059.html">Safari 3.2リリース　11件の脆弱性を修正</a></li>
+</ul>
+<p>Safariのデザインは好き。Webkitで作られているところも魅力です。</p>
+<p><br /></p>
+<ul>
+<li><a href="http://journal.mycom.co.jp/articles/2008/11/12/gyunyucm/index.html">澤本嘉光が女子中学生に広告制作の極意を伝授!</a></li>
+</ul>
+<p>「牛乳に相談だ。」のキャッチコピーは誰もが聞いたことあると思います。<br />ところで、澤本嘉光さんのスーツとHPのノートって似合いすぎだと思いません？(笑</p>

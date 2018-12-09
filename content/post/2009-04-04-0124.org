@@ -1,0 +1,39 @@
+#+TITLE: "Photoshop Lightroom 2 を体験してみた"
+#+DATE: 2009-04-04T01:50:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Xmpとちょっと関連して<br /></h4>
+<p>メタデータ付けるときは、ボタンを押せば済む。そんな感じのものがあるととてもいいなぁ・・・、って思って。(実際にそれを使えるところまで持っていくとなると、かなり手強いけどｗ</p>
+<p>ビューアー(サムネイル表示されててイメージを確認しやすい)がある、ってことで思いついたソフトウェア。</p>
+<ul>
+<li>Adobe Brige</li>
+<li>Adobe Photoshop Lightroom</li>
+<li>Micirosoft Expression Media</li>
+<li>iTunes</li>
+<li>iPhoto</li>
+</ul>
+<p>他にも沢山あると思うけど、いまのところはこんな感じで。<br />今回はPhotoshop Lightroomをチェックしてみる。</p>
+<p>まだ一度も触ったことないしね。</p>
+<h4>おもしろそうなので、体験版をダウンロードして使ってみました。</h4>
+<h5>サポートされているファイル形式はこんな感じでした。<br /></h5>
+<ul>
+<li>JPEG</li>
+<li>TIFF（8 ビット、16 ビット）</li>
+<li>PSD（8 ビット、16 ビット）</li>
+<li>DNG</li>
+<li>RAW</li>
+</ul>
+<p>画像全てが対応しているわけではないみたいです。<br />本当に、スチールカメラ(写真屋)さん向けですね。</p>
+<p>RAWについては詳しいことが次のURLに載っているそうです。<br />(僕は、このときRAWデータを持ってなかったからリンク先を確かめていません</p>
+<ul>
+<li><a href="http://www.adobe.com/jp/products/photoshop/cameraraw.html" target="_blank">http://www.adobe.com/jp/products/photoshop/cameraraw.html</a></li>
+</ul>
+<h4>起動させて使っていくとこんな感じ</h4>
+<p>右上にライブラリ、現像、スライドショーとか書いてあるけど、これは作業の段階を示しているみたい。<br />とりあえず、以前3dsMaxで作った津波もどきをLightroomに読み込んでみました。</p>
+<p><a href="http://www.hiroakit.com/blog/photo/photo_090404_01_l.png"><img src="http://www.hiroakit.com/blog/photo/photo_090404_01.png" alt="" /></a></p>
+<p>Tiffの連番ファイルなので、下にあるバーをスライドさせるとパラパラ漫画みたいなことが起こります。</p>
+<h4>余談なんですが</h4>
+<p>でも、僕のPCとあまり相性が良くなかったのか。頻繁に「応答なし」の状態になってしまいました。まぁその状態になることは珍しくないので良いんですが、Lightroom以外にも支障きたしてしまって、OS自体が動かなくなって「再起動」ってことになりました。</p>
+<p>肝心のメタデータのつけるときの動作もチェックできず。</p>
+<p>うーん・・・、ちょっと怖い。。。<br />(アンインストールしました)</p>

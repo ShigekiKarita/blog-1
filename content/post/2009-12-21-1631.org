@@ -1,0 +1,15 @@
+#+TITLE: "Objectifiedって知ってますか"
+#+DATE: 2009-12-21T01:07:05+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+Objectifiedという謎のキーワードと遭遇しました。<!--more-->それで調べていたのですが、どうやらこれのようです。
+<p style="text-align: center;"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="640" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/S9E2D2PaIcI&amp;hl=ja_JP&amp;fs=1&amp;rel=0" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="640" height="385" src="http://www.youtube.com/v/S9E2D2PaIcI&amp;hl=ja_JP&amp;fs=1&amp;rel=0" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+TechCrunchの「<a href="http://jp.techcrunch.com/archives/20090115video-objectified-documentary-shows-secrets-of-industrial-design/" target="_blank">ドキュメンタリー「Objectified」に見るインダストリアルデザインの秘密</a>」の記事によると、インダストリアルデザインの秘密に迫っていくドキュメンタリー番組らしいです。
+<blockquote>これは「具象化して形にする」（Objectified）というドキュメンタリーだ。Muji、イケア、アップル、Flip Video、BMWなど有名ブランドのインダストリアルデザインをテーマにしている。</blockquote>
+うへへ
+
+おもしろそうです。
+
+<a href="http://www.objectifiedfilm.com/shop/" target="_blank">Objectified: A Documentary Film by Gary Hustwit</a>からDVDが購入できるみたい。お値段は$20です。<span style="color: #888888;">ちなみに、一番下までサイトをスクロールするとHelveticaのＤＶＤもあります。</span>ほしいです。とてつもなく欲しいです。凄く欲しい。

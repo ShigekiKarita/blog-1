@@ -1,0 +1,13 @@
+#+TITLE: "shaderman(セットアップ編) Part2"
+#+DATE: 2009-04-09T09:51:25+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>shadermanで使うRendererを変更する</h4>
+<p>上部のメニューに Action! という項目があって、さらにそのなかに Render という項目があります。このRender を押すと、組み立てた shader(slファイル)をコンパイルして、かつプレビューをみることができます。</p>
+<p>この一連の流れは、恐らく初期の状態だと3Dlightがコンパイラとして、ビューアーとして設定されているみたいなんですね。(たまたま、僕の環境だけそうだったのかもしれないけどｗ)</p>
+<p>それをPixie、あるいはAqsisに変えるためには settings.py というファイルに修正を加える必要があります。shaderman の　modes\Renderman SL に入っています。</p>
+<pre>settings = [{'default': u'shaderdl', 'name': u'ShaderCompiler'},<br />{'default': u'renderdl', 'name': u'Renderer'}]</pre>
+<p>実際には改行されていないと思います。(横に長くなってしまうので勝手に改行入れました)<br />ここの shaderdl を任意のレンダラーのものへ、renderdl を任意のレンダラーのものに変更します。</p>
+<p>僕はPixieを使いたかったので、このようにしました。</p>
+<pre>settings = [{'default': u'sdrc', 'name': u'ShaderCompiler'},<br />{'default': u'rndr', 'name': u'Renderer'}]<br /></pre>

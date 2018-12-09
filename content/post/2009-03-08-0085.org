@@ -1,0 +1,25 @@
+#+TITLE: "The Legend of Zelda"
+#+DATE: 2009-03-08T02:40:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>ゼルダの映画</h4>
+<p><a href="http://rainfallfilms.com/projects/zelda/" target="_blank">The Legend of Zelda</a> というタイトルで映画化されるようです。<a href="http://rainfallfilms.com/projects/zelda/" target="_blank"><br /></a></p>
+<h5>Trailer<br /></h5>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="535" height="360" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="flashvars" value="isStandAlone=true&amp;highRes_ID=2343290&amp;lowRes_ID=2343291&amp;article_ID=863515&amp;downloadURL=http://moviesmovies.ign.com/movies/video/article/863/863515/legendofzelda_filmtrailer_040108_flvlowwide.flv&amp;allownetworking=&quot;all%&quot;" />
+<param name="src" value="http://videomedia.ign.com/ev/ev.swf" /><embed type="application/x-shockwave-flash" width="535" height="360" src="http://videomedia.ign.com/ev/ev.swf" flashvars="isStandAlone=true&amp;highRes_ID=2343290&amp;lowRes_ID=2343291&amp;article_ID=863515&amp;downloadURL=http://moviesmovies.ign.com/movies/video/article/863/863515/legendofzelda_filmtrailer_040108_flvlowwide.flv&amp;allownetworking=&quot;all%&quot;"></embed>
+</object>
+</p>
+<h5>Making</h5>
+<p>&nbsp;</p>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="535" height="360" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="flashvars" value="article_ID=863515&amp;downloadURL=http://moviesmovies.ign.com/movies/video/article/863/863515/zelda_makingof_040308_flvlowwide.flv&amp;allownetworking=&quot;all&quot;" />
+<param name="src" value="http://videomedia.ign.com/ev/ev.swf" /><embed type="application/x-shockwave-flash" width="535" height="360" src="http://videomedia.ign.com/ev/ev.swf" flashvars="article_ID=863515&amp;downloadURL=http://moviesmovies.ign.com/movies/video/article/863/863515/zelda_makingof_040308_flvlowwide.flv&amp;allownetworking=&quot;all&quot;"></embed>
+</object>
+</p>
+<h4>2008年のエイプリルフールネタ</h4>
+<p>そう、これは2008年のエイプリルフールネタだったのでした。これまたちょっと話題として遅いけども、まぁ当時の僕にとっては衝撃的だったのです。まず最初に作りとしてちゃんとなっていたことに驚いて、その上にエイプリルフールのネタと聞いてさらに驚いて、唖然としていた記憶があります。</p>
+<p><a href="http://www.rainfallfilms.com/" target="_blank">Rainfall Films</a> というプロダクションが作ったみたいです。</p>

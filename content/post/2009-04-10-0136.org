@@ -1,0 +1,17 @@
+#+TITLE: "Maya の Python のバージョン"
+#+DATE: 2009-04-10T06:30:25+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Python で問題発生<br /></h4>
+<p>shaderman(セットアップ編) で Python 2.5.1 をインストールしてから、Output Windows にエラーメッセージがでるようになった。Mayaのバージョンは 8.5です。</p>
+<pre>'import site' failed; use -v for traceback<br />ImportError: No module named maya.app.python<br />ImportError: No module named maya.app.python<br />ImportError: No module named maya<br />ImportError: No module named maya.cmds<br />ImportError: No module named maya.utils<br />ImportError: No module named maya.mel<br />ImportError: No module named maya.app<br />ImportError: No module named maya.app.startup.gui</pre>
+<p>Pythonを使うことがないので、しばらくの間保留のままにしていたのですが、<br />なんとなく消したいなぁ･･･・・・と思ってきて(笑<br />解決策を探ることにしました。</p>
+<h4>原因はPYTHONHOME</h4>
+<p>どうやら、原因はPYTHONHOMEにあるようです。Maya の python ではなく、python 2.5.1　のところを指定しているとこういったエラーが出るらしいです。</p>
+<p><a href="http://area.autodesk.com/index.php/forums/viewthread/8992/" target="_blank">The Area: scons + python2.5 + Maya 2008 = environment variable issues!</a></p>
+<h4>解決方法はバッチファイル</h4>
+<p>Windowsの環境変数をMaya の Python に変更すれば解決しました。ただ、それをやってしまうと python 2.5.1 が使えなくなってしまいます。これは何とか避けたいところ。</p>
+<p>そこでMayaをバッチファイルから起動させようと考えました。<br />(たくさんのMayaを使って作業しているところは、PATHとか統一したいときとかどうやってんだろ)</p>
+<pre>SET PYTHONHOME=C:\Program Files\Autodesk\your maya version\Python<br />"C:\Program Files\Autodesk\your maya version\bin\maya.exe"<br /></pre>
+<p>ただ、コマンドコロンプトが出現してしまうけどね。<br />ひとまずは問題解決しました。</p>

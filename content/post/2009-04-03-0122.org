@@ -1,0 +1,42 @@
+#+TITLE: "XMP ToolKit SDK のサンプルをコンパイル"
+#+DATE: 2009-04-03T11:30:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>コンパイル: 1回目</h4>
+<h5>結果<br /></h5>
+<pre>========== ビルド: 0 正常終了、10 失敗、0 更新、0 スキップ ==========<br /></pre>
+<p>失敗が10と出たけど、たくさんの種類のエラーが出ているというわけではありませんでした。</p>
+<pre>  error LNK1181: 入力ファイル 'XMPCoreStaticRelease.lib' を開けません。</pre>
+<p>なるほど、ライブラリが足りないと。<br />やっぱり、third-party というフォルダには目を通したほうが良かったみたい。</p>
+<pre>D:.<br />├─expat<br />│      ReadMe.txt<br />│<br />├─MD5<br />│      MD5.cpp<br />│      MD5.h<br />│<br />├─QTDevWin<br />│      ReadMe.txt<br />│<br />└─zlib<br />        ReadMe.txt<br /></pre>
+<h4>ライブラリを揃える<br /></h4>
+<h5>Expat<br /></h5>
+<p><a href="http://sourceforge.net/projects/expat/" target="_blank">Expat</a> の version 2.0.0 が必要みたいです。<br />ReadMe.txt には入手したファイルを /third-party/expat/lib へとあります。（たぶん</p>
+<blockquote>
+<p>Place Expat's lib directory within .../third-party/expat. I.e. as a sibling of this file.For Expat version 2.0.0 the contents of .../third-party/expat/lib are:<br /> &nbsp;&nbsp;&nbsp; amigaconfig.h<br />&nbsp;&nbsp;&nbsp; ascii.h<br />&nbsp;&nbsp;&nbsp; asciitab.h<br />&nbsp;&nbsp;&nbsp; expat.dsp<br />&nbsp;&nbsp;&nbsp; expat.h<br />&nbsp;&nbsp;&nbsp; expatw.dsp<br />&nbsp;&nbsp;&nbsp; expatw_static.dsp<br />&nbsp;&nbsp;&nbsp; expat_external.h<br />&nbsp;&nbsp;&nbsp; expat_static.dsp<br />&nbsp;&nbsp;&nbsp; iasciitab.h<br />&nbsp;&nbsp;&nbsp; internal.h<br />&nbsp;&nbsp;&nbsp; latin1tab.h<br />&nbsp;&nbsp;&nbsp; libexpat.def<br />&nbsp;&nbsp;&nbsp; libexpatw.def<br />&nbsp;&nbsp;&nbsp; macconfig.h<br />&nbsp;&nbsp;&nbsp; Makefile.MPW<br />&nbsp;&nbsp;&nbsp; nametab.h<br />&nbsp;&nbsp;&nbsp; utf8tab.h<br />&nbsp;&nbsp;&nbsp; winconfig.h<br />&nbsp;&nbsp;&nbsp; xmlparse.c<br />&nbsp;&nbsp;&nbsp; xmlrole.c<br />&nbsp;&nbsp;&nbsp; xmlrole.h<br />&nbsp;&nbsp;&nbsp; xmltok.c<br />&nbsp;&nbsp;&nbsp; xmltok.h<br />&nbsp;&nbsp;&nbsp; xmltok_impl.c<br />&nbsp;&nbsp;&nbsp; xmltok_impl.h<br />&nbsp;&nbsp;&nbsp; xmltok_ns.c</p>
+</blockquote>
+<p>めんどくさいので、expat-2.0.0.tar.gz の lib のフォルダを丸ごと移動させました。<br />全部入れてしまえ(笑</p>
+<h5>QuickTime SDK for Windows</h5>
+<p><a href="http://developer.apple.com/sdk/" target="_blank">Apple Developer Connection : Development Kits</a></p>
+<p>今回、QuickTimeのSDKがあることを初めて知りました。<br />Windowsの場合だと、これを用意しないといけないみたいです。<br />ReadMe.txt を見る限りだと、Macの場合は特に行うことはないみたいです。</p>
+<p>今回は、QuickTime 7.3 SDK for Windows (Zip) をダウンロードしました。</p>
+<p>ちなみに、ダウンロードはADCメンバーでないと出来ません。<br />メンバーでない方は新規にアカウントを作る必要があります。</p>
+<p>解凍すると、インストーラーが出てくるので、それを実行します。<br />その後、CIncludes と Libraries を third-party/QTDevWin にコピーします。</p>
+<p>これでQuickTimeはOK</p>
+<h5>Zlib</h5>
+<p>僕が使ったのは zlib123.zip です。</p>
+<blockquote>
+<p>Place all top-level .c and .h files of the tar/zip you downloaded</p>
+</blockquote>
+<p>解凍して出てきたトップ階層のフォルダ以外を全部入れてくださいってことでしょうか。とりあえず、third-party/zlib 移動させます。</p>
+<h4>コンパイル: 2回目</h4>
+<p>結果は変わらず。<br />同じエラーが出ます。</p>
+<h4>あ、順番ちが(笑<br /></h4>
+<p>どうやら、あともう一つだけやることがあるみたいです。<br />build フォルダにあるファイルを使ってXMPCore と XMPFiles のコンパイルです。</p>
+<p>おそらく、記事に沿っていればなんなく成功すると思います。</p>
+<p>本当は、このコンパイルのために、expat, QuickTime SDK, zlib を揃えるみたいです。<br />まぁ、今までやってきたことは順番が違ってはいますが、うまくコンパイルできたのでいっか(笑</p>
+<h4>コンパイル: 3回目</h4>
+<p>成功しました！<br />ファイルは target\samples\windows\release に出てきます。</p>
+<pre>D:.<br />&nbsp;&nbsp;&nbsp; CustomSchema.exe<br />&nbsp;&nbsp;&nbsp; CustomSchema.map<br />&nbsp;&nbsp;&nbsp; CustomSchema.pdb<br />&nbsp;&nbsp;&nbsp; dumpfile.exe<br />&nbsp;&nbsp;&nbsp; dumpfile.map<br />&nbsp;&nbsp;&nbsp; dumpfile.pdb<br />&nbsp;&nbsp;&nbsp; DumpMainXMP.exe<br />&nbsp;&nbsp;&nbsp; DumpMainXMP.map<br />&nbsp;&nbsp;&nbsp; DumpMainXMP.pdb<br />&nbsp;&nbsp;&nbsp; DumpScannedXMP.exe<br />&nbsp;&nbsp;&nbsp; DumpScannedXMP.map<br />&nbsp;&nbsp;&nbsp; DumpScannedXMP.pdb<br />&nbsp;&nbsp;&nbsp; ModifyingXMP.exe<br />&nbsp;&nbsp;&nbsp; ModifyingXMP.map<br />&nbsp;&nbsp;&nbsp; ModifyingXMP.pdb<br />&nbsp;&nbsp;&nbsp; ReadingXMP.exe<br />&nbsp;&nbsp;&nbsp; ReadingXMP.map<br />&nbsp;&nbsp;&nbsp; ReadingXMP.pdb<br />&nbsp;&nbsp;&nbsp; xmpcommand.exe<br />&nbsp;&nbsp;&nbsp; xmpcommand.map<br />&nbsp;&nbsp;&nbsp; xmpcommand.pdb<br />&nbsp;&nbsp;&nbsp; XMPCoreCoverage.exe<br />&nbsp;&nbsp;&nbsp; XMPCoreCoverage.map<br />&nbsp;&nbsp;&nbsp; XMPCoreCoverage.pdb<br />&nbsp;&nbsp;&nbsp; XMPFilesCoverage.exe<br />&nbsp;&nbsp;&nbsp; XMPFilesCoverage.map<br />&nbsp;&nbsp;&nbsp; XMPFilesCoverage.pdb<br />&nbsp;&nbsp;&nbsp; XMPIterations.exe<br />&nbsp;&nbsp;&nbsp; XMPIterations.map<br />&nbsp;&nbsp;&nbsp; XMPIterations.pdb</pre>
+<p>今日はひとまずここまでとします。</p>

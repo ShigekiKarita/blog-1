@@ -1,0 +1,27 @@
+#+TITLE: "The Way Things Go"
+#+DATE: 2009-01-07T09:41:39+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>The Way Things Go</h4>
+<p>今日、" The Way Things Go " という映像を大学で見ました。<br /> ペーター・フィッシュリとデヴィッド・ヴァイスの二人組が作った作品です。<br /> この二人の詳しい情報は<a href="http://www.uplink.co.jp/kotonoshidai/artist.php">こっち</a>から見ることができます。</p>
+<div style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" />
+<param name="src" value="http://www.youtube.com/v/U82eWptFxSs&amp;hl=ja&amp;fs=1" /><embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/U82eWptFxSs&amp;hl=ja&amp;fs=1" allowscriptaccess="always" allowfullscreen="true"></embed>
+</object>
+</div>
+<p>日本では1987年に "<a href="http://www.allcinema.net/prog/show_c.php?num_c=327363#1">事の次第</a>" として放映されていたみたいです。<br />他にも、2006年には<a href="http://www.ntticc.or.jp/Archive/2006/ConnectingWorld/Work/TheWayThingsGo_j.html">コネクティング・ワールド展</a>で出品されていました。<br /> ちなみに、そのWEBページにはこんな風に紹介されていました。</p>
+<blockquote>
+<p>何の変哲もない椅子，ガラスビンやバケツ，タイヤなどのがらくたが，次々とドミノ倒しのように連鎖反応を起こして展開する．転げる輪，流れる泡，噴出する煙など，モノからモノへさまざまな形でエネルギーが伝達されていく，綿密な仕掛けと偶然性が織りなす，スリリングな「パフォーマンス」．</p>
+</blockquote>
+<p>スリリングかどうかは、きちんと映像を見ていただかないとわかりません。<br /> けど、確かなことが一つだけあって、これを見ていた僕はずっと面白くて、<br /> それでいておかしくて、思わず声を出して笑ってしまってたってこと。</p>
+<h4>Rube Goldberg machines</h4>
+<p>どうやら、この映像は<span>ルーブ・ゴールドバーグ・マシン</span>という手法らしく、<br /> アメリカの漫画家のルーブ・ゴールドバーグという方が編み出したようです。</p>
+<ul>
+<li><a href="http://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%BC%E3%83%96%E3%83%BB%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%89%E3%83%90%E3%83%BC%E3%82%B0%E3%83%BB%E3%83%9E%E3%82%B7%E3%83%B3">Wikipedia: ルーブ・ゴールドバーグ・マシン</a></li>
+</ul>
+<p>&nbsp;</p>
+<h4>他にも</h4>
+<p>ペーター・フィッシュリとデヴィッド・ヴァイスの作品には、<br /> 「ゆずれない事」、「正しい方向」という映像があるみたいです。</p>

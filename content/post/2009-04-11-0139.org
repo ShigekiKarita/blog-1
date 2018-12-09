@@ -1,0 +1,15 @@
+#+TITLE: "Maya (+=n, -=n, *=n, /=n)"
+#+DATE: 2009-04-11T11:20:25+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Mayaのアトリビュートエディタの値を変えるときに</h4>
+<p><a href="http://me.autodesk.jp/wam/maya/docs/Maya85/wwhelp/wwhimpl/js/html/wwhelp.htm" target="_blank">アトリビュート エディタまたはチャンネル ボックス（Channel Box）でアトリビュートを変更する </a></p>
+<ul>
+<li class="Bullet">カレント値に <span style="font-style: oblique; text-decoration: underline;">n</span> を足すには、<code class="cCode" style="font-style: normal; text-decoration: none;">+=</code><span style="font-style: oblique; text-decoration: underline;">n</span> と入力します。</li>
+<li class="Bullet">カレント値から <span style="font-style: oblique; text-decoration: underline;">n</span> を引くには、<code class="cCode" style="font-style: normal; text-decoration: none;">-=</code><span style="font-style: oblique; text-decoration: underline;">n</span> と入力します。</li>
+<li class="Bullet">カレント値に <span style="font-style: oblique; text-decoration: underline;">n</span> を掛けるには、<code class="cCode" style="font-style: normal; text-decoration: none;">*=</code><span style="font-style: oblique; text-decoration: underline;">n</span> と入力します。</li>
+<li class="Bullet">カレント値を <span style="font-style: oblique; text-decoration: underline;">n</span> で割るには、<code class="cCode" style="font-style: normal; text-decoration: none;">/=</code><span style="font-style: oblique; text-decoration: underline;">n</span> と入力します。</li>
+<li class="Bullet">末尾に %  を付けると、パーセンテージ ベースで演算することを表します（たとえば、<code class="cCode">+=10%</code> では、各選択した値にカレント値の 10% が追加されます）。</li>
+</ul>
+<p>カレント値というのは現在入力されている値のことみたいです。<br />こんなことができるなんて知らなかった。便利だなぁ。</p>

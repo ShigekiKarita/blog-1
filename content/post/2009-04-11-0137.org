@@ -1,0 +1,11 @@
+#+TITLE: "Movable Type で IPを遮断する"
+#+DATE: 2009-04-11T10:50:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>禁止IPアドレス</h4>
+<p>最近、変なコメント投稿があったから、そのIPだけ遮断することにしました。</p>
+<ul>
+<li><a href="http://www.sixapart.jp/movabletype/manual/3.3/03_blog_admin_guide/blog/detailed_setting_ip_ban.html" target="_blank">Movable Type 3.3 マニュアル: ブログの設定（詳細モード: 禁止IPアドレス）</a></li>
+</ul>
+<p>3.3だから大丈夫かなぁって思ったんだけど、うまくいきました。</p>

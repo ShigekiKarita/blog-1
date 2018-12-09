@@ -1,0 +1,17 @@
+#+TITLE: "Ubuntu 8.10 の画面解像度の設定"
+#+DATE: 2009-02-18T12:33:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>displayconfig-gtk がない<br /></h4>
+<p>Ubuntu 8.10で画面解像度の設定をするのは、やや面倒です。Ubuntu 8.04 には displayconfig-gtk が搭載されていましたが、Ubuntu 8.10はそれがありません。synapticパッケージマネージャで調べてみても無いと思います。面倒くさいです&hellip;&hellip;。</p>
+<h4>インストールすればいいか</h4>
+<p>検索していたら見つかりました。下記のURLに移動して、好きなところからダウンロードしてください。保存場所はどこでも構いません。デスクトップでも平気だと思います。displayconfig-gtk と guidance-backends の二つのdebパッケージをダウンロードし終わったら、それをダブルクリックしてインストーラを起動させ、インストール作業へ。</p>
+<ul>
+<li><a href="http://packages.ubuntu.com/ja/hardy/all/displayconfig-gtk/download" target="_blank">displayconfig-gtk_0.3.10_all.deb のダウンロードページ</a></li>
+<li><a href="http://packages.ubuntu.com/ja/hardy/i386/guidance-backends/download" target="_blank">Intel x86 マシン用 guidance-backends_0.8.0svn20080103-0ubuntu16_i386.deb のダウンロードページ</a></li>
+</ul>
+<p>インストールする際はちょっと順番に気をつけなければなりません。先にインストールするのは <span>guidance-backends_0.8.0svn20080103-0ubuntu16_i386.deb</span> です。少なくとも、僕の場合はそうでないと&nbsp;displayconfig-gtk_0.3.10_all.deb のインストーラーが依存関係をクリアできませんでした。</p>
+<h4>インストール完了後</h4>
+<p>端末を起動させ、コマンドを入力します。</p>
+<p><textarea class="html" name="code">$ sudo displayconfig-gtk </textarea></p>

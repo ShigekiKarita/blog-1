@@ -1,0 +1,13 @@
+#+TITLE: "２つのJDK"
+#+DATE: 2009-04-07T22:30:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>どう違うの？<br /></h4>
+<p>Linux で Java を使うときって二種類ありますよね。</p>
+<p><a href="http://blogs.sun.com/katakai/entry/installing_jdk_on_ubuntu_8" target="_blank">Ubuntu 8.04 に JDK をインストールする</a></p>
+<ul>
+<li>$ sudo apt-get install openjdk-6-jdk</li>
+<li>$ sudo apt-get install sun-java6-jdk</li>
+</ul>
+<p>前にXMindを入れたので、僕のUbuntuにはOpenJDKが入っています。<br />どこがどうちがうんだろう。あまり大差ないのかな。</p>

@@ -1,0 +1,11 @@
+#+TITLE: "Visual Studio 2005 C++でM_PI"
+#+DATE: 2009-05-02T23:13:29+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>M_PIが使えなかった理由<br /></h4>
+<p>この前コーディングしていたときに#include &lt;math.h&gt; を読み込んでM_PIを使うことがありました。<br />それ後、コンパイルをかけたとき「M_PIが定義されてない」とエラーが出てきて「どうして？」</p>
+<ul>
+<li><a href="http://www.atinfinity.info/blog/archives/14" target="_blank">dandelion's log: VC++でM_PIが使えなかった理由判明</a></li>
+</ul>
+<p>なるほど。</p>

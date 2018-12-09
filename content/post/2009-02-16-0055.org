@@ -1,0 +1,22 @@
+#+TITLE: "Movable Type 4.1 から 4.23 へ"
+#+DATE: 2009-02-16T05:58:29+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Movable Type をアップグレード</h4>
+<ul>
+<li><a href="http://www.sixapart.jp/movabletype/news/2008/12/03-1400.html" target="_blank">[重要] セキュリティアップデート Movable Type 4.23 の提供を開始</a></li>
+</ul>
+<blockquote>
+<p>Movable Type においてクロスサイトスクリプティングによる脆弱性が確認されました。この問題に対処するため、Movable Type の修正バージョンを公開致します。脆弱性の修正バージョンとなりますので、アップデートを推奨致します。</p>
+</blockquote>
+<p>本当は去年の暮れにやろうと思ったんですが、気がついたら年が明けて1ヶ月半も経ってしまいました。クロスサイトスクリプティングによる脆弱性、と言われてもあまりピンときませんが、Movable Type の再構築にかかる処理速度が変わったみたいだったので、この際にアップグレードしました。</p>
+<p>アップグレードするにあたって、『小粋空間』さんを参考にしました。</p>
+<ul>
+<li><a href="http://www.koikikukan.com/archives/2008/08/15-021717.php" target="_blank">Movable Type 4.1x から 4.2 へのアップグレード</a> </li>
+</ul>
+<h4>アップグレードしたんだけども・・・ バージョン情報が</h4>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090216_04.jpg" alt="photo_090216_04.jpg" /></p>
+<p>Movable Type のシステムメニューのツールのシステム情報で確認するとバージョンが4.1と表示されています。なんでだろう・・・。</p>
+<h4>アップグレードしたんだけども・・・　InsertLink</h4>
+<p>つい最近入れたプラグインなんですが、MT4.23にアップグレードしたら機能しなくなりました。詳しく調べていないのでわかりませんけれども、僕の場合はうまく対応できていないようです。</p>

@@ -1,0 +1,22 @@
+#+TITLE: "Ubuntu 8.10 と C言語"
+#+DATE: 2009-03-23T05:40:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>UbuntuでのC開発環境を整える<br /></h4>
+<h5>"build-essential"のインストール</h5>
+<p>Ubuntuにはlibc6-devが入っていないようでC言語のヘッダファイルがありません。これだとコンパイルするときに困るので対策を取ります。(ただ、単にインストールするだけです)</p>
+<ul>
+<li><a href="http://techno-st.net/2008/08/30/ubuntu-804-gcc.html" target="_blank">Ubuntu 8.04 で gcc が動かない...?</a></li>
+<li><a href="http://d.hatena.ne.jp/sotarok/20070625/1182701469" target="_blank">UbuntuにC言語の開発環境をインストール</a></li>
+</ul>
+<p>端末を起動して、以下の通りに入力し、build-essential をインストールします。(もしくは、Synaptic パッケージマネージャで "build-essential"と検索してインストールします。)</p>
+<pre>$ sudo apt-get install build-essential</pre>
+<h4>試しにコンパイルしてみます</h4>
+<p>以下のような簡単なソースを用意します。</p>
+<pre>#include &lt;stdio.h&gt;<br /><br />int main(void)<br />{<br />&nbsp;&nbsp;&nbsp; printf("hello, world\n");<br />&nbsp;&nbsp;&nbsp; return 0;<br />}<br /></pre>
+<p>コンパイルするには、端末で次のように入力します。</p>
+<pre>$ gcc -o hello hello.c<br /></pre>
+<p>動作が完了したら、引き続き端末に入力します。</p>
+<pre>$ ./hello</pre>
+<p>すると、端末上に hello, world と出てきます。<br />これが出てきたら、ひとまずは終了です。</p>

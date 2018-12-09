@@ -1,0 +1,9 @@
+#+TITLE: "FreeNASの設定"
+#+DATE: 2009-07-20T21:50:52+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h3>FreeNASの参考にしたページ</h3>
+<p>FreeNASをインストールしたので設定に移ります。<br />
+下記のページを参考にしました。</p>
+<ul><li><a href="http://freebsd.fkimura.com/FreeNAS-a0.html" target="_blank">FreeNASでiSCSIターゲット。Windows Vistaで試すメモ</a></li><li><a href="http://inohara.net/~kazuyoshi/freenas-services-nfs.htm" target="_blank">FreeNAS　NFS設定</a>　#文字コードをShift_JISに</li></ul>

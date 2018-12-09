@@ -1,0 +1,19 @@
+#+TITLE: "コマンドプロンプトとバッチファイル"
+#+DATE: 2009-04-12T11:39:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>メモ代わりに</h4>
+<ul>
+<li><a href="http://ykr414.com/dos/dos05.html#02" target="_blank">コマンドプロンプトを使ってみよう！: ?バッチファイル?</a></li>
+<li><a href="http://www.geocities.co.jp/SiliconValley-SanJose/1227/macros.html" target="_blank">炎のコマンドプロンプト入門: コマンドマクロ</a></li>
+<li><a href="http://fdays.blogspot.com/2007/12/blog-post_06.html" target="_blank">floatingdays: コマンドプロンプトで繰り返し処理</a></li>
+</ul>
+<p>この前、コマンドを繰り返すバッチファイルを作ろうと思って調べたときにブックマークしたサイト。<br />RIBファイルの連番(001~180)をPixieで続けてTiffに変える時に使いました。<br />結局、よくわからないまま微妙なのができてしまったんですけども。</p>
+<h5>rib_render_001-009.bat<br /></h5>
+<pre>set num=1<br />:loop1<br />　rem&nbsp; Render RIBs<br />　rndr&nbsp; ./rib/00%num%.rib<br />　set /a num=%num%+1<br />if not %num% == 10 goto loop1<br /></pre>
+<h5>rib_render_010-099.bat<br /></h5>
+<pre>set num=10<br />:loop1<br />　rem&nbsp; Render RIBs<br />　rndr ./rib/0%num%.rib<br />　set /a num=%num%+1<br />if not %num% == 100 goto loop1<br /></pre>
+<h5>rib_render_100-180.bat<br /></h5>
+<pre>set num=100<br />:loop1<br />　rem&nbsp; Render RIBs<br />　rndr ./rib/%num%.rib<br />　set /a num=%num%+1<br />if not %num% == 181 goto loop1</pre>
+<p>0（ゼロ）で数字の桁を揃えたいと思ったんですが、その方法がわからなかったのでbatファイルを3つ作って乗り切りました。とりあえずなんとかなったから良いかぁ・・・ってところだけど、桁を揃えるのってどうやってやるんだろうなぁ。</p>

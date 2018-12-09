@@ -1,0 +1,38 @@
+#+TITLE: "牛乳を買い忘れた"
+#+DATE: 2009-03-10T04:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>きっかけはココアから<br /></h4>
+<p>ココア飲みたいなって思って、ココアを買いに行きました。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090310_02.png" alt="" /></p>
+<p><span>でもね、牛乳を買い忘れました。</span></p>
+<h4>"Remember The Milk"を使う</h4>
+<ul>
+</ul>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090310_01.png" alt="" /></p>
+<p>ココアを飲もうと思っているのに牛乳を買い忘れるといった、そんなうっかりミス。そんな失敗をなくすために<a href="http://www.rememberthemilk.com/?hl=ja" target="_blank">Remember The Milk</a> をもう一度使うことにしました。久しぶりにログインして、2007年の2月頃の履歴を見てちょっと懐かしむ。</p>
+<p>ああ、iPhone か iPod touch が欲しくなってきたよ。</p>
+<h4>Mozilla ThunderbirdでRemenber The Milkを使う</h4>
+<p>前回、<a href="../../blog/2009/03/post_52.html">スケジュール管理</a>でMozilla ThunderbirdをGoogleカレンダーと同期させました。その延長でRemenber The MilkもMozilla Thunderbirdと同期させられるのじゃないのかと思い、試しに調べてみると、こんな記事を見つけました。</p>
+<ul>
+<li><a href="http://blog.rememberthemilk.jp/2008/07/31/196/" target="_blank">Remember The Milk 日本版 公式ブログ:Remember The Milkにアクセスする5つのクールな方法</a></li>
+<li><a href="http://www.dailygyan.com/2008/05/remember-milk-provider-extension-for.html" target="_blank">Daily Gyan:Remember The Milk Provider Extension For Thunderbird. [Thunderbird Gyan]</a></li>
+</ul>
+<p>やり方はそんなに難しくないみたいです。<br />アドオンのRemember the Milk Providerさえインストールしてしまえば。<br />ただ、ダウンロードするためには下記のリンク先でアカウントが必要となります。</p>
+<ul>
+<li><a href="https://addons.mozilla.org/ja/thunderbird/addon/7125" target="_blank">"Remember the Milk Provider"をダウンロードする</a></li>
+</ul>
+<h4>使い方はこんな感じ</h4>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="450" height="390" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://blip.tv/play/tTa1t1aK7Do" />
+<param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="450" height="390" src="http://blip.tv/play/tTa1t1aK7Do" allowfullscreen="true"></embed>
+</object>
+</p>
+<p>ココアが熱い。</p>
+<p>&nbsp;</p>
+<p><span>追記：</span>ココア以上に熱そうなサイトを見つけた</p>
+<ul>
+<li><a href="http://forgotthemilk.net/rtm_links" target="_blank">Forgot the Milk:Remember The Milk を徹底的に使い倒す！！</a></li>
+</ul>

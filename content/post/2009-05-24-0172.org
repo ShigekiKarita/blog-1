@@ -1,0 +1,61 @@
+#+TITLE: "UbuntuとSamba"
+#+DATE: 2009-05-24T14:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Samba</h4>
+<h5>Sambaのインストール</h5>
+<pre>$ sudo apt-get install samba</pre>
+<h5>Linuxユーザーの追加</h5>
+<p>SambaにWindowsからアクセスするにはLinuxユーザーが必要です。<br />
+なお、ユーザー情報は/etc/passwdに記載されます。</p>
+<pre>$ sudo useradd -s /sbin/nologin test
+$ sudo passwd test</pre>
+<h5>Sambaユーザーの追加</h5>
+<p>Linuxユーザーを作成したら、Sambaユーザーを作成します。</p>
+<pre>$ sudo pdbedit -a test</pre>
+<p>smbpasswdでもありかなと思うんですが、Samba3.0では推奨ではないようです。<br />
+そういうこともあって、今回はpdbeditを用います。</p>
+<h5>Sambaサーバーのディレクトリ設定</h5>
+<p>Sambaサーバーで使うディレクトリを作成します。<br />
+まずは、共有ディレクトリから手をつけます。パーミッションもそれ合わせます。</p>
+<pre>$ sudo mkdir /var/samba
+$ sudo chown nobody:nogroup /var/samba
+$ sudo chmod 777 /var/samba
+</pre>
+<h5>Sambaサーバー設定ファイル(smb.conf)の変更</h5>
+<p>まずは設定ファイルのバックアップを取っておきます。</p>
+<pre>$ sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.original</pre>
+<p>以下に追記ないし変更した部分のみを記載します。</p>
+<pre>$ sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.original
+$ sudo vi /etc/samba/smb.conf
+[global]
+dos charset = CP932
+unix charset = UTF-8
+display charset = UTF-8
+map to guest = bad user
+security = user
+workgroup = WORKGROUP
+[public] # 括弧で囲まれた名前が共有名として表示されます
+comment = for Everyone
+public = yes
+path = /var/samba/public
+writable = yes
+guest ok = yes
+guest only = yes
+directory mask = 0777
+create mask = 0777
+$ sudo /etc/init.d/samba restart
+</pre>
+<h4>補足</h4>
+<h5>security=share／server／domainは使わない</h5>
+<p><a href="http://www.atmarkit.co.jp/flinux/special/samba_n/samba_nb.html" target="_blank">@IT: Sambaサーバ構築、5つのべからず：2008年版</a>で詳しく載っています。</p>
+<ul>
+<li>security=user	ユーザー単位でパスワード認証を行う</li>
+<li>security=ads	Active Directoryドメインで認証を行う</li>
+<li>security=share	共有単位で認証を行う</li>
+<li>security=server	Windows NTもしくはSambaで認証を行う</li>
+<li>security=domain	Windowsドメインで認証を行う</li>
+</ul>
+<blockquote><p>Windows XPまでは上記のどれを使っても問題は出なかったのだと思います。しかしながらWindows 2003 R2やVista、Windows 2008、XP 64ビットエディションでは、security=share／server／domainを使うと、うまく接続できない場合が増えてきました。 Kerberos認証やNTLMv2認証などの新しい認証方式では、セキュリティ強化のために、代理認証やパスワードのリダイレクトを許さないためです。</p></blockquote>
+<p>see also: Ubuntu Server Guide</p>

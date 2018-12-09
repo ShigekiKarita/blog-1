@@ -1,0 +1,11 @@
+#+TITLE: "Mnet “Magic Studios” "
+#+DATE: 2009-12-13T12:48:31+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<!--more-->ドクター・オクトパスやハルク、アイアンマンなどのアメコミキャラクターたちが姿を見せるスタジオ内の映像と、その加工過程の映像を比較して楽しめる映像を見つけました。まずは1つ目の完成品の映像を見て、どの部分が実写でどの部分がCG加工された映像なのかを見てから、メイキング映像の方を見ると面白いです。
+<strong>Movie</strong> (<a href="http://vimeo.com/7520657">Mnet "Magic Studios"</a> from <a href="http://vimeo.com/panicembryo">panic embryo</a> on <a href="http://vimeo.com">Vimeo</a>)
+<p style="text-align: center;"><object width="700" height="394"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=7520657&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=7520657&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="700" height="394"></embed></object></p>
+
+<strong>Breakdowns</strong> (<a href="http://vimeo.com/7522038">Mnet "Magic Studios" VFX Breakdowns</a> from <a href="http://vimeo.com/panicembryo">panic embryo</a> on <a href="http://vimeo.com">Vimeo</a>)
+<p style="text-align: center;"><object width="700" height="394"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=7522038&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=7522038&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="700" height="394"></embed></object></p>

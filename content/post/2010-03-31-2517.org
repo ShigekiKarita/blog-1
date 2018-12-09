@@ -1,0 +1,50 @@
+#+TITLE: "Gmail をバックアップして Google Apps に統合"
+#+DATE: 2010-03-31T23:52:27+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+最近, 古い Gmail アドレスを整理しています. その際にバックアップを行い, 独自ドメインでGmailを利用できる Google Apps へ移しています. 今回, 一連の方法についてご紹介します.
+
+この方法では, まず Gmail で作成するメールおよび添付ファイルの保存を行ないます. それ以外のデータに関しては末尾に記載している方法で Google アカウントの削除を行いすべて廃棄しています. もしも連絡先を Gmail で管理しているのならば, Google アカウントを削除するべきではありません.
+
+その次に, バックアップしたメールデータを Google Apps へコピーしデータをまとめます.
+<h3>バックアップの仕方</h3>
+バックアップの仕方は Gmail の利用方法によって異なります. 例えば, メーラーを通じて Gmail を使用している場合やプロトコルが pop なのか imap かでも異なりますが, メールのバックアップ方法を数多く覚えたい人以外は個別対応などしていられません.
+
+今回は様々な環境でも対応できる <a href="http://www.mailstore.com/en/mailstore-home.aspx" target="_blank">MailStore Home</a> というソフトウェアを使います. このソフトは私的利用なら無料で扱うことができるほか,  多くのメーラーに対応していて, なおかつ Gmail に対応しています.(残念ながら, Backy! に MailStore Home が対応しているか確認できません)
+<p style="text-align: center;"><img class="aligncenter" src="http://www.mailstore.com/images/screenshots/home-en/start540.jpg" alt="The free email archiving software for Exchange Server, Outlook, PST  and other email systems" width="540" height="349" /></p>
+
+<blockquote>
+<p style="text-align: right;"><a href="http://www.mailstore.com/en/" target="_blank">deepinvent Software GmbH</a></p>
+</blockquote>
+実際の方法についてはMailStore 公式の <a href="http://www.mailstore.com/en/e-mail-archiving/archiving-email.aspx" target="_blank">Archiving Emails - MailStore Server E-mail Archive</a> などを確認してください. 写真が多いので英語が読めなくても理解できるはずです.
+<h5>メディアへのコピー</h5>
+取得できたデータはCD/DVD などのメディアにコピーしておくことも大変重要です.  MailStore Home では直接 CD/DVD に書き出せますが, 一度メールのファイル形式として一般的な "eml ファイル"  に変換しておくことをおすすめします.
+
+これは MailStore Home で作成した CD/DVD よりも "eml ファイル" の集まりを CD/DVD に移したほうが汎用性を高められることや CD/DVD よりもはるかに歴史の長い磁気テープを記録用媒体として選択できるためです.
+
+ここまで無事に終わったならば, 次にこのメールデータを Google Apps へ移します.
+<h3>Google Apps にメールデータをコピーする</h3>
+<a rel="attachment wp-att-2589" href="http://www.hiroakit.com/blog/archives/2517/photo_20100331_05"><img class="alignright size-full wp-image-2589" title="photo_20100331_05" src="http://www.hiroakit.com/blog/photo/photo_20100331_05.png" alt="photo_20100331_05" width="162" height="228" /></a>バックアップしたデータを Google Apps にコピーします.  MailStore Home を利用します.  実際の方法は第三者が書いた <a href="http://www.pcsif.com/siryo/gmail/Gmailupload.pdf" target="_blank">Gmailupload.pdf</a> が参考になります.
+
+MailStore Home を使って Google Apps へメールデータをコピーすると, "MailStore Export" というラベルが作成されています. そのラベルをクリックすると, コピーされたメールを確認することができます. MailStore Home のメール数と Google Apps にあるメール数とを比較して, コピーが成功しているかを判断してください.
+
+コピーが成功しない場合, 今までの作業を振り返る必要があります. コピーの設定がおかしいのか, バックアップの段階で不具合がてでいるのかを見極めるためにです. もしかしたら, 新しい作業が発生するかもしれません.
+
+コピーに成功した場合, 次に Google アカウントの削除へ進みます.
+<h3>Google アカウントの削除</h3>
+アカウントの削除は<a href="https://www.google.com/accounts/Login" target="_blank">Google アカウント</a>から可能です.  アカウントを削除すると, Google が提供しているサービスに関するあなたのすべてのデータが消えます. そのため, この作業を行ってしまうと元に戻ることはできません. ( リストアが成功していなければ, すぐさま引き返すべきです. )
+<p style="text-align: center;"><a rel="attachment wp-att-2520" href="http://www.hiroakit.com/blog/archives/2517/photo_20100331_04"></a><a rel="attachment wp-att-2620" href="http://www.hiroakit.com/blog/archives/2517/photo_20100331_04-2"><img class="size-full wp-image-2620 aligncenter" title="photo_20100331_04" src="http://www.hiroakit.com/blog/photo/photo_20100331_041.jpg" alt="photo_20100331_04" width="512" height="239" /></a></p>
+<p style="text-align: left;">マイサービスの近くにある"編集"をクリックします.  画面が変わった先で "アカウントを閉鎖し、そのアカウントに関連するすべてのサービスと情報を削除します" という一文があるので, これをクリックします. 後は指示に従うだけです.</p>
+
+<h3>リファレンス</h3>
+<ul>
+	<li><a href="http://www.mailstore.com/en/" target="_blank">Email archiving and management solutions - MailStore</a></li>
+	<li><a href="http://www.mailstore.com/en/e-mail-archiving/supported-e-mail-systems.aspx" target="_blank">Supported Email Systems - MailStore Server E-mail Archive</a></li>
+	<li><a href="http://www.pcsif.com/download.html" target="_blank">ダウンロード：PCサポート＆ITコンサル インターフェイス</a></li>
+	<li><a href="http://httalk.xrea.jp/mt3/archives/2008/11/gmail-backupmai.html" target="_blank">Gmail Backupもかすむ高機能ソフト、MailStore HOME - HORNET's TALK..</a></li>
+	<li><a href="http://www.ringolab.com/note/daiya/2009/07/gmailpop3pcmailstore-home.html" target="_blank">GmailもPOP3もメールをPCにバックアップする　MailStore Home - 情報考学 Passion For The Future</a></li>
+	<li><a href="http://mozilla-remix.seesaa.net/article/77247341.html" target="_blank">Mozilla Re-Mix: ThunderbirdやSeaMonkeyなど複数のクライアントからメッセージをまとめてバックアップできるソフトウェア「MailStore Home」</a></li>
+	<li><a href="http://www.macotakara.jp/blog/index.php?ID=351&amp;tag=MailStore%20Home" target="_blank">Windows VistaのメールをMac OS Xに移動する － MACお宝鑑定団 blog（羅針盤）</a></li>
+	<li><a href="http://geeks.artsjp.com/?p=9044" target="_blank">Gmailのバックアップどうしてる？「MailStore Home 4」が便利！！ « LiveartGEEKS -ライブアートギークス-</a></li>
+</ul>

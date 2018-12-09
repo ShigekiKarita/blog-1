@@ -1,0 +1,30 @@
+#+TITLE: "Psyop"
+#+DATE: 2009-02-27T22:17:05+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Psyop</h4>
+<p>僕が好きな海外プロダクションの一つに <a href="http://www.psyop.tv/" target="_blank">Psyop</a> というところがあります。パーティクルの表現を多く使うところです。(ソフトウェアは Softimage を使っているところという話をネットではみます)</p>
+<p>Psyop が作った中でも、一番好きなのはこのHP(ヒューレットパッカード)のCMですね。</p>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="535" height="295" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" />
+<param name="src" value="http://www.youtube.com/v/f359zT1XvkU&amp;hl=ja&amp;fs=1" /><embed type="application/x-shockwave-flash" width="535" height="295" src="http://www.youtube.com/v/f359zT1XvkU&amp;hl=ja&amp;fs=1" allowscriptaccess="always" allowfullscreen="true"></embed>
+</object>
+</p>
+<h4>Motionographer</h4>
+<p>最近、僕が好きな Psyop が <a href="http://motionographer.com/" target="_blank">Motionographer</a> という映像を紹介するサイトで2つほど記事が投稿されていました。どうやら、新しい作品を作ったみたいです。</p>
+<ul>
+<li><a href="http://motionographer.com/2009/02/25/psyops-inferno/" target="_blank">Psyop&rsquo;s Inferno</a></li>
+<li><a href="http://motionographer.com/2009/02/19/psyop-for-t-rowe-price-the-world-is-connected-beautiful/" target="_blank">Psyop for T. Rowe Price: The world is connected, beautiful</a></li>
+</ul>
+<ul>
+</ul>
+<h4>Movie</h4>
+<p>それで、以下のリンクから映像を見てみれば、わかると思うんですけど、表現レベルが化け物級(笑<br />特に、2番目の映像はどうやって作ってるかなんて予想すらもできやしない。このシェーダーどうなってるのさ、って思います。</p>
+<ul>
+<li><a href="http://motionographer.com/theater/dantes-inferno-trailer/" target="_blank">Dante&rsquo;s Inferno Trailer</a></li>
+<li><a href="http://motionographer.com/theater/t-rowe-price-ink/" target="_blank">T. Rowe Price &ldquo;Ink&rdquo;</a></li>
+<li><a href="http://motionographer.com/theater/t-rowe-price-rice/" target="_blank">T. Rowe Price &ldquo;Rice&rdquo;</a></li>
+</ul>

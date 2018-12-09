@@ -1,0 +1,9 @@
+#+TITLE: "NVIDIA - Speak Visual"
+#+DATE: 2009-03-08T11:30:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>NVIDA は面白いことをやってるのかもしれない<br /></h4>
+<p><a href="http://www.speakvisual.com/" target="_blank">NVIDIA - Speak Visual</a> というサイトを見つけた。<a href="http://www.speakvisual.com/" target="_blank"><br /></a></p>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090308_05.png" alt="" /></p>
+<p>何するサイトなんだろう。ページによっては、UPLOAD NOW とボタンがあるけれども。</p>

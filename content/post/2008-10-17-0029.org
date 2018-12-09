@@ -1,0 +1,43 @@
+#+TITLE: "最近みたWEBページ part4"
+#+DATE: 2008-10-17T12:10:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<p>ご縁あって、東京ゲームショウ2008に大勢でいくことがありました。その間は間ネットとは距離を置いていました。帰ってきてだいぶ落ち着いたのでチェックしてみると・・・・・・。</p>
+<p><br /></p>
+<ul>
+<li><a href="http://www.itmedia.co.jp/news/articles/0810/16/news039.html">Opera、Web開発者向け検索エンジン「MAMA」を開発</a></li>
+</ul>
+<p>Opera Softwereがノルウェーにあるということをこの記事で初めて知りました。メタデータについてちゃんと意識したら、もっとすごいネット世界が見られるんだろうなぁ。</p>
+<p><br /></p>
+<ul>
+<li><a href="http://www.itmedia.co.jp/enterprise/articles/0810/16/news025.html">Flash CS3にコード実行の脆弱性、Adobeがセキュリティ情報公開</a></li>
+</ul>
+<p>Adobeの日本語のセキュリティページ見ても載ってないみたい。米国ので探してみるとあった。</p>
+<p><br /></p>
+<ul>
+<li><a href="http://www.adobe.com/support/security/advisories/apsa08-09.html">Potential vulnerability in Flash CS3 Professional</a></li>
+</ul>
+<blockquote>
+<p>These issues do not affect the Mac version of Flash CS3 Professional.</p>
+</blockquote>
+<p>Macは平気みたい(僕はWin版だけど)。ちょっと怖い。</p>
+<p><br /></p>
+<ul>
+<li><a href="http://www.itmedia.co.jp/enterprise/articles/0810/15/news047.html">新JavaScriptエンジン搭載の「Firefox 3.1&beta;1」リリース</a></li>
+</ul>
+<p>TraceMonkeyを搭載するみたいです。と言っても、JavaScriptの世界はちょっとよくわからない。記事にチラッと書いてあるCSS3とかそろそろ意識した方が良いかな?とは思いました。</p>
+<p><br /></p>
+<ul>
+<li><a href="http://www.itmedia.co.jp/enterprise/articles/0810/14/news079.html">Silverlight 2はFlashにどこまで追い付けるか？</a></li>
+</ul>
+<blockquote>
+<p>Microsoftは10月13日、メディア再生用ブラウザプラグイン新版「Silverlight 2」の正式版を発表した。</p>
+</blockquote>
+<p>知らなかった・・・。さらに"4人に1人はSilverlightを利用している"というのも知らなかった。</p>
+<p><br /></p>
+<ul>
+<li><a href="http://journal.mycom.co.jp/news/2008/10/16/014/index.html">アドビ、「Adobe Flash Player 10」日本語版の無償提供を開始</a></li>
+</ul>
+<p>Silverlight以上に知らなかった。もう10を出すんですか・・・。</p>
+<p><br /></p>

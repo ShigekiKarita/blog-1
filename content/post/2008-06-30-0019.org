@@ -1,0 +1,8 @@
+#+TITLE: "IMC Tokyo 2008"
+#+DATE: 2008-06-30T19:23:52+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>IMC Tokyoに行ってきました</h4>
+<p>IMC Tokyoに行ってきました。会場ではモニタキャリブレーションについて見てきました。Spyder3の紹介をしてくれたソリューションシステムズさんにはとても感謝です。自宅の デュアルディスプレイ環境なのですが、モニタの種類が違うこともあって色が合っていません。Spyder3の購入か、モニタを同型のものに揃えるかを考え るきっかけにもなりました。<br /><br />他にはオライリーの本に眼が行きました。<br />オライリーの本って慣れていないと文字が多さにつらさを感じます。<br /><br /><br />Ted Schilowitz氏の講演を聴くため会場へ。<br /><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img class="mt-image-center" style="margin: 0pt auto 20px; text-align: center; display: block;" src="http://www.hiroakit.com/blog/photo/photo_080612_a.jpg" alt="photo_080612_a.jpg" width="450" height="338" /></span><br />同時通訳が用意してありました。<br />英語がわからない自分にとってはとても助かります。<br /><br />講演の内容は、前回書いた記事に併せて、RED ONEは一度5Kサイズにとって、それを4Kに落としているといるという技術的なこと。そして現在1000台をすでに出荷しているということ。サポート体 制としてカメラ自体のソフトウェアのアップグレードをオンラインで提供しているということ。また、AppleのFinalCutとの連携が強いことをア ピールしていました。<br /><br />講演が終わり帰り際に先輩に偶然にも遭遇し、REDのカメラが展示されているところを教えてくださいました。ようやく本物を見ることが出来ました。<br /><br />RED SCARLETを買うために貯金しようかな、と考え中です。<br />どうしても買えない額というわけではありませんしね。<br /><br /><br />ソーラン節を踊っている方々が居ました。<span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img class="mt-image-center" style="margin: 0pt auto 20px; text-align: center; display: block;" src="http://www.hiroakit.com/blog/photo/photo_080612_b.jpg" alt="photo_080612_b.jpg" width="450" height="338" /></span><br /></p>
+<div><br /></div>

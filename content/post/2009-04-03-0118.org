@@ -1,0 +1,206 @@
+#+TITLE: "Liquid(コンパイル編): Part 1"
+#+DATE: 2009-04-03T02:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<a href="http://sourceforge.net/projects/liquidmaya/" target="_blank">Liquid</a> のコンパイルに挑戦しました。ひとまずは動きます。初めてのことばかりで悪戦苦闘したけど、収穫多し！<!--more-->
+<h4>結論</h4>
+<p style="text-align: center;"><img class="aligncenter" src="http://www.hiroakit.com/blog/photo/photo_090403_01.png" alt="" width="555" height="809" /></p>
+
+<h4>確認させてください</h4>
+以下の事にご理解いただける方のみ、この先は読み進めてもらいたいと思います。もしも仮に「パソコンがぶっ壊れた！」とかなってしまったら、それはとても悲しいことですから。
+<ul>
+	<li>学生が行ったことですので完璧な結果ではなく、不具合があるかもしれません。</li>
+	<li>この一連の作業によって生じるトラブル等には責任を持てません。</li>
+</ul>
+<h4>環境を整える</h4>
+以下の環境でコンパイルを行いました。
+(レンダラーには Installer とつけました。これは setup.exe を使ったという意味です)
+<ul>
+	<li>Microsoft Windows XP Professional SP2 (32bit)</li>
+	<li>Microsoft Visual Studio 2005 Professional Edition SP1</li>
+	<li>Microsoft Windows Server 2003 SP1 Platform SDK</li>
+	<li>Pixie RenderMan Renderer v2.2.5 (Installer)</li>
+	<li>Aqsis version 1.4.2 (Installer)</li>
+	<li>3delight 8.0.1 (Installer) 試用版</li>
+	<li>Autodesk Maya 8.5</li>
+</ul>
+<h4>Liquidのソースを入手</h4>
+SourceForge.net から Liquid のソースを入手します。今回、僕がダウンロードしたファイルは Liquid_2.3.3_src.zip です。保存先はお任せします。(本当はSVNで入手したかったのですが、ログインパスワードを求められた際に何を入力すればいいのかがわからなかったので以下のリンク先から入手しました。
+<ul>
+	<li><a href="http://sourceforge.net/project/showfiles.php?group_id=63608" target="_blank">SourceForge.net: Liquid</a></li>
+</ul>
+<h4>ディレクトリ構造のチェック</h4>
+ファイルを解凍したら、ディレクトリ構造のチェックをします。でも、この行動は個人的に状況を把握するためにやっているだけですので、9割方の人はやる必要はないとは思います。(本当は tree /f と打ったものをブログに載せようと思ったのですが、テキスト量が多過ぎたので tree の結果を載せました。
+
+そうするとこんな感じの結果がコマンドコロンプト内に表示されました。
+<pre>D:.
+├─bin
+│  ├─win32lib
+│  └─win64lib
+├─devkit
+│  └─examples
+├─displayDrivers
+│  ├─3Delight
+│  │  ├─win32
+│  │  └─win64
+│  ├─air
+│  │  └─win32
+│  └─pixie
+│      ├─win32
+│      └─win64
+├─doc
+│  └─html
+├─html
+│  └─images
+├─icons
+├─include
+│  └─boost
+│      ├─algorithm
+│      │  └─string
+│      │      └─detail
+│      ├─bind
+│      ├─config
+│      │  ├─abi
+│      │  ├─compiler
+│      │  ├─platform
+│      │  └─stdlib
+│      ├─detail
+│      ├─function
+│      │  └─detail
+│      ├─iterator
+│      │  └─detail
+│      ├─mpl
+│      │  ├─aux_
+│      │  │  ├─config
+│      │  │  ├─preprocessed
+│      │  │  │  ├─bcc
+│      │  │  │  ├─bcc551
+│      │  │  │  ├─dmc
+│      │  │  │  ├─gcc
+│      │  │  │  ├─msvc60
+│      │  │  │  ├─msvc70
+│      │  │  │  ├─mwcw
+│      │  │  │  ├─no_ctps
+│      │  │  │  ├─no_ttp
+│      │  │  │  └─plain
+│      │  │  └─preprocessor
+│      │  └─limits
+│      ├─pending
+│      ├─preprocessor
+│      │  ├─arithmetic
+│      │  ├─array
+│      │  ├─config
+│      │  ├─control
+│      │  │  └─detail
+│      │  │      ├─dmc
+│      │  │      ├─edg
+│      │  │      └─msvc
+│      │  ├─debug
+│      │  ├─detail
+│      │  │  └─dmc
+│      │  ├─facilities
+│      │  ├─iteration
+│      │  │  └─detail
+│      │  │      ├─bounds
+│      │  │      └─iter
+│      │  ├─list
+│      │  │  └─detail
+│      │  │      ├─dmc
+│      │  │      └─edg
+│      │  ├─logical
+│      │  ├─punctuation
+│      │  ├─repetition
+│      │  │  └─detail
+│      │  │      ├─dmc
+│      │  │      ├─edg
+│      │  │      └─msvc
+│      │  ├─seq
+│      │  │  └─detail
+│      │  ├─slot
+│      │  │  └─detail
+│      │  └─tuple
+│      ├─range
+│      │  └─detail
+│      │      └─vc6
+│      ├─type_traits
+│      │  └─detail
+│      └─utility
+├─linux
+├─mel
+├─osx
+├─renderers
+├─ribLib
+├─scripts
+├─shaders
+│  └─src
+├─src
+│  ├─liquidMaya.xcodeproj
+│  ├─MSVC2005
+│  │  ├─displayDriver3delight
+│  │  ├─displayDriverAir
+│  │  ├─displayDriverAqsis
+│  │  ├─displayDriverPixie
+│  │  ├─liquidBin
+│  │  └─RILIB
+│  └─MSVC6
+│      ├─displayDriver3delight
+│      ├─displayDriverAir
+│      ├─displayDriverAqsis
+│      ├─displayDriverPixie
+│      └─RILIB
+└─W32Installer</pre>
+フォルダが沢山ありますね。初心者にはとてもきつい光景です･･････。
+そう、僕は<span>プログラミングが全くできない</span>、いわゆる初心者なのです(笑
+
+さて、それはさておき、displayDrivers というディレクトリありますが、これってなんなのでしょうか。RIBファイルの中には、display という項目(？)で画面に表示するのか、ファイルに保存するのかを決めたり、チャンネル数(rgba)について設定できたりするみたいですけど、それに関係してくるのでしょうか。謎ですね・・・・・・。
+<h4>とりあえず！</h4>
+とりあえず、src/MSVC2005 へ移動します。
+そして、tree /f でファイルの確認しました。 表示された内容は次の通りでした。
+<pre>D:.
+│  liquid.ncb
+│  liquid.sln
+│  liquid.vcproj
+│  ReadMe.txt
+│
+├─displayDriver3delight
+│      displayDriver3delight.vcproj
+│
+├─displayDriverAir
+│      displayDriverAir.vcproj
+│
+├─displayDriverAqsis
+│      displayDriverAqsis.vcproj
+│
+├─displayDriverPixie
+│      displayDriverPixie.vcproj
+│
+├─liquidBin
+│      liquidBin.vcproj
+│
+└─RILIB
+        RILIB.vcproj</pre>
+README.txt があったのでそれに目を通します。
+<blockquote>Note for compiling with MSVC2005
+
+1st note: Projects comes with a generic RIB library to avoid linking problem.
+
+2nd note: if you want to compile the generic RIB library, you'll need to create an empty unistd.h in your MSVC standard include directory (due to the bison/flex file generator), and install zlib headers and libs.
+
+3rd note: to load liquid on x64, zlibwapi.dll needs to be in one of the lib paths, the file is here: liquid\bin\win64lib</blockquote>
+こういうことをやってると、英語がちょっとずつわかっていく･･････、かもしれませんね。
+僕は英語が全然読めないので、とても遠い未来の話に思えますけどね(笑
+<p style="padding-left: 30px;"><strong>1st note</strong>
+書いてあることわからない。リンクの問題がどうとか？
+
+<p style="padding-left: 30px;"><strong>2nd note</strong>
+unistd.h を作って、include フォルダに入れてください？
+それと、zlibのヘッダーファイルとライブラリを入れてください？
+
+<p style="padding-left: 30px;"><strong>3rd note</strong>
+64bit版についての記述・・・、かな？
+僕のWindowsは32bitなのでここは飛ばしました。
+
+とりあえず、 src/MSVC2005/liquid.vcproj を開きました。
+
+<a href="http://www.hiroakit.com/blog/archives/117" target="_blank">Liquid(コンパイル編): Part 2へ続く。</a>

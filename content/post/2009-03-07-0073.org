@@ -1,0 +1,17 @@
+#+TITLE: "MIGUEL A. SALEK"
+#+DATE: 2009-03-07T12:19:25+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>MIGUEL A. SALEK</h4>
+<p><a href="http://www.msalek.com/" target="_blank">MIGUEL A. SALEK</a> さんという方がいらっしゃるそうです。<a href="http://vimeo.com/" target="_blank">Vimeo</a> 経由で初めて知りました。</p>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="535" height="295" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://vimeo.com/moogaloop.swf?clip_id=1714595&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed type="application/x-shockwave-flash" width="535" height="295" src="http://vimeo.com/moogaloop.swf?clip_id=1714595&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1"></embed>
+</object>
+<br /><a href="http://vimeo.com/1714595">Miguel A. Salek FX REEL.08</a> from <a href="http://vimeo.com/msalek">Miguel A. Salek</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+<p>タイトルに Effects Technical Director と出てきます。字の如く、エフェクトのTDということなんでしょうが、具体的にどういったことをするお仕事なんでしょうか。上の映像のようなエフェクトを表現することを最終的に目指すのでしょうが、実際のところ何するのさ&hellip;&hellip;？と情報が少ないためにそう思ってしまいます。</p>
+<p>難しい話は抜きにして、ただ純粋にこの映像はかっこいいよね。炎や水の表現が特に好みです。<br />こういうのを表現できるようになれたらいいなと常々思います。(あと、何年かかることやら･･････。</p>
+<p>MIGUEL A. SALEK さんのサイトには、経歴として Sony Pictures Imageworks, Psyop, Industrial Light &amp; Magic　が載っていて ParticleFX &amp; Dynamics artist, FX Technical Director/R&amp;D とも書いてあります。</p>
+<p>そもそもの話、エフェクトって難しいよね。Try ＆ Error の時間が多く欲しいのに、それをプレビューするのに時間がかかってしまうし。それに必要とする技能や知識やらが多岐にわたっているようにも思えます。</p>
+<p style="text-align: left;">でも、<span>非常に楽しい分野</span>であることには間違いない！</p>

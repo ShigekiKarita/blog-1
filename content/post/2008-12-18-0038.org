@@ -1,0 +1,31 @@
+#+TITLE: "FINAL FANTASY XIII"
+#+DATE: 2008-12-18T02:50:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<div style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="392" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="id" value="gtembed" />
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="allowFullScreen" value="true" />
+<param name="quality" value="high" />
+<param name="src" value="http://www.gametrailers.com/remote_wrap.php?mid=43655" /><embed id="gtembed" type="application/x-shockwave-flash" width="480" height="392" src="http://www.gametrailers.com/remote_wrap.php?mid=43655" quality="high" allowfullscreen="true" allowscriptaccess="sameDomain"></embed>
+</object>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="392" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="id" value="gtembed" />
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="allowFullScreen" value="true" />
+<param name="quality" value="high" />
+<param name="src" value="http://www.gametrailers.com/remote_wrap.php?mid=43656" /><embed id="gtembed" type="application/x-shockwave-flash" width="480" height="392" src="http://www.gametrailers.com/remote_wrap.php?mid=43656" quality="high" allowfullscreen="true" allowscriptaccess="sameDomain"></embed>
+</object>
+</div>
+<p>次作である FINAL FANTASY XIII のトレイラー映像を発見しました。<br /> この FF XIII は 三種類のパッケージが発表されていますね。</p>
+<ul>
+<li>FINAL FANTASY XIII (PLAYSTATION 3)</li>
+<li>FINAL FANTASY Agito XIII (PlayStation Portable)</li>
+<li>FINAL FANTASY Versus XIII (PLAYSTATION 3)</li>
+</ul>
+<p>FINAL FANTASY Agito XIII に関しては正しい情報かはわかりません。<br />そういった話もあるらしいです。</p>

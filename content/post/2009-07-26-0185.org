@@ -1,0 +1,35 @@
+#+TITLE: "UbuntuでRedmineとMySQL"
+#+DATE: 2009-07-26T18:52:16+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h3>状況</h3>
+Ubuntu Server 8.10
+MySQL 5.0
+<!--more-->
+<pre>$ sudo rake db:migrate RAILS_ENV="production"
+Mysql::Error: Can't create/write to file '/tmp/#sql_19bf_0.MYI' (Errcode: 13): SHOW FIELDS FROM `permissions`</pre>
+<h3>作業内容</h3>
+<h4>MySQLにログインし、SHOW FIELDS FROM `permissions`</h4>
+<pre>$ mysql -u user_name -p
+mysql&gt; show databases;
+mysql&gt; use database_name;
+mysql&gt; show fields from permissions;
+ERROR 1 (HY000): Can't create/write to file '/tmp/#sql_19bf_0.MYI' (Errcode: 13)</pre>
+<h4>ERROR 1 (HY000)の検索</h4>
+<blockquote><a href="http://q.hatena.ne.jp/1159437279" target="_blank">実行しているユーザにファイルの作成権限又は、書き込み権限がで/home/hogeディレクトリー又は、/home/hoge/hoge.csvファイルにない。chmod o+rw/home/hogeで誰でも読み書きできますがmysqlのユーザで書き込むができる場所にファイル書き込み場所を変えた方がよいと思います。</a></blockquote>
+初期からある/tmp/ディレクトリのパーミッションを変えるより、MySQLがアクセスできるエリアを新しましょう、と。
+<h4>MySQLのテンポラリディレクトリの設定</h4>
+<pre>$ sudo mkdir /var/tmp/mysql/
+$ sudo chown mysql /var/tmp/mysql/
+$ sudo vi /etc/mysql/my.conf
+[mysqld]
+# tmpdir = /tmp
+tmpdir = /var/tmp/mysql #変更後</pre>
+<h4>MySQLの再起動</h4>
+<pre># /etc/init.d/mysql restart</pre>
+<h4>rake db:migrate</h4>
+<pre>$ sudo rake db:migrate RAILS_ENV="production"</pre>
+<h3>参考URL</h3>
+<a href="http://d.hatena.ne.jp/garbagetown/20090425/1240617540" target="_blank">Redmine - garbagetown</a>
+<a href="http://q.hatena.ne.jp/1159437279" target="_blank">http://q.hatena.ne.jp/1159437279</a>

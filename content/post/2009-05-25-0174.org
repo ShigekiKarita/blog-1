@@ -1,0 +1,144 @@
+#+TITLE: "UbuntuとRedmine"
+#+DATE: 2009-05-25T20:28:54+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Redmine</h4>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090526_01.jpg" alt="" /></p>
+<h5>Redmineとは</h5>
+<p>RedmineとはRuby on Railsで書かれているプロジェクト管理ソフト。基本的にウェブベースで管理作業ができます。wiki, SCM, 工数管理, ガントチャート, Movable TypeにもあるカスタムフィールドがRedmineにもある他、RSS配信や多言語対応などといった機能があります。Redmineの一番凄いところは複数のプロジェクトを管理できるところでしょうか。</p>
+<p><a href="http://my.redmine.jp/demo/">Redmine demo (my.redmine.jp/demo)</a>で試して、気に入ってしまえばインストール。</p>
+<h4>Redmineの導入</h4>
+<h5>Reference</h5>
+<p>今回、Redmineを使用するにあたり下記のページを参考にしました。</p>
+<ul><li><a href="http://d.hatena.ne.jp/kobainfo/20090126/1232897403">coLinux（ubuntu）でRedmineを動かす</a></li>
+<li><a href="http://d.matu.biz/05">Redmine環境のつくりかた</a>
+</li><li><a href="http://redmine.jp/tech_note/apache-passenger/">Apache上でRuby on Railsアプリケーションを動かす</a></li>
+<li><a href="http://yasu1973fc2.blog99.fc2.com/blog-entry-34.html">apache de ruby on rails</a></li>
+<li><a href="http://tech.lampetty.net/tech/index.php/archives/276">Redmine 0.8.1をPhusion Passengerで動かす</a></li>
+</ul>
+<h5>インストールするもの</h5>
+<ul>
+<li>build-essential</li>
+<li>subversion</li>
+<li>ruby</li>
+<li>rubygems</li>
+<li>rails</li>
+<li>rake</li>
+<li>redmine</li>
+<li>sqlite3</li>
+<li>imagemagick</li>
+<li>redcloth</li>
+<li>passenger</li>
+</ul>
+<p>･･････多いね(笑</p>
+<h5>インストール</h5>
+<p>build-essential, subversionのインストール</p>
+<pre>$ sudo apt-get install build-essential
+$ sudo apt-get install subversion
+</pre>
+<p>rubyのインストール</p>
+<pre>$ sudo apt-get install ruby-full</pre>
+<p>rubygemsのインストール</p>
+<pre>$ wget http://rubyforge.org/frs/download.php/45905/rubygems-1.3.1.tgz
+$ tar xzf rubygems-1.3.1.tgz
+$ cd rubygems-1.3.1
+$ sudo ruby setup.rb
+$ sudo ln -s /usr/bin/gem1.8 /usr/bin/gem
+</pre>
+<p>rake, railsのインストール</p>
+<pre>$ sudo gem install rake -v=0.8.3
+$ sudo gem install rails -v=2.1.2
+</pre>
+<p>redmineのインストール</p>
+<pre>$ mkdir ~/www
+$ cd ~/www
+$ svn checkout http://redmine.rubyforge.org/svn/trunk/ redmine
+$ cd ~/www/redmine
+$ chmod o+w tmp log
+</pre>
+<p>sqliteのインストール</p>
+<pre>$ sudo apt-get install sqlite3
+$ sudo apt-get install libsqlite3-dev
+$ sudo apt-get install swig
+$ sudo gem install sqlite3-ruby
+</pre>
+<p>ImageMagickのインストール</p>
+<pre>$ sudo apt-get install imagemagick libmagick-dev
+$ sudo gem install rmagick -v version  #http://raa.ruby-lang.org/project/RMagick
+</pre>
+<p>RedClothのインストール</p>
+<pre>$ sudo gem install RedCloth</pre>
+<p>database.ymlの編集</p>
+<pre>$ cd ~/www/redmine/config
+$ cp database.yml.example database.yml
+$ vi database.yml
+production:
+adapter: sqlite3
+database: redmine
+host: localhost
+username: お任せ
+password: お任せ
+encoding: utf8
+dbfile: db/redmine.db
+timeout: 5000
+</pre>
+<p>データベース作成</p>
+<pre>$ rake db:migrate RAILS_ENV=production
+$ rake redmine:load_default_data RAILS_ENV=production
+</pre>
+<p>WRBrickで起動</p>
+<pre>$ cd ~/www/redmine
+$ ruby script/server -e production
+</pre>
+<p>http://localhost:3000にアクセスして動いているか確認します。</p>
+<h4>Passenger</h4>
+<h5>Passengerとは</h5>
+<p>先輩から「Passengerというのがあるよ」と教えてもらったので調べてみました。</p>
+<pre>Railsアプリケーションを実行するためのApacheモジュールです。</pre>
+<p>他にも「<a href="http://redmine.jp/tech_note/apache-passenger/">Apache上でRuby on Railsアプリケーションを動かす</a>」に色々と書いてあります。<br />正式名称は"Phusion Passenger"と言うみたいです。</p>
+<h5>Passengerのインストール</h5>
+<pre>$ sudo gem install passenger
+$ sudo passenger-install-apache2-module
+</pre>
+<p>どうやら何か足りないみたいです。</p>
+<pre> * To install Apache 2 development headers:
+Please run apt-get install apache2-prefork-dev as root.
+* To install Apache Portable Runtime (APR) development headers:
+Please run apt-get install libapr1-dev as root.
+* To install Apache Portable Runtime Utility (APU) development headers:
+Please download it from http://httpd.apache.org/
+(APR Utility is an integrated part of Apache.)
+</pre>
+<p>エラー文に従い、apache2-prefork-dev と libapr1-dev をインストールします。</p>
+<pre>$sudo apt-get install apache2-prefork-dev
+$sudo apt-get install libapr1-dev</pre>
+<pre>$ sudo passenger-install-apache2-module</pre>
+<h5>モジュールの設定ファイル作成</h5>
+<p>モジュールのインストールが完了したら、設定ファイルを作成します。設定ファイルに記述する文面はpassenger-install-apache2-moduleのインストール中に出てきたものをコピーします。</p>
+<pre>$ sudo vi /etc/apache2/mods-available/passenger.load</pre>
+<pre>LoadModule passenger_module /usr/lib/ruby/gems/1.8/gems/passenger-2.2.2/ext/apache2/mod_passenger.so
+PassengerRoot /usr/lib/ruby/gems/1.8/gems/passenger-2.2.2
+PassengerRuby /usr/bin/ruby1.8</pre>
+<p>モジュールを有効にします。</p>
+<pre>$ sudo a2enmod passenger</pre>
+<h5>Apacheの設定</h5>
+<p>Apacheの設定ファイル作成。VirtualHostにする。</p>
+<pre>$ sudo vi /etc/apache2/sites-available/redmine
+&lt;virtualhost *:80&gt;
+ServerName redmine.example.jp
+DocumentRoot /path/to/redmine/public
+&lt;/virtualhost&gt;
+</pre>
+<p>設定を有効化</p>
+<pre>$ sudo a2ensite redmine</pre>
+<h5>Apacheの再起動</h5>
+<pre>$ sudo /etc/init.d/apache2 restart</pre>
+<h4>補足</h4>
+<h5>Apacheのエラー文</h5>
+<pre>$ cat /var/log/apache2/error.log</pre>
+<h5>Redmineのエラー文</h5>
+<pre>$ cat path/to/redmine/log/production.log</pre>
+<h5>もしも、Apacheの設定ファイルがうまくいかなければ</h5>
+<p>$ sudo vi /etc/apache2/sites-available/default で<br />
+DocumentRoot を/path/to/redmine/public に変えるのも手かもしれません。</p>

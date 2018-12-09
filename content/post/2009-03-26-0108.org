@@ -1,0 +1,30 @@
+#+TITLE: "mental ray 5日目"
+#+DATE: 2009-03-26T09:20:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>シェーダ言語がない</h4>
+<p>前回の4日目からかなり時間が経ってしまったけれども、mental ray にはシェーディング言語がないようです。(最近、RenderManにも手を出したけど、そのうちちょっとは比較できるようになれればいいなと思ってます。できるんやろか・・・、不安やで)</p>
+<p><a href="http://lucille.sourceforge.net/blog/archives/000024.html" target="_blank">lucille 開発日記: mental ray シェーダアーキティクチャ</a></p>
+<blockquote>
+<p>メンタルレイでは、シェーダ言語というのはなく、シェーダは、C/C++ で記述します。<br /> 必要となるデータ型や関数は、メンタルレイ側が提供します。<br /> このシェーダコードを、通常の C コンパイラでダイナミックリンク形式にコンパイルして使用します(cのソースコードを直接メンタルレイが受け取って、メンタルレイが内部でコンパイルするオプションもあります)。<br /> また、シーン記述ファイル内には、シェーダとのインターフェスとなるメタデータ構造(使用する変数の名前やデフォルトのパラメータ値など)を記述します。</p>
+</blockquote>
+<p>シェーダは、C/C++で書いてそれを "dll" にして、 mental ray に読み取らせるみたい。</p>
+<p>それと、本にいくつかシェーダの種類が載っていたのでリストアップしてみました。たぶん、これらは基本形だと思うんですが、英語のなので、もうちょっとゆっくりと読み進めてみないとわからないことだらけです。(もっと詳しく読むと他にも出てくるかもしれないって事です)</p>
+<ul>
+<li>Material Shaders</li>
+<li>Texture Shaders</li>
+<li>Volume Shaders</li>
+<li>Environment Shaders</li>
+<li>Light Shaders</li>
+<li>Shadow Shaders</li>
+<li>Photon Shaders</li>
+<li>Photon Emitter Shaders</li>
+<li>Lens Shaders</li>
+<li>Output Shaders</li>
+<li>Parallel Output Shaders</li>
+<li>Displacement Shaders</li>
+<li>Geometry Shaders</li>
+<li>Contour Shaders</li>
+</ul>
+<p>ざっと見た感じで、これだけありました。<br />九九を暗記するようにこれもそうした方がいいのかな。</p>

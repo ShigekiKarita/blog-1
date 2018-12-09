@@ -1,0 +1,23 @@
+#+TITLE: "Oracle to buy Sun"
+#+DATE: 2009-05-16T23:27:21+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>誰もオープンソースプロジェクトを所有することなどできない</h4>
+<p>先月、OracleがSunを74億ドルで買収しました。</p>
+<ul><li><a href="http://jp.techcrunch.com/archives/20090420oracle-to-buy-sun-hold-on-to-your-hats/" target="_blank">TechCrunch: 速報―Oracle、74億ドルでSunを買収へ</a></li>
+</ul>
+<br />
+<p>そのSunは2008年の1月にMySQLを10億ドルで買収しています。<br />
+</p>
+<ul>
+<li><a href="http://jp.techcrunch.com/archives/sun-picks-up-mysql-for-1-billion-open-source-is-a-legitimate-business-model/" target="_blank">TechCrunch: Sun、MySQLを$1Bで買収。オープンソースは道理にかなったビジネスモデル</a></li>
+</ul>
+<br />
+<p>MySQL創業者のMichael Wideniusが今回の買収についてこう書いています。</p>
+<ul>
+<li><a href="http://monty-says.blogspot.com/2009/04/to-be-free-or-not-to-be-free.html" target="_blank">Monty says: To be (free) or not to be (free)</a></li>
+</ul>
+<blockquote><p>I don't think that anyone can own an open source project; the projects are defined by the de-facto project leaders and the developers that are working on the project. If the company loses the trust of these people, they can go away and fork the project and turn it the way they want to.
+</p></blockquote>
+<p>「誰もオープンソースプロジェクトを所有することなどできない」ってかっこいいですね。</p>

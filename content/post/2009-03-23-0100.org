@@ -1,0 +1,42 @@
+#+TITLE: "Ubuntuの再インストール"
+#+DATE: 2009-03-23T01:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>再インストール</h4>
+<p>この前、Ubuntuで色々と試していたら元の戻せなくなってしまいました。その状態が気持ち悪くてたまらなかったので、再インストールしました。ちなみに、入っていたUbuntuは8.04でノートPCで使用していたものです。</p>
+<p>まずは、Ubuntuに割り当てているパーティションをWindowsから削除しました。その後、インストールディスクからUbuntuのインストール作業へ。</p>
+<p>Ubuntu8.10にしようかなと思ったら、以前書き込んだディスクが見当たらず、Ubuntu7.10が出てきたので、ひとまずそれでインストールしてアップデートしようと考えました。</p>
+<p>使用しているノートPCにはディスクドライブが内蔵されていないので、外付けのものを使いました。けれども、このドライブが上手く動作していないためなのか、インストールの設定途中に何度もディスクの再生が止まりました。((勘弁して欲しい・・・。</p>
+<p>パーティションの設定は、&ldquo;連続した最大空き領域&rdquo;を選択しました。<br />((このノートPCはそこまで深く考えなくていいかと思ったので。</p>
+<p>とにもかくにも、これでUbuntu7.04がインストールできました。</p>
+<h4>menu.lst</h4>
+<p>WindowsXPが入っていたPCにUbuntuを入れていたので、ブートローダーがgrubになっています。そのため、/boot/grub /menu.lst に修正を加える必要がありました。さして、難しい作業じゃなかったので、スムーズに進みました。((でも、念のためメモを</p>
+<p>$sudo gedit /boot/grub/menu.lst　と端末に入力して</p>
+<pre>title      Microsoft Windows XP Home Edition<br />root        (hd0,0) <br />savedefault<br />makeactive&nbsp;<br />chainloader     +1</pre>
+<p>―とUbuntuのブート関係の文の上に追記しました。これで、ブートメニューが増えました。</p>
+<p>けれども、再起動後してみると、ブートメニューがEscを押さないと開かず、しかもカウントダウンが入っています。(なんだろう、これ。始めてみました。指示通りEscを押せば何の問題もないんですが)</p>
+<h4>$sudo apt-get update</h4>
+<p>端末からアップデートしようとコマンドを打ってもできませんでした。</p>
+<ul>
+<li><a href="http://www.ubuntulinux.jp/News/ubuntu-704-end-of-life" target="_blank">Ubuntu 7.04 のサポート期間が終了</a></li>
+</ul>
+<blockquote>
+<p>2007年4月19日にリリースされたUbuntu 7.04のサポート期間が、2008年10月19日に終了しました。18ヶ月間に渡りセキュリティアップデートが提供されてきましたが、今後、セキュリティ情報や更新パッケージは提供されません。<br /><br />Ubuntu 7.04を7.10にアップグレードすることにより、引き続き重要なアップデートを利用することができます。アップグレードの方法は、<a href="http://www.ubuntulinux.jp/getubuntu/upgrading">Ubuntu 7.10へアップグレードするには</a>をご覧ください。なお、7.04から8.04 LTS（長期サポート版）へアップグレードするには、まず7.10にアップグレードし、その後で8.04 LTSにアップグレードしてください。7.04から8.04 LTSへの直接アップグレードはサポートされていません。<br /><br />Ubuntuは今後も、半年ごとにリリースされ、通常版は18ヶ月間、長期サポート版はデスクトップが3年間、サーバが5年間に渡りサポートされる予定です。</p>
+</blockquote>
+<p>なるほど、そうですよね。サポート期間が決まっていますものね。<br />ひとまず、<a href="http://www.ubuntulinux.jp/getubuntu/upgrading">Ubuntu 7.10へアップグレードするには</a> をクリック。</p>
+<p>Ubuntu8.10へのアップグレード情報しか載っていない・・・・・・？<br />困った・・・。</p>
+<h4>Ubuntu 7.10へアップグレードする</h4>
+<ul>
+<li><a href="https://help.ubuntu.com/community/GutsyUpgrades" target="_blank">Upgrading to Ubuntu 7.10<br /></a></li>
+</ul>
+<p>英語のものならあった。</p>
+<blockquote>
+<p>Before upgrading to Ubuntu 7.10, you should make sure Ubuntu 7.04 is fully up to date. Ubuntu 7.04 does not have ongoing support and has now been removed from the normal archives and mirrors, but its packages are still available if you add these lines to your /etc/apt/sources.list file:</p>
+</blockquote>
+<p>/etc/apt/sources.list に修正を加えてってことか。どうやら、この引用元の下にある文章を加えないといけないみたいです。((それ以外のものをコメントアウトを忘れないで、ともありますね。</p>
+<p>$sudo gedit /etc/apt/sources.list</p>
+<pre>deb http://old-releases.ubuntu.com/ubuntu/ feisty main restricted universe multiverse<br />deb http://old-releases.ubuntu.com/ubuntu/ feisty-updates main restricted universe multiverse<br />deb http://old-releases.ubuntu.com/ubuntu/ feisty-security main restricted universe multiverse<br />deb http://old-releases.ubuntu.com/ubuntu/ feisty-backports main restricted universe multiverse<br />deb http://old-releases.ubuntu.com/ubuntu/ feisty-backports main/debian-installer<br />deb-src http://old-releases.ubuntu.com/ubuntu/ feisty-backports main restricted universe multiverse<br /><br /></pre>
+<h4>結論</h4>
+<p>結論としてアップグレードには失敗しました。一応、レポジトリを変更するとアップグレードをかけることはできるのですが、ネットワークの問題と出てきて、アップグレードが完了せず、終了してしまいます。サポートが切れるとこういうことになるんでしょうか？<br />いかんせん時間が勿体なかったなと思います(笑</p>
+<p>次は違う方法でやってみようと思います。</p>

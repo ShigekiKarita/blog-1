@@ -1,0 +1,17 @@
+#+TITLE: "Pixar見学した人のブログエントリー"
+#+DATE: 2009-04-17T12:42:35+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Pixar行って来た人がいるみたいです</h4>
+<p>写真を交えつつのエントリーなのでとてもおもしろかった！</p>
+<ul>
+<li><a href="http://longtailworld.blogspot.com/2008/08/1visiting-pixars-headquarters-1.html" target="_blank">Long Tail World: ピクサー本社訪問記1</a></li>
+<li><a href="http://longtailworld.blogspot.com/2008/08/22visiting-pixars-headquarters-22.html" target="_blank">Long Tail World: ピクサー本社訪問記2</a></li>
+</ul>
+<p style="text-align: center;"><iframe src="http://maps.google.co.jp/maps?q=Pixar+Animation+Studios&amp;lr=lang_ja&amp;oe=utf-8&amp;client=firefox-a&amp;ie=UTF8&amp;hl=ja&amp;ll=37.911701,-122.250366&amp;spn=0.331318,0.403061&amp;z=11&amp;iwloc=A&amp;cid=11992425670796546068&amp;output=embed" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br /><small><a style="color:#0000FF;text-align:left" href="http://maps.google.co.jp/maps?q=Pixar+Animation+Studios&amp;lr=lang_ja&amp;oe=utf-8&amp;client=firefox-a&amp;ie=UTF8&amp;hl=ja&amp;ll=37.911701,-122.250366&amp;spn=0.331318,0.403061&amp;z=11&amp;iwloc=A&amp;cid=11992425670796546068&amp;source=embed">大きな地図で見る</a></small></p>
+<h4>プラスアルファのPixar</h4>
+<ul>
+<li><a href="http://www.yomiuri.co.jp/entertainment/ghibli/cnt_pixar_20040518.htm" target="_blank">【ＰＩＸＡＲの秘密】和を貴ぶ社風の総合力</a></li>
+<li><a href="http://www.yomiuri.co.jp/entertainment/ghibli/cnt_pixar_20040420.htm" target="_blank">【ＰＩＸＡＲの秘密】活気引き出す広い社屋</a></li>
+</ul>

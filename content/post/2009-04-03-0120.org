@@ -1,0 +1,53 @@
+#+TITLE: "Visual Studio 2005: warning C4996"
+#+DATE: 2009-04-03T07:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>理由はセキュリティ上の都合</h4>
+<p>Liquid のコンパイルしていたときに、warning C4996 というのが大量に出てきた。最初のころは、エラー・・・ではないから飛ばしておこうと思っていたんだけど、エラーが出ている部分を調べていくときに、なんとなく邪魔に感じてきました(笑</p>
+<p>ネットで調べてみたら、解決策が載っていました。<br />こういうときって、とりあえずは MSDN で調べればいいのかな。<br />いまいち、どこで調べていけばいいのかがよくわからない(笑</p>
+<ul>
+<li><a href="http://msdn.microsoft.com/ja-jp/library/8ef0s5kh.aspx" target="_blank">MSDN Visual C++ デベロッパー センター: CRT のセキュリティ強化</a></li>
+</ul>
+<blockquote>
+<p>CRT のセキュリティは大幅に強化されています。多くの CRT 関数にセキュリティが強化されたバージョンができました。セキュリティが強化された新しい関数が存在する場合、セキュリティが弱い古いバージョンは推奨されないバージョンとしてマークされ、新しいバージョンには _s ("secure") のサフィックスが付いています。</p>
+</blockquote>
+<p>セキュリティ上の都合でってことですよね。</p>
+<blockquote>
+<p>ここで、"推奨されない" ということは、その関数が CRT から削除される予定だということではありません。</p>
+</blockquote>
+<p>―ということは、別に無視してても大丈夫ってことになるんでしょうか。関数が消えることはなさそうなのでそう思いました。でも、解決できるんだったらした方がいいですよね。もうちょっと調べる。</p>
+<blockquote>
+<p>_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES を 1 として定義すると、strcpy の呼び出しが、バッファ オーバーランを防ぐ strcpy_s の呼び出しに変更され、警告は除去されます。</p>
+</blockquote>
+<p>_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES を 1 として定義する というのは</p>
+<pre>_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1 <br /></pre>
+<p>―ってことなんでしょうか。これをソースコードに追記すればいいのかなぁ。<br />でも、なんか足りない感じがするんですよね(笑<br />#include じゃないけど、そういったやつが必要な気がする。</p>
+<h4>解決策<br /></h4>
+<ul>
+<li><a href="http://msdn.microsoft.com/ja-jp/library/ms175759.aspx" target="_blank">MSDN Visual C++ デベロッパー センター: セキュリティ保護されたテンプレート オーバーロード</a></li>
+</ul>
+<pre>#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1</pre>
+<p>書いてあった。<br />でも、なんか自信がない。</p>
+<ul>
+<li><a href="http://www.geocities.jp/ky_webid/common/vc2005warning.html" target="_blank">VisualC++2008/2005 の警告メッセージについて</a></li>
+</ul>
+<blockquote>
+<p>ソースの先頭に、<br />#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1　<br />と書いておけば、自動的に関数を置き換えてくれます。ただし、これは、C++の関数オーバーロードの機能を用いているので、Ｃ言語では使えません。</p>
+</blockquote>
+<p>なるほど。オーバーロードの機能はC言語は対応してなさそうってことも情報として手に入った！<br />とりあえず、ソースコードの文頭に以下のコードを追記する。</p>
+<pre>#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1</pre>
+<p>・・・、ソースファイルの量を考えると気が滅入ります。<br />本当に、量がハンパない。なんか良い方法はないものか。</p>
+<h4>プリプロセッサ</h4>
+<p>_CRT_SECURE_NO_WARNINGS を書き加えればいいみたいです。</p>
+<p><a href="http://jinn.at.webry.info/200812/article_4.html" target="_blank">ババリンのバイオメカニクス/ウェブリブログ: warning C4996 </a></p>
+<blockquote>
+<p>今のところよくわからないが、プリプロセッサ（事前処理）で、「_CRT_SECURE_NO_WARNINGS」を指定すると、str***-&gt;str***_sにしましょうwerningは消せるようです。</p>
+</blockquote>
+<p>もっと詳しいところまで、書いてあるサイトがありました。<br />画像の通りにやれば、うまくいくと思います。</p>
+<ul>
+<li><a href="http://homepage3.nifty.com/f-sasaki/" target="_blank">ＣＥＤＩＴの機能の紹介</a></li>
+</ul>
+<blockquote>
+<p>CRTのセキュリティの強化の結果、コンパイル時に出力される警告メッセージを削除する為に、プリプロセッサの定義に「_CRT_SECURE_NO_WARNINGS」を追加する。</p>
+</blockquote>

@@ -1,0 +1,132 @@
+#+TITLE: "ウイルス対策は何をするべきですか"
+#+DATE: 2010-03-31T16:38:38+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+パソコンを使う場合, ウイルス対策は必須と言われていますが,
+実際のところ何を対策すればいいのだろうと未だに思います.
+
+大抵の人は ウイルスバスター, ノートン, マカフィーといったウイルス対策ソフトを導入するだけで良いと言います. しかしながら, 果たして本当にそうなのでしょうか. 私には「ウイルス対策ソフトを使っていれば良い」という偽りの安心感を抱かせる考え自体がウイルスのように思えます.
+
+そもそも, ウイルス対策ソフトは何に対抗しているのでしょうか.
+
+<!--more-->
+<h3>ウイルス対策ソフトが行う大きな4つのこと</h3>
+大半のウイルス対策ソフトは総合ソフトウェアです.  とても多機能です.
+しかしながら, ウイルス対策ソフトが対抗している基本的なものは大きく分けて4つです.
+これらに共通して言えることは, あなたの個人情報を狙っているということです.
+<ul>
+	<li>クライムウェア</li>
+	<li>ハッキング</li>
+	<li>フィッシング</li>
+	<li>スパムメール</li>
+</ul>
+<h4><strong>クライムウェア</strong></h4>
+クライムウェアとはコンピュータへひそかにインストールする悪意あるプログラムのことです.
+このプログラムは, あなたの機密データ (パスワードや暗証番号など) を盗むことが狙いです.
+<ul>
+	<li> マルウェアとスパイウェアに分けていることもあります.</li>
+	<li> クライムウェアの対応はウイルス対策, アンチウイルスと呼ばれます.</li>
+</ul>
+<h4>ハッキング</h4>
+ハッキングとはあなた以外の人物があなたのパソコンを勝手に操作することです. ハッキングに成功すると, ウイルスをインストールしたり, 機密データを盗み出すことができます. 侵入したコンピュータを利用してスパムメールを送信することもできます. ハッキングを行う人物は主にソフトウェアの弱点を突いてきます.
+<ul>
+	<li> 不正アクセス, 不正侵入とも呼ばれます.</li>
+	<li> ハッキングへの対応は不正侵入対策と呼ばれます.</li>
+</ul>
+<h4>フィッシング</h4>
+フィッシングとは個人情報を盗むことです. 特に銀行口座やクレジットカードや住所などの情報が狙われます.
+<ul>
+	<li> フィッシングへの対応は個人情報保護, フィッシング対策, 個人情報漏えい防止とも呼ばれます.</li>
+</ul>
+<h4>スパムメール</h4>
+スパムメールとは匿名で勝手に送りつけられてくるダイレクトメールの電子版のことです. スパムメールは応答してきた受信者から金銭を得ようとするほかに, フィッシング詐欺や悪性コードの拡散にスパムが使用されることがあります. したがって大きな被害へと繋がる恐れがあります. セキュリティの観点から深刻な問題です.
+<ul>
+	<li> 迷惑メールとも呼ばれます.</li>
+	<li> スパムメールへの対応はアンチスパムと呼ばれます.</li>
+</ul>
+<h3>どのウイルス対策ソフトがいいのか</h3>
+さて, 前述した4点に対抗するにはウイルス対策ソフトに頼らざるを得ません.  ウイルス対策ソフトはたくさんがありますが, 取り上げた4点に対して対策を取っているソフトウェアに限定します.
+
+性能も重要ですが, 価格やライセンス形態についても検討する必要があります. なぜならば, 大抵のウイルス対策ソフトは1年ごとに契約の更新が必要だからです.　(2010年3月現在 , OSはすべてWindows)
+<ul>
+	<li><a href="http://www.justsystems.com/jp/products/kaspersky/price2010.html" target="_blank">Kaspersky Internet Security 2010</a>
+<ul>
+	<li>ダウンロード版(新規):4,680円[税別]</li>
+	<li>ダウンロード版(更新):4,095円[税別]</li>
+	<li>パソコン２台まで利用可能</li>
+</ul>
+</li>
+	<li><a href="http://www.eset-smart-security.jp/" target="_blank">ESET Smart Security V4.0</a>
+<ul>
+	<li>ダウンロード版(新規):4,200円[税別]</li>
+	<li>ダウンロード版(更新):3,150円[税別]</li>
+	<li>パソコン1台まで利用可能</li>
+</ul>
+</li>
+	<li><a href="http://virusbuster.jp/vb2010/functions/" target="_blank">ウイルスバスター2010 </a>
+<ul>
+	<li>ダウンロード版(新規):4,980円[税別]</li>
+	<li>ダウンロード版(更新):4,725円[税別]</li>
+	<li>パソコン3台まで利用可能</li>
+</ul>
+</li>
+	<li><a href="http://www.symantec.com/ja/jp/norton/theme.jsp?themeid=security-internet-security" target="_blank">ノートン インターネット セキュリティ 2010 </a>
+<ul>
+	<li>ダウンロード版(新規):4,680円[税別]</li>
+	<li>ダウンロード版(更新):4,680円[税別]</li>
+	<li>パソコン3台まで利用可能</li>
+</ul>
+</li>
+	<li><a href="http://www.storemcafee.jp/mcfs/catalog/_info.php?comparison_list" target="_blank">マカフィー インターネットセキュリティ 2010 </a>
+<ul>
+	<li>ダウンロード版(新規):5,775円（税込）</li>
+	<li>ダウンロード版(更新):後続のマカフィー インターネットセキュリティ新規と同額</li>
+	<li>パソコン3台まで利用可能</li>
+</ul>
+</li>
+	<li><a href="http://gdata.co.jp/product/2010/is/" target="_blank">G Data インターネットセキュリティ 2010 </a>
+<ul>
+	<li>ダウンロード版(新規):3,480円[税別]</li>
+	<li>ダウンロード版(更新):不明</li>
+	<li>パソコン1台まで利用可能</li>
+</ul>
+</li>
+	<li><a href="http://www.avgjapan.com/avgis.html" target="_blank">AVG Internet Security 9.0 </a>
+<ul>
+	<li>ダウンロード版(新規):<span><span>3,801</span></span>円[税別]</li>
+	<li>ダウンロード版(更新):<span><span>3,801</span></span>円[税別]</li>
+	<li>パソコン1台まで利用可能</li>
+</ul>
+</li>
+	<li><a href="http://www.avast.com/ja-jp/internet-security" target="_blank">アバスト! インターネットセキュリティ </a>
+<ul>
+	<li>ダウンロード版(新規):3,980円[税別]</li>
+	<li>ダウンロード版(更新):2,786円[税別]</li>
+	<li>パソコン1台まで利用可能</li>
+</ul>
+</li>
+</ul>
+<h3>ウイルス対策ソフトを活用するほかにできること</h3>
+ウイルスソフトを活用するほかにも, いくつか注意を払うことで感染の危険性を下げることができます. あくまでも注意することしかできないので, 下記のことを行ったからといって必ずしも安全になるわけではありません.
+<ul>
+	<li>ファイル名の表示に拡張子も必須とする</li>
+	<li>インターネットを閲覧する際は URL を確認すること</li>
+	<li>知らない人から告知された URL やファイルを開かないこと</li>
+	<li>セキュリティパッチを適用する</li>
+	<li>個人情報をパソコン経由で広範囲には伝えない</li>
+</ul>
+<h3>リファレンス</h3>
+<ul>
+	<li><a href="http://www.kaspersky.co.jp/threats" target="_blank">研究・分析｜アンチウイルス・アンチウイルスソフトの【 カスペルスキー 】</a></li>
+	<li><a href="http://virusbuster.jp/vb2010/functions/" target="_blank">機能一覧｜ウイルスセキュリティ対策ソフトのウイルスバスター2010</a></li>
+	<li><a href="http://www.symantec.com/ja/jp/norton/security_response" target="_blank">最新のウイルス | 無料オンラインウイルススキャン : Security Response</a></li>
+	<li><a href="http://www.avast.com/ja-jp/lp-upgrade-4-5-internet-security?utm_source=program&amp;utm_medium=link&amp;utm_campaign=Upgrade4-5&amp;utm_content=Free30#tab2" target="_blank">Upgrade to the new avast! Internet Security</a></li>
+	<li><a href="http://www.mcafee.com/japan/mcafee/home/pd/comparison_list.asp" target="_blank">マカフィー製品比較 | マカフィー株式会社</a></li>
+	<li><a href="http://www.eset-smart-security.jp/" target="_blank">ESET Smart Security V4.0 | 検出率No.1,軽さNo.1のウイルス対策ソフト</a></li>
+	<li><a href="http://www.kaspersky.com/downloads/pdf/kasperskylabwpphishing_the_netnov06.pdf" target="_blank">Phishing the Net [PDF]</a></li>
+	<li><a href="http://www.ipa.go.jp/security/isg/virus.html" target="_blank">情報処理推進機構：情報セキュリティ：対策情報 ウイルス対策</a></li>
+	<li><a href="http://gdata.co.jp/product/2010/is/" target="_blank">G Data  インターネットセキュリティ 2010 </a></li>
+	<li><a href="http://www.avgjapan.com/avgis.html" target="_blank">AVG  Internet Security 9.0 </a></li>
+	<li><a href="http://www.avast.com/ja-jp/internet-security" target="_blank">ア バスト! インターネットセキュリティ </a></li>
+</ul>

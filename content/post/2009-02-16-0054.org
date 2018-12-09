@@ -1,0 +1,23 @@
+#+TITLE: "CSSハック"
+#+DATE: 2009-02-16T12:57:10+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>ブラウザによって表示が異なる</h4>
+<p>今の世の中、インターネットを見るために使うブラウザは様々です。Internet Explorer、Safari、Firefox、Opera、Google Chromeなどがあります。当然ながら、そのバージョンも様々です。全ブラウザに同じ表示をするようにマークアップするのは疲れます。</p>
+<p>ただ、Webサイトがブラウザによって表示が異なってしまうというのはとても残念な結果です。こういった時はCSSハックをして、指定したブラウザのみを調節していきます。</p>
+<p>今回はInternet Explorer についてのみです。</p>
+<h4>Internet Explorer の CSSハック</h4>
+<h5>Internet Explorer 6 以下の場合</h5>
+<p><textarea class="html" name="code">* html div{ font-size:1em; } </textarea></p>
+<h5>Internet Explorer 7 のみの場合</h5>
+<p><textarea class="html" name="code">*:first-child+html div{ font-size:1em; } </textarea></p>
+<h5>Internet Explorer 8 のみの場合</h5>
+<p><textarea class="html" name="code">html:first-child div{ font-size:1em; } </textarea></p>
+<h4>番外編として</h4>
+<h5>XHTMLに書き込む方法 (Internet Explorer 6 の場合)</h5>
+<p><textarea class="html" name="code">&lt;head&gt; &lt;!--[if It IE 6]&gt; &lt;link rel="stylesheet" type="text/css" href="css/yourstyle.css" media="screen" /&gt; &lt;![endif]--&gt; &lt;/head&gt; </textarea></p>
+<h5>XHTMLに書き込む方法 (Internet Explorer 7 の場合)</h5>
+<p><textarea class="html" name="code">&lt;head&gt; &lt;!--[if It IE 7]&gt; &lt;link rel="stylesheet" type="text/css" href="css/yourstyle.css" media="screen" /&gt; &lt;![endif]--&gt; &lt;/head&gt; </textarea></p>
+<p>直接HTMLの&lt;head&gt;タグに書き込む方法です。これによってユーザーが使っているブラウザで適用させるCSSを変更させることができます。</p>
+<p>他にも javascript を使って対処することもできるみたいです。<br /> <a href="http://youmos.com/news/css_browser_selector.html" target="_blank">簡単にブラウザ別CSSを導入するJavaScript （CSS Browser Selector）</a></p>

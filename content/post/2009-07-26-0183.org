@@ -1,0 +1,30 @@
+#+TITLE: "MySQLのパスワード変更（緊急時）"
+#+DATE: 2009-07-26T15:44:19+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h3>状況</h3>
+<p>Ubuntu Server 8.10<br />MySQL 5.0</p>
+<!--more-->
+<h3>作業内容</h3>
+<h4>MySQLの停止</h4>
+<p>ルート権限にしてMysQLを停止させ、セーフモードからログイン出来るようにする。</p>
+<pre>$ sudo su
+# /etc/init.d/mysql stop
+# /usr/bin/mysqld_safe --user=root --skip-grant-tables &amp;
+</pre>
+<h4>MySQLでパスワード変更</h4>
+<p>アカウント"root"でMySQLにログインし、パスワードを変更する。</p>
+<pre>$ mysql -u root -p
+mysql&gt; use mysql;
+mysql&gt; show tables;
+mysql&gt; select host, User, Password from user;
+mysql&gt; update user set password=password('new password') where user='root';
+mysql&gt; flush privileges;
+mysql&gt; exit
+</pre>
+<h4>MySQLの再起動</h4>
+<pre># /etc/init.d/mysql stop
+# /etc/init.d/mysql start</pre>
+<h3>参考URL</h3>
+<p><a href="http://www.nilab.info/zurazure2/000310.html" target="_blank">[ヅラド] MySQL の root パスワード忘れた！</a><br /><a href="http://dev.mysql.com/doc/refman/4.1/ja/resetting-permissions.html" target="_blank">MySQL :: MySQL 4.1 リファレンスマニュアル :: A.4.2 忘れたルートパスワードをリセットする方法</a></p>

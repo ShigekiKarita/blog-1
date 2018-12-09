@@ -1,0 +1,47 @@
+#+TITLE: "スケジュール管理"
+#+DATE: 2009-03-09T12:30:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>スケジュール管理</h4>
+<p>基本的には、スケジュール管理は紙媒体のものでやっています。ただ、一時期Googleカレンダーで予定をチェックしていたこともあってかどこか不便さを感じます。たとえば、予定が変更になったときに紙媒体だと書き換えなければなりませんが、Googleカレンダーだとドラッグするだけで済みます。ただ、今のはどうなっているのかわかりませんが、当時は履歴が残りませんでした。</p>
+<p>それから、今はもうほとんど使っていないのですが、一時期<a href="http://www.rememberthemilk.com/?hl=ja" target="_blank">Remember The Milk</a>でToDoやらTaskを管理していたことがあります。今は紙に書き込んでいって、それを消化していく形です。紙媒体だとその情報を必ず携帯していないといけませんが、<a href="http://www.rememberthemilk.com/?hl=ja" target="_blank">Remember The Milk</a>だと情報をネットを使って教えてくれるので、その辺りでは気が楽でした。</p>
+<p>さて、どうやってスケジュール管理とToDo管理をしていこうか。</p>
+<p>普段、メールチェックには<a href="http://mozilla.jp/thunderbird/" target="_blank">Mozilla Thunderbird</a>を使っています。あと、初めて使ったメーラーがThunderbirdだったので、ちょっとした思い入れがあるってところぐらいでしょうか。(メーラーはソフトウェアの中で一番取っつきにくいようなイメージがあります）</p>
+<p>でも、一番の理由は鳥の色が好きだから。青色の使い方が好きです(笑</p>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090309_06.png" alt="" /></p>
+<p>メールチェックとスケジュールチェックは、日程の知らせがメールで来ることもあって結構関連性高いとおもいます。なので、同時にこなせるようなソフトの方が都合が良さそうです。そこで、Thunderbirdでスケジュール管理ができないものかと調べてみました。どうやらアドオンを入れることでカレンダー機能が追加できるみたいなので、早速試しにやってみました。</p>
+<h4>アドオンのインストール</h4>
+<p>まずは、Mozilla Thunderbird に2つのアドオンをインストールします。</p>
+<ul>
+<li><a href="https://addons.mozilla.org/ja/thunderbird/addon/2313" target="_blank">Lightning 0.9 のダウンロードページ</a>&nbsp;</li>
+<li><a href="https://addons.mozilla.org/ja/firefox/addon/4631" target="_blank"> Provider for Google Calendar 0.5.1 のダウンロードページ</a></li>
+</ul>
+<p>上記のページにインストール方法が次の通りに載っているので、それに従います。</p>
+<blockquote>
+<p>下のリンクを右クリックして [名前を付けてリンク先を保存] を選択し、ファイルをハードディスクにダウンロードします。<br />Thunderbird を開き、[ツール] メニューから [アドオン] を選択します。<br />[インストール] ボタンをクリックして、ダウンロードしたファイルを選択し、[OK] をクリックします。</p>
+</blockquote>
+<p>アドオンがインストールされると、Thunderbird自体の再起動をするよう促されるので、それに従います。無事に再起動できると次のような画面になっているはずです。</p>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090309_01.png" alt="" /></p>
+<h4>Google Calender と同期させる</h4>
+<h5>新しいカレンダーの作成</h5>
+<p>Thunderbirdの画面左下の端にある"カレンダー"をクリックします。</p>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090309_02.png" alt="" /></p>
+<p>すると、次のような画面に切り替わります。</p>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090309_07.png" alt="" /></p>
+<p>上部にあるメニューバーから、カレンダーをクリックして、新しいカレンダーを選択します。</p>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090309_03.png" alt="" /></p>
+<p>すると、次のようなウィンドウが表示されます。"ネットワークのサーバーに保存する"を選択して次に進みます。</p>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090309_04.png" alt="" /></p>
+<p>フォーマットを"Google カレンダー"に設定し、場所にGoogleカレンダーの設定から得られるXMLを入力します。</p>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090309_05.png" alt="" /></p>
+<h5>XMLフィードの取得方法</h5>
+<ol>
+<li>Google カレンダーにアクセスします。</li>
+<li>右上の端の方にある設定をクリックします。</li>
+<li>画面がきりかわるカレンダーのタブがあるので、そこをクリックします。</li>
+<li>カレンダーの一覧が表示されるので、同期したいカレンダー名をクリックします。</li>
+<li>カレンダー情報タブの下部に"カレンダーのアドレス"という項目があるので、その近くにある"XML"をクリックし、表示されたアドレスをコピーします。</li>
+</ol>
+<h4>ところで</h4>
+<p>レンダリングのスケジュールをGoogle Calenderで管理とかってできないのかな。あまりやる意味がないけども、できたら面白いよねぇってことで。</p>

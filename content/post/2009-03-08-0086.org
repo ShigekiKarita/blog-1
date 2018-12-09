@@ -1,0 +1,16 @@
+#+TITLE: "TERMINATOR"
+#+DATE: 2009-03-08T02:50:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>TERMINATOR SALVATION</h4>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="535" height="327" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="wmode" value="transparent" />
+<param name="id" value="uvp_fop" />
+<param name="src" value="http://l.yimg.com/cosmos.bcst.yahoo.com/up/fop/embedflv/swf/fop.swf" /><embed id="uvp_fop" type="application/x-shockwave-flash" width="535" height="327" src="http://l.yimg.com/cosmos.bcst.yahoo.com/up/fop/embedflv/swf/fop.swf" wmode="transparent"></embed>
+</object>
+</p>
+<h4>ターミネーター展　戦いか、共に生きるか？~ロボットとボクらの未来~</h4>
+<p style="text-align: center;"><img src="http://www.hiroakit.com/blog/photo/photo_090308_04.png" alt="" /></p>
+<p>ターミネーター展なるものが開かれるみたいです。場所は日本科学未来館で、日程は2009年3月19日(木)から6月28日(日)まで。チケット代として一般は1200円みたい。</p>

@@ -1,0 +1,14 @@
+#+TITLE: "マリオが道路歩いてるよ！"
+#+DATE: 2009-05-06T21:18:17+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>マリオが道路歩いてるよ！</h4>
+<p style="text-align: center;"><object width="555" height="291"><param name="movie" value="http://www.dailymotion.com/swf/x8oma9_warp-whistle_shortfilms&amp;related=1" /><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><embed src="http://www.dailymotion.com/swf/x8oma9_warp-whistle_shortfilms&amp;related=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="555" height="291"></object></p>
+<p>マリオが道路歩いてるよ！<br />
+なんだかとても興奮したよ。<br />
+パックンフラワーをやっている人がおもしろい！</p>
+<p>それにしても、このドットはどうやって作ったんだろう。<br />
+しゃがんだり、飛び跳ねたりとモーションが多彩だよ。</p>
+<p>このロケ地はどこ何でしょうか。欧州のどっかかな。<br />
+映像に出てくる文字を見る限り英語圏のようなので、アメリカかもしれないですが。</p>

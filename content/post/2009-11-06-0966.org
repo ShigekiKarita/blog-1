@@ -1,0 +1,30 @@
+#+TITLE: "Pixar Intro Parodyから繋ぎを考えてみる"
+#+DATE: 2009-11-06T12:48:43+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<!--more-->
+
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="700" height="360" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowfullscreen" value="true" /><param name="wmode" value="transparent" /><param name="allowScriptAccess" value="always" /><param name="src" value="http://www.collegehumor.com/moogaloop/moogaloop.swf?clip_id=1921845&amp;fullscreen=1" /><embed type="application/x-shockwave-flash" width="700" height="360" src="http://www.collegehumor.com/moogaloop/moogaloop.swf?clip_id=1921845&amp;fullscreen=1" allowscriptaccess="always" wmode="transparent" allowfullscreen="true"></embed></object>
+<div style="padding: 5px 0pt; text-align: center; width: 640px;">See more <a href="http://www.collegehumor.com/videos">funny videos</a> and <a href="http://www.collegehumor.com/pictures">funny pictures</a> at <a href="http://www.collegehumor.com/">CollegeHumor</a>.</div>
+Pixarの作品冒頭では、ランプが文字を踏むシーンが必ず含まれています。その後に本編が始まっていくのですが、今回はそこに注目した人がいました。どこのどなたかが作ったのかわかりませんが、そのパロディを見つけたので紹介します。
+
+正直なところ、個人的にはこのパロディ作品に対してあまり好い印象を持てませんでした。だって、キャラクターが死んじゃうんですよね。こういうのはあまり楽しくない。 でもでも、そんなことを思いつつもキャラクターとして文字を選択しているところはとても面白かったし、カメラワークというべきか編集というべきか各シーンごとの繋ぎ方がとても感動しました。
+
+それで、その繋ぎ方で考えてみたのですが、繋ぎ方の名称がわかりません。「フラッシュバック」とは異なりそうですし、「クロスカッティング」ではなさそうですし、「カットバック」というべきなのか。「<a href="http://www.amazon.co.jp/gp/product/B0000TXOSQ?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=B0000TXOSQ">國民の創生</a>(1915年)」や「<a href="http://www.youtube.com/watch?v=Bc7wWOmEGGY" target="_blank">大列車強盗</a>(1903年)」あたりを見たときにちょっと勉強したはずなんですが、すっかり忘れてしまいました。ひとまずは、繋ぎのポイントとなっているところをピックアップしてみることにします。
+
+上記のパロディ作品では、次のところが繋ぎポイントでした。
+<ul>
+	<li>17秒: ランプから光が発せられて白で飛ばして葬儀のシーンに繋がる</li>
+	<li>38秒: ランプからズームアウトしてグループショットの形にして警官に連行されるシーンへ繋がる</li>
+	<li>45秒: ランプの足かせがカメラに迫ってきて、シーンがマスコミの部分に繋がる</li>
+	<li>60秒: マスコミのカメラのフラッシュとランプとが交互に切り替わり、裁判のシーンへと繋がる</li>
+	<li>65秒: 判決が言い渡され画面が赤くなったところで、冊が登場して、シーンが牢獄へと繋がる</li>
+	<li>70秒: 牢獄のシーンから、画面が白くなり、刑執行のシーンへと繋がる</li>
+</ul>
+
+ほかの作品でも似たような繋ぎ方があったら、またエントリーを書いて気長に話を進めてみます。
+
+最近、iPhoneのアプリを作ったり、サーバー触ったりしていますが、なんだかんだ言って、一番興味を感じるのはCGアニメなんだなと思った今日この頃でした。Houdniが触りたいね。あと、「<a href="http://www.amazon.co.jp/gp/product/B0000TXOSQ?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=B0000TXOSQ">國民の創生</a>」の題材になっている南北戦争繋がりで「<a href="http://www.amazon.co.jp/gp/product/B001525JAS?ie=UTF8&amp;tag=hiroakit-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=B001525JAS">風と共に去りぬ</a>」を見よう見ようとしてたのだけれども、なんだかんだ言って見ていないことを思い出した。これはまずい......。
+
+<p><iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=hiroakit-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=B0000TXOSQ&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=0000FF&#038;bc1=000000&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>&nbsp;<iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=hiroakit-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=B001CFXM7K&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=0000FF&#038;bc1=000000&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>&nbsp;<iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=hiroakit-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=B001525JAS&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=0000FF&#038;bc1=000000&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>

@@ -1,0 +1,58 @@
+#+TITLE: "FlashDevelop with Flash CS3"
+#+DATE: 2009-02-18T03:30:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>FlashDevelop と Flash CS3 を連携させる</h4>
+<p>以前、 <a href="http://www.hiroakit.com/blog/2008/11/flashdevelop_install.html" target="_blank">FlashDevelop Install</a> という記事を書きました。今回はその続きです。FlashDevelop と Flash CS3 を連携させると多くの点でメリットがあります。そのため、かなりオススメしたいです。</p>
+<h5>メリット</h5>
+<ul>
+<li>コードアシスト機能</li>
+<p>FlashDevelopの多くのコードアシスト機能が使えます。</p>
+<p>1)［Ctrl］＋［Space］</p>
+<p style="padding-left: 16px;">文脈に応じたコードヒントが表示されます。</p>
+<p>2)［Ctrl］＋［Shift］＋［Space］</p>
+<p style="padding-left: 16px;">メソッドの () の中で使用すると、そのメソッドの引数に関して説明が表示されます。メソッドにASDocがあればそれに応じた説明が表示されます。説明が多い場合は省略して表示されますが、その際は［F1］キーで拡大できます。</p>
+<p>3)［Ctrl］＋［Alt］＋［Space］</p>
+<p style="padding-left: 16px;">そのプロジェクトで使えるクラスのリストが表示されます。</p>
+<p>4)［Ctrl］＋［Shift］＋［1］</p>
+<p style="padding-left: 16px;">後述。文脈に応じたコード生成を行います。</p>
+<br />
+<li>import自動補完</li>
+<p>型宣言の入力を終えた際、自動でヘッダにimport文が挿入されます。</p>
+<br />
+<li>スニペット機能</li>
+<p>コードを前もって登録しておけば、Ctrl］＋［B］キーで好きなタイミングで呼び出せます。</p>
+<br />
+<li>定義元へ移動</li>
+<p>クラス名やメソッド、プロパティなどにテキストカーソルを合わせ［F4］を押します。すると、その宣言をしているコードまで移動できます。定義元が別ファイルであればそれを開きさえします。移動後は［Shift］＋［F4］で戻れます。</p>
+</ul>
+<h5>条件</h5>
+<ul>
+<li>FlashDevelop がインストールされていること</li>
+<li>Flash CS3 がインストールされていること</li>
+</ul>
+<h4>連携させるための大まかな流れ</h4>
+<p>1) FlashDevelop でプロジェクトを作成する<br />2) Flash CS3 で fla (Flash ファイル (AS 3.0)) の作成。<br />3) FlashDevelop で ActionScript ファイルの作成。<br />4) FlashDevelop で パブリッシュ(［Ctrl］＋［Enter］)</p>
+<h4>1) FlashDevelop でプロジェクトを作成する</h4>
+<h5>Path To Flash IDE<br /></h5>
+<p>プロジェクトを作成する前に、一つ確認しておきたいことがあります。</p>
+<ul>
+<li>Tools &gt; Program Settings &gt; Plugins (AS3Completion)</li>
+</ul>
+<p>この AS3Completion に "Flash IDE" という項目があります。そこで Flash CS3 があるディレクトリ (フォルダ) が指定されているか確認してください。Windows 機の方で Flash CS3 を初期設定のままでインストールされている場合は C:\Program Files\Adobe\Adobe Flash CS3 となっているかと思います。ここで設定するものはそれで大丈夫です。</p>
+<h5>新規プロジェクト作成</h5>
+<p>上部メニューの Project &gt; New Project を選択します。すると、ウィンドウが一つ出てくるので、そこでは Flash IDE Project を選択します。Name は任意の名称で大丈夫です。</p>
+<h4>2) Flash CS3 で fla (Flash ファイル (AS 3.0)) の作成。</h4>
+<h5>Flash CS3 で新規ファイルの作成</h5>
+<p>上部メニューの ファイル &gt; 新規 を選択します。すると、ウィンドウが一つ出てくるので、そこでは Flash ファイル (AS3.0) を選択します。</p>
+<h5>ドキュメントクラスの設定</h5>
+<p>Flash CS3 下部にあるプロパティウィンドウの "ドキュメントクラス" というところにクラス名を付けます。今回はここを Main と入力します。それが終わったら、先ほど FlashDevelop で作ったプロジェクトファイルと同じフォルダにこの fla ファイルを保存します。</p>
+<h4>3) FlashDevelop で ActionScript ファイルの作成。</h4>
+<h5>ActionScript ファイルの作成</h5>
+<p>FlashDevelopに戻り、Project ウィンドウのプロジェクトフォルダを右クリックして、Add &gt; New Class を選択します。ウィンドウが現れ名前の入力を求められます。この時、名前を fla ファイルのドキュメントクラスと同じものを入れることが重要です。 今回は ここに Main.as と入力します。これで、ActionScript ファイルが作成されました。</p>
+<h5>ActionScript の記述</h5>
+<p>以下は、Flash CS3 の trace で Hello, World! と現れるスクリプトです。</p>
+<pre>package{<br />&nbsp;&nbsp;&nbsp; import flash.display.Sprite;<br />&nbsp;&nbsp;&nbsp; public class Main extends Sprite{<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; public function Main(){<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; trace("Hello World!")<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br />}<br /></pre>
+<h4>4) FlashDevelop で パブリッシュ(［Ctrl］＋［Enter］)</h4>
+<p>引き続き FlashDevelop です。 [Ctrl]+[Enter] を押すと、自動でFlash CS3に切り替わり、パブリッシュ（ムービープレビュー）されます。 swf ファイルはプロジェクトフォルダ直下に作成されます。</p>

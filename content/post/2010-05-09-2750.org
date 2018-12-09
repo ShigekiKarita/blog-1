@@ -1,0 +1,16 @@
+#+TITLE: "Microsoft Office 2010はすごく期待できる"
+#+DATE: 2010-05-09T19:38:26+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<p style="text-align: left;">今年の4月下旬にMicrosoft Office 2010 の発売日が発表されました. 僕はMicrosoft Office 2003 を主に使っていますが, そろそろ新しいバージョンに乗り換えようかなと興味心身です. Word, Excel, Outlook, PowerPoint ,  なによりも OneNote をすごく使いたいので, <a href="http://www.microsoftstore.jp/Form/Product/ProductDetail.aspx?shop=0&amp;cat=200004&amp;swrd=&amp;pid=OFC0000071" target="_blank">Home ＆ Basics</a> 以上のセット製品でパッケージ版に狙いを絞っています.</p>
+<p style="text-align: left;"><!--more--></p>
+<p style="text-align: center;"><a rel="attachment wp-att-2751" href="http://www.hiroakit.com/blog/archives/2750/photo_20100509_01"><img class="size-full wp-image-2751 aligncenter" title="photo_20100509_01" src="http://www.hiroakit.com/blog/photo/photo_20100509_01.jpg" alt="photo_20100509_01" width="650" height="259" /></a></p>
+
+ちなみに<a href="http://media.microsoftstore.jp/product/T5D-00565_JP_Office_Hm_Bus_2010/homebiz.jpg" target="_blank">Microsoft Office 2010 のシステム要件</a>ではWindows XP SP3以上となっています.
+<h3>Microsoft Office 2010 ベータ版</h3>
+2010年10月31日までの期間限定であるベータ版を試用している何人からは良い話も聞いていて, さきほどから僕も使い始めています.  今, 試しているのはMicrosoft Office Professional 2010 ベータ版です.
+
+まず, 一番最初に驚いたのはExcelに関数の補完機能が備わっていること.  これは便利かもしれないですね.
+
+次にOutlookです. これだったら, メールしやすいかもしれません. しばらく使ってみます. ちなみにiPhoneとの連携しやすさも重要視しています. 特に連絡先（アドレス帳）が管理しやすいかどうかはすごく大事. 試しに今まで連絡先を管理していたところからOutlookへ移行させて使ってみたら, それなりにつかえています. もうちょっと使ってみます.

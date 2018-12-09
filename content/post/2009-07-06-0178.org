@@ -1,0 +1,116 @@
+#+TITLE: "VMware ESXi インストール"
+#+DATE: 2009-07-06T23:14:55+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h3>VMware ESXiに挑戦してみた</h3>
+最近、周りで"VMWare ESXi"という言葉をちょくちょく耳にするようになったので挑戦してみました。
+今回はあまり難しくない範囲で次のことを目標として作業を行いました。
+<ul>
+	<li>VMware ESXi 4のインストール</li>
+	<li>VMware Infrastructure Clientのインストール</li>
+	<li>仮想マシンの作成</li>
+	<li>Ubuntu-server 8.04のインストール</li>
+	<li>VMware-toolsのインストール</li>
+</ul>
+なお、VMware ESXi 4のインストールにはメモリが2GB以上必要です。
+<h3>インストーラの入手</h3>
+<img src="http://www.hiroakit.com/blog/photo/photo_090704_01.png" alt="" />
+
+VMware ESXiを入手します。下記のページからダウンロードできます。
+(ただし、ダウンロードするためにはユーザ登録が必要となります)
+<ul>
+	<li><a href="http://www.vmware.com/jp/products/esxi">無償の VMware ESXi： ライブ マイグレーションを実現するベアメタル ハイパーバイザー</a></li>
+</ul>
+入手したISOファイルはCDに焼きます。これが VMWare ESXiのインストーラとなります。
+入手したexeファイルは後ほどWindowsにインストールしますので、ひとまずはお預けです。
+<h3>VMware ESXiのインストール</h3>
+作成したCDを使いサーバーにインストールします。
+
+<img src="http://www.hiroakit.com/blog/photo/photo_090704_02.png" alt="" />
+
+さして難しい要求はないように思えます。(僕の場合はあくまでも"試し"です)
+項目はとりあえず先に進めるように選択しました。
+
+<img src="http://www.hiroakit.com/blog/photo/photo_090704_03.png" alt="" />
+
+VMware ESXiのインストールが完了しました。再起動します。
+
+<img src="http://www.hiroakit.com/blog/photo/photo_090704_03.png" alt="" />
+
+画面に「http://サーバーIPアドレス」が表示されます。これをメモしておきます。
+そうしたら、F2を押して設定変更を行います。ひとまずは現在使っているアカウント(初期状態からあるアカウント)のrootにパスワードを設定します。Configure Passwordでパスワード設定ができます。
+
+<img src="http://www.hiroakit.com/blog/photo/photo_090704_04.png" alt="" />
+
+これでVMware ESXiがインストールが終わり、初期設定も終わりました。
+後のLinuxのインストールに備え、お好みのLinuxディストリビューションのCDを入れます。
+(僕の場合はUbuntu 8.04のサーバー版を選びました)
+<h3>VMware Infrastructure Client のインストール</h3>
+VMware Infrastructure Client は略してVI Clientと呼びます。
+(今は、正確には名前が変わっていて"VMware vSphere Client"となっています)
+
+さて、ダウンロードしたexeファイルをサーバーにアクセスしたいWindowsにインストールします。
+これには多少時間を要する場合がありますが特に難しいことは聞かれませんでした。
+<h5>VMWare ESXiへログイン</h5>
+インストールが完了したらVI Clientを起動させ、必須事項を入力します。
+
+「http://サーバーIPアドレス」のIPアドレス部分、ユーザー名、パスワードなどを入力したら、ログインボタンを押します。
+
+<img src="http://www.hiroakit.com/blog/photo/photo_090704_05.png" alt="" />
+
+ログインに成功すると次のようなウィンドウが表示されます。ここではインベントリをクリックします。
+
+<img src="http://www.hiroakit.com/blog/photo/photo_090704_06.png" alt="" />
+<h5>ライセンスの設定</h5>
+インベントリをクリックしたら「構成」というタブを選択してライセンス機能というところをクリックします。そうすると次のような画面になります。編集をクリックして、ライセンス設定を行います。
+
+<img src="http://www.hiroakit.com/blog/photo/photo_090704_07.png" alt="" />
+<h5>VM Networkの動作確認</h5>
+次にVM Networkがきちんと動いているか（表示されていたらOKです）をチェックします。「サマリ」タブをクリックするとリソースの中のネットワーク部分で見つけられます。これに問題がなければ仮想マシン作成へ移ります。(問題があるケースには遭遇していないため対処の仕方はわかりません)
+
+<img src="http://www.hiroakit.com/blog/photo/photo_090704_08.png" alt="" />
+<h5>仮想マシンの作成</h5>
+基本的に聞かれたことに答えていけば平気です。
+僕はUbuntuをインストールする事にしました。
+
+<img src="http://www.hiroakit.com/blog/photo/photo_090704_09.png" alt="" />
+
+パワーオンにします。
+
+<img src="http://www.hiroakit.com/blog/photo/photo_090704_10.png" alt="" />
+
+9のアイコンが並んでいる列の一番右のものを選択します。「ホストに接続」まで進んでクリックします。すると、入れてあるCDが表示されます。それを使ってLinuxをインストールします。
+
+<img src="http://www.hiroakit.com/blog/photo/photo_090704_11.png" alt="" />
+<h5>Ubuntuのインストール</h5>
+今回、Ubuntuのインストールはほぼ通常通り行いました。詳しいところに関しては割愛します。
+Ubuntuの端末画面が文字化けだらけだったので、.bashrcにexport LANG=Cを記述しました。
+<h3>VMware-toolsのインストール</h3>
+<h5>VMware-toolsをインストールする前に</h5>
+gccなどがVMware-toolsをインストールする際に必要です。Ubuntuではbuild-essentialをしないとgccがありません。dh-makeもインストールしてmakeが使えるようにしておきます。またVMware-toolsのインストール際にkernel-headersのことを聞かれるので、linux-headersを確認します。
+<pre>$ sudo apt-get　update
+$ sudo apt-get dist-update
+$ sudo apt-get install build-essential dh-make
+$ sudo uname -a
+$ sudo apt-get install linux-headers-'uname -a'</pre>
+<h5>VMware-toolsをインストール</h5>
+仮想CDドライブにVMware Toolsが入ったCDイメージをマウントします。
+僕は以下の手順で行いました。
+<pre>$ sudo mkdir /mnt/cdrom
+$ sudo mount /dev/cdrom /mnt/cdrom
+$ sudo cp /mnt/cdrom/VMwareTools-'version'.tar.gz /usr/local/src/
+$ sudo tar xvzf /usr/local/src/VMwareTools-'version'.tar.gz
+$ sudo cd $HOME/vmware-tools-distrib
+$ sudo ./vmware-install.pl</pre>
+<h3>参考にしたページ</h3>
+VMware ESXiに関してはひとまずここまでです。
+最後に今回参考にしたURLを列挙します。
+<ul>
+	<li><a href="http://tam.qmix.org/wiki/UbuntuOnVmware.html">http://tam.qmix.org/wiki/UbuntuOnVmware.html</a></li>
+	<li><a href="http://hyamada.ddo.jp/vmware-player.html">http://hyamada.ddo.jp/vmware-player.html</a></li>
+	<li><a href="http://ameblo.jp/wildrick/entry-10242779975.html">http://ameblo.jp/wildrick/entry-10242779975.html</a></li>
+	<li><a href="http://kaede.blog.abk.nu/vmtools">http://kaede.blog.abk.nu/vmtools</a></li>
+	<li><a href="http://d.hatena.ne.jp/embedded/20090503/p1">http://d.hatena.ne.jp/embedded/20090503/p1</a></li>
+</ul>
+お疲れさまでした。

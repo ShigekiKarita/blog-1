@@ -1,0 +1,22 @@
+#+TITLE: "最近みたWEBページ part9"
+#+DATE: 2009-02-25T10:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/matsukazuto/20090129/1233221924" target="_blank">嘘をつかない，正直なデザイン，「本気で美しい景観をつくれますか」</a></li>
+<li><a href="http://hamasta.g.hatena.ne.jp/hamasta/20090127/p1" target="_blank">世界恐慌を押し戻すだけの知識を手に入れる</a></li>
+<li><a href="http://q.hatena.ne.jp/1231675251" target="_blank">私がゲームの企画を出すと、「これ誰が面白いの？」</a></li>
+<li><a href="http://n-a-m.org/" target="_blank">Nam</a></li>
+<li><a href="http://www.zugakousaku.com/index.php?ref=works-newmoon---jp" target="_blank">未来派図画工作</a></li>
+<li><a href="http://www.sitexgraphics.com/" target="_blank">SiTex Graphics</a></li>
+<li><a href="http://www.public-image.org/interview/2009/02/09/nam.html" target="_blank">Nam | ナム | Photographer / Graphic Designer</a></li>
+<li><a href="http://archiva.jp/web/html-css/web-typography.html" target="_blank">Webタイポグラフィまとめ</a></li>
+<li><a href="http://www.nikonet.or.jp/spring/sanae/report/suusiki/suusiki.htm" target="_blank">数式記号の読み方・表し方</a></li>
+<li><a href="http://features.cgsociety.org/story_custom.php?story_id=4883&amp;page=1" target="_blank">CGSociety - The Gods of Harvest</a></li>
+<li><a href="http://d.hatena.ne.jp/kousuke-i/20090120/1232465199" target="_blank">オバマ演説等まとめ</a></li>
+<li><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4862460453/" target="_blank">3ds Max レンダリング - mental ray で実現する高度なレンダリング - </a></li>
+<li><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4839926050/" target="_blank">ロベールのC++入門講座</a></li>
+<li><a href="http://blog.masuidrive.jp/index.php/2008/04/25/built-workspace-with-ikea/" target="_blank">IKEAと5万円で作る快適仕事場</a></li>
+<li><a href="http://www.eonet.ne.jp/~mizui/sodoku.htm" target="_blank">素読のためのテキスト</a></li>
+</ul>

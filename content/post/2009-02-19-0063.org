@@ -1,0 +1,15 @@
+#+TITLE: "3ds max 8 en linux (virtualbox)"
+#+DATE: 2009-02-19T22:06:52+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<p>Youtube で 3dsmax 8 を Linux で起動させている映像を見つけました。どうやら、 virtualbox を使っているみたいです。</p>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" />
+<param name="src" value="http://www.youtube.com/v/u5STAqsYKFg&amp;hl=ja&amp;fs=1" /><embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/u5STAqsYKFg&amp;hl=ja&amp;fs=1" allowscriptaccess="always" allowfullscreen="true"></embed>
+</object>
+</p>
+<p style="text-align: left;">3dsMax は Windows 版しかないので、Houdini や Maya のことを考えると 一瞬こういった事を想像してはみますが、それでも Mac で VMFusion をするか BootCamp をするかといったところぐらいですね。Mac 版 3dsMax が出たら乗り換えたい。</p>
+<p style="text-align: left;">Linux で 3dsMax か。面白いっちゃ面白いですけど、ライセンス的に平気なんでしょうか。よくわかりません。 ( Ubuntu で Wine 使って、それで起動できたり・・・・・・、はしないか。Photoshop 7 が動かせた噂は聞いたことあるけども、さすがに 3D はないか。)</p>

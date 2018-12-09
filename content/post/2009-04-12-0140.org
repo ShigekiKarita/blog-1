@@ -1,0 +1,20 @@
+#+TITLE: "File contains unknown nodes or data."
+#+DATE: 2009-04-12T11:39:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>よくわからないエラー</h4>
+<p>Mayaでデータを保存する際、よくわからないエラーが出ました。</p>
+<blockquote>
+<p>Error: File contains unknown nodes or data.&nbsp; To preserve this information, the current file type cannot be changed.</p>
+</blockquote>
+<p>保存の前に、色々あっち触ったりこっち触ったりしてたからでしょうか。<br />とにもかくにも、早く何とかしたい。</p>
+<ul>
+<li><a href="http://www.twin.ne.jp/~kashima/blog/db/2006/10/file_contains_u.html" target="_blank">3DCG LABO: File contains unknown nodes or data...</a></li>
+<li><a href="http://me.autodesk.jp/wam/maya/docs/Maya2009/index.html" target="_blank">Autodesk Maya オンライン ヘルプ: ls　コマンド</a></li>
+</ul>
+<p>MELを使って何とかできるみたいです。<br />とりあえず、一度リストアップするそうです。</p>
+<pre>ls -type unknown;</pre>
+<p>それで、それを消去する。</p>
+<pre>delete `ls -type unknown`;</pre>
+<p>これで、無事解決しました。</p>

@@ -1,0 +1,44 @@
+#+TITLE: "The Orphanage"
+#+DATE: 2009-02-11T12:35:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>The Orphanageの閉鎖</h4>
+<h5>閉鎖</h5>
+<p><a href="http://www.theorphanage.com/">The Orphanage</a>が<span>閉鎖される</span>みたいです。</p>
+<ul>
+<li><a href="http://prolost.blogspot.com/2009/02/ten-years-of-orphanage.html">Ten Years of The Orphanage</a></li>
+</ul>
+<blockquote>
+<p>Today I had the heart-wrenching task of joining my co-founders Scott Stewart and Jonathan Rothbart in announcing that The Orphanage will be suspending operations indefinitely.</p>
+</blockquote>
+<p>"The Orphanage" はサンフランシスコとロサンゼルスに拠点を構える、設立10年のVFX工房です。ILM ( Industrial Light &amp; Magic ) 出身のStu Maschwitz 氏、 Jonathan Rothbart 氏、Scott Stewart 氏 の3人が立てたところです。 After Effects のプラグイン「Magic Bullet」はこのThe Orphanage よって開発されました。</p>
+<p>長い間、全くRSSをチェックしていなくて、最近になって久しぶりみたのです。<br />そしたら、悲しいニュースを見てしまうことになりました。<span>涙しか出ない。</span></p>
+<h5>作品</h5>
+<ul>
+<li><a href="http://www.theorphanage.com/vfx/index.html">The Orphanage Feature VFX</a></li>
+<p>デイ・アフター・トゥモロー</p>
+<p>パイレーツ・オブ・ザ・カリビアン：デッドマンズ・チェスト</p>
+<p>ダイ・ハード4.0</p>
+<p>レッドクリフ</p>
+<p>アイアンマン</p>
+<p>The Orphanage が関わっている作品をいくつか挙げてみました。<br /> 基本的に全部好きです、<span>VFXが特に。</span></p>
+</ul>
+<h5>個人的に</h5>
+<p>僕、結構ショックなんですよね......。<br /> 僕もCGをやること(学生レベルです)があって3dsMaxをよく使います。最初は違うのを使っていたのですが、あるときを境に3dsMaxに移ったんです。いくつか理由はあるんですが、その中の一つとして<a href="http://www.autodesk.co.jp/adsk/servlet/item?siteID=1169823&amp;id=6088101">Autodeskのユーザー事例の"The&nbsp;Orphanage"</a>を読んだことなんです。道具として「3dsMaxを選ぼう！」と思ったことに"The Orphanage" の存在があるんです。だから、その分、この発表にはとてもショックを受けました。</p>
+<h4>VFX工房は10年、30年経ったときどうなるのだろう</h4>
+<p>平家物語　祗園精舎</p>
+<blockquote>
+<p>祗園精舎の鐘の声、 諸行無常の響きあり。 娑羅双樹の花の色、 盛者必衰の理をあらはす。 おごれる人も久しからず、 唯春の夜の夢のごとし。 たけき者も遂にはほろびぬ、 偏に風の前の塵に同じ。</p>
+</blockquote>
+<p>&nbsp;</p>
+<p>物事はそう長くは続かない。</p>
+<p>&nbsp;</p>
+<p>今はVFXというのが職業としてありますが、今後10年、30年経ったときどうなっているのでしょうか。VFX工房っていうのはとても夢があるし、とても憧れを感じます。けれども、今回のような話を耳にすると不安を覚えます。</p>
+<p>日本の場合だと、VFX工房というのがそう存在するものではないみたいです。<br />だからといって、日本のCG関連の会社に全く関係ない話でもない気がします。<br />勤めた経験がない上に、想像でも全くわかりません。</p>
+<p>&nbsp;</p>
+<p><a href="http://prolost.blogspot.com/2009/02/ten-years-of-orphanage.html">Ten Years of The Orphanage</a></p>
+<blockquote>
+<p>A message to the visual effects industry: You will never find a better employee than a former Orphan.</p>
+</blockquote>
+<p>日本で起きた場合は、こういったメッセージを出してくれるだろうか。</p>

@@ -1,0 +1,79 @@
+#+TITLE: "RenderManのシェーディング言語"
+#+DATE: 2009-04-09T11:45:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>RenderManのシェーディング言語</h4>
+<p>RISpec を見ながら気長にやっていこうと思います。</p>
+<ul>
+<li><a href="https://renderman.pixar.com/products/rispec/rispec_pdf/RISpec3_2.pdf" target="_blank">Pixar: The RISpec 3.2</a><span>(PDF)</span></li>
+</ul>
+<h4>主要な shader は5つ</h4>
+<p>RISpecの120頁に "There are thus five major types of shaders" って書いてあった。<br />どうやら、主要な shader は5つあるみたいです。</p>
+<ul>
+<li>Light source shaders</li>
+<li>Displacement shaders</li>
+<li>Surface shaders</li>
+<li>Volume shaders</li>
+<li>Imager shader</li>
+</ul>
+<h4>変数<br /></h4>
+<h5>グローバル変数</h5>
+<blockquote>
+<p>All the predefined variables which are available to each type of shader are shown in Table 12.1,</p>
+</blockquote>
+<p>130頁にこう書いてありました。変数も定義されているみたいです。shader によってちょっと違う。<br /> (フィーリング読みだから、あっているかわかりませんが、たぶんそんな意味だと思う)</p>
+<ul>
+<li>Table 12.1: Predefined Surface Shader Variables (132頁)</li>
+<li>Table 12.2: Predefined Light Source Variables (133頁)</li>
+<li>Table 12.3: Predefined Volume Shader Variables (133頁)</li>
+<li>Table 12.4: Predefined Displacement Shader Variables (134頁)</li>
+<li>Table 12.5: Predefined Imager Shader Variables (134頁)</li>
+</ul>
+<h5>変数の型</h5>
+<p>125頁からの Section 11 TYPES に書いてあった。</p>
+<ul>
+<li>float</li>
+<li>color</li>
+<li>point</li>
+<li>vector</li>
+<li>normal</li>
+<li>matrix</li>
+<li>string</li>
+<li>array</li>
+</ul>
+<h4>座標空間</h4>
+<p>Table 4.2: Point Coordinate Systems (32頁) に書いてありました。<br />基本、書いてある英語が理解できなかった。けど、とりあえず暗記。</p>
+<ul>
+<li>object</li>
+<li>world</li>
+<li>camera</li>
+<li>screen</li>
+<li>raster</li>
+<li>NDC</li>
+</ul>
+<h4>RSL を記述する</h4>
+<p>Appendix A　STANDARD RENDERMAN INTERFACE SHADERS (166頁) を参考にしながら試しにやっていこうと思います。やることはメモ帳などのテキストエディタでソースファイル(拡張子は sl )を書いていくだけです。</p>
+<h5>matte.sl</h5>
+<pre>surface<br />matte(<br />&nbsp;&nbsp;&nbsp; float Ka = 1;<br />&nbsp;&nbsp;&nbsp; float Kd = 1;)<br />{<br />&nbsp;&nbsp;&nbsp; normal Nf = faceforward(normalize(N), I);<br />&nbsp;&nbsp;&nbsp; Oi = Os;<br />&nbsp;&nbsp;&nbsp; Ci = Os * Cs * (Ka * ambient() + Kd * diffuse(Nf));<br />}<br /></pre>
+<h5>plastic.sl<br /></h5>
+<pre>surface<br />plastic(<br />	float Ka = 1;<br />	float Kd =.5;<br />	float Ks =.5;<br />	float roughness =.1;<br />	color specularcolor = 1;)<br />{<br />	normal Nf = faceforward(normalize(N), I);<br />	vector V = -normalize(I);<br />	Oi = Os;<br />	Ci = Os * (Cs * (Ka * ambient() + Kd * diffuse(Nf)) +<br />	specularcolor * Ks * specular(Nf, V, roughness));<br />}<br /></pre>
+<p>いまいちよくわからないけど、こんな感じ。</p>
+<h4>RSL をコンパイルする</h4>
+<p>書き写したソースファイルをコンパイルしますが、そのコンパイラは使用するRenderManのレンダラーによって異なります。</p>
+<p>例えば、レンダラーが 3Delight なら shaderdl で書き出されるファイルの拡張子は sdl で、Pixie なら sdrc がコンパイラで sdr が書き出されるファイルの拡張子です。 Aqsis の場合はコンパイラがaqsl でファイルの拡張子は slx となります。</p>
+<p>僕の場合は Pixie なので sdrc plastic.sl matte.sl と打ちます。<br />2個連続でコンパイルかけています。plastic.sdr と matte.sl が出てきます。</p>
+<h4>RIB ファイルを用意する</h4>
+<p>コンパイルしたshaderがどういう効果を持っているのかを確かめるためRIBファイルを作成します。</p>
+<h5>matte.rib<br /></h5>
+<pre>Display "matte.tiff" "file" "rgba"<br />Projection "perspective" <br />&nbsp;&nbsp;&nbsp; Translate 0 0 2<br />WorldBegin<br />&nbsp;&nbsp;&nbsp; LightSource "ambientlight" 1<br />&nbsp;&nbsp;&nbsp; "intensity" [0.2]<br />&nbsp;&nbsp;&nbsp; LightSource "spotlight" 2<br />&nbsp;&nbsp;&nbsp; "from" [2 2 -2]<br />&nbsp;&nbsp;&nbsp; "to" [0 0 0]<br />&nbsp;&nbsp;&nbsp; "intensity" [5]<br />&nbsp;&nbsp;&nbsp; Color [1 0 0]<br />&nbsp;&nbsp;&nbsp; Surface "matte"<br />&nbsp;&nbsp;&nbsp; Sphere 1 -1 1 360<br />WorldEnd<br /></pre>
+<h5>plastic.rib</h5>
+<pre>Display "plastic.tiff" "file" "rgba"<br />Projection "perspective" <br />&nbsp;&nbsp;&nbsp; Translate 0 0 2<br />WorldBegin<br />&nbsp;&nbsp;&nbsp; LightSource "ambientlight" 1<br />&nbsp;&nbsp;&nbsp; "intensity" [0.2]<br />&nbsp;&nbsp;&nbsp; LightSource "spotlight" 2<br />&nbsp;&nbsp;&nbsp; "from" [2 2 -2]<br />&nbsp;&nbsp;&nbsp; "to" [0 0 0]<br />&nbsp;&nbsp;&nbsp; "intensity" [5]<br />&nbsp;&nbsp;&nbsp; Color [1 0 0]<br />&nbsp;&nbsp;&nbsp; Surface "plastic"<br />&nbsp;&nbsp;&nbsp; Sphere 1 -1 1 360<br />WorldEnd</pre>
+<p>このRIBファイルの違いは、Surface "matte" なのか Surface "plastic" なのかというところだけです。それ以外の違いはありません。</p>
+<h4>結果</h4>
+<h5>matte.rib</h5>
+<p>matteだから反射してなければいいのかな？(笑<br />だとしたら、まぁ良い感じなのかな。わからないｗ</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090409_01.png" alt="matte.rib の結果" /></p>
+<h5>plastic.rib</h5>
+<p>プラスチックっぽい質感･･････、なんだろうか。。。(笑<br />もうちょっと試行錯誤したほうが良さそうですね。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090409_02.png" alt="plastic.rib の結果" /></p>

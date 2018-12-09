@@ -1,0 +1,16 @@
+#+TITLE: "Ubuntu 8.04 と Hotkey と Command"
+#+DATE: 2008-03-13T13:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>Alt + F2</h4>
+<p>アプリケーションの実行というウィンドウが出てくる。</p>
+<p>Windowsで言うファイル名を指定して実行って奴と一緒かな。</p>
+<h4>Ctrl + Alt + d</h4>
+<p>Windowsでいう"Win + D (デスクトップを表示）"</p>
+<h4>$ gconf-editor</h4>
+<p>設定エディタ」の起動</p>
+<h4>$ synaptic</h4>
+<p>「Synapticパッケージマネージャ」 の起動</p>
+<h4>$ alacarte</h4>
+<p>「メインメニュー」ウィンドウの起動</p>

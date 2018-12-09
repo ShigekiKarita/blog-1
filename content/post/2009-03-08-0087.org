@@ -1,0 +1,62 @@
+#+TITLE: "最近みたWEBページ part11"
+#+DATE: 2009-03-08T02:59:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>いろいろ<br /></h4>
+<ul>
+<li><strong><a href="http://www.skype.com/intl/ja/download/skype/windows/" target="_blank">Skype 4.0 for Windows</a></strong></li>
+<li><a href="http://sugi-iggy.blogspot.com/2008/04/psyopxsi.html">Psyop　XSIセミナー</a></li>
+<li><a href="http://japan.cnet.com/news/ent/story/0,2000056022,20059681,00.htm" target="_blank">DreamWorks + HP：実はLinuxマシンだって知ってた？</a></li>
+<li><strong><a href="http://h50146.www5.hp.com/products/servers/proliant/campaign/sd3back/index.html" target="_blank">日本HP: 帰ってきた！スタートダッシュ3 キャンペーン</a></strong></li>
+<li><a href="http://www.cgcookie.com/articles/2008/09/04/modeling-a-hosta-plant-in-3d-studio-max" target="_blank">Modeling a Hosta plant in 3D Studio Max</a></li>
+<li><a href="http://www.cgcookie.com/articles/2008/11/05/tutorial-chrome-material-in-mental-ray-3ds-max" target="_blank">Chrome material in Mental Ray</a></li>
+<li><strong><a href="http://www.the-blueprints.com/index.php?tutorials/3dmax/" target="_blank">Setting up blueprints in 3D Studio Max</a></strong></li>
+<li><a href="http://www.the-blueprints.com/index.php?blueprints/" target="_blank">The Blueprints Database</a></li>
+<li><a href="http://www.3dtotal.com/team/Tutorials_3/realistic_glass/realistic_glass_01.asp" target="_blank">3DTotal Tutorials: Creating Realistic Glass Using 3 Different Materials</a></li>
+<li><a href="http://www.heyhush.com/" target="_blank">HUSH</a></li>
+<li><a href="http://blog.livedoor.jp/lalha/archives/50254634.html" target="_blank">プログラマー面接時の技術的な質問事項(アプレッソ版)</a></li>
+<li><a href="http://tech-artists.org/" target="_blank">Tech Artists</a></li>
+<li><a href="http://www.officepro.jp/excelvba/basic/index7.html" target="_blank">文字列の結合 - 基本文法 - Excel VBA入門</a></li>
+<li><a href="http://d.hatena.ne.jp/next49/20090227" target="_blank">発声練習：　学生が自分の主張を述べにくくなる心理について</a></li>
+<li><a href="http://d.hatena.ne.jp/p_shirokuma/20090226/p1" target="_blank">シロクマの屑籠(汎適所属)：　『使えない個性は、要らない個性。』</a></li>
+<li><a href="http://koitiyano.hp.infoseek.co.jp/rikai/" target="_blank">総合科目　経済学入門＜現代経済理解へのガイド＞</a></li>
+<li><a href="http://d.hatena.ne.jp/koiti_yano/20090301/p1" target="_blank">ハリ・セルダンになりたくて：　一年間「経済学入門」を担当したので最後に「まとめ」</a></li>
+<li><a href="http://d.hatena.ne.jp/terracao/20090228/1235765661" target="_blank">女教師ブログ:　卒論修論のために、これから統計学を学ぶつもりの人に知って欲しい5箇条</a></li>
+<li><a href="http://business.nikkeibp.co.jp/article/life/20090127/184058/" target="_blank">日経ビジネスオンライン:　人を育てない組織は必ず復讐される</a></li>
+<li><a href="http://d.hatena.ne.jp/Chikirin/20090121" target="_blank">Chikirinの日記：　アドバイスの正しいもらい方</a></li>
+<li><strong><a href="http://alldesign.seesaa.net/article/114373347.html" target="_blank">Lifehack（ライフハック）:フリーのマインドマップツールが熱い！</a></strong></li>
+<li><a href="http://dzineblog.com/2009/02/30-free-quality-psd-files.html" target="_blank">Design Resource: 30+ Free Quality PSD Files to Download</a></li>
+<li><a href="http://ae.tutsplus.com/tutorials/motion-graphics/cinematic-opening-title-redux-day-2/" target="_blank">AETUTS: Cinematic Opening Title Redux - Day 2 -</a></li>
+<li><a href="http://www.hiroakit.com/cgi-bin/mt/mt.cgi?__mode=view&amp;_type=entry&amp;id=299&amp;blog_id=3&amp;saved_changes=1" target="_blank">CG Cookie: Fluid Dynamics with Limit Realflow</a></li>
+<li><strong><a href="http://blog.worldending.jp/web/apples-ambition-for-webkit.php" target="_blank">BLOG × WORLD ENDING:　シリーズ妄想 (1) - アップルはWebKitをFlash対抗プラットフォームに進化させようとしているのか</a></strong></li>
+</ul>
+<h4>C++</h4>
+<ul>
+<li><a href="http://d.hatena.ne.jp/higepon/20080320/1206022231" target="_blank">ひげぽん OSとか作っちゃうかMona-: ロベールのC++入門講座を読んで C++ を初歩の初歩から再入門するよ - 前編</a></li>
+<li><a href="http://www.costco.co.jp/products_outdoor.htm" target="_blank">コストコ</a></li>
+<li><a href="http://www.cppll.jp/cppreference/index.html" target="_blank">C/C++ リファレンス</a></li>
+<li><a href="http://www.kumei.ne.jp/c_lang/" target="_blank">猫でもわかるプログラミング</a></li>
+</ul>
+<h4>mental ray</h4>
+<ul>
+<li><a href="http://www.mymentalray.com/index.php?option=com_content&amp;view=article&amp;id=115&amp;Itemid=109" target="_blank">MY mental ray: Learn</a></li>
+<li><strong><a href="http://forum.lamrug.org/viewtopic.php?f=8&amp;t=1361#p5648">Compiling on Windows with MS VC Express 2008 and mr 3.6+</a></strong></li>
+<li><strong><a href="http://www.fundza.com/" target="_blank">CG References &amp; Tutorials</a></strong></li>
+<li><a href="http://www.mrmaterials.com/" target="_blank">Welcome to Mr Materials!</a></li>
+<li><a href="http://ypuechweb.free.fr/" target="_blank">Yannick Puech Website</a></li>
+</ul>
+<ul>
+<li><a href="http://blog.taikomatsu.com/2007/10/06/make-makefile/" target="_blank">memlog: make, makefile</a></li>
+<li><a href="http://blog.taikomatsu.com/2007/03/09/mentalray-%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%80%E9%96%8B%E7%99%BAgetting-start/" target="_blank">memlog: シェーダ開発getting start</a></li>
+<li><a href="http://blog.taikomatsu.com/2007/03/09/mentalray-mr%E3%81%AEdoc%E3%81%AB%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%82%E3%82%8Bcl%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E6%84%8F%E5%91%B3/" target="_blank">memlog: mrのdocに書いてあるclのオプションの意味</a></li>
+<li><a href="http://blog.taikomatsu.com/2007/03/09/mentalray-mayarayrc%E3%81%A8mi_custom_shader_path/" target="_blank">memlog: maya.rayrcとMI_CUSTOM_SHADER_PATH</a></li>
+<li><a href="http://blog.taikomatsu.com/2008/10/02/3delight-80/" target="_blank">memlog: 3Delight 8.0</a></li>
+<li><a href="http://www.twin.ne.jp/%7Ekashima/blog/db/3dcg/maya_1/mentalray/" target="_blank">3DCG LABO: MentalRay Archives</a></li>
+<li><a href="http://www.twin.ne.jp/%7Ekashima/blog/db/2007/01/mrmaxarch.html" target="_blank">3DCG LABO: MR用MaxのArchシェーダーがクソ速い件</a></li>
+</ul>
+<h4>RenderMan</h4>
+<ul>
+<li><a href="http://lucille.sourceforge.net/docs/japanese/tutorial/tutorial1.html" target="_blank">lucille: RenderMan 入門 | 初めてのレンダリング</a></li>
+<li><a href="http://www.ctc-g.co.jp/%7ERenderMan/products/Animal/maxman.html" target="_blank">MaxMan</a></li>
+</ul>

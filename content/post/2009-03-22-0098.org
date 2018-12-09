@@ -1,0 +1,391 @@
+#+TITLE: "After Effects Hotkeys (Win)"
+#+DATE: 2009-03-22T12:18:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>まとめてみました</h4>
+<p>Windows版のAfter Effects ショートカット(ホット)キーについてまとめてみました。テンキーを使用するショートカットには、<span>(テンキー)</span>と書いておきました。</p>
+<h4>コンポジション</h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">新規コンポジション</td>
+<td width="400">Ctrl+N</td>
+</tr>
+<tr>
+<td width="442">選択したコンポジションの設定画面を開く</td>
+<td width="400">Ctrl+K</td>
+</tr>
+</tbody>
+</table>
+<h4>フッテージ</h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">ファイル(静止画シーケンスなど)の読み込み</td>
+<td width="390">Ctrl+i</td>
+</tr>
+<tr>
+<td width="442">複数のファイル(静止画シーケンスなど)の読み込み</td>
+<td width="390">Ctrl+Alt+i</td>
+</tr>
+<tr>
+<td width="442">選択したフッテージの変換画面を開く</td>
+<td width="390">Ctrl+F</td>
+</tr>
+<tr>
+<td width="442">選択したフッテージアイテムの置き換え</td>
+<td width="390">Ctrl+H</td>
+</tr>
+<tr>
+<td width="442">選択したフッテージアイテムの再読み込み</td>
+<td width="390">Ctrl+Alt+L</td>
+</tr>
+</tbody>
+</table>
+<h4>レンダリング</h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">レンダーキューに追加</td>
+<td width="390">Ctrl+Shift+ / <br /></td>
+</tr>
+<tr>
+<td width="442">ムービー作成</td>
+<td width="390">Ctrl+M</td>
+</tr>
+</tbody>
+</table>
+<h4>プロパティの表示<br /></h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">「アンカーポイント」プロパティのみを表示</td>
+<td width="400">A</td>
+</tr>
+<tr>
+<td width="442">「マスクの境界線をぼかす」プロパティのみを表示</td>
+<td width="400">F</td>
+</tr>
+<tr>
+<td width="442">「マスクパス」プロパティのみを表示</td>
+<td width="400">M</td>
+</tr>
+<tr>
+<td width="442">「マスク不透明度」プロパティのみを表示</td>
+<td width="400">TT（T キーを 2 回)</td>
+</tr>
+<tr>
+<td width="442">「不透明度」プロパティのみを表示</td>
+<td width="400">T</td>
+</tr>
+<tr>
+<td width="442">「位置」プロパティのみを表示</td>
+<td width="400">P</td>
+</tr>
+<tr>
+<td width="442">「回転」プロパティのみを表示</td>
+<td width="400">R</td>
+</tr>
+<tr>
+<td width="442">「スケール」プロパティのみを表示</td>
+<td width="400">S</td>
+</tr>
+<tr>
+<td width="442">「マスク」プロパティグループのみを表示</td>
+<td width="400">MM（M キーを 2 回)</td>
+</tr>
+<tr>
+<td width="442">エクスプレッションのみを表示</td>
+<td width="400">EE（E キーを 2 回）</td>
+</tr>
+<tr>
+<td width="442">キーフレームが設定されているプロパティのみを表示</td>
+<td width="400">U</td>
+</tr>
+<tr>
+<td width="442">プロパティまたはグループを隠す</td>
+<td width="150">Alt+Shift+プロパティをクリック</td>
+</tr>
+<tr>
+<td width="442">現在の時間にキーフレームを追加または削除</td>
+<td width="400">Alt+Shift+プロパティのショートカット</td>
+</tr>
+<tr>
+<td width="442">すべてのプロパティを表示</td>
+<td width="400">Ctrl+プロパティの左側三角形をクリック</td>
+</tr>
+</tbody>
+</table>
+<h4>ツール</h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">選択ツールの使用</td>
+<td width="430">V</td>
+</tr>
+<tr>
+<td width="442">回転ツールの使用</td>
+<td>W</td>
+</tr>
+<tr>
+<td width="442">アンカーポイントツールの使用</td>
+<td>Y</td>
+</tr>
+<tr>
+<td width="442">ペンツールの使用</td>
+<td>G</td>
+</tr>
+</tbody>
+</table>
+<h4>プレビュー</h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">RAM プレビュー</td>
+<td width="400">0(テンキーのゼロ)</td>
+</tr>
+<tr>
+<td width="442">プレビュー禁止</td>
+<td width="400">Shift + CapsLock</td>
+</tr>
+</tbody>
+</table>
+<h4>キャッシュ</h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">メモリクリア</td>
+<td width="380">Ctrl+Alt+/(テンキー)</td>
+</tr>
+</tbody>
+</table>
+<h4>新規作成レイヤー<br /></h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">新規平面レイヤー</td>
+<td width="380">Ctrl+Y</td>
+</tr>
+<tr>
+<td width="442">新規ヌルレイヤー</td>
+<td>Ctrl+Alt+Shift+Y</td>
+</tr>
+<tr>
+<td width="442">新規テキストレイヤー</td>
+<td>Ctrl+Alt+Shift+T</td>
+</tr>
+<tr>
+<td width="442">新規マスク</td>
+<td>Ctrl+Shift+N</td>
+</tr>
+<tr>
+<td width="442">選択した平面レイヤーなどの設定画面を開く</td>
+<td>Ctrl+Shift+Y</td>
+</tr>
+</tbody>
+</table>
+<h4>タイムライン</h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">タイムラインの拡大</td>
+<td width="380">^</td>
+</tr>
+<tr>
+<td width="442">タイムラインの縮小</td>
+<td>-</td>
+</tr>
+<tr>
+<td width="442">ワークエリアの開始点を現在の時間に設定</td>
+<td>B</td>
+</tr>
+<tr>
+<td width="442">ワークエリアの終了点を現在の時間に設定</td>
+<td>N</td>
+</tr>
+<tr>
+<td width="442">ワークエリアの開始点に移動</td>
+<td>Shift+Home</td>
+</tr>
+<tr>
+<td width="442">ワークエリアの終了点に移動</td>
+<td>Shift+End</td>
+</tr>
+<tr>
+<td width="442">レイヤーのインポイントに移動</td>
+<td>i</td>
+</tr>
+<tr>
+<td width="442">レイヤーのアウトポイントに移動</td>
+<td>o</td>
+</tr>
+<tr>
+<td width="442">1 フレーム先に進む</td>
+<td>Ctrl+右向き矢印</td>
+</tr>
+<tr>
+<td width="442">1 フレーム前に戻る</td>
+<td>Ctrl+左向き矢印</td>
+</tr>
+<tr>
+<td width="442">10 フレーム先に進む</td>
+<td>Ctrl+Shift+右矢印</td>
+</tr>
+<tr>
+<td width="442">10 フレーム前に戻る</td>
+<td>Ctrl+Shift+左矢印</td>
+</tr>
+<tr>
+<td width="442">現在の時間にコンポジションタイムマーカーを作成</td>
+<td>Shift+0~9</td>
+</tr>
+<tr>
+<td width="442">コンポジションタイムマーカーに移動</td>
+<td>0~9</td>
+</tr>
+</tbody>
+</table>
+<h4>レイヤーの選択</h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">レイヤーの選択</td>
+<td width="400">Ctrl+上下矢印</td>
+</tr>
+<tr>
+<td width="442">レイヤーの選択範囲拡大</td>
+<td>Ctrl+Shift+上下矢印</td>
+</tr>
+<tr>
+<td width="442">レイヤー（1~999）を番号で選択</td>
+<td>0~9(テンキー)</td>
+</tr>
+<tr>
+<td width="442">全レイヤーの選択</td>
+<td>Ctrl+A</td>
+</tr>
+<tr>
+<td width="442">全レイヤーの選択を解除</td>
+<td>Ctrl+Shift+A</td>
+</tr>
+<tr>
+<td width="442">選択したレイヤーのロック</td>
+<td>Ctrl+L</td>
+</tr>
+<tr>
+<td width="442">すべてのレイヤーのロック解除</td>
+<td>Ctrl+Shift+L</td>
+</tr>
+</tbody>
+</table>
+<h4>レイヤーの表示切り替え</h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">選択したレイヤーのビデオスイッチ（目）のON/OFF</td>
+<td width="375">Ctrl+Alt+Shift+V</td>
+</tr>
+<tr>
+<td width="442">選択したレイヤー以外のビデオスイッチをOFF</td>
+<td>Ctrl+Shift+V</td>
+</tr>
+<tr>
+<td width="442">他のすべてのソロスイッチをオフにする</td>
+<td>Alt+ソロスイッチのクリック</td>
+</tr>
+<tr>
+<td width="442">レイヤースイッチ列とモード列の表示切り替え</td>
+<td>F4</td>
+</tr>
+<tr>
+<td width="442">選択したレイヤーの描画モードの切り替え</td>
+<td>Shift+^ <br /></td>
+</tr>
+</tbody>
+</table>
+<h4>レイヤー貼り切りないし統合</h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">現在の時間にレイヤーをペースト</td>
+<td width="370">Ctrl+Alt+V</td>
+</tr>
+<tr>
+<td width="442">選択したレイヤーを分割</td>
+<td width="370">Ctrl+Shift+D</td>
+</tr>
+<tr>
+<td width="442">選択したレイヤーをプリコンポーズ</td>
+<td width="370">Ctrl+Shift+C</td>
+</tr>
+</tbody>
+</table>
+<h4>レイヤーの時間</h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">選択したレイヤーをタイムリバース</td>
+<td width="370">Ctrl+Alt+R</td>
+</tr>
+<tr>
+<td width="442">選択したレイヤーをタイムリマップ</td>
+<td width="370">Ctrl+Alt+T</td>
+</tr>
+<tr>
+<td width="442">選択したレイヤーのインポイントを現在の時間へ</td>
+<td width="370">[</td>
+</tr>
+<tr>
+<td width="442">選択したレイヤーのアウトポイントを現在の時間へ</td>
+<td width="370">]</td>
+</tr>
+<tr>
+<td width="442">選択したレイヤーのインポイントを現在の時間にトリム</td>
+<td width="370">Alt+ [</td>
+</tr>
+<tr>
+<td width="442">選択したレイヤーのアウトポイントを現在の時間にトリム</td>
+<td width="370">Alt+ ]</td>
+</tr>
+<tr>
+<td width="442">時間伸縮によりインポイントを設定</td>
+<td width="370">Ctrl+Shift+ ,</td>
+</tr>
+<tr>
+<td width="442">時間伸縮によりアウトポイントを設定</td>
+<td width="370">Ctrl+Alt+ ,</td>
+</tr>
+</tbody>
+</table>
+<h4>パネルの表示<br /></h4>
+<table style="border=" border="0" width="555">
+<tbody>
+<tr>
+<td width="442">プロジェクトパネルを開く／閉じる</td>
+<td width="370">Ctrl+0</td>
+</tr>
+<tr>
+<td width="442">レンダーキューパネルを開く／閉じる</td>
+<td width="370">Ctrl+Alt+0</td>
+</tr>
+<tr>
+<td width="442">ツールパネルを開く／閉じる</td>
+<td width="370">Ctrl+1</td>
+</tr>
+<tr>
+<td width="442">情報パネルを開く／閉じる</td>
+<td width="370">Ctrl+2</td>
+</tr>
+<tr>
+<td width="442">時間制御パネルを開く／閉じる</td>
+<td width="370">Ctrl+3</td>
+</tr>
+<tr>
+<td width="442">文字パネルを開く／閉じる</td>
+<td width="370">Ctrl+6</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>tableレイアウト、いや（笑</p>

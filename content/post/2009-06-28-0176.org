@@ -1,0 +1,10 @@
+#+TITLE: "Ubuntuでネットワーク上の共有ファイルを消されないようにする"
+#+DATE: 2009-06-28T20:55:50+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>chattr</h4>
+<pre>$ sudo chattr -R +i /home/samba/public/ //制限をかける
+$ sudo chattr -R -i /home/samba/public/ //制限を解除
+</pre>
+<p>see also: <a href="http://linux.kororo.jp/cont/tips/chattr.php" target="_blank">http://linux.kororo.jp/cont/tips/chattr.php</a></p>

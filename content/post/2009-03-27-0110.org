@@ -1,0 +1,18 @@
+#+TITLE: "Ubuntu と XMind"
+#+DATE: 2009-03-27T11:59:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>Ubuntu に XMind をインストールしました。</h4>
+<p>こちらの記事を参考にしました。インストール自体は結構簡単でした。</p>
+<ul>
+<li><a href="http://forestseeds.xsrv.jp/nocode/2009/03/ubuntu-xmind.html" target="_blank">Ubuntu でXMindを使ってマインドマップを書こう！</a></li>
+</ul>
+<h4>Javaで動いてるので当たり前なのかもしれませんが<br /></h4>
+<p>XMindを入れると自動でJDK(Java)が入るみたいですね・・・。<br />(XMindを入れる前にはJavaが入っていなかった記憶があるので)</p>
+<ul>
+<li><a href="http://blogs.sun.com/katakai/entry/installing_jdk_on_ubuntu_8" target="_blank">Ubuntu 8.04 に JDK をインストールする</a></li>
+</ul>
+<pre>$ which java</pre>
+<pre>$ java -version</pre>
+<p>Mind Map というよりも、メモ帳として使ったいこうと思います。</p>

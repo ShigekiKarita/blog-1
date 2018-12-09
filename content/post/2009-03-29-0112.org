@@ -1,0 +1,52 @@
+#+TITLE: "mental ray 6日目： MetaSL"
+#+DATE: 2009-03-29T12:20:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>MetaSLって何なの？</h4>
+<p>前回の <a href="http://www.hiroakit.com/blog/2009/03/post_67.html" target="_blank">mental ray 5日目</a> シェーダ言語がないと書きました。<br />けれども、コメントで MetaSLというのを知ることができたので、<br />その後、次のサイトを参考にしながら、自分なりに調べてみました。</p>
+<ul>
+<li><a href="http://www.mentalimages.com/products/mental-mill/metasl.html" target="_blank">mental images: MetaSL</a></li>
+<li><a href="http://blog.taikomatsu.com/2009/03/28/metasla/" target="_blank">memlog: MetaSL&auml;</a></li>
+<li><a href="http://masafumi.cocolog-nifty.com/masafumis_diary/2007/06/mental_mill_21f8.html" target="_blank">新 masafumi's Diary: mental millとは</a></li>
+</ul>
+<p>結論は、結局のところ何も分からずじまいなんですけどもね(笑</p>
+<p>MetaSL というのは Mental Mill というソフト(?)で使われている言語のよう。<br />それを使ってシェーダ開発していくようです。</p>
+<blockquote>
+<p>including CPUs (C++), GPUs (Cg, GLSL, HLSL) and other current and future platforms, eliminating the need to re-engineer and debug shaders and Phenomena for each of them.</p>
+</blockquote>
+<p>C++ 埋め込む(読み込む)の？<br />だったら、最初からC++で書くって発想が起こりえるんじゃ・・・？</p>
+<p>C/C++ でやったほうがいいっていうのは、なんとなくわかる気はするんだけど、<br />まだ知識が全然ないのでなんとも言えないですね。もうちょっと勉強しないと。</p>
+<ul>
+<li><a href="http://www.mentalimages.com/fileadmin/user_upload/PDF/MetaSL_spec_1.0.14_20Mar2009.pdf" target="_blank">mental image: MetaSL Specification</a> (PDF)<br />今度印刷してこよう。紙面じゃないとメモしづらいし。<a href="http://www.mentalimages.com/fileadmin/user_upload/PDF/MetaSL_spec_1.0.14_20Mar2009.pdf" target="_blank"><br /></a></li>
+</ul>
+<h4>Mental Mill って何なの？</h4>
+<p>リアルタイムの方で使うのかな。どちらかといえばゲームの方で用いるように思えるけど。<br />もうちょっと調べていかないとわからない。</p>
+<ul>
+<li><a href="http://www.mentalimages.com/products/mental-mill.html" target="_blank">mental images: Mental Mill</a></li>
+</ul>
+<blockquote>
+<p>mental mill supports CgFX, HLSL, and GLSL, and runs natively in mental ray and RealityServer.</p>
+</blockquote>
+<p>それで、このMental Mill というのは3つエディションがあるみたいです。</p>
+<ul>
+<li>mental mill Standard Edition</li>
+<li>mental mill Artist Edition</li>
+<li>mental mill Integrator Edition</li>
+</ul>
+<p>操作はGUIでやって組み立てていくみたい。</p>
+<ul>
+<li><a href="http://masafumi.cocolog-nifty.com/masafumis_diary/2007/06/mental_mill_21f8.html" target="_blank">新 masafumi's Diary: mental millとは</a></li>
+</ul>
+<blockquote>
+<p>これは、グラフィカルなインターフェイスでシェーダ開発が出来るツールですね。Mac使ってる人（つーか、FX Composerのユーザーは基本的にWindows使いですが）なら<a href="http://journal.mycom.co.jp/articles/2005/05/26/qc/">Quartz Composer</a>みたいなインターフェイスっていうとわかりやすいかもしれませんね。</p>
+</blockquote>
+<p>今なら、mental mill 1.0 RC 1をダウンロードできるので後でインストールして使ってみる。</p>
+<h4>ちなみに、新しい 3ds Max が出るみたい<br /></h4>
+<ul>
+<li><a href="http://usa.autodesk.com/adsk/servlet/index?siteID=123112&amp;id=7658360" target="_blank">Autodesk: Autodesk 3ds Max - What&rsquo;s New</a></li>
+</ul>
+<blockquote>
+<p>Integrated mental mill Technology<br />Develop, test, and maintain powerful mental mill&reg; shaders and shader graphs―right inside 3ds Max. As the first 3D modeling and animation program to integrate mental mill technology, 3ds Max 2010 gives you real-time visual feedback, enabling even the novice user to create sophisticated, hardware-agnostic shaders.</p>
+</blockquote>
+<p>毎年、新しいのが出てきますね&hellip;&hellip;。<br />それをウリにしているとは思わないですけど&hellip;&hellip;。<br />学生には優しくはない&hellip;&hellip;よね。(常に最新版を求めはしないだろうけど)</p>

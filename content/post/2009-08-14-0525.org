@@ -1,0 +1,25 @@
+#+TITLE: "花火を観に行きました"
+#+DATE: 2009-08-14T21:37:23+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<!--more-->
+<p style="text-align: center;"><object style="width: 480px; height: 340px;" classid="clsid:02bf25d5-8c17-4b23-bc80-d3488abddc6b" width="480" height="340" codebase="http://www.apple.com/qtactivex/qtplugin.cab#version=6,0,2,0"><param name="autoplay" value="false" /><param name="src" value="http://www.hiroakit.com/blog/photo/video_x264_090814_01.mp4" /><param name="align" value="bottom" /><embed style="width: 480px; height: 340px;" type="video/quicktime" width="480" height="340" src="http://www.hiroakit.com/blog/photo/video_x264_090814_01.mp4" align="bottom" autoplay="false"></embed></object>
+
+気のせいか撮った映像を見ると、レーザーが打たれて空中の物体に当たって砕けているように思えます。ただ単にフレアしているだけなのでしょうが、自分にとってはとても面白い感じに撮れた映像の1つとなっています。
+
+花火って不思議ですよね。見ていると自然と「おーっ!」と口にしてしまいます。私の場合はパーティクルが無性にいじりたくなってくるのですが、それは一部例外を除いて"おかしい"と言われてしまいますので置いておきまして。
+
+<a rel="attachment wp-att-537" href="http://www.hiroakit.com/blog/archives/525/photo_090814_01"><img class="size-large wp-image-537 alignleft" title="photo_090814_01" src="http://www.hiroakit.com/blog/photo/photo_090814_01-360x480.jpg" alt="photo_090814_01" width="360" height="480" /></a>
+
+花火が上がるのですから、もうお祭りですよね。お店側はここぞとばかりに壮大にやりたかったのでしょう。その結果、私が今回初めて見ることのできたものが左の写真のような光景です。天井が車です。とてもいいですね。ただ残念なことに通り過ぎてしまいました。ご覧の通りコーンが置いてありましたのであまり近寄らない方がいいのかなと思いました。正直怖かったです、あまりウェルカムな感じがしませんでした。「いらっしゃいませ」のかけ声はとてもよかったのですが、黒が前面に広がっている状態は言っていることとやっていることが違っているように見えました。
+
+でも、この様子をちょっとアレンジすれば立派なポスターになってしまう気がします。下で家族がバーベキューしていて、文字で「荷物が一杯載せれる」みたいなとか、いやはや「煙にやわじゃない」とか入れてしまえばもう最高な気がします。
+
+前を通り過ぎてしまった私が言うのもおかしい話ですが、このやり方は引き続きやっていってほしいですね。とても斬新です。クレイジーです。
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><a rel="attachment wp-att-538" href="http://www.hiroakit.com/blog/archives/525/photo_090814_02"><img class="size-large wp-image-538 aligncenter" title="photo_090814_02" src="http://www.hiroakit.com/blog/photo/photo_090814_02-640x480.jpg" alt="photo_090814_02" width="640" height="480" /></a></p>
+
+厚木バーガー、食べてくればよかったでしょうか。けれども、正直なところバーガー類はモスバーガー、マクドナルド、ロッテリアぐらいしか知りらず、それらの違いもわかりませんがどれも一緒な気がします。ただ単に今回は何か不思議な感じのするバーガーだったから止めただけですけどね。

@@ -1,0 +1,110 @@
+#+TITLE: "Ubuntu 8.10 と Pixie(RenderMan) インストール編"
+#+DATE: 2009-03-25T02:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>Ubuntu に Pixie をインストールする</h4>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090325_01.png" alt="" /></p>
+<p>UbuntuにRenderMan互換のある "Pixie" というソフトウェアをインストールしてみます。</p>
+<h4>ファイルの入手</h4>
+<p><a href="http://www.renderpixie.com/" target="_blank">Pixie</a> に行き Download をクリック。<br />あるいは、直接 <a href="http://sourceforge.net/project/showfiles.php?group_id=59462&amp;package_id=55537&amp;release_id=656528" target="_blank">SourceForge.net: Pixie</a> へ移動します。</p>
+<p>ページに移動できたら、そのなかの "Pixie-linux-2.2.5.tgz" をダウンロード。<br />保存先はお任せします。(僕は /home/hiroaki/ に保存しました。)</p>
+<h4>インストール作業</h4>
+<h5>ディレクトリ作成 と ファイルの解凍</h5>
+<p>まず、ディレクトリ(フォルダ)を作成します。</p>
+<pre>$ mkdir ./renderman</pre>
+<p>その後、ダウンロードしてきた"Pixie-linux-2.2.5.tgz" を解凍(展開)します。</p>
+<pre>$ tar xzvf Pixie-linux-2.2.5.tgz -C ./renderman/</pre>
+<p>そうすると、"renderman" というディレクトリの下に "Pixie" というディレクトリができているはずなので、次のようにして確認してみてください。</p>
+<pre>$ ls ./renderman/Pixie</pre>
+<p>すると、bin, displays, doc, include, lib, man, modules, shaders というディレクトリが確認できます。これらの中の bin に対してパスを通します。</p>
+<h5>パスを通す</h5>
+<p>現時点のパスがどうなっているのかを確認します。</p>
+<pre>$ echo $PATH</pre>
+<p>すると、Ubuntu 8.10をインストール仕立てのころだとこう出てくると思います。</p>
+<pre>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:<br /></pre>
+<p>パスを通す方法はいくつかあるそうですが、今回は ".bash_profile" にパスを記述します。<br />ただし、Ubuntu では ".bash_profile" ではなく ".profile" にするようなので、それに従います。(".profile"と".bash_profile" は同じ扱いのようです。)</p>
+<ul>
+<li><a href="https://forums.ubuntulinux.jp/viewtopic.php?pid=6667#p6667" target="_blank">Ubuntu日本語フォーラム: .bash_profile</a></li>
+</ul>
+<p>念のため、".profile"のコピーを取っておきます。(todayには日付を入れます。)</p>
+<pre>$ cp .profile ./profile_backup_today</pre>
+<p>それが終わったら、".profile"をテキストエディタ gedit で編集します。<br />(emacs, Vimを使おうかと思ったけど、それはまた今度に)</p>
+<pre>$ gedit .profile</pre>
+<p>すると、Windowsで言うメモ帳みたいのが出てきます。文章の末尾に次のように入れます。</p>
+<pre>export PATH=$PATH:/home/hiroaki/renderman/Pixie/bin</pre>
+<p>".profile" は結果として次のようなります。(全然いじってないのがバレるw</p>
+<pre># ~/.profile: executed by the command interpreter for login shells.<br /># This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login<br /># exists.<br /># see /usr/share/doc/bash/examples/startup-files for examples.<br /># the files are located in the bash-doc package.<br /><br /># the default umask is set in /etc/profile; for setting the umask<br /># for ssh logins, install and configure the libpam-umask package.<br />#umask 022<br /><br /># if running bash<br />if [ -n "$BASH_VERSION" ]; then<br />&nbsp;&nbsp;&nbsp; # include .bashrc if it exists<br />&nbsp;&nbsp;&nbsp; if [ -f "$HOME/.bashrc" ]; then<br />&nbsp;&nbsp;&nbsp; . "$HOME/.bashrc"<br />&nbsp;&nbsp;&nbsp; fi<br />fi<br /><br /># set PATH so it includes user's private bin if it exists<br />if [ -d "$HOME/bin" ] ; then<br />&nbsp;&nbsp;&nbsp; PATH="$HOME/bin:$PATH"<br />fi<br /><br />export PATH=$PATH:/home/hiroaki/renderman/Pixie/bin<br /></pre>
+<p>".profile" はUbuntuにログインしたときに適応されるそうです。</p>
+<p><a href="http://pocketstudio.jp/linux/?%A5%D1%A5%B9(PATH)%A4%CE%B3%CE%C7%A7%A4%C8%C0%DF%C4%EA%CA%FD%CB%A1%A4%CF%A1%A9" target="_blank">Pocketstudio.jp Linux Wiki: パス(PATH)の確認と設定方法は？ </a></p>
+<blockquote>
+<p>毎回ログインする度にパスの指定をするのは面倒なものです。 　その場合、ホームディレクトリ配下にある .bash_profile を編集します。 　.bash_profile の中に PATH=$PATH:? と export の記述をするだけで、毎回ログインするたびに自動で環境変数が設定されます。</p>
+</blockquote>
+<p>改めてログインし直すのはやや面倒なので次のように打ち、現時点だけ".profile" を適応させます。(端末を閉じて終了させてしまうと、おそらくUbuntuをログインし直さない限り、その都度やらないといけないと思います)</p>
+<pre>$ source .profile</pre>
+<p>きちんと適応されたか $ echo $PATH と打って確認します。</p>
+<blockquote>
+<p>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/hiroaki/renderman/Pixie/bin</p>
+</blockquote>
+<h4>試しにやってみます</h4>
+<p>どうやら、"RIB"というファイルを用意する必要があるみたいです。"Actionsript"みたいなソースコードのこと&hellip;&hellip;かな？</p>
+<h5 id="content_2">RIBとは何か</h5>
+<p>下記のサイトを参考にして "RIB(RenderMan Interface Bytestream)" というものを調べました。 ("RIB" はリブと読みます。)</p>
+<ul>
+<li><a href="http://wiki.livedoor.jp/m_riho/d/RenderMan%A4%CE%A4%AA%CA%D9%B6%AF" target="_blank">RenderManのお勉強 - ダメ研の日々の記録 -</a></li>
+</ul>
+<blockquote>
+<p>RIBには、物体形状の情報、カメラに関する情報、光源に関する情報などのシーン記述やレンダリング時に利用するshader名やパラメータなどの情報が 記述されています。RIBは、RenderMan Interfaceをサポートしているモデラから保存することも出来ますが、適当なエディタを利用して自分でも書くことが出来ます。</p>
+</blockquote>
+<p>なるほど、勉強になります。</p>
+<h5 id="content_2">RIBを書いてみる</h5>
+<p>引き続き <a href="http://wiki.livedoor.jp/m_riho/d/RenderMan%A4%CE%A4%AA%CA%D9%B6%AF" target="_blank">RenderManのお勉強 - ダメ研の日々の記録 -</a>を参考にして "RIB" を書いてみます。</p>
+<blockquote>
+<p>ここでは、RIBを手書きすることに挑戦しています。通常のエディタで書くことが出来ます。拡張子は.ribとします。</p>
+</blockquote>
+<p>簡単なrib(その2) というものがあったので、それを少々変えてテストに用います。<br />(正直なところ、現時点では書いてある内容が全くわかりません。勉強します。)</p>
+<p>$ gedit ./minimal.rib として gedit を開いて、次のように書き保存します。</p>
+<pre># minimal.rib : minimal rib file<br />Display "minimal.tiff" "file" "rgba"<br />Projection "perspective" <br />WorldBegin<br />	Translate 0 0 2<br />	Sphere 1 -1 1 360<br />WorldEnd<br /></pre>
+<h5>レンダリングしてみる</h5>
+<p>ソフトウェアによって異なるかもしれませんが、基本的なやり方としては 「コマンド名　RIBファイル名」とすればいいみたいです。</p>
+<p>例えば、"pixie" "minimal.rib" をレンダリングする場合は次の通りのようです。<br />やってみます。</p>
+<pre>$ rndr minimal.rib<br /></pre>
+<p>すると、エラーがでますね。</p>
+<pre>rndr: error while loading shared libraries: libri.so.0: cannot open shared object file: No such file or directory<br /></pre>
+<p>どうやら、実行するには "libri.so.0" というのが必要みたいです。</p>
+<h4>エラーの対処 <br /></h4>
+<p>とりあえず、libri.so.0 というのものが本当にないのか確認します。lib のなかにあると思うので、まずはそこから確認します。</p>
+<pre>$ ls -la ./renderman/Pixie/lib</pre>
+<p>おそらく、libri.so.0 がどうやっても確認できると思います。<br />原因がますます分からなくなってきました。</p>
+<p>今度は、フォルダ(GUI)で直接見て確認してみます。すると、ちゃんとあるんですよね、"libri.so.0" が。</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090325_02.png" alt="" /></p>
+<p>リンクファイルだったのでプロパティを確かめてみました。もしかしたらリンクが切れているだけかもしれません</p>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090325_03.png" alt="" /></p>
+<p>ちゃんと "libri.so.0.0.0" を指定していますね&hellip;&hellip;。さらに原因がわからなくなりました。</p>
+<p>その後、長いこと1時間にらめっこしてみた。<br />行ったことは主に次の3つ</p>
+<ul>
+<li>ソースをコンパイルしてインストールする</li>
+<p>"libtiffoio.h"がないと言われ、何のことかさっぱりだったため断念しました。<br />libtiff4 なら入っているんですが、これとはまるっきり違うものなんでしょうか。</p>
+<li>rpm パッケージ を deb に変えてインストールする</li>
+<p>alien をインストールして Fedora の rpm を deb に変えてインストールしてみました。インストールは無事できたけど、$ rndr minimal.rib をすると libtiff.so.3 が必要ですと言われる。この問題を解決するなら、一個上のソースをコンパイルしてインストールする方がいい気がしたので取りやめました。</p>
+<li>エラーメッセージをそのまま検索にかけてみた</li>
+<p>最初からこれをすればよかったかもしれない。すぐに解決の方向に進みました。ただし、言語はロシア語。英語でさえ必死なのに、これはきついです(笑</p>
+</ul>
+<h4>原因はパスの設定ミス<br /></h4>
+<p>ロシア語、読めないよ&hellip;&hellip;(笑</p>
+<ul>
+<li><a href="http://www.cgtalk.ru/forum/showthread.php?t=18048" target="_blank">CGTALK.RU: проблема с установкой PIXIE в линукс</a></li>
+</ul>
+<blockquote>
+<p>#pixie<br />export PIXIEHOME="$HOME/opt/pixie"<br />export PATH="$PATH:$PIXIEHOME/bin"<br />export SHADERS="$PIXIEHOME/share/Pixie/shaders"<br />export DISPLAYS="$PIXIEHOME/lib/Pixie/displays"<br />export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$PIXIEHOME/lib"<br />export MANPATH="$MANPATH:$PIXIEHOME/share/man"</p>
+</blockquote>
+<p>でも、なんとか分かりました。どうやらパスの設定ミスのようです。<br />指定しなくてはいけない項目がいくつか足りませんでした。</p>
+<p>引用してきたパス設定を $ gedit .profile で設定し直します。</p>
+<pre>export PIXIEHOME=/home/hiroaki/renderman/Pixie<br />export PATH=$PATH:$PIXIEHOME/bin<br />export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PIXIEHOME/lib<br />export SHADERS="$PIXIEHOME/shaders"<br />export DISPLAYS="$PIXIEHOME/displays"<br />export MANPATH="$MANPATH:$PIXIEHOME/man"<br /></pre>
+<p>".profile" は結果として次のようなりました。</p>
+<pre># ~/.profile: executed by the command interpreter for login shells.<br /># This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login<br /># exists.<br /># see /usr/share/doc/bash/examples/startup-files for examples.<br /># the files are located in the bash-doc package.<br /><br /># the default umask is set in /etc/profile; for setting the umask<br /># for ssh logins, install and configure the libpam-umask package.<br />#umask 022<br /><br /># if running bash<br />if [ -n "$BASH_VERSION" ]; then<br />&nbsp;&nbsp;&nbsp; # include .bashrc if it exists<br />&nbsp;&nbsp;&nbsp; if [ -f "$HOME/.bashrc" ]; then<br />&nbsp;&nbsp; &nbsp;. "$HOME/.bashrc"<br />&nbsp;&nbsp;&nbsp; fi<br />fi<br /><br /># set PATH so it includes user's private bin if it exists<br />if [ -d "$HOME/bin" ] ; then<br />&nbsp;&nbsp;&nbsp; PATH="$HOME/bin:$PATH"<br />fi<br /><br />export PIXIEHOME=/home/hiroaki/renderman/Pixie<br />export PATH=$PATH:$PIXIEHOME/bin<br />export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PIXIEHOME/lib<br />export SHADERS="$PIXIEHOME/shaders"<br />export DISPLAYS="$PIXIEHOME/displays"<br />export MANPATH="$MANPATH:$PIXIEHOME/man"<br /></pre>
+<p>保存したら、$ source .profile で適応させます。</p>
+<h4>もう一度、試しにやってみます</h4>
+<pre>$ rndr minimal.rib<br /></pre>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090325_04.png" alt="" /></p>
+<p>無事できました！</p>

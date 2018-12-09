@@ -1,0 +1,16 @@
+#+TITLE: "最近みたWEBページ part12"
+#+DATE: 2009-05-03T00:59:08+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<ul>
+<li><a href="http://www.act2.com/products/omni/omni_graffle/" target="_blank">オムニグラフ [Omni Graffle]: アクト・ツー</a></li>
+<li><a href="http://blueman.jp/mixi.html" target="_blank">Blue Man Group</a></li>
+<li><a href="http://ubuntuforums.org/showthread.php?t=66859" target="_blank">Ubuntu Forums: Installing Maya 7.0</a></li>
+<li><a href="http://www.felissimo.info/500colors/enjoy/download/" target="_blank">色えんぴつで楽しもう｜500色の色えんぴつ</a></li>
+<li><a href="http://ifif.blog.shinobi.jp/" target="_blank">愛されるなら明日も咲こう</a></li>
+<li><a href="http://d.hatena.ne.jp/GUNDAM_Mk-II/" target="_blank">ガンダム Mk-II</a></li>
+<li><a href="http://www.imdb.com/title/tt0173840/business" target="_blank">Final Fantasy: The Spirits Within (2001) - Box office / business</a></li>
+<li><a href="http://www.atmarkit.co.jp/fsecurity/index/index_openid.html" target="_blank">OpenIDの仕様と技術 連載インデックス - ＠IT -:</a></li>
+</ul>
+<p>&nbsp;</p>

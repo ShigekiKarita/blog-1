@@ -1,0 +1,26 @@
+#+TITLE: "Microsoftと2019年"
+#+DATE: 2009-03-09T21:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Microsoft Office Labs 2019 Vision Montage<br /></h4>
+<p style="text-align: center;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="535" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="src" value="http://www.youtube.com/v/DQdGvfV4WnU&amp;fmt=18" /><embed type="application/x-shockwave-flash" width="535" height="350" src="http://www.youtube.com/v/DQdGvfV4WnU&amp;fmt=18"></embed>
+</object>
+</p>
+<p><a href="http://d.hatena.ne.jp/shi3z/20090305/1236281938" target="_blank">Keep Crazy;shi3zの日記:いまそこにある明るい未来、その妄想またはマイクロソフトvs俺 </a></p>
+<blockquote>
+<p>マイクロソフトのOSであるWindowsはおろか、Officeすらでてこない。<br />マイクロソフトは自らの破滅を予言しているに等しいのである。または現状路線のいきづまりを指摘するビデオなのかもしれない。いずれにせよマイクロソフトが10年後に存在感を得ているためには、相当な努力をしないとこのビデオで描かれる未来に居場所はないはずだ。</p>
+</blockquote>
+<p>そう、この映像はすごいんですよ。Microsoftの映像なのに、Windowsが出てこない。<br />まぁ、確かにたくさんタッチできる窓が出てくるので、ウィンドウズではあるんですけど(笑</p>
+<p>こういう映像いいね、未来性があって。とっても面白い。</p>
+<p>毎日ずっと、パソコン、パソコン、パソコン･･････。そういった生活ってどうなんだろうなぁって思う。悪いとは感じないけど、そろそろ違うスタイルを求めていくのもありなんじゃないかなっても思います。</p>
+<p><a href="http://d.hatena.ne.jp/shi3z/20090305/1236281938" target="_blank">Keep Crazy;shi3zの日記:いまそこにある明るい未来、その妄想またはマイクロソフトvs俺 </a></p>
+<blockquote>
+<p>実際、iPhoneだけでほとんどの仕事ができてしまうことにいろいろな人が気づき始めている。</p>
+</blockquote>
+<p>iPhoneのすごさってそんなにもすごいものなのか。たしかに、触ってみて感動したけれども、実際に持っていないのでそこまではわからない。でも、一日の仕事が会議とメールで比較的埋まる人は確かにパソコンは不要になるのかもなぁ、とは確かに思えた。</p>
+<h4>最後に</h4>
+<p><img src="http://www.hiroakit.com/blog/photo/photo_090309_08.png" alt="" /></p>
+<p>この映像の最後に"一ヶ夢想"と出てきます。<br />これを出したのは何故なんでしょうか。</p>

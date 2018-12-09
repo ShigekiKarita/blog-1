@@ -1,0 +1,46 @@
+#+TITLE: "WindowsからMacに完全に乗り換えるとしたら"
+#+DATE: 2009-11-28T03:01:43+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<!--more-->
+WindowsからMacに完全に乗り換えるとしたら￥939663必要でした。
+逃走資金とか亡命資金として捉えたら決して高くないのだろうけれど(笑
+<ul>
+	<li>Mac ProではなくてiMacにすれば20万近く下がりますが、拡張性を失います。</li>
+	<li>MacBookで使うMS Officeを無くせば1万5千円ほど下がりますが、一般性を失います。</li>
+	<li>Photoshopを買わなければ約10万ほど下がりますが、Mac用のライセンスは必要です。</li>
+	<li>Final Cut Proを買わなければ約10万ほど下がりますが、合成等には必要です。(Shakeは販売中止でした)</li>
+	<li>G-DRIVE GEN4を買わなければ約5万ほど下がりますが、長持ちするストレージは欲しいです。</li>
+	<li>Spyder3を買わなければ約1万ほど下がりますが、モニターの色調整が出来なくなります。</li>
+	<li>AirMac Extremeを買わないなら約1万5千円ほど下がりますが、LANケーブルが床に蔓延ってしまう。</li>
+</ul>
+額を下げなければ日々の生活が大変なことになってしまうし、稼ぐって言っても限度があるのでこれは何とかしないと。ただ、あまり諦めてしまったり、勢いよく買わないと結局Windowsを間で使ってしまうのでMacを買う意味があまりなくなってしまう。ああ、Macで遊びたい。
+
+<strong>1) Desktop: Mac Pro ￥531,840</strong>
+<ul>
+	<li>2 x 2.26GHz Quad-Core Intel Xeon</li>
+	<li>12GB (6x2GB) 1066MHz DDR3 ECC SDRAM</li>
+	<li>NVIDIA GeForce GT 120 512MB</li>
+	<li>AirMac Extreme Wi-Fi Card with 802.11n</li>
+	<li>Apple LED Cinema Display（24インチフラットパネル）</li>
+	<li>iWork ファミリーパック</li>
+	<li>AppleCare Protection Plan</li>
+</ul>
+<strong>2) Laptop: MacBook ￥119,150</strong>
+<ul>
+	<li>Mini DisplayPort to DVI Adapter</li>
+	<li>Microsoft Office 2008 ファミリー&amp;アカデミック 日本語版</li>
+</ul>
+<strong>3) その他 ￥288,673</strong>
+<ul>
+	<li>ATOK 2009 for Mac ￥9,800</li>
+	<li>FileMaker Bento 3 ファミリーパック ￥10,290</li>
+	<li>Houdini APPRENTICE HD ￥18,000</li>
+	<li>Final Cut Studio ￥108,800 (or NUKE ￥??????)</li>
+	<li>Adobe Photoshop CS5 ￥99,750</li>
+	<li>G-DRIVE GEN4 ￥48,090</li>
+	<li>Spyder3 EXPRESS ￥13,143</li>
+	<li>AirMac Extreme ￥16,800</li>
+</ul>
+<p style="padding-left: 30px;"><a href="http://toolfarm.co.jp/catalog/product_info.php/cPath/53/products_id/337" target="_blank"><span style="color: #800000;">※Nukeの価格はおよそ40万近く</span></a></p>

@@ -1,0 +1,84 @@
+#+TITLE: "UbuntuとApache"
+#+DATE: 2009-05-24T15:00:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Apache</h4>
+<p>校正などは後で行う</p>
+<p>Ubuntu Server 8.04 </p>
+<h4>Apacheのインストール</h4>
+<pre>$ sudo apt-get install apache2</pre>
+<h4>apache2.conf</h4>
+<p>apache2の設定ファイルは/etc/apache2/apache2.conf</p>
+<p>もっと別のやり方があった。<br />
+<a href="http://tobysoft.net/wiki/index.php?Ubuntu%2Fapache2">Ubuntu/apache2</a></p>
+<p>/etc/apache2/conf.d の中にファイルを自分で作ると/etc/apache2/apache2.conf に反映されるみたいだ。</p>
+<pre>HostnameLookups Off
+ServerTokens Prod
+ServerSignature Off
+CustomLog /var/log/apache2/access.log combined
+</pre>
+<h4>subversion</h4>
+<p>subversionのインストール</p>
+<p>参照: <a href="http://blog.riywo.com/2008/04/01/054421">UbuntuにSubversionを入れてバージョン管理でもしてみる</a></p>
+<pre>$ sudo apt-get install subversion</pre>
+<h4>WebDAV</h4>
+<p>参照: <a href="http://tech.gowest.co.jp/?p=10">UbuntuでSubversion設定 （Apache WebDAV) </a></p>
+<pre>$ sudo apt-get install subversion libapache2-svn</pre>
+<h4>dav_svn.conf</h4>
+<p>WebDAVの設定ファイルは/etc/apache2/apache2.conf</p>
+<pre>$ sudo vi /etc/apache2/mods-enabled/dav_svn.conf</pre>
+<pre><location svn="" test="">
+DAV svn
+SVNPath /home/svn/repos
+AuthType Basic
+AuthName "Subversion Repository"
+AuthUserFile /etc/apache2/dav_svn.passwd
+Require valid-user
+</location>
+</pre>
+<p>LocationでアクセスするURLを指定</p>
+<p>SVNPathでsubversionのリポジトリディレクトリの指定</p>
+<p>AuthTypeでBasic認証にし、パスワードファイルのパスをAuthUserFileで指定</p>
+<h4>dav_svn.passwd</h4>
+<p>dav_svn.passwdはhtpasswdコマンドで以下のように作成する。</p>
+<pre>$ htpasswd -c /etc/apach2/dav_svn.passwd hoge</pre>
+<h4>リポジトリの作成</h4>
+<p>例えば、こんな感じで作る</p>
+<pre>$ sudo mkdir /home/svn
+$ sudo svnadmin create /home/svn/repos
+</pre>
+<h5>例外：同期させる</h5>
+<p><a href="http://it.pakapaka.jp/info/109.html">TracでSubversionのリポジトリを変更</a></p><p>
+</p><h4>ファイルオーナーの変更</h4>
+<p>ApacheがSubversionファイルを読めるようにする<br />
+例えば、こんな感じ</p>
+<pre>$ sudo chown -R www-data /home/svn</pre>
+<h4>Apacheの再起動</h4>
+<p>変更を有効にするには再起動が必要</p>
+<pre>$ sudo /etc/init.d/apache2 restart</pre>
+<h4>アクセスして確認</h4>
+<p>http://ホスト名/svn/test</p>
+<h4>この辺もやりたい</h4>
+<p><a href="http://itpro.nikkeibp.co.jp/article/COLUMN/20080731/311879/?ST=develop&amp;P=1">第3回 TracをLinuxにインストール，Tracの基本的な設定</a> </p>
+<h4>Trac</h4>
+<pre>sudo chown -R www-data /home/trac</pre>
+<p>とりあえず、Trac動いた。実際に使うのは情報をきちんと整理してからだね。<br /> ちょっと疲れたから今日はこの辺で終わり。</p>
+<p><a href="http://blog.riywo.com/2008/04/01/145305">Subversion入れたらTracも入れてみる</a></p>
+<p><a href="http://d.hatena.ne.jp/xenop/20081121/p2">UbuntuでWebDAV</a></p>
+<p><a href="http://d.hatena.ne.jp/yaakaito/20090105/1231163794">UbuntuにSubVersion+ViewVC+Tracをインストール</a></p>
+<h4>Apacheを完全に入れ直す方法</h4>
+<p>完全にって言ったら語弊がありますが、apacheを入れ直したいときなどには使えるのではないでしょうか。</p>
+<pre>$ sudo rm -rf /etc/apache2/
+$ sudo apt-get remove apache2
+$ sudo apt-get autoremove apache2
+$ sudo apt-get purge apache2.2-common
+$ sudo apt-get install apache2
+</pre>
+<h4>Networking</h4>
+<p>
+どっかの誰かが勝手にLANケーブル抜いちゃったみたい。<br />
+（LANケーブル抜き差ししちゃった後とかも使えるよ）<br />
+ネットワークの再接続します。</p>
+<pre>$ sudo /etc/init.d/networking restart</pre>
+<p>NodeBox</p>

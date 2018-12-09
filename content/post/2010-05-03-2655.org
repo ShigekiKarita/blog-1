@@ -1,0 +1,14 @@
+#+TITLE: "Adobe Illustrator CS3 のために Visual Studio の Just-In-Time デバッグ を無効にする"
+#+DATE: 2010-05-03T11:25:27+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+前に Adobe Illustrator CS3 を動かしているとき, Microsoft Visual Studio 2005 の Just-In-Time デバッグが作動して Adobe Illustrator CS3 を操作できなくなる現象と幾度か遭遇していました.
+
+Just-In-Time デバッグについては msdn に「<a href="http://msdn.microsoft.com/ja-jp/library/5hs4b7a6%28VS.80%29.aspx" target="_blank">Just-In-Time  デバッグ</a>」という記事があります.
+<blockquote>Just-In-Time デバッグは、Visual Studio の外部で実行中のプログラムで致命的なエラーが発生したときに、Visual Studio デバッガを自動的に起動する機能です。</blockquote>
+その記事には無効にする方法も書かれていますが, その方法では レジストリの一部を修正する必要があるとのこと.
+<ul>
+	<li>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger</li>
+	<li>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\DbgManagedDebugger</li>
+</ul>

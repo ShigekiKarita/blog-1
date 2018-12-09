@@ -1,0 +1,21 @@
+#+TITLE: "Gimpで画像縮小"
+#+DATE: 2009-04-29T10:52:28+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>Linux版Photoshopが欲しいです</h4>
+<p>Gimpを使って画像を縮小させてみました。<br />とりあえず、Gimp起動させたけど使ったことないので全然わからない。</p>
+<p>UbuntuでPhotoshopが使えれば、それが一番いいのですけど。<br />Linux版Photoshopが出ればいいのになぁ・・・・・・。</p>
+<h4>画像縮小のやりかた<br /></h4>
+<p>どうやら、上部メニューにある 画像 &gt; 画像の拡大・縮小 を使うみたいです。<br />あとはPhotoshopと同様に聞かれたことに答えを返すだけ。</p>
+<h4>メモ<br /></h4>
+<p>その他、ショートカットキーもいくつか発見したのでメモしておきます。</p>
+<ul>
+<li>拡大 +</li>
+<li>縮小 -</li>
+<li>全体表示 1</li>
+<li>全画面表示 F11</li>
+<li>ガイド表示&nbsp;Shift + Ctrl + T</li>
+<li>ものさし表示 Shift + Ctrl + R</li>
+<li>情報ウインドウ Shift + Ctrl + I</li>
+</ul>

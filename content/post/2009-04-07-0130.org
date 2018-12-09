@@ -1,0 +1,52 @@
+#+TITLE: "Ubuntu (Linux) のコマンド: df, uname, man, head, tail, more, grep"
+#+DATE: 2009-04-07T12:45:00+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート Ubuntu Linux
+
+<h4>後で見直せるように</h4>
+<p>新しくコマンドを覚えた。<br />今回はそのメモとして。</p>
+<h4>df</h4>
+<p>ハードディスク(ファイルシステム)容量の確認。<br />たとえば......</p>
+<pre>$ df -h</pre>
+<h4>uname</h4>
+<p>OSの各種情報を表示。<br />例えば......</p>
+<pre>$ uname -m<br /></pre>
+<ul>
+<li>-m OSの種類</li>
+<li>-n ホスト名</li>
+<li>-r カーネルの番号</li>
+<li>-s OSの名称</li>
+<li>-a 全て</li>
+</ul>
+<h4>man</h4>
+<p>各コマンドのヘルプ(マニュアル)を表示。<br />例えば......</p>
+<pre>$ man gcc<br /></pre>
+<ul>
+<li>1ページスクロール Space</li>
+<li>1行スクロール　Enter</li>
+<li>終了させたい場合 "q"</li>
+</ul>
+<h4>head</h4>
+<p>ログファイルなどの文章を頭から一部分（行）だけ表示。<br />n には数字を入れる。</p>
+<pre>$ head -n ファイル名</pre>
+<h4>tail</h4>
+<p>ログファイルなどの文章を末尾から一部分（行）だけ表示。<br /> n には数字を入れる。</p>
+<pre>$ tail -n ファイル名</pre>
+<h4>more</h4>
+<p>ログファイルなどの文章を少しずつ表示。<br />たとえば......</p>
+<pre>$ more ファイル名<br /></pre>
+<ul>
+<li>1ページスクロール Space</li>
+<li>1行スクロール　Enter</li>
+<li>一画面分戻す　b</li>
+<li>終了させたい場合 "q"</li>
+</ul>
+<h4>grep</h4>
+<p>テキストファイル中から、指定した文字列を含む行を検索。<br />たとえば......</p>
+<pre class="block">$ grep "renderman" ./renderman.txt<br /></pre>
+<ul>
+<li>-c　行数のみを表示する。</li>
+<li>-i　大文字と小文字を区別しない。</li>
+<li>-n　結果表示に行番号をつける。</li>
+</ul>
+<dl><dt><br /></dt></dl>

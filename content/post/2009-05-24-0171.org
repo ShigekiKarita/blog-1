@@ -1,0 +1,42 @@
+#+TITLE: "UbuntuとSSH"
+#+DATE: 2009-05-24T13:24:40+09:00
+#+DRAFT: false
+#+TAGS: 過去記事インポート
+
+<h4>SSH</h4>
+<p>Ubuntuがインストールされたサーバーマシンをクライアントマシンから操作する設定を行います。<br />(ちなみにこのクライアントはIntel Macです)</p>
+<h5>Server side:</h5>
+<p>まず、初めにサーバー側でインストールします。</p>
+<pre>$ ps -C sshd
+$ sudo apt-get install ssh
+$ sudo vi /etc/ssh/sshd_config/
+PasswordAuthentication　no # パスワードでのログインを許可しない
+PermitRootLogin no # ルート権限でのログインを許可しない
+PermitEmptyPassword no # パスワードなしのログインを許可しない
+AllowUsers test # 指定したユーザー(今回の場合は"test")のみログインを許可する
+$ sudo /etc/init.d/ssh restart # sshを再起動します
+$ sudo lsof -nPi:22 # sshが問題なく動作しているかを確認します
+</pre>
+<p>なお、このタイミングであらかじめ.sshディレクトリを作成しておきます。</p>
+<pre>$ mkdir .ssh</pre>
+<h5>Client side:</h5>
+<p>クライアントマシン側で鍵の生成をします。<br />
+なお、鍵には2種類あります。（生成時に自動的に2種類用意されます）</p>
+<ul>
+<li>秘密鍵：id_rsa</li>
+<li>公開鍵：id_rsa.pub</li>
+</ul>
+<pre>ssh-keygen -t rsa # $HOME/.ssh/にファイルは保存されます
+scp .ssh/id_rsa.pub username@server IP:~/.ssh　# 公開鍵のみをサーバーに転送します
+</pre>
+<h5>Server side:</h5>
+<p>サーバー側でauthorized_keysを用意し、そこにid_rsa.pubの情報を登録します。</p>
+<pre>$ touch .ssh/authorized_keys
+$ chmod 600 .ssh/authorized_keys
+$ cat .ssh/id_rsa.pub &gt;&gt; .ssh/authorized_keys
+</pre>
+<h5>Client side:</h5>
+<p>クライアントからssh接続できるかどうか確かめます。<br />
+この確認ができたら、設定は完了です。</p>
+<pre>$ ssh -2 username@serverIP
+</pre>
