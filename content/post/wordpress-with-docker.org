@@ -1,0 +1,99 @@
+#+TITLE: 昔のWordPressのデータとDockerを使ってWordPressを動かす
+#+DATE: 2018-12-08T20:00:00+09:00
+#+DRAFT: false
+#+TAGS: Docker WordPress
+
+訳あってWordPressの環境構築が必要となり、すごい今更感ありますが、インフラの色々な設定を毎度実施するのは億劫ですので、[[http://docs.docker.jp/compose/overview.html][Docker Compose]]を使い、毎度実施する作業を減らして、億劫さを払拭します。
+
+なお、macOS版のDocker Desktopが手元の環境にインストール済みであることを前提とします。
+
+# more
+
+* Docker ComposeでWordPressの環境を構築する
+
+WordPressの環境構築はDocker Composeを使うことにしました。WordPressの使用頻度はあまりないのですが環境構築の設定が色々と億劫に思いましたので、以下のように ~docker-compose.yml~ を作成しました。
+
+#+BEGIN_SRC yaml
+version: '2'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    ports: 
+      - "8080:80"
+    depends_on:
+      - mysql
+    environment:
+      WORDPRESS_DB_HOST: "mysql:3306"
+      WORDPRESS_DB_NAME: wordpress_database_name
+      WORDPRESS_DB_USER: wordpress_database_user
+      WORDPRESS_DB_PASSWORD: wordpress_database_user_password
+
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - db-data:/var/lib/mysql   
+      - ./db-data/mysql_blog.dump:/docker-entrypoint-initdb.d/install_wordpress.sql
+    environment: 
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: wordpress_database_name
+      MYSQL_USER: wordpress_database_user
+      MYSQL_PASSWORD: wordpress_database_user_password
+
+# ストレージ
+volumes:
+    db-data:
+        driver: local
+#+END_SRC
+
+WordPress運用時にMySQLのダンプデータを残していたので、そのデータをDocker Composeで環境構築する際にMySQLのデータベースに流し込むようにしています。
+
+この ~docker-compose.yml~ があるディレクトリに移動して、以下のコマンドを実行します。
+
+#+BEGIN_SRC sh
+$ docker-compose up -d　// 作成
+#+END_SRC
+
+なお、作成した環境を破壊する場合は以下のコマンドを実行します。
+
+#+BEGIN_SRC sh
+$ docker-compose down -v // ボリュームも含めて削除
+#+END_SRC
+
+* WordPressの設定をデータベースから修正する
+Docker Composeが成功したら、WordPressの環境構築も完了します。MySQLのデータベースがクリーンな状態であれば、上記のdocker-compose.ymlのポート指定通り http://localhost:8080 にアクセスするとWordPressのインストール画面が表示されます。
+
+今回はMySQLのダンプデータを読み込んでいるため、当時のWordPressの設定によっては変更する必要があります。例えば、私はWordPressのサイトURLを http://www.hiroakit.com/blog と階層があるURL形式にしていたため http://localhost:8080 にアクセスしてもCSSが期待通りに読み込まれなかったり、インデックスページすら表示されません。
+
+そこでDocker Composeで作成したMySQLのコンテナにログインしてデータベースを直接書き換えようと思います。
+
+まずはDocker Composeで作成したコンテナを確認します。
+
+#+BEGIN_SRC sh
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+437836957f75        wordpress:latest    "docker-entrypoint.s…"   17 hours ago        Up 17 hours         0.0.0.0:8080->80/tcp   docker_wordpress_1
+5897b51285e9        mysql:5.7           "docker-entrypoint.s…"   17 hours ago        Up 17 hours         3306/tcp, 33060/tcp    docker_mysql_1
+#+END_SRC
+
+コンテナの名称が ~docker_mysql_1~ ということがわかりましたので、以下のコマンドを使い、コンテナにログインします。
+
+#+BEGIN_SRC sh
+$ docker exec -it docker_mysql_1 /bin/bash
+#+END_SRC
+
+コンテナにログインしたら今度はMySQLにログインします。
+
+#+BEGIN_SRC sh
+$ mysql -u username -p
+mysql > SELECT option_id, option_name, option_value FROM wp_options WHERE option_name = "siteurl"; 
+mysql > UPDATE wp_options SET option_value = "http://localhost:8080" WHERE option_name = "siteurl”;
+#+END_SRC
+
+今度は http://localhost:8080 でWordPressにアクセスできるはずです。
+
+もし、久しぶりすぎてWordPressのログインパスワードを忘れてしまっている場合は、データベースに入っているアカウントのパスワードを変更する方法があります。以下はその例です。
+
+#+BEGIN_SRC sh
+mysql > UPDATE wp_users SET user_pass = md5(‘your_password’) WHERE user_login = ‘user_name’;
+#+END_SRC
