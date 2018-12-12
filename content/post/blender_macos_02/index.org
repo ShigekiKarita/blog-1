@@ -1,0 +1,235 @@
+#+TITLE: BlenderのソースコードをXcodeで読む
+#+AUTHOR: Hiroaki ENDOH
+#+DATE: 2018-12-10
+#+DRAFT: false
+#+TAGS: Blender macOS Xcode
+
+[[https://www.hiroakit.com/2018/11/blender_macos_01/][前回の記事]]では、とりあえずEmacsでコードを読み進めましたが、BlenderのコードはCMakeに対応していてXcodeプロジェクトを作成できるので、
+デバッグし易さを考えて方針を変えます。
+
+# more
+
+** CMakeでXcodeプロジェクトを作る
+
+私の環境は以下の通りです。
+
+#+BEGIN_SRC sh
+$ sw_vers
+ProductName:	Mac OS X
+ProductVersion:	10.13.6
+BuildVersion:	17G3025
+
+$ xcodebuild -version
+Xcode 10.1
+Build version 10B61
+
+$ cmake -version
+cmake version 3.12.4
+#+END_SRC
+
+とりあえずmakeでビルドできることを確認します。
+
+#+BEGIN_SRC sh
+$ mkdir ~/blender-build
+$ cd ~/blender-build
+$ git clone http://git.blender.org/blender.git
+$ cd blender
+$ make update
+$ make
+#+END_SRC
+
+makeでビルドに成功したら、cmakeでXcodeプロジェクト作成するために、場所を用意します。
+
+#+BEGIN_SRC sh
+$ cd ../
+$ mkdir xcode
+$ cd xcode
+#+END_SRC
+
+場所を確保したので、cmakeでXcodeプロジェクトを作成します。
+
+#+BEGIN_SRC sh
+$ cmake ../blender/ -G Xcode
+-- The C compiler identification is AppleClang 10.0.0.10001145
+-- The CXX compiler identification is AppleClang 10.0.0.10001145
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detected OS X 10.14 and Xcode 10.1 at /Applications/Xcode.app
+-- OSX_SYSROOT_PREFIX: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform
+-- Performing Test SUPPORT_SSE_BUILD
+-- Performing Test SUPPORT_SSE_BUILD - Success
+-- SSE Support: detected.
+-- Performing Test SUPPORT_SSE2_BUILD
+-- Performing Test SUPPORT_SSE2_BUILD - Success
+-- SSE2 Support: detected.
+-- Found Git: /usr/bin/git (found version "2.17.2 (Apple Git-113)") 
+-- Found OpenAL: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenAL.framework  
+-- Found OpenGL: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework   
+-- Performing Test C_WARN_ALL
+-- Performing Test C_WARN_ALL - Success
+-- Performing Test C_WARN_ERROR_IMPLICIT_FUNCTION_DECLARATION
+-- Performing Test C_WARN_ERROR_IMPLICIT_FUNCTION_DECLARATION - Success
+-- Performing Test C_WARN_ERROR_RETURN_TYPE
+-- Performing Test C_WARN_ERROR_RETURN_TYPE - Success
+-- Performing Test C_WARN_NO_AUTOLOGICAL_COMPARE
+-- Performing Test C_WARN_NO_AUTOLOGICAL_COMPARE - Success
+-- Performing Test C_WARN_NO_UNKNOWN_PRAGMAS
+-- Performing Test C_WARN_NO_UNKNOWN_PRAGMAS - Success
+-- Performing Test C_WARN_NO_CHAR_SUBSCRIPTS
+-- Performing Test C_WARN_NO_CHAR_SUBSCRIPTS - Success
+-- Performing Test C_WARN_STRICT_PROTOTYPES
+-- Performing Test C_WARN_STRICT_PROTOTYPES - Success
+-- Performing Test C_WARN_MISSING_PROTOTYPES
+-- Performing Test C_WARN_MISSING_PROTOTYPES - Success
+-- Performing Test C_WARN_UNUSED_PARAMETER
+-- Performing Test C_WARN_UNUSED_PARAMETER - Success
+-- Performing Test CXX_WARN_ALL
+-- Performing Test CXX_WARN_ALL - Success
+-- Performing Test CXX_WARN_NO_AUTOLOGICAL_COMPARE
+-- Performing Test CXX_WARN_NO_AUTOLOGICAL_COMPARE - Success
+-- Performing Test CXX_WARN_NO_UNKNOWN_PRAGMAS
+-- Performing Test CXX_WARN_NO_UNKNOWN_PRAGMAS - Success
+-- Performing Test CXX_WARN_NO_CHAR_SUBSCRIPTS
+-- Performing Test CXX_WARN_NO_CHAR_SUBSCRIPTS - Success
+-- Performing Test CXX_WARN_NO_OVERLOADED_VIRTUAL
+-- Performing Test CXX_WARN_NO_OVERLOADED_VIRTUAL - Success
+-- Performing Test CXX_WARN_NO_SIGN_COMPARE
+-- Performing Test CXX_WARN_NO_SIGN_COMPARE - Success
+-- Performing Test CXX_WARN_NO_INVALID_OFFSETOF
+-- Performing Test CXX_WARN_NO_INVALID_OFFSETOF - Success
+-- Performing Test C_WARN_NO_UNUSED_PARAMETER
+-- Performing Test C_WARN_NO_UNUSED_PARAMETER - Success
+-- Performing Test C_WARN_NO_UNUSED_MACROS
+-- Performing Test C_WARN_NO_UNUSED_MACROS - Success
+-- Performing Test C_WARN_NO_MISSING_VARIABLE_DECLARATIONS
+-- Performing Test C_WARN_NO_MISSING_VARIABLE_DECLARATIONS - Success
+-- Performing Test C_WARN_NO_INCOMPAT_PTR_DISCARD_QUAL
+-- Performing Test C_WARN_NO_INCOMPAT_PTR_DISCARD_QUAL - Success
+-- Performing Test C_WARN_NO_UNUSED_FUNCTION
+-- Performing Test C_WARN_NO_UNUSED_FUNCTION - Success
+-- Performing Test C_WARN_NO_INT_TO_VOID_POINTER_CAST
+-- Performing Test C_WARN_NO_INT_TO_VOID_POINTER_CAST - Success
+-- Performing Test C_WARN_NO_MISSING_PROTOTYPES
+-- Performing Test C_WARN_NO_MISSING_PROTOTYPES - Success
+-- Performing Test C_WARN_NO_DUPLICATE_ENUM
+-- Performing Test C_WARN_NO_DUPLICATE_ENUM - Success
+-- Performing Test C_WARN_NO_UNDEF
+-- Performing Test C_WARN_NO_UNDEF - Success
+-- Performing Test C_WARN_NO_MISSING_NORETURN
+-- Performing Test C_WARN_NO_MISSING_NORETURN - Success
+-- Performing Test CXX_WARN_NO_UNUSED_PRIVATE_FIELD
+-- Performing Test CXX_WARN_NO_UNUSED_PRIVATE_FIELD - Success
+-- Performing Test CXX_WARN_NO_CXX11_NARROWING
+-- Performing Test CXX_WARN_NO_CXX11_NARROWING - Success
+-- Performing Test CXX_WARN_NO_NON_VIRTUAL_DTOR
+-- Performing Test CXX_WARN_NO_NON_VIRTUAL_DTOR - Success
+-- Performing Test CXX_WARN_NO_UNUSED_MACROS
+-- Performing Test CXX_WARN_NO_UNUSED_MACROS - Success
+-- Performing Test CXX_WARN_NO_REORDER
+-- Performing Test CXX_WARN_NO_REORDER - Success
+-- Performing Test CXX_HAS_SSE
+-- Performing Test CXX_HAS_SSE - Success
+-- Performing Test CXX_HAS_AVX
+-- Performing Test CXX_HAS_AVX - Success
+-- Performing Test CXX_HAS_AVX2
+-- Performing Test CXX_HAS_AVX2 - Success
+-- opencollada: Build without animation clip support
+ERROR: File Not Found. (-43)  on file: /Users/hiro/Documents/sources/blender-build/xcode/bin/blender.app 
+-- Blender Skipping: (bf_alembic;bf_editor_space_logic;bf_editor_space_time;bf_intern_ctr;bf_intern_gawain;bf_intern_moto;bf_intern_opencl;bf_intern_utfconv;extern_openjpeg;extern_sdlew)
+-- Disabling Cycles tests because tests folder does not exist
+-- C Compiler:   "AppleClang"
+-- C++ Compiler: "AppleClang"
+
+Blender Configuration
+=====================
+
+  Build Options:
+  - WITH_BULLET                 ON
+  - WITH_IK_SOLVER              ON
+  - WITH_IK_ITASC               ON
+  - WITH_OPENCOLLADA            ON
+  - WITH_FFTW3                  ON
+  - WITH_INTERNATIONAL          ON
+  - WITH_INPUT_NDOF             ON
+  - WITH_CYCLES                 ON
+  - WITH_FREESTYLE              ON
+  - WITH_OPENCOLORIO            ON
+  - WITH_OPENVDB                OFF
+  - WITH_ALEMBIC                OFF
+
+  Compiler Options:
+  - WITH_BUILDINFO              ON
+  - WITH_OPENMP                 OFF
+  - WITH_RAYOPTIMIZATION        ON
+
+  System Options:
+  - WITH_INSTALL_PORTABLE       
+  - WITH_X11_ALPHA              
+  - WITH_X11_XF86VMODE          
+  - WITH_X11_XFIXES             
+  - WITH_X11_XINPUT             
+  - WITH_MEM_JEMALLOC           ON
+  - WITH_MEM_VALGRIND           OFF
+  - WITH_SYSTEM_GLEW            OFF
+
+  Image Formats:
+  - WITH_OPENIMAGEIO            ON
+  - WITH_IMAGE_CINEON           ON
+  - WITH_IMAGE_DDS              ON
+  - WITH_IMAGE_HDR              ON
+  - WITH_IMAGE_OPENEXR          ON
+  - WITH_IMAGE_OPENJPEG         ON
+  - WITH_IMAGE_TIFF             ON
+
+  Audio:
+  - WITH_OPENAL                 ON
+  - WITH_SDL                    ON
+  - WITH_SDL_DYNLOAD            
+  - WITH_JACK                   OFF
+  - WITH_JACK_DYNLOAD           
+  - WITH_CODEC_AVI              ON
+  - WITH_CODEC_FFMPEG           ON
+  - WITH_CODEC_SNDFILE          OFF
+
+  Compression:
+  - WITH_LZMA                   ON
+  - WITH_LZO                    ON
+
+  Python:
+  - WITH_PYTHON_INSTALL         ON
+  - WITH_PYTHON_INSTALL_NUMPY   ON
+  - WITH_PYTHON_MODULE          OFF
+  - WITH_PYTHON_SAFETY          OFF
+  - WITH_PYTHON_FRAMEWORK       OFF
+
+  Modifiers:
+  - WITH_MOD_REMESH             ON
+  - WITH_MOD_FLUID              ON
+  - WITH_MOD_OCEANSIM           OFF
+
+  OpenGL:
+  - WITH_GLEW_ES                OFF
+  - WITH_GL_EGL                 OFF
+  - WITH_GL_PROFILE_ES20        OFF
+
+  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/hiro/Documents/sources/blender-build/xcode
+#+END_SRC
+
+これでXcodeでコードを確認できます。
+
+** 参考資料
+
+- [[https://wiki.blender.org/wiki/Building_Blender/Mac][Building Blender/Mac - Blender Developer Wiki]]
