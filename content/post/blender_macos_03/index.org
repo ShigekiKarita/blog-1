@@ -1,0 +1,166 @@
+#+TITLE: BlenderのソースコードをXcodeで読む Part2
+#+AUTHOR: Hiroaki ENDOH
+#+DATE: 2018-12-18 00:00:00 +0900
+#+DRAFT: false
+#+TAGS: Blender macOS Xcode
+
+[[https://www.hiroakit.com/2018/11/blender_macos_02/][前回の記事]]で、CMakeでBlenderのXcodeプロジェクトを生成できるようになりましたので、コードの読解を進めます。 
+
+# more
+
+前のコード読解では ~RE_engine.h~ の ~RenderEngineType~ の定義を確認するところでした。
+
+#+BEGIN_SRC c
+typedef struct RenderEngineType {
+	struct RenderEngineType *next, *prev;
+
+	/* type info */
+	char idname[64]; // best keep the same size as BKE_ST_MAXNAME
+	char name[64];
+	int flag;
+
+	void (*update)(struct RenderEngine *engine, struct Main *bmain, struct Depsgraph *depsgraph);
+	void (*render)(struct RenderEngine *engine, struct Depsgraph *depsgraph);
+	void (*bake)(struct RenderEngine *engine, struct Depsgraph *depsgraph,
+	             struct Object *object, const int pass_type,
+	             const int pass_filter, const int object_id, const struct BakePixel *pixel_array, const int num_pixels,
+	             const int depth, void *result);
+
+	void (*view_update)(struct RenderEngine *engine, const struct bContext *context);
+	void (*view_draw)(struct RenderEngine *engine, const struct bContext *context);
+
+	void (*update_script_node)(struct RenderEngine *engine, struct bNodeTree *ntree, struct bNode *node);
+	void (*update_render_passes)(struct RenderEngine *engine, struct Scene *scene, struct ViewLayer *view_layer);
+
+	struct DrawEngineType *draw_engine;
+
+	/* RNA integration */
+	ExtensionRNA ext;
+} RenderEngineType;
+#+END_SRC
+
+この中の ~DrawEngineType~ を追いかけると、以下の定義があって、
+
+#+BEGIN_SRC c
+typedef struct DrawEngineType {
+	struct DrawEngineType *next, *prev;
+
+	char idname[32];
+
+	const DrawEngineDataSize *vedata_size;
+
+	void (*engine_init)(void *vedata);
+	void (*engine_free)(void);
+
+	void (*cache_init)(void *vedata);
+	void (*cache_populate)(void *vedata, struct Object *ob);
+	void (*cache_finish)(void *vedata);
+
+	void (*draw_background)(void *vedata);
+	void (*draw_scene)(void *vedata);
+
+	void (*view_update)(void *vedata);
+	void (*id_update)(void *vedata, struct ID *id);
+
+	void (*render_to_image)(
+	        void *vedata, struct RenderEngine *engine,
+	        struct RenderLayer *layer, const struct rcti *rect);
+} DrawEngineType;
+#+END_SRC
+
+例えば、 ~eevee_engine.c~ ではDrawEngineTypeを使った ~draw_engine_eevee_type~ という定義があり、
+
+#+BEGIN_SRC c
+DrawEngineType draw_engine_eevee_type = {
+	NULL, NULL,
+	N_("Eevee"),
+	&eevee_data_size,
+	&eevee_engine_init,
+	&eevee_engine_free,
+	&eevee_cache_init,
+	&EEVEE_cache_populate,
+	&eevee_cache_finish,
+	&eevee_draw_background,
+	NULL, /* Everything is drawn in the background pass (see comment on function) */
+	&eevee_view_update,
+	&eevee_id_update,
+	&eevee_render_to_image,
+};
+#+END_SRC
+
+この中の例えば ~&eevee_engine_init~ は以下の定義になっています。
+
+#+BEGIN_SRC c
+static void eevee_engine_init(void *ved)
+{
+	EEVEE_Data *vedata = (EEVEE_Data *)ved;
+	EEVEE_TextureList *txl = vedata->txl;
+	EEVEE_FramebufferList *fbl = vedata->fbl;
+	EEVEE_StorageList *stl = ((EEVEE_Data *)vedata)->stl;
+	EEVEE_ViewLayerData *sldata = EEVEE_view_layer_data_ensure();
+	DefaultTextureList *dtxl = DRW_viewport_texture_list_get();
+
+	const DRWContextState *draw_ctx = DRW_context_state_get();
+	View3D *v3d = draw_ctx->v3d;
+	RegionView3D *rv3d = draw_ctx->rv3d;
+	Object *camera = (rv3d->persp == RV3D_CAMOB) ? v3d->camera : NULL;
+
+	if (!stl->g_data) {
+		/* Alloc transient pointers */
+		stl->g_data = MEM_callocN(sizeof(*stl->g_data), __func__);
+	}
+	stl->g_data->use_color_view_settings = USE_SCENE_LIGHT(v3d) || !LOOK_DEV_STUDIO_LIGHT_ENABLED(v3d);
+	stl->g_data->background_alpha = DRW_state_draw_background() ? 1.0f : 0.0f;
+	stl->g_data->valid_double_buffer = (txl->color_double_buffer != NULL);
+	stl->g_data->valid_taa_history = (txl->taa_history != NULL);
+
+	/* Main Buffer */
+	DRW_texture_ensure_fullscreen_2D(&txl->color, GPU_RGBA16F, DRW_TEX_FILTER | DRW_TEX_MIPMAP);
+
+	GPU_framebuffer_ensure_config(&fbl->main_fb, {
+		GPU_ATTACHMENT_TEXTURE(dtxl->depth),
+		GPU_ATTACHMENT_TEXTURE(txl->color),
+		GPU_ATTACHMENT_LEAVE,
+		GPU_ATTACHMENT_LEAVE,
+		GPU_ATTACHMENT_LEAVE,
+		GPU_ATTACHMENT_LEAVE
+	});
+
+	GPU_framebuffer_ensure_config(&fbl->main_color_fb, {
+		GPU_ATTACHMENT_NONE,
+		GPU_ATTACHMENT_TEXTURE(txl->color)
+	});
+
+	if (sldata->common_ubo == NULL) {
+		sldata->common_ubo = DRW_uniformbuffer_create(sizeof(sldata->common_data), &sldata->common_data);
+	}
+	if (sldata->clip_ubo == NULL) {
+		sldata->clip_ubo = DRW_uniformbuffer_create(sizeof(sldata->clip_data), &sldata->clip_data);
+	}
+
+	/* EEVEE_effects_init needs to go first for TAA */
+	EEVEE_effects_init(sldata, vedata, camera, false);
+	EEVEE_materials_init(sldata, stl, fbl);
+	EEVEE_lights_init(sldata);
+	EEVEE_lightprobes_init(sldata, vedata);
+
+	if ((stl->effects->taa_current_sample > 1) && !DRW_state_is_image_render()) {
+		/* XXX otherwise it would break the other engines. */
+		DRW_viewport_matrix_override_unset_all();
+	}
+}
+#+END_SRC
+
+ここで出てくるEEVEE_Data ってなんでしたっけ？
+
+#+BEGIN_SRC c
+typedef struct EEVEE_Data {
+	void *engine_type;
+	EEVEE_FramebufferList *fbl;
+	EEVEE_TextureList *txl;
+	EEVEE_PassList *psl;
+	EEVEE_StorageList *stl;
+} EEVEE_Data;
+#+END_SRC
+
+さて、今日はこの辺で。
