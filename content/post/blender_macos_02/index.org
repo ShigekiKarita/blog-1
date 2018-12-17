@@ -1,11 +1,10 @@
-#+TITLE: BlenderのソースコードをXcodeで読む
+#+TITLE: BlenderのソースコードをXcodeで読む Part1
 #+AUTHOR: Hiroaki ENDOH
 #+DATE: 2018-12-10
 #+DRAFT: false
 #+TAGS: Blender macOS Xcode
 
-[[https://www.hiroakit.com/2018/11/blender_macos_01/][前回の記事]]では、とりあえずEmacsでコードを読み進めましたが、BlenderのコードはCMakeに対応していてXcodeプロジェクトを作成できるので、
-デバッグし易さを考えて方針を変えます。
+[[https://www.hiroakit.com/2018/11/blender_macos_01/][前回の記事]]では、とりあえずEmacsでコードを読み進めましたが、BlenderのコードはCMakeに対応していてXcodeプロジェクトを作成できるので、デバッグし易さを考えて方針を変えます。
 
 # more
 
