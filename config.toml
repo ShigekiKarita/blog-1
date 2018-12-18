@@ -5,6 +5,12 @@ theme = "kiss"
 googleAnalytics = "UA-10216886-3"
 Paginate = 5
 
+# Syntax Highlight
+# https://gohugo.io/content-management/syntax-highlighting/
+pygmentsUseClasses = true
+pygmentsCodefences = true
+# pygmentsoptions = "linenos=inline"
+
 [permalinks]
   post = "/:year/:month/:filename/"
   
