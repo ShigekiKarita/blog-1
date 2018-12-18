@@ -1,0 +1,184 @@
+#+TITLE: BlenderのソースコードをXcodeで読む Part3
+#+AUTHOR: Hiroaki ENDOH
+#+DATE: 2018-12-18 09:30:00 +0900
+#+DRAFT: false
+#+TAGS: Blender macOS Xcode
+
+[[https://www.hiroakit.com/2018/11/blender_macos_03/][前回の記事]]は ~eevee_private.h~ の ~EEVEE_Data~ で読解を中断していましたので、そこから再開します。
+
+# more
+
+~eevee_private.h~ の ~EEVEE_Data~ は以下の通り。
+
+#+BEGIN_SRC c
+typedef struct EEVEE_Data {
+	void *engine_type;
+	EEVEE_FramebufferList *fbl;
+	EEVEE_TextureList *txl;
+	EEVEE_PassList *psl;
+	EEVEE_StorageList *stl;
+} EEVEE_Data;
+#+END_SRC
+
+** EEVEE_FramebufferList
+
+この中の ~*fbl~ の型になっている ~EEVEE_FramebufferList ~ は ~eevee_private.h~ で以下の通り定義されています。
+
+#+BEGIN_SRC c
+typedef struct EEVEE_FramebufferList {
+	/* Effects */
+	struct GPUFrameBuffer *gtao_fb;
+	struct GPUFrameBuffer *gtao_debug_fb;
+	struct GPUFrameBuffer *downsample_fb;
+	struct GPUFrameBuffer *bloom_blit_fb;
+	struct GPUFrameBuffer *bloom_down_fb[MAX_BLOOM_STEP];
+	struct GPUFrameBuffer *bloom_accum_fb[MAX_BLOOM_STEP - 1];
+	struct GPUFrameBuffer *sss_blur_fb;
+	struct GPUFrameBuffer *sss_blit_fb;
+	struct GPUFrameBuffer *sss_resolve_fb;
+	struct GPUFrameBuffer *sss_clear_fb;
+	struct GPUFrameBuffer *sss_accum_fb;
+	struct GPUFrameBuffer *dof_down_fb;
+	struct GPUFrameBuffer *dof_scatter_fb;
+	struct GPUFrameBuffer *volumetric_fb;
+	struct GPUFrameBuffer *volumetric_scat_fb;
+	struct GPUFrameBuffer *volumetric_integ_fb;
+	struct GPUFrameBuffer *screen_tracing_fb;
+	struct GPUFrameBuffer *refract_fb;
+	struct GPUFrameBuffer *mist_accum_fb;
+	struct GPUFrameBuffer *ao_accum_fb;
+	struct GPUFrameBuffer *velocity_resolve_fb;
+
+	struct GPUFrameBuffer *update_noise_fb;
+
+	struct GPUFrameBuffer *planarref_fb;
+	struct GPUFrameBuffer *planar_downsample_fb;
+
+	struct GPUFrameBuffer *main_fb;
+	struct GPUFrameBuffer *main_color_fb;
+	struct GPUFrameBuffer *effect_fb;
+	struct GPUFrameBuffer *effect_color_fb;
+	struct GPUFrameBuffer *double_buffer_fb;
+	struct GPUFrameBuffer *double_buffer_color_fb;
+	struct GPUFrameBuffer *double_buffer_depth_fb;
+	struct GPUFrameBuffer *taa_history_fb;
+	struct GPUFrameBuffer *taa_history_color_fb;
+} EEVEE_FramebufferList;
+#+END_SRC
+
+~GPUFrameBuffer~ は ~GPU_framebuffer.h~ でtypedefしてあり、
+
+#+BEGIN_SRC c
+typedef struct GPUFrameBuffer GPUFrameBuffer;
+#+END_SRC
+
+構造体は ~gpu_framebuffer.c~ に定義されていて、
+
+#+BEGIN_SRC c
+struct GPUFrameBuffer {
+	GPUContext *ctx;
+	GLuint object;
+	GPUAttachment attachments[GPU_FB_MAX_ATTACHEMENT];
+	uint16_t dirty_flag;
+	int width, height;
+	bool multisample;
+	/* TODO Check that we always use the right context when binding
+	 * (FBOs are not shared across ogl contexts). */
+	// void *ctx;
+};
+#+END_SRC
+
+~GPUContext~ は ~GPU_context.h~ でtypedefしていて、
+
+#+BEGIN_SRC c
+typedef struct GPUContext GPUContext;
+#+END_SRC
+
+~GPUContext~ の構造体は ~gpu_context.cpp~ に定義されています。
+
+#+BEGIN_SRC c
+struct GPUContext {
+	GLuint default_vao;
+	GPUFrameBuffer *current_fbo;
+	std::unordered_set<GPUBatch *> batches; /* Batches that have VAOs from this context */
+#ifdef DEBUG
+	std::unordered_set<GPUFrameBuffer *> framebuffers; /* Framebuffers that have FBO from this context */
+#endif
+	std::vector<GLuint> orphaned_vertarray_ids;
+	std::vector<GLuint> orphaned_framebuffer_ids;
+	std::mutex orphans_mutex; /* todo: try spinlock instead */
+#if TRUST_NO_ONE
+	pthread_t thread; /* Thread on which this context is active. */
+	bool thread_is_used;
+
+	GPUContext() {
+		thread_is_used = false;
+		current_fbo = 0;
+	}
+#endif
+};
+#+END_SRC
+
+** EEVEE_TextureList
+
+~EEVEE_Data~ にある ~EEVEE_TextureList~ は ~eevee_private.h~ で以下の通り定義されています。
+
+#+BEGIN_SRC c
+typedef struct EEVEE_TextureList {
+	/* Effects */
+	struct GPUTexture *color_post; /* R16_G16_B16 */
+	struct GPUTexture *mist_accum;
+	struct GPUTexture *ao_accum;
+	struct GPUTexture *sss_dir_accum;
+	struct GPUTexture *sss_col_accum;
+	struct GPUTexture *refract_color;
+	struct GPUTexture *taa_history;
+
+	struct GPUTexture *volume_prop_scattering;
+	struct GPUTexture *volume_prop_extinction;
+	struct GPUTexture *volume_prop_emission;
+	struct GPUTexture *volume_prop_phase;
+	struct GPUTexture *volume_scatter;
+	struct GPUTexture *volume_transmittance;
+	struct GPUTexture *volume_scatter_history;
+	struct GPUTexture *volume_transmittance_history;
+
+	struct GPUTexture *lookdev_grid_tx;
+	struct GPUTexture *lookdev_cube_tx;
+
+	struct GPUTexture *planar_pool;
+	struct GPUTexture *planar_depth;
+
+	struct GPUTexture *maxzbuffer;
+
+	struct GPUTexture *color; /* R16_G16_B16 */
+	struct GPUTexture *color_double_buffer;
+	struct GPUTexture *depth_double_buffer;
+} EEVEE_TextureList;
+#+END_SRC
+
+~GPUTexture~ は ~gpu_texture.c~ で定義されています。
+
+#+BEGIN_SRC c
+struct GPUTexture {
+	int w, h, d;        /* width/height/depth */
+	int number;         /* number for multitexture binding */
+	int refcount;       /* reference count */
+	GLenum target;      /* GL_TEXTURE_* */
+	GLenum target_base; /* same as target, (but no multisample)
+	                     * use it for unbinding */
+	GLuint bindcode;    /* opengl identifier for texture */
+
+	GPUTextureFormat format;
+	GPUTextureFormatFlag format_flag;
+
+	uint bytesize;      /* number of byte for one pixel */
+	int components;     /* number of color/alpha channels */
+	int samples;        /* number of samples for multisamples textures. 0 if not multisample target */
+
+	int fb_attachment[GPU_TEX_MAX_FBO_ATTACHED];
+	GPUFrameBuffer *fb[GPU_TEX_MAX_FBO_ATTACHED];
+};
+#+END_SRC
+
+さて、今日はこの辺で。
