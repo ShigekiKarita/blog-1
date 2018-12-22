@@ -3,7 +3,7 @@ languageCode = "ja-JP"
 title = "Hiroaki ENDOH"
 theme = "kiss"
 googleAnalytics = "UA-10216886-3"
-Paginate = 5
+Paginate = 10
 
 # Syntax Highlight
 # https://gohugo.io/content-management/syntax-highlighting/
