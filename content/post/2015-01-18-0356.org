@@ -1,0 +1,45 @@
+#+title: Gmailをローカルにバックアップする (Google Takeout活用編)
+#+date: 2015-01-18T14:01:29+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+以前にGmailのバックアップを取る方法としてWindows用ソフトのMailStore Homeを取り上げた。今では[Google Takeout](https://www.google.com/settings/takeout)というウェブサービスからバックアップが可能になっている。ウェブサービスなのでMacからもバックアップが取れる。
+
+以下にGoogle Takeoutの使い方を簡単にまとめた。
+
+## Google Takeoutの使い方
+
+[Google Takeout](https://www.google.com/settings/takeout)に行くと、下図のようなページが表示される。
+
+<a href="https://www.flickr.com/photos/130437776@N03/16304260581" title="Google Takeoutの使い方 (図1) by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7523/16304260581_11fc144eac_z.jpg" width="640" height="434" alt="Google Takeoutの使い方 (図1)"></a>
+
+Gmail以外のバックアップも取れるので、カレンダー、連絡先も必要であれば右端にあるボタン(下図参照のこと)をクリックする。
+
+<a href="https://www.flickr.com/photos/130437776@N03/16306109215" title="Google Takeoutの使い方 (図2) by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7572/16306109215_05a41f856d_z.jpg" width="640" height="375" alt="Google Takeoutの使い方 (図2)"></a>
+
+バックアップを取りたいものが選択し終わったら、ページ末尾にある「次へ」ボタンをクリックする。
+
+すると、下図のように「ダウンロード形式のカスタマイズ」が出るので、ファイル形式と配信方法を選ぶ。ここでは、例としてファイル形式に.zipを選び、配信方法にはGoogle ドライブに追加を選択する。最後に「アーカイブを作成ボタン」をクリックする。
+
+<a href="https://www.flickr.com/photos/130437776@N03/15686261203" title="Google Takeoutの使い方 (図3) by hiroakit, on Flickr"><img src="https://farm9.staticflickr.com/8601/15686261203_018f80aaf7_z.jpg" width="640" height="526" alt="Google Takeoutの使い方 (図3)"></a>
+
+バックアップには時間がかかるが、しばらくするとメールで通知が届くようになっている。
+
+<a href="https://www.flickr.com/photos/130437776@N03/15683738734" title="Google Takeoutの使い方 (図4) by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7566/15683738734_6235145196_z.jpg" width="640" height="487" alt="Google Takeoutの使い方 (図4)"></a>
+
+私がGoogle Takeoutを使ったときは60MB程度のバックアップだったのだが、30分ぐらいでメール通知が届いた。
+
+<a href="https://www.flickr.com/photos/130437776@N03/16120321587" title="Google Takeoutの使い方 (図5) by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7472/16120321587_c1a0820d81_z.jpg" width="640" height="443" alt="Google Takeoutの使い方 (図5)"></a>
+
+このメールに記載されている「Googleドライブで表示」をクリックすると、下記のページに移動する。
+ダウンロードは下向きの矢印をクリックすれば実行される。これが終われば作業完了だ。
+
+<a href="https://www.flickr.com/photos/130437776@N03/16280252126" title="Google Takeoutの使い方 (図6) by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7489/16280252126_0d851867ba_z.jpg" width="640" height="135" alt="Google Takeoutの使い方 (図6)"></a>
+
+なお、データサイズによってはこのような警告ページが表示されるが、一旦無視して「ダウンロード」ボタンをクリックする。ダウンロード後にウイルススキャンをかけておく。
+
+<a href="https://www.flickr.com/photos/130437776@N03/16118671938" title="Google Takeoutの使い方 (図7) by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7461/16118671938_8f942cf4e2_z.jpg" width="640" height="160" alt="Google Takeoutの使い方 (図7)"></a>
+
+## まとめ
+
+Gmailのバックアップを取る際は、Google Takeoutがオススメ

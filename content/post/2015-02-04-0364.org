@@ -1,0 +1,19 @@
+#+title: Microsoft Azure Essentials: Fundamentals of Azure
+#+date: 2015-02-04T06:23:08+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+Microsoftがブログでアナウンスを出した。Microsoft Azure Essentials: Fundamentals of Azureが公開された。
+
+- [Free ebook: Microsoft Azure Essentials Fundamentals of Azure - Microsoft Press - Site Home - MSDN Blogs](http://blogs.msdn.com/b/microsoft_press/archive/2015/02/03/free-ebook-microsoft-azure-essentials-fundamentals-of-azure.aspx)
+
+上記のページから左側に「Get this ebook」というボタンがある。
+ここからebookを無料でダウンロードできる。
+
+個人的に興味深いのは下記の章
+
+- Chapter 2
+- Chapter 6
+- Chapter 7
+
+今月はこの読解で終わってしまいそうだ。

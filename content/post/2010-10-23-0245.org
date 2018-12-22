@@ -1,0 +1,6 @@
+#+title: NAS
+#+date: 2010-10-23T12:11:08+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+容量iSCSIRAIDUPS<a href="http://plusd.itmedia.co.jp/pcuser/special/unistar.html">http://plusd.itmedia.co.jp/pcuser/special/unistar.html</a><a href="http://internet.watch.impress.co.jp/docs/column/qnap/20100906_390578.html">http://internet.watch.impress.co.jp/docs/column/qnap/20100906_390578.html</a>LS-XH1.5TLQNAP TS-459 Pro?(TimeMachine機能, iTunesサーバ機能, Webサーバ機能)http://ramblelazy.com/archives/1572880.html<a href="http://internet.watch.impress.co.jp/docs/column/qnap/20100906_390578.html">http://internet.watch.impress.co.jp/docs/column/qnap/20100906_390578.html</a>QNAP?TS-859U-RP<a href="http://internet.watch.impress.co.jp/docs/column/shimizu/20100511_364567.html">http://internet.watch.impress.co.jp/docs/column/shimizu/20100511_364567.html</a>QNAP TS-110 (iTunesサーバ機能, Webサーバ機能)CrystalDiskMark で Read/Write 速度を計測する人がいるけど、不思議。LS-Q2.0TL/R5 (2TB=500GBx4) 63,600BUFFALO 筐体がもろそう。（ねじなしでフロントカバーがはずせます　→　折れちゃったらしまらない）72MBスペア用ハードディスクが高いNASにeSATA端子がついていない

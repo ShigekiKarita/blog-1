@@ -1,0 +1,29 @@
+#+title: 書斎にホワイトボードを設置した
+#+date: 2016-02-29T06:28:30+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+先日、書斎にホワイトボードを設置した。  
+以下の製品を使って実現した。
+
+<table border=1 style="width:540px;">
+ <tr><th>製品名</th><th>価格 (単位:円)</th></tr>
+ <tr><td><a  href="http://www.amazon.co.jp/gp/product/B00YE9WYBQ/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00YE9WYBQ&linkCode=as2&tag=hiroakit-22">ナカバヤシ 薄型アルミホワイトボード900×600mm WBA-U9060</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=hiroakit-22&l=as2&o=9&a=B00YE9WYBQ" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></td><td>4,212</td></tr>
+ <tr><td><a  href="http://www.amazon.co.jp/gp/product/B00CB6TFOS/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00CB6TFOS&linkCode=as2&tag=hiroakit-22">壁美人 石膏ボード用固定金具 P-8 ホワイト 2枚セット P-8Shw</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=hiroakit-22&l=as2&o=9&a=B00CB6TFOS" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></td><td>1,264</td></tr>
+ <tr><td>合計</td><td>5,476</td></tr>
+</table>
+
+これらの製品を使うと、この写真のようにホワイトボードを壁にかけられる。  
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/130437776@N03/24729623603/in/photostream/" title="ホワイトボードを設置した - 1"><img src="https://farm2.staticflickr.com/1632/24729623603_d6a4a82d5e_c.jpg" width="800" height="600" alt="ホワイトボードを設置した - 1"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+壁美人でホワイトボードを掛けている。ホワイトボードの重さは3kgで、壁美人は1枚あたり12kgまで耐えられる。
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/130437776@N03/25238095342/" title="ホワイトボードを設置した - 2"><img src="https://farm2.staticflickr.com/1452/25238095342_092a93d362_c.jpg" width="600" height="800" alt="ホワイトボードを設置した - 2"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+このホワイトボードを使うようになって3週間程度経過したが、以下の効果があった。
+
+-   状況を整理しやすくなった。 (マインドマップや図がかけるので、構造を把握できる)
+-   学習意欲が向上した。 (ロジック、英文法、数式などを手を動かしながら覚えられる)
+-   オープンソースのプログラムの構造を把握しやすくなった。 (UMLなどが自由に描ける)
+
+5,476円の出費でとても満足いくものとなった。

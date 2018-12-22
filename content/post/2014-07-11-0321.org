@@ -1,0 +1,6 @@
+#+title: LINQ to Objects 入門 その2
+#+date: 2014-07-11T00:00:00+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>LINQ to Objectsの続き。<a href="https://github.com/hiroakit/LinqToObjectsSample/blob/0f3a0640e0ca3283763462ee9a2248584fd00800/LinqToObjectsSample/Program.cs">contains, countメソッドを調べた。</a></p>

@@ -1,0 +1,6 @@
+#+title: Visual Studio とソース管理
+#+date: 2011-02-23T22:27:38+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>大抵の会社では「Windows 向けの開発ならば Visual Studio ！」なんだそうですね。そういう会社だと Microsoft の MSDN サブスクリプションを利用していることが少なくないようです。</p><!--more--><p>そのサブスクリプションのプランで Visual Studio 2010 Professional Edition 以上のものを契約すると、ソース管理ができるTeam Foundation Server 2010 という製品も抱き合わせで付いてくるようです。</p><ul>	<li><a href="http://sorceryforce.com/visualstudio/sourcemanagement2010.html">Team Foundation Server 2010 を使って Visual Studio 2010 のソース管理を行う</a></li></ul><p>調べてみると、Team Foundation Server 2010 は メモリ2GB 必要のようです。まぁ、Xcode の利用者には全く関係のない話です。</p>

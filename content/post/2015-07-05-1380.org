@@ -1,0 +1,135 @@
+#+title: LANモールを使った配線
+#+date: 2015-07-05T14:45:07+09:00
+#+draft: false
+#+tags: 過去記事インポート 配線
+
+先日、LANケーブルを配線する際にモールを使った。費用は配送料を抜いて1,500円程度かかったが、以下の結果を得られた。十分に満足している。
+
+# more
+
+- 子供がLANケーブルに触れない (遊ばなくなる)
+- 景観を汚さずに済む
+
+下図はLANモールを使ってケーブルを配線した後の様子。
+
+<a href="https://www.flickr.com/photos/130437776@N03/19396752226">
+  <img src="https://c1.staticflickr.com/1/273/19396752226_c67708ce3d_c.jpg" alt="LANモール敷設後 by hiroakit, on Flickr" />
+</a>
+
+なお、LANモールではないが[3Mのコマンドフックを使った事例](http://www.hiroakit.com/article/293)がある。
+
+* きっかけ
+
+テレビ付近にPS3があるのだが、これの近くにLANのコンセントがないため、スイッチングハブからLANケーブルを這わせる必要があった。
+
+そのため、下図の矢印の通りに配線することにした。下図の右側にスイッチングハブがあるが、そこから左側のテレビ(PS3)に向かってケーブルを敷く。およそ5mぐらいの距離がある。
+
+<a href="https://flic.kr/p/vy2ED3">
+  <img src="https://c1.staticflickr.com/1/513/19396799236_a5fdb98fac_c.jpg" alt="LANモール敷設前 by hiroakit, on Flickr" />
+</a>
+
+しかし、ケーブルを直に這わせた場合、以下のことが予想される。
+
+- 景観が見苦しくなる
+- 子供が遊ぶ
+
+そのため、LANモールを使用してケーブルを隠すことにした。
+
+* 備品の調達
+
+調達した備品はモール関係のみで、LANケーブルは自宅にあったものを使用した。
+
+<a href="https://www.flickr.com/photos/130437776@N03/18786504863">
+  <img src="https://c1.staticflickr.com/1/261/18786504863_ba988f9bbd_c.jpg" alt="LANモール敷設で使う備品 by hiroakit, on Flickr" />
+</a>
+
+調達した備品は下記の通り。 費用は1,441円(配送料別)だった。
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>単価 (円)</th>
+<th>個数</th>
+<th>用途</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a href="http://www.amazon.co.jp/gp/product/B0009N6KFW/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B0009N6KFW&linkCode=as2&tag=largeworld-22">CA-KK17</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=largeworld-22&l=as2&o=9&a=B0009N6KFW" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></td>
+<td>209</td>
+<td>5</td>
+<td>モール本体 (1m)。両面テープ付き。蓋が取り外せる。</td>
+</tr>
+<tr>
+<td><a href="http://www.amazon.co.jp/gp/product/B0009N6KHU/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B0009N6KHU&linkCode=as2&tag=largeworld-22">CA-KK17J</a></td>
+<td>99</td>
+<td>3</td>
+<td>CA-KK17用の連結器。直線型。</td>
+</tr>
+<tr>
+<td><a href="http://www.amazon.co.jp/gp/product/B0009N6KI4/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B0009N6KI4&linkCode=as2&tag=largeworld-22">CA-KK17L</a></td>
+<td>99</td>
+<td>1</td>
+<td>CA-KK17用の連結器。L字型。</td>
+</tr>
+</tbody>
+</table>
+
+このCA-KK17というモールは両面テープが最初から付いている。これで壁に貼り付けられる。
+
+<a href="https://www.flickr.com/photos/130437776@N03/19219681260">
+  <img src="https://c2.staticflickr.com/4/3850/19219681260_0a18c5b6a4_c.jpg" alt="LANモールの裏側 by hiroakit, on Flickr" />
+</a>
+
+また、蓋が取り外せる。中に収めているLANケーブルを取り替えたい場合に役立ちそうだ。
+
+<a href="https://www.flickr.com/photos/130437776@N03/19219699458">
+  <img src="https://c1.staticflickr.com/1/299/19219699458_470e707b30_c.jpg" alt="LANモールの分離 by hiroakit, on Flickr" />
+</a>
+
+* モールの加工
+
+モールは1mなので、場合によっては調整が必要である。例えば、この写真。台の下に取り付けたいので長さを調節する。
+
+<a href="https://www.flickr.com/photos/130437776@N03/18802376553">
+  <img src="https://c1.staticflickr.com/1/490/18802376553_5a9d7c617f_c.jpg" alt="LANモール加工 その1 by hiroakit, on Flickr" />
+</a>
+
+モールを加工するための専用機材があるが、ニッパーでも十分だ。カッターでもできないことはないが、時間がかかる。
+
+<a href="https://www.flickr.com/photos/130437776@N03/19235448068">
+  <img src="https://c2.staticflickr.com/4/3748/19235448068_b7123c883f_c.jpg" alt="LANモールとニッパー by hiroakit, on Flickr" />
+</a>
+
+* 連結器の使用
+
+今回は配線距離が長いため連結器を使用した。参考までに図を載せた。
+
+直線の連結器 (CA-KK17J) は下図のように使う。
+
+<a href="https://www.flickr.com/photos/130437776@N03/19221033449">
+  <img src="https://c1.staticflickr.com/1/306/19221033449_7eeedfa721_c.jpg" alt="LANモール(直線)の使用例 by hiroakit, on Flickr" />
+</a>
+
+L字の連結器 (CA-KK17L) は下図のように
+
+<a href="https://www.flickr.com/photos/130437776@N03/19422794435">
+  <img src="https://c2.staticflickr.com/4/3775/19422794435_1f2bf95e3b_c.jpg" alt="LANモール連結器(L字)の使用例 by hiroakit, on Flickr" />
+</a>
+
+* まとめ
+
+以上の作業で下図のようになった。
+
+<a href="https://www.flickr.com/photos/130437776@N03/19396752226">
+  <img src="https://c1.staticflickr.com/1/273/19396752226_c67708ce3d_c.jpg" alt="LANモール敷設後 by hiroakit, on Flickr" />
+</a>
+
+- 費用: 1,441円 (配送料別)
+- 所要時間: なんだかんだやっていたら2時間
+
+子供がいる家庭では効果抜群だと思う。お試しあれ。
+
+

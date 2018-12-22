@@ -1,0 +1,64 @@
+#+title: Office 365のメールをMozilla Thunderbirdで使う
+#+date: 2015-01-24T09:43:13+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+Office 365のメールをMozilla Thunderbirdから使う方法についてまとめた。アカウント設定時に手動で行う場所があるため、それらについて解説したい。原則、設定方法はMicrosoftがまとめた記事に従えば良いのだが、図がないため理解し辛い。この記事ではそれを補いたい。
+
+アカウント設定の参考資料は下記のとおり。
+
+- [メール プログラム セットアップ リファレンス](https://support.office.com/ja-jp/article/メール-プログラム-セットアップ-リファレンス-ac2eb7cb-370e-48fd-86be-0d641b7d35c1#__find_your_server)
+- [Mozilla Thunderbird 8.0 でメールを設定する](https://support.office.com/ja-jp/article/Mozilla-Thunderbird-80-でメールを設定する-1ac34fa0-c5be-46f1-9c28-8622d92d766e)
+    - (余談だが、Thunderbird 8のリリース日は2011年11月頃である)
+
+これらの記事をまとめると、Thunderbirdの場合はサーバーの値は以下の通りとなる。アカウント設定時に参照してほしい。
+
+<table>
+<caption>Thunderbirdのメールアカウント設定 (サーバー関連)</caption>
+<tr><th></th><th>受信サーバー</th><th>送信サーバー</th></tr>
+<tr><th>プロトコル</th><td>IMAP</td><td>SMTP</td></tr>
+<tr><th>サーバーのホスト名</th><td>outlook.office365.com</td><td>smtp.office365.com</td></tr>
+<tr><th>ポート番号</th><td>993</td><td>587</td></tr>
+<tr><th>SSL</th><td>SSL/TLS</td><td>STARTTLS</td></tr>
+<tr><th>認証方式</th><td>通常のパスワード認証</td><td>通常のパスワード認証</td></tr>
+</table>
+
+ここで使うのはThunderbird 31.4.0である。
+OSはMac OS Xだが、Windowsでも共通だろう。
+
+## アカウント設定
+
+まず、Office 365のメールアカウントをThunderbirdに追加する。
+
+<a href="https://www.flickr.com/photos/130437776@N03/16163872800" title="ThunderbirdにOffice 365のメールアカウントを設定 (図1) by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7511/16163872800_ceda5ccc1a_o.png" width="438" height="385" alt="ThunderbirdにOffice 365のメールアカウントを設定 (図1)"></a>
+
+メールアドレスとパスワードを入力して、「続ける」ボタンをクリックすると、下図のようになる。しかし、Thunderbirdが提示した受信サーバと送信サーバの設定値は間違っているので、このままではサーバーに繋がらない。(2015年1月24日現在のMozilla ISPデータベースを参照した)
+
+<a href="https://www.flickr.com/photos/130437776@N03/16349524181" title="ThunderbirdにOffice 365のメールアカウントを設定 (図2) by hiroakit, on Flickr"><img src="https://farm9.staticflickr.com/8672/16349524181_b6e86a1dcb_o.jpg" width="443" height="385" alt="ThunderbirdにOffice 365のメールアカウントを設定 (図2)"></a>
+
+この設定値は「手動設定」から変更できる。下図は手動設定後のもの。入力する値は前述の表「Thunderbirdのメールアカウント設定 (サーバー関連)」を参照してほしい。
+
+<a href="https://www.flickr.com/photos/130437776@N03/16165559587" title="ThunderbirdにOffice 365のメールアカウントを設定 (図3) by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7400/16165559587_84018e75fc_z.jpg" width="640" height="300" alt="ThunderbirdにOffice 365のメールアカウントを設定 (図3)"></a>
+
+サーバーに接続するための設定は整った。しかし、このまま使い始めると「送信済みメール」の管理に苦労するので下記の設定を加える。
+
+## 「送信済みメール」の保管先を変更する
+
+以下は受信サーバーのプロトコルをIMAPに指定した場合に行う。IMAPでは、「送信済みメール」を特定のフォルダに保管することができる。このおかげで異なる環境でも「送信済みメール」を確認できるが、アプリケーション毎に保管先が違う。
+
+<table>
+<caption>送信済みメールの保管先 (アプリケーションの初期値)</caption>
+<tr><th></th><th>Outlook Web App</th><th> Thunderbird </th></tr>
+<tr><th>フォルダ</th><td>送信済みアイテム</td><td>送信済みトレイ</td></tr>
+</table>
+
+この状態のまま、Thunderbirdからメールを送り、別の機会にOutlook Web Appを開くと、送信したはずのメールが見当たらないとった状況に陥る。これは「送信済みメール」の保管先がアプリケーションによって違うからだ。ちゃんと探せば見つかるだろうが、いつもの所にメールがないというのはストレスが溜まる。これを避けため、以下の設定をする。
+
+今回はThunderbirdの送信済みメールの保管先フォルダをOutlook Web Appに合わせる。つまり、変更後にThunderbirdからメールを送ると「送信済みアイテム」フォルダに保管される。Thunderbirdでの設定方法は下記のとおり。
+
+1. 受信トレイが表示される左端のメニューでアカウント名の部分をクリックする (アカウント用のスタートページみたいな画面になる)
+2. 「購読するフォルダを管理する」をクリック
+3. 送信済みアイテムをチェックする
+4. アカウント設定画面に移動する
+5. 「送信控えと特別なフォルダ」をクリック
+6. 「送信控え」に「その他のフォルダを指定する」があるので、そこで、先ほどの「送信済みアイテム」を指定する 

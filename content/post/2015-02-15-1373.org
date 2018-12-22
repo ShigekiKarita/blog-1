@@ -1,0 +1,34 @@
+#+title: 映画「スティーブ・ジョブズ (原題: jOBS)」
+#+date: 2015-02-15T22:06:25+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+映画「スティーブ・ジョブズ (原題: jOBS)」を観た。米国では2013年8月に公開、日本では2013年11月に公開された作品である。[IMDBによれば製作予算は1200万米ドル](http://www.imdb.com/title/tt2357129/business?ref_=tt_dt_bus)。
+
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=hiroakit-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B00IEUHLU0" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+## マイク・マークラが辞めるシーン
+
+この映画はジョブズがアップル取締役のマイク・マークラに辞任を迫り、マイク・マークラが去って、「アップルの業績が回復した」という形で終わる。
+
+このマイク・マークラの辞めさせ方なのだが、ジョブズと仲違いしたようになっている。しかし、ウォルター・アイザックソン著「<a href="http://www.amazon.co.jp/gp/product/B009GXM2OE/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B009GXM2OE&linkCode=as2&tag=hiroakit-22">Steve Jobs II</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=hiroakit-22&l=as2&o=9&a=B009GXM2OE" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+」では異なる。
+
+書籍ではマイク・マークラの辞任シーンはP60~61でこのように書かれている。
+
+> アップル取締役の辞任を迫るにあたっても、ジョブズは、ウッドサイドにあるお城のようなマークラの邸宅を自ら訪問し、自分で引導を渡すことにした。
+
+> いつものように散歩に誘い、ピクニックテーブルのあるセコイアの小さな森までふたりで歩く。
+
+> 「一から出直すため、取締役会を一新したいと言われました。私が怒っているのではないかとジョブズは心配していて、そんなことはないと言ったらずいぶんと安心していましたよ」
+
+> そのあとは、今後、アップルが注力すべき点について話し合った。長く存続する会社を作りたいとジョブズは考えており、そのためにはどうすべきかマークラにたずねた。
+
+書籍では"父親のような存在"として良きアドバイザーとして書かれている。一方、映画では仲違いをするように描かれている。本当はどうだったのかわからないが、映画の辞任を迫るシーンはちょっと雑な感じを受けた。
+
+雑な感じは受けたが、DVD (Blu-ray)は欲しくなった。
+
+## 余談
+
+スティーブ・ジョブズ役のアシュトン・カッチャーがなかなか良い味を出していたように思えるのだが、2013年のワースト主演男優賞にノミネートされている。
+ちなみにこの年のワースト主演男優賞はアフター・アースに出演していたジェイデン・スミスだった。

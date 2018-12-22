@@ -1,0 +1,32 @@
+#+title: IISのログをLog Parser Studioで解析する
+#+date: 2015-02-09T12:29:36+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+Log Parserはコマンドラインのツールだが、Log Parser Studioを使えばGUIで操作できる。
+
+## インストール
+
+1. [Log Parser 2.2 日本語版](https://technet.microsoft.com/ja-jp/scriptcenter/dd919274.aspx)
+2. [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765)
+
+
+この記事を見ると、色々とできそうである。
+
+SELECT	QUANTIZE(TO_TIMESTAMP(date, time), 3600) AS Hour, 
+	COUNT(*) AS Total
+FROM '[LOGFILEPATH]'
+WHERE date < '2015-02-03' 
+GROUP BY Hour 
+ORDER BY Hour
+
+SELECT	QUANTIZE(TO_TIMESTAMP(date, time), 3600) AS Hour, 
+	COUNT(*) AS Total
+FROM '[LOGFILEPATH]'
+WHERE (sc-status >= 200 AND sc-status < 300)
+GROUP BY Hour 
+ORDER BY Hour
+
+[無償ながら強力なログ解析ツールLog Parserを活用する：第1回 Log Parserの概要 (1/4) - ＠IT](http://www.atmarkit.co.jp/ait/articles/0610/27/news140.html)
+[Log Parser Studio : ログ解析に便利なLog Parser を、GUI で使えるようにするMicrosoft のフリーのツール](http://troushoo.blog.fc2.com/blog-entry-169.html)
+[Log Parser Plus - Log Parser Example Queries](http://logparserplus.com/Examples)

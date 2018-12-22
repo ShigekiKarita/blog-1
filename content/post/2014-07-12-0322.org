@@ -1,0 +1,6 @@
+#+title: タタタ
+#+date: 2014-07-12T00:00:00+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>北斗の拳が見たい。漫画を読んだことがない。今年の課題だな。</p><iframe width="560" height="315" src="//www.youtube.com/embed/YcGk13HvSM4" frameborder="0" allowfullscreen=""></iframe>

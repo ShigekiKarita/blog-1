@@ -1,0 +1,21 @@
+#+title: PythonでMayaプラグインを作成する - プリミティブ操作編
+#+date: 2015-08-02T20:58:40+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+プリミティブのオブジェクトを生成して、移動、拡大、回転をするコード。
+
+<script src="https://gist.github.com/hiroakit/e5dea7433bbdcec26d95.js"></script>
+
+これはプラグインではなく、あくまでもスクリプト。
+そのうち、役に立つ日が来るだろうか。
+
+## 資料
+
+- [Maya ヘルプ - polyCube command](http://help.autodesk.com/cloudhelp/2016/JPN/Maya-Tech-Docs/CommandsPython/polyCube.html)
+- [Maya ヘルプ - polyPlane command](http://help.autodesk.com/cloudhelp/2016/JPN/Maya-Tech-Docs/CommandsPython/polyPlane.html)
+- [Maya ヘルプ - polySphere command](http://help.autodesk.com/cloudhelp/2016/JPN/Maya-Tech-Docs/CommandsPython/polySphere.html)
+- [Maya ヘルプ - polyCylinder command](http://help.autodesk.com/cloudhelp/2016/JPN/Maya-Tech-Docs/CommandsPython/polyCylinder.html)
+- [Maya ヘルプ - move command](http://help.autodesk.com/cloudhelp/2016/JPN/Maya-Tech-Docs/CommandsPython/move.html)
+- [Maya ヘルプ - rotate command](http://help.autodesk.com/cloudhelp/2016/JPN/Maya-Tech-Docs/CommandsPython/rotate.html)
+- [Maya ヘルプ - scale command](http://help.autodesk.com/cloudhelp/2016/JPN/Maya-Tech-Docs/CommandsPython/scale.html)

@@ -1,0 +1,23 @@
+#+title: チョコブラウザ
+#+date: 2015-02-15T19:58:11+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+妻からバレンタインデーのチョコレートをもらった。Firefox、Google Chrome、Netscape、IEのアイコンを模している。うまかった。
+
+[![チョコレートで模したウェブブラウザのアイコン](https://farm8.staticflickr.com/7366/16350403377_3879163c82_z.jpg)](https://www.flickr.com/photos/130437776@N03/16350403377 "チョコレートで模したウェブブラウザのアイコン by hiroakit, on Flickr")
+
+グラデーションがいい感じ。
+
+##  ブラウザのソースコード
+
+各ブラウザのソースコードは以下の通り。
+
+- Mozilla Firefox :
+    - [https://hg.mozilla.org/mozilla-central](https://hg.mozilla.org/mozilla-central)
+- Google Chrome :
+    - [https://chromium.googlesource.com/chromium/src.git](https://chromium.googlesource.com/chromium/src.git)
+- Netscape : 
+    - [http://ftp.mozilla.org/pub/mozilla.org/mozilla/source](http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/)
+- Internet Explorer
+    - プロプライエタリのためソースコードは非公開

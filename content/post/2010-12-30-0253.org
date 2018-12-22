@@ -1,0 +1,46 @@
+#+title: iTunes Libraryバイナリファイルの中身を移す
+#+date: 2010-12-30T09:30:20+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+iTunesのデータをWindowsからMacへ移動させる際、後回しにしてしまいがちなのがバイナリファイルのiTunes Linbraryです。
+
+> <span style="color:#ff0000;">注意：万が一にも失敗した時のことを考え、これらのファイルを事前にバックアップします。</span>
+>
+> * Windows	: iTunes Library.itl
+> * Mac			: iTunes Library
+
+これらの3つのデータが以下のディレクトリ<span style="text-decoration:underline;">/Users/アカウント名/Music/iTunes</span> にあるとします。
+
+* iTunes Library
+* iTunes Library.itl
+* iTunes Music Library.xml
+
+ターミナルを開いたら、次の場所へ移動します。
+
+> $ cd ~/Music/iTunes
+
+まずは、iTunes Libraryファイルの中身を消します。
+
+    $ vim -b -o iTunes Library 
+    ?//ファイル名に「」があるのは空白があるからです。
+    ms　//範囲の開始行 を指定します
+    shift + g //最終業へ移動します
+    me　//範囲の終了行 を指定します
+    :'s,'ed //指定した範囲を削除します
+    :wq //ファイルを上書きして閉じます(この場合、iTunes Libraryを閉じます)
+
+次に、iTunes Library.itlファイルの中身をiTunes Libraryファイルへコピーします。
+
+    $ vim -b -o iTunes Library iTunes Library.itl
+    :windo :%!xxd　//16進数表示に切り替えます// カーソルがiTunes Library.itlにあることを確認します
+    ms　//範囲の開始行 を指定します
+    shift + g //最終業へ移動します
+    me　//範囲の終了行 を指定します
+    :'s,'ey //指定した範囲をコピーします
+    :q //ファイルを閉じます(この場合、iTunes Library.itlを閉じます)// この時点でカーソルはiTunes Libraryにあります
+    p //ペーストします (空白行が一番上にある場合、dd と押し、空白行を削除します)
+    :%!xxd -r //16進数表示から元の2進数表示に切り替えます
+    :wq //ファイルを上書きして閉じます(この場合、iTunes Libraryを閉じます)
+
+最後に、iTunes Library.itl を削除 (あるいは違うディレクトリへ移動)後にiTunes の起動します。

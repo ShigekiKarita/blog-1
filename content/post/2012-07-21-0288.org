@@ -1,0 +1,6 @@
+#+title: Xcodeをアンインストールする
+#+date: 2012-07-21T17:07:29+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+MacにインストールしたXcodeのバージョンによってアンインストール方法が異なる。<h2>Xcode4.3以上の場合</h2>アプリケーションフォルダからゴミ箱に送るだけ。<h2>Xcode4.3未満の場合</h2>専用のコマンドがあるのでそれを用いる。アンインストールするとmakeなどのコマンドも削除される。ただし、Xcode4以上で”Command Line Tools”をインストールしている場合はこの影響を受けない。<pre><code>$ sudo /Developer/Library/uninstall-devtools --mode=all</code></pre>modeの引数は以下の中から選ぶ。all 完全削除systemsupport 確かSDK関連のみ削除unixdev : UNIXライクコマンドのみ削除xcodedir : ゴミ箱にポイするのと同じこのコマンドでXcodeを削除するが、複数のXcode4.3未満のものがまだ残っている場合がある。その場合は以下のコマンドでuninstall-devtoolsを探す。<pre><code>$ sudo find / -name uninstall-devtools</code></pre>検索に引っかかったら、削除したいXcodeのuninstall-devtoolsを実行する。いずれにせよ、Macで開発する場合はXcodeと”Command Line Tools”が要求されることがほとんどなので、新しくインストールする必要がある。

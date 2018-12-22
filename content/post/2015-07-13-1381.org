@@ -1,0 +1,103 @@
+#+title: PythonでMayaプラグインを作成する - HelloWorld編
+#+date: 2015-07-13T00:50:11+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+先日、Autodesk Maya 2016 (以下、Mayaと略す)を試用した。PythonでMayaプラグインを開発するためである。
+
+## Maya Python API
+
+本当にこのAPIは使われているのだろうか。
+
+MayaはPythonでコールできるAPI "Maya Python API" を提供している。同APIは1.0と2.0と2つのバージョンが存在するが、[Maya ヘルプ: Python API 2.0 を使用する](http://help.autodesk.com/view/MAYAUL/2016/JPN/?guid=__files_GUID_B1CD0989_EB49_46BE_934F_F23BFB869142_htm) を読む限り互換性はない。
+
+> 新しい API クラスと古い API クラスを同じスクリプト内で使用することができますが、
+> それらのオブジェクトには相互運用性はありません。 
+
+APIに互換性がないということは、プログラム内でバージョンを明示する必要があるはず。先のAutodeskのドキュメントを読み進めるとこのように記されている。
+
+> 新しい API を使用するプラグインを記述する場合、プラグインは maya_useNewAPI と呼ばれる関数を定義しなければなりません。
+
+さらに、[Maya ヘルプ: Maya Maya Python プラグインの Learning Path](http://help.autodesk.com/view/MAYAUL/2016/JPN/?guid=__files_GUID_856DDB26_93E7_493D_A1D4_60C4CBA38B9C_htm) を読むと、よりショッキングな記述がある。同APIの2.0は1.0の機能を受け継いでいるわけではないようだ。廃止されたAPIがあって、そのような流れなら理解できるが、下記の記述はAPIに対する不安を抱かせる。本当に大丈夫なのか。
+
+> 2.0 API は高速化され、より「Python に近い」ものになりましたが、まだ 1.0 のすべてのフィーチャは 2.0 で使用
+できません。この API と旧式の 1.0 API の違いについては、「Maya Python API 2.0」を参照してください。
+
+このように私はMaya Python APIに不安を感じているが、業界の方々は本当にこのAPIを使っているのだろうか。
+
+##  プラグインの実装
+
+気を取りなして、具体的な実装方法について見ていきたい。どうやらMayaのプラグインには種類があるようだ。ここでは大まかな流れを把握したいので、Hello Worldと表示するコマンドプラグインを作っていく。
+
+まずはMayaのプラグイン機構に対応するために実装が必要のメソッドを探す。[Maya ヘルプ: コマンド プラグイン](http://help.autodesk.com/view/MAYAUL/2016/JPN/?guid=__files_GUID_85B1116E_F0C1_42AD_9CD4_30E936B6C7B8_htm)にはこのように書かれている。
+
+> Maya プラグインには initializePlugin() および uninitializePlugin() という 2 つの関数が必要であり、
+> それぞれ Maya がプラグインのロードおよびアンロードを試みるときに呼び出されます。
+> これら 2 つの関数がファイル内に存在しない場合、プラグインはロードに失敗します。
+
+つまり、Python API 2.0を使ってMayaプラグインを実装する場合は前述のmaya_useNewAPI()を含め下記のメソッドの実装が必要だ。
+
+- maya_useNewAPI()
+- initializePlugin()
+- uninitializePlugin()
+
+コマンドプラグインの場合には、Mayaに読み込ませるためにクラス MFnPlugin が持つregisterCommandおよびderegisterCommandの実装をする。initializePluginでregisterCommandを呼び、uninitializePluginでderegisterCommandを呼ぶといった形になる。
+
+実際に処理内容は、maya.api.OpenMaya.MPxCommandクラスを継承し、doItメソッドに記述する。今回はここにHello Worldと出力する処理を入れる。
+
+## プラグインのロードとパス
+
+さて、次に自作プラグインのデプロイ先について調べたい。
+
+Mayaは特定のパスからプラグインをロードする。このパスは同アプリのスクリプトエディタで"getenv MAYA_PLUG_IN_PATH"とMELコマンドを実行することで確認が可能だ。実行結果はOS毎に異なる。Autodeskの[Maya ヘルプ: ファイル パス変数](http://help.autodesk.com/view/MAYAUL/2016/JPN/?guid=GUID-228CCA33-4AFE-4380-8C3D-18D23F7EAC72)に詳細がある。下表に示す。なお、変数で表記できるところはそのようにした。
+
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>パス</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>
+<ul><li>%SystemDrive%:/Users/%USERNAME%/Documents/maya/{version}/plug-ins</li>
+<li>{ユーザ フォルダ}/Documents/maya/plug-ins</li>
+<li>{Maya ディレクトリ}/bin/plug-ins</li></ul>
+</td>
+</tr>
+<tr>
+<td>Mac OS X</td>
+<td>
+<ul><li>$HOME/Library/Preferences/Autodesk/maya/{version}/plug-ins</li>
+<li>$HOME/Library/Preferences/Autodesk/maya/plug-ins</li>
+<li>/Users/Shared/Autodesk/maya/{version}/plug-ins</li>
+<li>/Users/Shared/Autodesk/maya/plug-ins</li>
+<li>/Applications/Maya {version}/Maya.app</li></ul>
+</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>
+<ul><li>$MAYA_APP_DIR/maya/{version}/plug-ins</li>
+<li>$MAYA_APP_DIR/maya/plug-ins</li>
+<li>/usr/autodesk/userconfig/maya/{version}/plug-ins</li>
+<li>/usr/autodesk/userconfig/maya/plug-ins</li>
+<li>$MAYA_LOCATION/bin/plug-ins</li></ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+実際にどこまでのパスをMayaが認識しているかは各自で確認されたい。
+
+もし、上記の他に任意のパスを追加したい場合は環境変数 MAYA\_PLUG\_IN\_PATHにそのパスを宣言すればよい。シェルがbashなら、$HOME/.bashrcに以下のように追記する。なお、この値が有効になるのはbashからMayaを実行した時である。
+
+<script src="https://gist.github.com/hiroakit/a8995fd5a88978248545.js"></script>
+
+# コード
+
+下記はHello Worldを出力するコードである。興味のある方はMayaのプラグインマネージャーで読み込み、スクリプトエディタでHelloWorldと実行してみてほしい。
+
+<script src="https://gist.github.com/hiroakit/b795f43f3d0d938cfb01.js"></script>

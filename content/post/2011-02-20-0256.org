@@ -1,0 +1,6 @@
+#+title: Apacheウェブサーバーの受け取り時に確認すること
+#+date: 2011-02-20T21:55:59+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>世の中にはわけのわからないサーバーがあふれているようだ。特にApacheをウェブサーバーとして使っているLinuxマシンを渡された場合は注意をしないと危険だ。</p><!--more--><h3>MPM(マルチプロセッシングモジュール)の確認</h3><p>サーバーに搭載されているメモリとApacheが使用するメモリ量のバランスをとらせたい。まずは状況を把握する。</p><blockquote># which apachectl　//apachectl が利用可能かPATHの有無で確認する# apachectl -V　//Server MPM を確認する# /etc/rc.d/init.d/httpd status　//プロセス(PID)の確認# ps aux | grep apache　//Apache関連のプロセスの確認とメモリ使用量(RSS)の把握</blockquote><h3>想定されている同時接続数の確認</h3><p>MaxClientsの値から想定されている同時接続数を把握する。(必ずしも、設定されているMaxClientsの値がサーバー性能を配慮しているとは限らないので簡単に計算して判断基準として使う)</p><blockquote># less /etc/httpd/conf/http.conf ?//MaxClients で検索をかける簡単に計算して、おかしいところがないか確認するMaxClients = サーバーメモリ量 / RSS(例) MaxClients = 2048 MB / 10MB = 204http.confに変更を加えたら、# /etc/rc.d/init.d/httpd graceful</blockquote>

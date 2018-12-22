@@ -1,0 +1,44 @@
+#+title: Windows Azure PowerShell
+#+date: 2015-02-06T21:08:47+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+今回は[Azure PowerShell](https://msdn.microsoft.com/library/azure/jj156055.aspx)について取り上げる。
+Azure PowerShellを使うには、「Windows Azure PowerShell」が必要だ。
+
+## インストール方法
+
+「Windows Azure PowerShell」は下記からインストーラーを入手可能だ。
+(ウェブページ内を「Windows PowerShell」で検索して、その近くにあるInstallと書かれたリンクをクリックする。)
+
+- [Download Azure SDKs and Tools | Azure](https://msdn.microsoft.com/library/azure/jj156055.aspx)
+
+インストールは画面に従って、先に進むだけでよい。インストール後、「Microsoft Azure PowerShell」というアプリケーションを起動する。
+
+## Azureにログインする
+
+ログイン方法は[How to install and configure Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/)で紹介されている。今回は紹介されている方法のうち、[Use the certificate method](http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/#use-the-certificate-method)を利用してログインする。なお、[Use the Azure AD method](http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/#use-the-azure-ad-method)に関しては[Windows Azure PowerShell Cmdletを試そう！](http://www.sigmact.com/article/2013/windowsazure-powershell)で紹介されている。
+
+### 管理証明書をインストールする
+
+下記の方法でインストールする。管理証明書はAzureポータルから入手するが、下記のコマンド操作の過程で処理される。
+
+Get-AzurePublishSettingsFile // Azureのログインページが開く。ここで管理証明書をダウンロードする
+Import-AzurePublishSettingsFile C:\Users\<UserProfile>\Downloads\<SubscriptionName>-credentials.publishsettings
+
+以上で管理証明書のインストールは完了だ。動作確認がてら、Get-AzureAccountやGet-AzureSubscriptionのコマンドを使って、どんな情報が取れるか確認してみると良いだろう。
+
+### コマンド
+
+- Select-AzureSubscription "サブスクリプション名"
+- Get-AzureDeployment
+- Get-AzureRole
+- Get-AzureService
+
+## 参考資料
+
+- [Azure PowerShell](https://msdn.microsoft.com/library/azure/jj156055.aspx)
+- [Microsoft.WindowsAzure.Commands.Storage.Table.Cmdlet](https://msdn.microsoft.com/en-us/library/azure/dn495240.aspx)
+- [How to install and configure Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/)
+- [Windows Azure PowerShell Cmdletを試そう！](http://www.sigmact.com/article/2013/windowsazure-powershell)
+- [PowerShell で Azure を操作する際のメモ | SE の雑記](https://engineermemo.wordpress.com/2013/04/29/powershell-%E3%81%A7-azure-%E3%82%92%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E3%83%A1%E3%83%A2/)

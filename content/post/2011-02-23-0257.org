@@ -1,0 +1,6 @@
+#+title: Mac mini のメモリを増設した
+#+date: 2011-02-23T00:43:54+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>今日は Mac mini のメモリを 8GB に増設しました。増設を行った Mac mini は2010年のモデルで裏面に回転蓋がついているアルミ筐体です。換装方法についてはアップルが<a href="http://support.apple.com/kb/HT4432?viewlocale=ja_JP">メモリの取り外し方法と取り付け方法</a>を紹介しています。</p><!--more--><p><a rel="attachment wp-att-3883" href="http://hiroakit.com/archives/3884/sony-dsc-3"><img class="size-full wp-image-3883  aligncenter" title="Mac mini" src="http://hiroakit.com/photo/fig1.jpg" alt="Mac mini Memory Slot" width="640" height="426"></a></p><p>(手先が器用な人間の場合に限り)メモリの換装そのものは難しくありません。ただ、いかんせんメモリが刺しづらいです。それ以外だと、取り外しの際に爪がとてつもなく傷つきます（笑メモリがうまく刺さっていない場合は、Macが起動せずに「ビー」とビープ音がなります。こうなった時は諦めるしかないようです。電源ボタンを長押しして停止させます。Mac は２つのメモリスロットをBANK 0, BANK 1 として認識しています。システムプロファイラで確認できます。実際に指す箇所は上図で言うと奥のメモリスロットが BANK 0 で、手前のメモリスロットが BANK 1 です。メモリは SO-DIMM で PC3-8500 のものが必要です。これで Xcode もすいすいです。</p>

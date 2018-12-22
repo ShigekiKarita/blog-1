@@ -1,0 +1,40 @@
+#+title: Team Geek 読了
+#+date: 2015-02-04T00:29:06+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+先日、「<a href="http://www.amazon.co.jp/gp/product/4873116309/ref=as_li_tf_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4873116309&linkCode=as2&tag=hiroakit-22">Team Geek ―Googleのギークたちはいかにしてチームを作るのか</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=hiroakit-22&l=as2&o=9&a=4873116309" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />」を読み終えた。その感想をここに記す。
+
+## きっかけ
+
+私はソフトウェアエンジニアのQOLについて悩んでいる。私個人だけでなく、一緒に仕事をしたソフトウェアエンジニアのQOLはどのようにして決まるのか、どうすると幸福度が上がるのかといったことをテーマに模索している。
+
+このテーマに関連する著書として以前に「ピープルウェア」を読んだことがある。これはマネージャーがプロジェクトを成功させるといった点からQOLに結びつく。しかしながら、それだけでは視座としては不十分であり、現場視点が欲しい。そんな矢先にこのTeam Geekと出会った。Team Geekはエンジニア同士のコラボレーションなど付き合い方を主軸に置き、現場寄りのエンジニアに書かれた書籍である。
+
+## HRT (ハート)
+
+この本では「ソフトウェア開発はスポーツ」と表した上で、以下の3要素が重要だと説いている。
+
+- 謙虚
+- 尊敬
+- 信頼
+
+## ポストモーテム
+
+## まとめ
+
+私は利用者のQOLを第1に考える。あくまでも、言語仕様やコード品質はそれをサポートするだけだ。ただ、これがなかなか難しい。理想と現実の狭間で何とかやっているのが実情で、チームメンバーには迷惑をかけている。コラボレーションとは程遠いだろう。
+
+## 第三者のレビュー
+
+- [私的手記: 【読了】Team Geek -Googleのギークたちはいかにしてチームを作るのか-](http://shitekisyuki.blogspot.jp/2014/08/team-geek-google.html)
+- [【読了】Team Geek - 僕はプログラマでありたいよ](http://tadasy.hatenablog.com/entry/2013/08/28/123146)
+- [Team Geek読んだ - はこべブログ ?](http://hakobe932.hatenablog.com/entry/2014/01/03/222344)
+- [『Team Geek』はGeek以外にも読む価値のある書籍](http://changesworlds.com/2013/10/team-geek-done/)
+- [Team Geek を読んだ. 仕事をつくるのは誰か? | Futurismo](http://futurismo.biz/archives/2940)
+- [Team Geek読んだ感想 - MEMOGRAPHIX](http://memo.sanographix.net/post/69767834495)
+- [Team Geekを読んだ ≫ 寺子屋未満](http://terakonya.sarm.net/wordpress/2013/10/23/team-geek/)
+- [すーくんさんの読書レビュー 「Team Geek」 | 読書ログ](http://www.dokusho-log.com/r/su-kun/ahFzfm5ldy1kb2t1c2hvLWxvZ3I0CxICQk0iETQ4NzMxMTYzMDkrc3Uta3VuDAsSAVIiFDQ4NzMxMTYzMDkrc3Uta3VuKzAxDA/)
+- [Jun Mukai's blog: 『Team Geek』が面白い](http://blog.jmuk.org/2013/07/team-geek.html)
+- [おそるべきTeam Geek - L'eclat des jours(2013-07-21)](http://www.artonx.org/diary/20130721.html#p01)
+-[「Team Geek」と「Being Geek」を読んだ - 工作とか、プログラミングとか](http://mia-0032.hatenablog.jp/entry/2014/10/21/162010)

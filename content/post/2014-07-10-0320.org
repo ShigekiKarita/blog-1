@@ -1,0 +1,6 @@
+#+title: LINQ to Objects 入門 その1
+#+date: 2014-07-10T00:00:00+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>初歩的だがLINQを使う前と使った後を比べられるコードを<a href="https://github.com/hiroakit/LinqToObjectsSample/blob/219dbd19393417cda5ea6247102afc17a7dd8931/LinqToObjectsSample/Program.cs">書いた</a></p><p>LINQ to SQLで嫌になってからLINQから距離を置いていたが、LINQ to Objectsはまだ触ったことがなかった。今日のところは、for, foreach, ifから成る峡谷を回避できるかなぐらいの認識。もうちょっと触ってみないと何とも言えないけれど、いい感じ。</p><p>今度はもう少し負荷をかけてみようと思う。</p>

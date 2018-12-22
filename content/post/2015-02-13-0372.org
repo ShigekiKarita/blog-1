@@ -1,0 +1,50 @@
+#+title: Azure PowerShellでSQLデータベースのバックアップを取る
+#+date: 2015-02-13T17:19:32+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+
+まずはバックアップの保管先となるストレージを把握する。
+
+Get-AzureStorageAccount | Format-Table -auto "Label","Location"
+
+> Label      Location
+>
+> -----      --------
+>
+> hnkdev28  East Asia
+>
+> hnkstrg   Japan East
+
+この辺もわからないとだめ。
+
+Get-AzureStorageKey -StorageAccountName "hnkdev28"
+
+最終的にはこれが肝。Get-Credentailがポップアップダイアログを開く。そこでデータベースサーバに入るための認証情報を入れる。これはこれでよいが。。。
+
+> C:\PS>$credential = Get-Credential
+
+> C:\PS>$SqlCtx = New-AzureSqlDatabaseServerContext -ServerName $ServerName -Credentials $credential
+
+> C:\PS>$StorageCtx = New-AzureStorageContext -StorageAccountName $StorageName -StorageAccountKey $StorageKey
+
+> C:\PS>$Container = Get-AzureStorageContainer -Name $ContainerName -Context $StorageCtx
+
+> C:\PS>$exportRequest = Start-AzureSqlDatabaseExport -SqlConnectionContext $SqlCtx -StorageContainer $Container -DatabaseName $DatabaseName -BlobName $BlobName' // BlobNameはファイル名ととらえてよい
+
+> Get-AzureSqlDatabaseImportExportStatus -Request $exportRequest 
+
+マイクロソフト曰く、GUIDは把握していろとのことなので、下記のコマンドも控えておく。
+
+$exportRequest.RequestGuid // Start-AzureSqlDatabaseExportで割り振られたGUIDが出る
+
+
+## 参考資料
+
+- [Get-AzureStorageAccount](https://msdn.microsoft.com/en-us/library/azure/dn495134.aspx)
+- [Get-AzureStorageKey](https://msdn.microsoft.com/en-us/library/azure/dn495235.aspx)
+- [Get-AzureSqlDatabaseServer](https://msdn.microsoft.com/ja-jp/library/azure/dn546740.aspx)
+- [Get-AzureSqlDatabase](https://msdn.microsoft.com/ja-jp/library/azure/dn546735.aspx)
+- [Start-AzureSqlDatabaseExport](https://msdn.microsoft.com/ja-jp/library/azure/dn546720.aspx)
+- [Get-AzureSqlDatabaseImportExportStatus](https://msdn.microsoft.com/ja-jp/library/azure/dn546734.aspx)
+- [データベースのエクスポート](https://msdn.microsoft.com/ja-jp/library/azure/dn781282.aspx)

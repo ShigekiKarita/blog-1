@@ -1,0 +1,6 @@
+#+title: 思考をコード化する道具Emacs
+#+date: 2013-12-17T23:57:58+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>先々月のSoftwareDesignを読んだ。</p><iframe style="width: 120px; height: 240px;" src="http://rcm-fe.amazon-adsystem.com/e/cm?t=largeworld-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00FK9ZZ38&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" height="240" width="320" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><p>特集の「思考をコード化する道具?<span style="line-height: 1.5;">我が友「Emacs」</span><span style="line-height: 1.5;">設定ファイルの行数は覇気に比例する?!」が面白かった。</span>やっぱEmacsがいい。</p>

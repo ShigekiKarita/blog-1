@@ -1,0 +1,38 @@
+#+title: Outlook for iOSでOffice 365のメールを見る
+#+date: 2015-01-30T00:02:23+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+Microsoftが**[Outlook for iOS](https://itunes.apple.com/app/id951937596)**をリリースした。詳しくは下記のMicrosoft公式ブログで確認できる。
+
+- [Office everywhere: More great news for Office on iOS and Android - The Official Microsoft Blog](http://blogs.microsoft.com/blog/2015/01/29/office-everywhere-great-news-office-ios-android/)
+
+早速、iPhoneでダウンロードして使ってみようと思う。
+
+インストール後に初回起動すると、以下の画面が出る。
+
+<a href="https://www.flickr.com/photos/130437776@N03/16369947036" title="Outlook for iOSでOffice 365のメールを見る (図1) by hiroakit, on Flickr"><img src="https://farm9.staticflickr.com/8668/16369947036_9346bf416e.jpg" width="333" height="500" alt="Outlook for iOSでOffice 365のメールを見る (図1)"></a>
+
+ぽちぽち進めて行き、「始める」ボタンをタップすると、メールアカウントの設定画面に移動する。
+
+<a href="https://www.flickr.com/photos/130437776@N03/15775905733" title="Outlook for iOSでOffice 365のメールを見る (図2) by hiroakit, on Flickr"><img src="https://farm9.staticflickr.com/8601/15775905733_b2bc0691ee.jpg" width="333" height="500" alt="Outlook for iOSでOffice 365のメールを見る (図2)"></a>
+
+一番上にあるExchangeをタップする。
+
+<a href="https://www.flickr.com/photos/130437776@N03/16369947056" title="Outlook for iOSでOffice 365のメールを見る (図3) by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7428/16369947056_6c3492e561.jpg" width="333" height="500" alt="Outlook for iOSでOffice 365のメールを見る (図3)"></a>
+
+すると、設定画面が出る。Office 365のメール(Microsoft Exchange Online)のアカウントを使う場合は、メールアドレスとパスワードを入力するだけで良い。「記述」という項目は未入力のままにしておく。
+
+<a href="https://www.flickr.com/photos/130437776@N03/16369947076" title="Outlook for iOSでOffice 365のメールを見る (図4) by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7410/16369947076_83189442da.jpg" width="333" height="500" alt="Outlook for iOSでOffice 365のメールを見る (図4)"></a>
+
+設定が終われば、受信トレイへ移動する。
+
+<a href="https://www.flickr.com/photos/130437776@N03/15775905703" title="Outlook for iOSでOffice 365のメールを見る (図5) by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7433/15775905703_4d0d593cdf.jpg" width="333" height="500" alt="Outlook for iOSでOffice 365のメールを見る (図5)"></a>
+
+第一印象はいい感じ。しばらく使い続けたい。
+
+## 追記
+
+他の方の解説記事が見つかったので掲載。
+
+- [iPhone「Outlook for iOS」アプリが、使いやすくていい感じ - ビジョンミッション成長ブログ](http://visionmission.hatenablog.com/entry/iphone-outlook)

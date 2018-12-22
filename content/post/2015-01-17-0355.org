@@ -1,0 +1,72 @@
+#+title: 独自ドメインのメールアドレスとその運用
+#+date: 2015-01-17T23:19:20+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+私はフリーメールアドレス(例: Gmail)以外に、
+独自ドメインのメールアドレスを利用している。
+今回、このアドレスをMicrosoft Exchange Onlineに移行した。
+
+今までは独自ドメインのメールアドレスを専用メールサーバーで運用していが、
+これの管理が次第に億劫になってきた。そこでメールサービスを探すことにした。
+ひとまずは月々の支払いが安いもので絞ったところ、下記が候補として挙った。
+
+- [[http://muumuu-domain.com/?mode=about&state=muumuumail][ムームーメール]]
+- [[http://www.sakura.ne.jp/mail/][さくらのメールボックス]]
+- [[https://www.google.co.jp/intx/ja/work/apps/business/][Google Apps for Work]]
+- [[http://www.microsoft.com/ja-jp/office/365/product-exchange.aspx][Microsoft Exchange Online]]
+
+** メールサービスの比較
+
+以下の観点で比較した。列挙順に調べ、条件にマッチしないものは、その時点で調査を打ち切った。
+
+- 月額費用
+- ドメイン縛り (その会社の別サービスでドメイン管理が必須など)
+- SSL / TLSが利用できるか
+- ストレージ容量
+
+<table>
+<caption>メールサービスの比較</caption>
+<tr><th>サービス</th><th>月額費用</th><th>ドメイン縛り</th><th>SSL/TLS</th><th>ストレージ</th></tr>
+<tr><td>ムームーメール</td><td>&yen;50</td><td>あり (ムームードメイン管理下の場合のみ使用可能)</td><td>未調査</td><td>未調査</td></tr>
+<tr><td>さくらのメールボックス</td><td>&yen;86</td><td>なし</td><td>独自ドメインでは利用不可</td><td>未調査</td></tr>
+<tr><td>Google Apps for Work</td><td>&yen;500</td><td>なし</td><td>利用可能</td><td>30GB</td></tr>
+<tr><td>Microsoft Exchange Online</td><td>&yen;330</td><td>なし</td><td>利用可能</td><td>50GB</td></tr>
+</table>
+
+*** ムームーメール 
+
+下記の記事を読む限り、利用したい独自ドメインはムームードメインで管理している必要があるようだ。
+そのため、候補から外した。
+
+- [[http://ninnin.in/web/muumuumail-used-domain-error/][さくらインターネットのメールからムームーメールに乗り換えてみた | ninnin.in -ニンニンイン-]]
+- [[http://kazumich.com/muumuuMail.html][ムームーメールってサービスを契約してみた | kazumich.log]]
+- [[http://mbdb.jp/web/muumuu-mail-start.html][マルチドメイン対応の大容量メールサービス「ムームーメール」始動 | mbdb (モバデビ)]]
+
+*** さくらのメールボックス
+
+[機能一覧](http://www.sakura.ne.jp/mail/)を読むと、メール送受信の暗号化の部分に注釈3が振ってある。
+どうやら独自ドメインではSSLあるいはTLSが使えないようだ。そのため、候補から外した。
+
+#+BEGIN_QUOTE
+初期ドメインで利用されているメールアドレスに限りご利用いただけます。
+#+END_QUOTE
+
+なお、初期ドメインとはさくらインターネットからもらえる「○○○.sakura.ne.jp」といった形式のもの。
+
+*** Google Apps for Work	
+
+Gmail以外にGoogleカレンダーやGoogleドキュメントが使える。
+ただし、私はGoogleドキュメントは使わないのでアドバンテージにならず、機能が多いと感じさせる要因になった。また、Microsoft Exchange Online比較するとストレージ容量が少なく値段も高い。
+
+以上のことから、候補から外すことにした。
+
+*** Microsoft Exchange Online
+
+MicrosoftのクラウドサービスOffice 365に含まれる製品群の1つ。Microsoft Exchange Onlineではメール、カレンダーが利用できる。機能や移行方法を見る限り、申し分なし。
+
+以上のことから、独自ドメインのメールアドレスの運用にはMicrosoft Exchange Onlineを利用することにした。
+
+** まとめ
+
+独自ドメインのメールアドレスは、個人でメールサーバーを立てるのではなく、Microsoft Exchange Onlineを始めとするメールサービスで運用した方が良い。メールサーバーの保守は手間がかかる割に、得られるメリットが少ない。

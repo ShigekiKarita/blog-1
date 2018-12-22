@@ -1,0 +1,6 @@
+#+title: pyenvをセットアップする
+#+date: 2014-07-07T00:00:00+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>幾度かpyenvをインストールしているので、セットアップスクリプトを書いた。修練以外の繰り返し作業はなるべく回避したい。</p><script src="https://gist.github.com/hiroakit/90b2fab3039326a72714.js"></script><p>Xcode command line toolsのインストール状況を判断するために、lsbomコマンドで"/var/db/receipts/com.apple.pkg.CLTools_Executables.bom"を見れば良いかなと探っていたのだが、気力尽き果ててしまった。</p><p>どうやら、pythonをビルドするときに/usr/include/opensslにあるヘッダーファイルを参照するようだ。しかし、Mac OS X Mavericksをインストールした直後ではこのディレクトリは存在しない。Xcode command line toolsをインストールすることで、"/usr/include/openssl"ディレクトリが生成される。このことに気づかず、ずいぶんとのんびりとした時間を過ごしてしまった。</p>

@@ -1,0 +1,59 @@
+#+title: ソースコードにinitializeとinitialiseが混在していた
+#+date: 2016-03-27T16:56:19+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+以下はとあるオープンソースのコードなのだが、  
+このコードでは initialize v.s. initialise (厳密にはinitialisation)が起きている。  
+
+コードを上から読んでいると、「Initialize」が目に入り、  
+その次に「initialisation」が出てくる。
+
+    // Initialize the database
+    if ((db = [Database sharedManager]) == nil)
+    {
+        	[NSApp terminate:nil];
+        	return;
+    }	
+    :
+    :
+    // <中略>
+    :
+    :    
+    // Do safe initialisation.
+    [self performSelector:@selector(doSafeInitialisation)
+               withObject:nil
+               afterDelay:0];
+
+さて、今後、私が初期化に関するコードを書く機会があった場合、どちらを使えばいいのだろうか。  
+Initializeだろうか、Initialiseだろうか。どちらに統一すべきなんだろうか。
+
+そこで調べてみることにした。  
+そもそも「Initialise」は辞書に載っているのか。
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">イギリス英語的にはInitialiseでも良いんじゃないかな？(出典はランダムハウス英和辞書<br>僕は論文ではイギリス英語使うようにしてる。 <a href="https://t.co/D3BBvEYlUr">pic.twitter.com/D3BBvEYlUr</a></p>&mdash; Ryoma Sin&#39;ya (@sinya8282) <a href="https://twitter.com/sinya8282/status/699916559939022848">2016年2月17日</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+どうやら辞書に載っているらしい。  
+そして、アメリカ英語とイギリス英語の違いだということがわかった。   
+
+プログラミングとしてはどうなのだろうか。  
+どちらを使えばいいのだろうか。どっちでもいいのだろうか。  
+統一してあればどちらでも構わないと思うのだが、どうやっているのだろうか。
+
+そこでプログラミングよりの意見を探した。  
+MATLABプログラミングスタイルガイドラインの邦訳版に、  
+「アメリカ英語の"initialize"を使用すべきでしょう．  」と記載があった。
+> ルール8: initializeというプレフィックスは，オブジェクトを生成する関数に使用する．  
+> イギリス英語の"initialise"とアメリカ英語の"initialize"があるが，  
+> アメリカ英語の"initialize"を使用すべきでしょう．  
+>   
+> 出典: [MATLAB Programming Style Guidelines 4: Functions - MyEnigma](http://myenigma.hatenablog.com/entry/20120107/1325888743)
+
+先にこうやって宣言しておけば、後々理由付けが楽そうだ。  
+
+別の記事には以下の文言を含むコメントがあり、  
+やはり、これは統一が図られるべきところなのだろう。
+> いずれにしても、1つの文書の中でsとzの両方はなしでしょうね。  
+> 出典: [InitializeとInitialise - れぷそる・ふぁいやぁ・ぶれぇど](http://d.hatena.ne.jp/RepsolFireBlade/20100521/1274473435)
+
+ふむ。。。  
+コミュニティ側に提案してみようか。

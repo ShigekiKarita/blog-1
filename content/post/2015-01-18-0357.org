@@ -1,0 +1,13 @@
+#+title: 散歩
+#+date: 2015-01-18T20:52:34+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+今日は家族と公園を散歩した。その公園には池があり鴨が生息している。
+心安らぎそうだったので動画に収めた。
+
+だいぶ遠くから手持ちで撮影したので、画質が荒いがカルガモとマガモを確認できる。
+
+<div style="text-align:center">
+<iframe width="560" height="315" src="//www.youtube.com/embed/iYXBNrJoogU" frameborder="0" allowfullscreen></iframe>
+</div>

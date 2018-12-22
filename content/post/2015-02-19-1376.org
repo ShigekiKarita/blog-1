@@ -1,0 +1,74 @@
+#+title: Windows Server 2012 R2でJenkinsを運用する
+#+date: 2015-02-19T16:54:19+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+開発時に使うサーバーにCI環境を入れる。このサーバーでは下記の役割を担ってもらう。この構成は非常に良くないが、ミニマムである。Hyper-Vなどで動く仮想マシンなら都合がよい。
+
+- CIサーバー(Jenkinsを使う)
+- Gitリポジトリ (クライアントにはWindows共有を介して git clone, git push, git pullなどをしてもらう)
+
+これらはWindows Server 2012 R2で動く。.NET Framework 4.5.1 Developer Packをインストールしておくこと。
+また、サーバーマネージャーの役割と機能の追加で.NET Framework 3.5をインストールしておくこと。NUnit-Consoleは.NET 3.5を使う。
+
+## Gitリポジトリ
+
+Windows向けGitである「Git for Windows」を使う。Gitリポジトリを公開するためには、ssh、gitのプロトコルを使うか、HTTP/HTTPSでアクセスできるgitをホスティングするか、はたまたWindowsファイル共有などファイルシステムで運用するである。今回は最後のを使う。ちなみにWindowsのgitプロトコルはデッドロックもしくはハングアップが発生することがあるようなので、避けている。
+
+主な流れは以下の通りだ。下記の2が面倒であるが、Windows環境ではこれがよいだろう。
+
+1. Windows ServerにGitリポジトリを集約するフォルダを作る
+2. そのフォルダを共有する
+3. クライアントはWindows Serverのフォルダをマウントする　(ネットワークドライブの割り当て) 
+
+### フォルダの共有
+
+1. 共有したいフォルダを右クリック
+2. 共有タブをクリック
+3. 詳細な共有...をクリック
+    1. このフォルダーを共有するにチェックを入れる
+    2. 「アクセス許可」をクリックしてアクセス可能なユーザを追加する(git pushなどでリモートリポジトリ側に書き込むことがあるので、変更と読み取りにチェックを入れる)
+
+## Jenkins
+
+下記のプラグインをインストールする
+
+1. git plugin
+2. MSBuild plugin
+3. Nunit plugin
+
+### git plugin
+
+1. git pluginを入れる
+2. gitの実行ファイルのパスはC:\Program Files (x86)\Git\cmd\git.exe
+3. ジョブを追加して、簡単なエコー文を入れて、ビルド実行までの流れが通るかチェックする
+
+### MSBuild Plugin
+
+MSBuild Pluginを入れる
+
+- Name: v4.030319 (Microsoft Build Tools 2013)
+- Path to MSBuild: C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+### NUnitPlugin
+
+NUnit Pluginを入れる
+
+## 参考資料
+
+- [Gitでリモートリポジトリを操作する （1/3）：CodeZine](http://codezine.jp/article/detail/7353)
+- [Git for Windows (msysgit)のgitプロトコルハングアップ問題](http://d.hatena.ne.jp/torutk/20120915/p1)
+- [WindowsでGit共有リポジトリをさくっと構築](http://thinking-megane.blogspot.jp/2012/07/windowsgit.html)
+- [Windows server 2012にJenkins環境を構築した際のメモ - Qiita](http://qiita.com/digdagdag/items/42b9abb6357b66117f54)
+- [開発者（個人）のためのJenkins - Git Plugin編](http://qiita.com/yasuhiroki/items/61a2be613fc7dcfc8682)
+- [JenkinsでMSBuild環境構築 | Changes](http://takecs.net/wp/archives/148)
+- [Hudson/JenkinsでVisual Studioプロジェクトのビルドをする ? MSBuild Plugin | skmks](http://unicus.jp/skmk/archives/515)
+- [Windows Server 2008 への Jenkins と .NET ビルド環境の構築手順](https://gist.github.com/dany1468/2234130)
+- [第2回 大規模Windows環境におけるデプロイ：AWS+Windows環境における大規模ソーシャルゲーム開発／運用の実際｜gihyo.jp … 技術評論社](https://gihyo.jp/admin/serial/01/grani/0002)
+- [.NET 開発で Jenkins を使ってみる：ビルド | MiYABiS note.](http://note.miyabis.jp/2014/10/net-%E9%96%8B%E7%99%BA%E3%81%A7-jenkins-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B%EF%BC%9A%E3%83%93%E3%83%AB%E3%83%89.html)
+- [.NET Framework 4.5、4.5.1、および 4.5.2 のインストール](https://msdn.microsoft.com/ja-jp/library/5a4x27ek%28v=vs.110%29.aspx)
+- [初めてのpsake　～PowerShelを使ったビルドツール～](http://84zume.wordpress.com/2011/12/14/first-psake/)
+- [herara_ofnir3.blogger: Jenkinsでのビルド時にNuGetパッケージを復元する](http://ofnirs.blogspot.jp/2013/01/restore-nuget-package-on-jenkins.html)
+- [社内の開発環境の改善＆効率化のためにNuGetを活用しよう - Build Insider](http://www.buildinsider.net/enterprise/nugetprivate/01)
+- [MSBuildのログ情報 | 84zume Works](http://84zume.wordpress.com/2014/03/09/msbuild-output-log/)
+- [Windows を Jenkins の Slave にして Git管理してる Rspec のテストを実行するためのセットアップ手順](http://qiita.com/yui/items/f813013863673f9684cf)

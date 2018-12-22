@@ -1,0 +1,6 @@
+#+title: ARC有効下でNSErrorを使う際に注意すべきこと
+#+date: 2013-11-15T01:19:50+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>まとめようと思ったのだけれど、github(gist)に繋がらなかったから急に書く気がなくなってしまった。書こうとしたのは、NSErrorの使い方を間違えると、ゾンビプロセスが増えるぞという趣旨の内容だったのだけれど、眠いし、ここらで寝ちゃうことにする。</p><p>参考記事</p><ol>	<li><a href="http://amattn.com/2011/12/07/arc_best_practices.html">ARC Best Practices</a></li>	<li><a href="http://stackoverflow.com/questions/13587742/nserror-and-autoreleasing">objective c - NSError and __autoreleasing - Stack Overflow</a></li></ol>

@@ -1,0 +1,6 @@
+#+title: Objective-CでiOSの全体容量と空き容量の取得
+#+date: 2011-05-22T17:46:25+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>結論としてはNSFileManagerのattributesOfFileSystemForPathを使用して値を取得する。ちなみに全体容量の値はiTunesで確認できる全体容量と同じものである。</p><!--more--><p>attributesOfFileSystemForPathはNSDictionaryに値を入れることになるのだが、その中にあるNSFileSystemFreeSizeは空き容量、NSFileSystemSizeは全体容量の値を持っている。</p><pre>NSString *path = NSHomeDirectory();NSNumber *allSize = nil;NSNumber *freeSize = nil;NSError *error = nil;NSDictionary *dict = [[NSFileManager defaultManager]attributesOfFileSystemForPath:path error:&amp;error];allSize = [dict objectForKey:NSFileSystemSize]; // 使用容量freeSize = [dict objectForKey:NSFileSystemFreeSize]; // 空き容量NSLog(@"used:%.3f GB",[allSize floatValue]/1024/1024/1024);NSLog(@"free:%.3f GB",[freeSize floatValue]/1024/1024/1024);</pre><p>なお、全体容量と空き容量を取得するために、NSFileManagerのfileSystemAttributesAtPathを使用すると紹介している記事があるが、これは以前のiOSにおいて有効なものであり、現在は使えない。</p><ul>	<li><a href="http://superdiszo.sakura.ne.jp/WP/?p=115" target="_blank">ボリュームの空き容量を取得する (DZ空間)</a></li>	<li><a href="http://ip7.biz/wordpress/?p=420" target="_blank">iPhoneの空き容量を取得する (おいしいCocoaの飲み方)</a></li>	<li><a href="http://stackoverflow.com/questions/1626139/how-do-you-find-how-much-disk-space-is-left-in-cocoa" target="_blank">How do you find how much disk space is left in Cocoa? (stackoverFlow)</a></li></ul>

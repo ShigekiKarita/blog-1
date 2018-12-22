@@ -1,0 +1,6 @@
+#+title: セキュリティ方面でよく読むサイト
+#+date: 2014-06-25T00:00:00+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<ol><li><a title="Japan Vulnerability Notes" href="https://jvn.jp">Japan Vulnerability Notes</a></li><li><a title="US-CERT" href="https://www.us-cert.gov">US-CERT</a></li><li><a title="Security NEXT" href="http://www.security-next.com">Security NEXT</a></li><li><a title="ScanNetSecurity" href="http://scan.netsecurity.ne.jp">ScanNetSecurity</a></li><li><a title="USBメモリ紛失・盗難事故一覧" href="http://usb.syoyu.net">USBメモリ紛失・盗難事故一覧</a></li><li><a title="Microsoft 日本のセキュリティチームのブログ" href="http://blogs.technet.com/b/jpsecurity/">Microsoft 日本のセキュリティチームのブログ</a></li></ol><p>以前はもう少し読むサイトの数が多かったが、それは単に自分に過負荷をかけるだけでメリットは何もなかった。今はこのぐらいがちょうど良い。</p>

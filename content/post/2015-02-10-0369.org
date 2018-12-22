@@ -1,0 +1,51 @@
+#+title: WindowsでPython開発環境をセットアップ
+#+date: 2015-02-10T12:32:55+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+Python 3.4.2を使う。pipは同梱されている。
+
+## Pythonインストール
+
+1. Pythonを[Download Python | Python.org](https://www.python.org/downloads/)からダウンロードする
+2. インストーラーに従って、先に進める
+3. 環境変数 PATH に値を追加する
+    - C:\Python34
+    - C:\Python34\Scripts
+    - C:\Python34\Lib\site-packages
+4. コマンドプロンプトを起動する
+
+### 動作確認をする
+
+python -V
+pip list
+
+## virtualenvインストール
+
+特定の環境でのみ動くようにvirtualenvを使う。
+
+pip install virtualenv
+
+## Seleniumを入れる
+
+Seleniumを使えば、ウェブアプリケーション実装者には大きなメリットがあるはず。ASP.NET MVCのウェブアプリケーションも同様だ。
+とりあえず、ウェブアプリケーション実装時にしか使わないはずなので、特定の環境でのみ動くようにvirtualenvを使う。
+
+virtualenv hogehoge
+cd hogehoge
+Scripts\activate
+
+activateコマンドでその特定の環境で動くPythonに切り替わる。仮想環境の起動といったところ。
+止める場合はdeactivateでよい。
+
+そこで pip install selenium
+
+コマンドプロンプトでテストコードがあるディレクトリに移動して、テストコードを実行する。
+
+例) python -m unittest test_webdriver.py
+
+## 参考資料
+
+- [今日のPython: VIRTUALENV について](http://blog1.erp2py.com/2011/07/virtualenv.html)
+- [1. Installation ? Selenium Python Bindings 2 documentation](http://selenium-python.readthedocs.org/en/latest/installation.html)
+- [26.3. unittest ? ユニットテストフレームワーク ? Python 3.4.2 ドキュメント](http://docs.python.jp/3/library/unittest.html)

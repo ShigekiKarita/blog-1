@@ -1,0 +1,121 @@
+#+title: PythonでMayaプラグインを作成する - 開発環境編
+#+date: 2015-07-18T16:50:40+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+[前回の記事](http://www.hiroakit.com/article/1381)では、プラグインの開発環境については触れず、Hello Worldの実装だけに留めた。
+
+そこで、今回はPythonでMayaプラグインを作成するための開発環境について触れたい。ネット上を探すと幾つか見つかった。下記に示す。
+
+- [Wing IDE](http://www.wingware.com), 有償, プロプライエタリソフトウェア
+- [PyCharm](https://www.jetbrains.com/pycharm/), 有償, プロプライエタリソフトウェア
+- [Winpdb](http://winpdb.org), 無償, フリーソフトウェア
+- [Eclipse](http://www.eclipse.org/home/index.php), 無償, フリーソフトウェア
+- [Emacs](https://www.gnu.org/software/emacs/emacs.html), 無償, フリーソフトウェア
+
+上記のうち、Wing IDE, Winpdb, Eclipseについては、Autodeskの[Maya ヘルプ: Python で初めてスクリプトを記述する場合のヒントとコツ](http://help.autodesk.com/view/MAYAUL/2016/JPN/?guid=GUID-8A96A8DB-FD6F-434F-A878-288DD84E99C7)で紹介されているもので、PyCharmは[PythonRandomDoc/pycharmDebugging at master ・ lochrist/PythonRandomDoc](https://github.com/lochrist/PythonRandomDoc/tree/master/pycharmDebugging)から候補に含めた。最後のEmacsについては[Koichi Tamura's blog: Emacs To Maya for Python Scripts](http://koichitamura.blogspot.jp/2009/06/emacs-to-maya-for-python-scripts.html)をみて候補に入れた。
+
+それでは、プロプライエタリソフトウェアとフリーソフトウェアに分けて見ていきたい。
+
+## プロプライエタリソフトウェア
+
+下表はWing IDEとPyCharmのライセンス料をまとめたものである。
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>商用</th>
+<th>非商用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wing IDE</td>
+<td>
+$245
+</td>
+<td>
+$95
+</td>
+</tr>
+<tr>
+<td>PyCharm</td>
+<td>
+$199
+</td>
+<td>
+$99
+</td>
+</tr>
+</tbody>
+</table>
+
+機能面については各製品のページを確認されたい。
+
+
+## フリーソフトウェア
+
+一方、フリーソフトウェアのWinpdb, Eclipse, Emacsはどうだろうか。
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th width=80>ライセンス</th>
+<th width=260>コードレポジトリ</th>
+<th width=100>対応OS</th>
+<th>年間のリリース頻度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Winpdb</td>
+<td>GPL</td>
+<td>ソースコードは<a href="https://code.google.com/p/winpdb/source/checkout">winpdbのGoogle Codeページ</a>から入手可能だが、Google Codeは2016年1月 25日にホスティングサービスを終了する。(<a href="http://googledevjp.blogspot.jp/2015/04/google-code.html">Google Code サービス終了のお知らせ - Google Developer Japan Blog</a>)</td>
+<td><ul><li>Linux</li><li>Windows</li></ul></td>
+<td>2010年が最後のリリースになっている。</td>
+</tr>
+<tr>
+<td>Eclipse</td>
+<td>EPL</td>
+<td>ソースコードは<a href="https://git.eclipse.org/c/">https://git.eclipse.org/c/</a>に集約されている。Eclipseはメジャーバージョン毎にgitレポジトリを変えており、Eclipse最新版のMarsの場合は<a href="https://git.eclipse.org/c/www.eclipse.org/mars.git/">こちら</a>だ。</td>
+<td><ul><li>Mac OS X</li><li>Linux</li><li>Windows</li></ul></td>
+<td>年に1回のペースでリリースがあり、2015年6月に最新版がリリースされた。詳細は<a href="http://www.eclipse.org/eclipse/development/readme_eclipse_4.5.php">Eclipse Project Release Notes 4.5</a>で確認されたい。</td>
+</tr>
+<tr>
+<td>Emacs</td>
+<td>GPL</td>
+<td>ソースコードは下記から入手可能だ。<br/><a href="http://savannah.gnu.org/git/?group=emacs">emacs - Git Repositories [Savannah]</a><br/>ただし、動作環境に最適化されたカスタマイズ版が存在するため、必ずしもコードを上記から入手しない。</td>
+<td><ul><li>Mac OS X</li><li>Linux</li><li>Windows</li></ul></td>
+<td>年に1回のペースでリリースがある。詳細は<a href="http://www.gnu.org/software/emacs/history.html">GNU Emacs Release History</a>で確認されたい。</td>
+</tr>
+</tbody>
+</table>
+
+上記の表をみるところ、Winpdbは開発が止まっているため、同ツールを選ぶのは賢い選択とは言えない。そうすると、EclipseとEmacsが残る。
+
+EclipseはPyDevというプラグインを追加することでPythonのコードを書くための環境が整う。このプラグインの追加作業はGUIで完結する。一方、Emacsは個人の判断でどうにでもなるので、これといった決まった構成はないが、原則としてテキストベースで全てプラグイン設定をするので、学習曲線がやや高めである。
+
+### Eclipse
+
+EclipseでPythonを書く場合、PyDevというプラグインが必須だ。このPyDevは[https://github.com/fabioz/Pydev](https://github.com/fabioz/Pydev)で公開されており、ライセンスもEPLと明言されている。開発も継続されているので、この組み合わせで進めるならば、いきなりツール公開もしくは開発が止まるといったことは起きないだろう。
+
+ただし、下記の記事などで紹介されている[MayaEditor](http://www.creativecrash.com/maya/downloads/applications/syntax-scripting/c/eclipse-maya-editor)については、導入する前に外部から遮断された閉じたネットワーク内でよく検証すべきだろう。
+
+- [統合プログラミング環境、Pleiades (プレアデス) Eclipseを使ってMayaPython開発をする](http://www.comtec.daikin.co.jp/DC/UsersNotes/Ritaro/tutorial/python_IDE/)
+- [Eclipse as Python Editor for Maya 2013 | Neal's Stuff](http://nealbuerger.com/2012/07/eclipse-python-editor-maya-2013/)
+
+MayaEditorはEclipseとMayaの間で通信をするためのツール(らしく)で、CreativeCrashでバイナリのみを公開している。
+
+- ソースコードが公開されていないため誰も引き継げない。このツールの開発が止まった場合は自力で何とか対処しなければならない
+- 「EclipseとMayaの間で通信をするためのツール」らしい (スニッフして検証をしてみないと本当のところはわからない)
+
+MayaEditorを導入する場合は、よく考えたほうがいい。
+
+## まとめ
+
+お金に余裕があるならば Wing IDEかPyCharmを選択する。
+お金を抑えたい場合はEclipse、Emacsが好きならEmacsを選ぶ。
+
+開発環境に関してはこんなところだろうか。

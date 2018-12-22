@@ -1,0 +1,18 @@
+#+title: Gmailをローカルにバックアップする (MailStore Home活用編)
+#+date: 2015-01-17T13:50:00+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+Gmailのメールをローカルにバックアップしたい場合は、Windowsユーザー限定の方法ですが[MailStore Home](http://www.mailstore.com/en/mailstore-home-email-archiving.aspx)を利用するのが最も簡単です。
+
+下記ページのDownload MailStore Home (Free)のボタンをクリックするとダウンロードできます。
+
+- [MailStore Home](http://www.mailstore.com/en/mailstore-home-email-archiving.aspx)
+
+## MailStore Homeの使い方
+
+下記の記事に詳しく載っています。
+
+- [Mozilla Re-Mix: ThunderbirdやSeaMonkeyなど複数のクライアントからメッセージをまとめてバックアップできるソフトウェア「MailStore Home」](http://mozilla-remix.seesaa.net/article/77247341.html)
+- [GmailもPOP3もメールをPCにバックアップする　MailStore Home - 情報考学 Passion For The Future](http://www.ringolab.com/note/daiya/2009/07/gmailpop3pcmailstore-home.html)
+- [Gmailのバックアップどうしてる？「MailStore Home 4」が便利！！ ≪ LiveartGEEKS -ライブアートギークス-](http://geeks.artsjp.com/?p=9044)

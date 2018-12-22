@@ -1,0 +1,64 @@
+#+title: ブログをMicrosoft Azureに移行した
+#+date: 2015-01-12T23:20:46+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+先日、当ブログを[Microsoft Azure](http://azure.microsoft.com)に移行した。これまでは保守対象がアプリケーションとOSだったが、今ではアプリケーションのみとなり、負担が大きく減った。下表は移行前後の変化を示したもの。
+
+<table>
+<caption>ブログ移行前後の比較</caption>
+<tr><th></th><th>移行前</th><th>移行後</th></tr>
+<tr><th>事業者</th><td><a href="http://www.cloudcore.jp/vps/">CloudCore VPS</a></td><td>Microsoft Azure</td></tr>
+<tr><th>OS</th><td>Linux</td><td>Windows</td></tr>
+<tr><th>アプリケーション</th><td>WordPress</td><td>Hinoki</td></tr>
+<tr><th>言語</th><td>PHP</td><td>C# & ASP.NET MVC 5</td></tr>
+<tr><th>保守対象</th><td>OS、アプリケーション</td><td>アプリケーション</td></tr>
+<tr><th>運用コスト</th><td>&yen;1,200</td><td>&yen;1,698</td></tr>
+</table>
+
+## 移行のきっかけ
+
+移行前はCPIが運営しているCloudCore VPSでLinuxを利用していた。契約当時は問題なく保守時間が取れたが、娘が生まれてから次第にそれが難しくなった。
+「VPS」はサーバーの保守をOSレベルから自分でするものだが、この前提を守れない状況になってしまった。
+保守ができていないサーバーをインターネットにさらし続けるのは危険が伴うため、OSの面倒を一切見ないで良いサービスを検討し、そこへ移行することにした。
+
+## 移行先の選定
+
+最初はレンタルサーバーを検討したが、この手のサービスは一通り利用経験があるので、
+あまり真新しさがなく面白味にかけるだろうと判断して候補から除外した。
+次にサーバーで動かすアプリケーションは従来使っていたWordPressではなく、
+ASP.NET MVC製の自作ブログを使うつもりだったので、Windowsを動かせる
+[AppHarbor](https://appharbor.com)、[Amazon Web Services](http://aws.amazon.com)、[Google Cloud Platform](https://cloud.google.com)、Microsoft Azureが候補に挙った。
+
+AppHarborに関しては、利用する際に契約が必要なベーシックプランのようなものがあるのだが、
+独自ドメインが適用できるプランだと$49から始まるため、候補から外すことにした。
+そのため、結局のところ、Amazon、Google、Microsoftから選ぶことになった。
+
+<table>
+<caption>概算ベースでの費用比較</caption>
+<tr><th></th><th>Amazon Web Services</th><th>Google Cloud Platform</th><th>Microsoft Azure</th></tr>
+<tr><th>コンピューティング</th><td>Amazon EC2<br/>t2.small (Windows)<br/>$37</td><td>Google Compute Engine<br/>g1-small (Windows)<br/>$31</td><td>Azure websites<br/>Shared (Windows)<br/>&yen;986</td></tr>
+<tr><th>データベース</th><td>Amazon RDS for SQL Server<br/>Web Edition (db.t2.small)<br/>$119</td><td>Google Cloud SQL (MySQL)<br/>D4 Instance<br/>$134</td><td>Azure SQL Database<br/>Basic<br/>&yen;612</td></tr>
+<tr><th>ストレージ</th><td>Amazon S3<br/>10GB<br/>$0.33</td><td>Google Cloud Storage<br/>10GB<br/>$0.26</td><td>Azure Storage<br/>10GB<br/>&yen;100</td></tr>
+</table>
+
+Microsoft Azureでは仮想マシンのコンピューティングプランだけでなく、
+運用するウェブサイト単位数で料金が変化するプラン「Azure websites Shared」がある。
+運営するウェブサイトはブログ1点のみのため、価格を抑えて運用ができる。
+当ブログのプラットフォームはMicrosoft Azureに決定した。
+
+## Microsoft Azureの構成と費用
+
+当ブログはMicrosoft Azureが提供する下記のサービスを利用している。
+
+<table>
+<caption>Azureの構成と費用</caption>
+<tr><th>サービス</th><th>プラン</th><th>用途</th><th>費用</th></tr>
+<tr><td>Azure Websites</td><td>Shared</td><td>IIS</td><td>&yen;986</td></tr>
+<tr><td>Azure SQL Database</td><td>Basic</td><td>データの永続化</td><td>&yen;612</td></tr>
+<tr><td>Azure Storage</td><td>地理冗長ストレージ (GRS)</td><td>アプリのログ保管庫</td><td>&yen;100</td></tr>
+<tr><td>Azure Active Directory</td><td>Free</td><td>認証</td><td>&yen;0</td></tr>
+<tr><td>合計</td><td></td><td></td><td>&yen;1,698</td></tr>
+</table>
+
+運用コストは1700円ぐらい。費用はAdobeのCCの契約を1つ切って捻出した。

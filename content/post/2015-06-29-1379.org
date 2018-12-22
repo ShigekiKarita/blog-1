@@ -1,0 +1,21 @@
+#+title: Xcode7で動的ライブラリをインポートできない件
+#+date: 2015-06-29T23:11:31+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+正確には、動的ライブラリをインポートし辛いとするべきだろうか。
+
+Xcodeで動的ライブラリ (例 : libxml, libz など) をインポートする際に、
+従来ではライブラリの一覧から選ぶだけで良かったが、
+公開されているXcode7のベータ版では、この辺りが少々異なっている。
+
+どうやら、この件で悩んでいる人は他にもいるようで、Apple Developer Forumsでスレッドが立っている。
+
+- [How do I link against .tbd files in Xcode 7?](https://forums.developer.apple.com/message/8609#8609)
+
+他には、ここにも。
+
+- [iOS 9/ OS X 10.11 & Xcode 7 Development with Dynamic Libraries : iOSProgramming](http://www.reddit.com/r/iOSProgramming/comments/39rcby/ios_9_os_x_1011_xcode_7_development_with_dynamic/)
+
+この件はiOS向けにDOMタイプのXMLパーサーを実装していて気がついた。
+Appleが出すソフトウェアは進化を重ねるねぇ。

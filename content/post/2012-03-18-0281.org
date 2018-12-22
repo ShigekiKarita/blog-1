@@ -1,0 +1,6 @@
+#+title: 自炊
+#+date: 2012-03-18T19:13:53+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>僕はいわゆる<a href="http://ja.wikipedia.org/wiki/自炊_(電子書籍)">自炊</a>をしたことがない。理由としては以下の2点だ。</p><ul>	<li>苦労が容易に想像できること。</li>	<li>液晶ディスプレイを見ていると、僕自身の眼がすぐに疲れてしまう。</li></ul><p>苦労してまで、なぜ自炊をするのか。Amazonで以下の商品を購入して、その"なぜ"を追求することにした。</p><ul>	<li>スキャナ　<a href="http://cweb.canon.jp/imageformula/lineup/dr-c125/index.html">Canon imageFORMULA DR-C125</a></li>	<li>裁断機　　<a href="http://www.carl.co.jp/item/DC-220N.html">CARL DISK CUTTER DC220N</a></li></ul><!--more--><p><strong>Canon imageFORMULA DR-C125</strong></p><a href="http://www2.hiroakit.com/wp-content/uploads/2012/03/20120318-184317.jpg"><img class="alignnone size-full" src="http://www2.hiroakit.com/wp-content/uploads/2012/03/20120318-184317.jpg" alt="20120318-184317.jpg"></a><p><strong>CARL DISK CUTTER DC220N</strong></p><a href="http://www2.hiroakit.com/wp-content/uploads/2012/03/20120318-184359.jpg"><img class="alignnone size-full" src="http://www2.hiroakit.com/wp-content/uploads/2012/03/20120318-184359.jpg" alt="20120318-184359.jpg"></a>

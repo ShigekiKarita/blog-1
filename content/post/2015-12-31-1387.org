@@ -1,0 +1,23 @@
+#+title: 2015年にお世話になった本
+#+date: 2015-12-31T13:28:04+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+2015年に読んだ本は16冊でした。
+
+1.  [HARD THINGS　答えがない難問と困難にきみはどう立ち向かうか](http://www.amazon.co.jp/gp/product/B00W535LOU/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00W535LOU&linkCode=as2&tag=hiroakit-22)
+2.  [Inspired: 顧客の心を捉える製品の創り方](http://www.amazon.co.jp/gp/product/B00TCM8TB4/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00TCM8TB4&linkCode=as2&tag=hiroakit-22)
+3.  [読書について](http://www.amazon.co.jp/gp/product/B015F4CCQA/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B015F4CCQA&linkCode=as2&tag=hiroakit-22")
+4.  [アート　オブ　ロバート・マッギニス：THE ART OF ROBERT McGINNIS](http://www.amazon.co.jp/gp/product/4837306365/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4837306365&linkCode=as2&tag=hiroakit-22")
+5.  [継続的デリバリー 信頼できるソフトウェアリリースのためのビルド・テスト・デプロイメントの自動化](http://www.amazon.co.jp/gp/product/4048707876/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4048707876&linkCode=as2&tag=hiroakit-22")
+6.  [エッセンシャル スクラム](http://www.amazon.co.jp/gp/product/B00MB6GO7E/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00MB6GO7E&linkCode=as2&tag=hiroakit-22")
+7.  [JavaScript: The Good Parts ―「良いパーツ」によるベストプラクティス](http://www.amazon.co.jp/gp/product/4873113911/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4873113911&linkCode=as2&tag=hiroakit-22)
+8.  [CによるCGレイトレーシング](http://www.amazon.co.jp/gp/product/4781906176/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4781906176&linkCode=as2&tag=hiroakit-22)
+9.  [初めてのSQL](http://www.amazon.co.jp/gp/product/4873112818/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4873112818&linkCode=as2&tag=hiroakit-22)
+10. [How Google Works](http://www.amazon.co.jp/gp/product/B00OJVMK5O/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00OJVMK5O&linkCode=as2&tag=hiroakit-22)
+11. [千のプラトー　上　資本主義と分裂症](http://www.amazon.co.jp/gp/product/B00QQKCV3W/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00QQKCV3W&linkCode=as2&tag=hiroakit-22)
+12. [そうだったのか現代思想　ニーチェからフーコーまで (講談社＋α文庫)](http://www.amazon.co.jp/gp/product/B00I9406D0/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00I9406D0&linkCode=as2&tag=hiroakit-22)
+13. [日本思想全史 ちくま新書](http://www.amazon.co.jp/gp/product/B00PXAUNBS/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00PXAUNBS&linkCode=as2&tag=hiroakit-22)
+14. [改訂新版　共同幻想論 角川文庫ソフィア (角川ソフィア文庫)](http://www.amazon.co.jp/gp/product/B00APUCNWI/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00APUCNWI&linkCode=as2&tag=largeworld-22)
+15. [世界に１つだけの子育ての教科書](http://www.amazon.co.jp/gp/product/B00RKTGXLY/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00RKTGXLY&linkCode=as2&tag=largeworld-22)
+16. [春琴抄](http://www.amazon.co.jp/gp/product/B00DOT564O/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00DOT564O&linkCode=as2&tag=largeworld-22)

@@ -1,0 +1,6 @@
+#+title: データの完全消去
+#+date: 2010-06-20T04:03:04+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+最近, データファイルを削除するときに気を使うようになりました. 多少なり意識しておかないとそのうち, やってしまうんじゃないかと思います. 特に個人情報や社外秘の情報が外に漏らてしまったときのことを想像したら怖いです.そういった気持ちがあるので, データを削除するときには完全消去に近い方法を使うようにしています. Windowsの場合は <strong><span style="color:#800000;">Eraser</span></strong> というアプリケーションを使うことでそれなりの対策をできます. 使いやすくておすすめです.<ul>	<li><a href="http://www.losttechnology.jp/Tips/cipher.html" target="_blank">完全データ消去</a></li>	<li><a href="http://past.openvista.jp/blog/article/2004/06/erasehdd.php" target="_blank">完全消去 - HDDを手放す前に.. - Software Linkage</a></li>	<li><a href="http://blog.goo.ne.jp/a2shiy/e/55ee491beef5508e4b5c5de70247522d" target="_blank">ディスクのデータ消去 - 胡椒の木Blog - Pepper Tree Blog</a></li>	<li><a href="http://support.microsoft.com/default.aspx?scid=kb;ja;309531#EFACAAA" target="_blank">System Volume Information フォルダへアクセスする方法</a></li></ul>

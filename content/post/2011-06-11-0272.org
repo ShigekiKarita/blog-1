@@ -1,0 +1,6 @@
+#+title: イベントを発生させることができません
+#+date: 2011-06-11T09:26:21+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+最近、Microsoft Office for Mac 2011 を使う。Mac OS X 10.6.7でもすいすい動く。しかし、なんだかんだでWordだ。奇妙なメッセージを表示してくる(下図参照)。<!--more--><img class="aligncenter size-full wp-image-4471" title="Mac版Wordのエラー" src="http://hiroakit.com/photo/fig.png" alt="" width="522" height="222" />この表示条件に関しては?<ol>	<li>新規作成の場合は表示しない。</li>	<li>docxファイルを開く場合は表示する。</li>	<li>docxファイルを開いている状態で、かつWordを閉じる場合は表示する。</li></ol><div><dl></dl></div>いずれにせよ、どのイベントを指しているのかが全くわからない。このメッセージが表示される状況に見舞われている方はいるだろうか？この問題に関する対処法をご存知の方、ぜひともおご教授ください。

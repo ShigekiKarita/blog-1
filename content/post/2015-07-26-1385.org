@@ -1,0 +1,26 @@
+#+title: IISのログをシンプルにする
+#+date: 2015-07-26T09:03:43+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+下記のコードはAzure Cloud ServiceでIISが出力する[W3C形式のログ](https://msdn.microsoft.com/ja-jp/library/Cc338018.aspx#W3CExtendedLogFileFormat)を、
+クライアント側でシンプルにするシェルスクリプトである。
+
+<script src="https://gist.github.com/hiroakit/54ddf4f5dd12fa5d911d.js"></script>
+
+本来はIISが何をログに残すかを設定すべきなのだろうが、
+その辺りは特に何もしないでAzure Cloud ServiceにMVCのウェブアプリをデプロイすることがあると思う。
+そもそも、この辺りの設定ができるのかどうかがわからない。
+
+そういったこともあって、クライアントでログの中身を取捨選択できると便利だろうと思い、
+上記コードを作成した。
+
+## 使い方
+
+下記に使い方を示す。Windowsの端末ではgit bashがあれば実行可能だ。
+
+> sh parse-iis-log.sh "/path/to/iis/log/*.log"
+
+このコマンドを実行するとIISログがシンプルになってテキストファイルとして出力される。 出力されるファイルはコマンド実行時にいたディレクトリ。ファイル名はtmp-parsed-log.txtである。
+
+また、500系のログは500-error-log.txtという別ファイルに出力される。コマンド実行時にいたディレクトリにファイルが生成される。

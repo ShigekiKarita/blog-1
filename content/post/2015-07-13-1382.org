@@ -1,0 +1,72 @@
+#+title: スライド共有サービス
+#+date: 2015-07-13T13:45:36+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+スライドを自分のブログに貼り付ける機能を提供しているサービスを探している。
+今のところ、下記の3つに目星を立てている。
+
+- SlideShare
+- Speaker Deck
+- Power Pointオンライン
+
+それでは、1つずつ見ていきたい。
+
+# SlideShare
+
+SlideShareはサイトに埋め込むためのHTMLを自動生成してくれる。この時、埋め込み時のサイズを候補から選べる。それとスライド番号を指定できる。また、機能提供元のサイトに移動すれば、ソーシャル関連の機能もあり、どれぐらいの人にシェアされたのか確認できる。
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/8TdmhLeZpDYEnd?startSlide=25" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/atsuoishimoto/pycon-jp-2012-handson-flaskweb" title="PyCon JP 2012 hands-on セッション/ FlaskによるWebアプリケーションの実装とプログラミングツール" target="_blank">PyCon JP 2012 hands-on セッション/ FlaskによるWebアプリケーションの実装とプログラミングツール</a> </strong> from <strong><a href="//www.slideshare.net/atsuoishimoto" target="_blank">Atsuo Ishimoto</a></strong> </div>
+
+スライド番号が選べるため、「上記スライドの～」といった紹介が可能だ。
+
+<br/>
+
+# Speaker Deck
+
+Speaker Deckも自分のサイトに埋め込むためのHTMLは自動生成。この時、スライド番号を指定できる。また、機能提供元のサイトに移動すれば、ソーシャル関連の機能もあり、どれぐらいの人にシェアされたのか確認できる。
+
+<script async class="speakerdeck-embed" data-slide="17" data-id="a3970e23eb734781843c012bca4c5dbf" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+ただし、下記のことができない。
+
+- 幅と高さは選べない。ユーザがHTMLを埋め込む際に自分で調整する
+
+Speaker Deckは先ほどのSlideShareと後述するPower Pointオンラインとは異なり、iframeではなくJavaScriptをasyncで埋め込む。
+そのため、スライドの表示までがワンテンポ遅い。ただ、iframeだとクリックジャッキングが…という人は選択肢としてアリかもしれない。
+
+<br/>
+
+# Power Pointオンライン
+
+Power Pointオンラインも作成したスライドを自分のブログに貼り付けることができる。ブログに埋め込むためのHTMLは同サービスが自動生成してくれる。貼り付け後、訪れたユーザがパワーポイント形式でダウンロード可能だ。
+
+<iframe src="https://onedrive.live.com/embed?cid=7B7FD04A30EFCA03&resid=7B7FD04A30EFCA03%216179&authkey=AOTgpbVLglLvqVU&em=2" width="804" height="654" frameborder="0" scrolling="no"></iframe>
+
+ただし、下記のことができない。
+
+- 幅と高さは選べない。ユーザがHTMLを埋め込む際に自分で調整する
+- スライド番号を選べない
+- ソーシャル関連の機能がない (何人にシェアされたとか、どのぐらいの人が見たといったデータが取れない)
+
+スライド番号が選べないので、「上記スライドの～」といった紹介の仕方はできず、特定のスライドについて言及する場合は「上記スライドの3枚目」といったような書き方を強いられる。
+
+だが、スライドのデータを認証を咬ませずに.pptx形式で配布可能というのは他のサービスにはない機能だ。
+
+<br/>
+
+
+
+# まとめ
+
+- Power Pointオンライン
+ - 気に入ったスライドは頭から貼り付け
+ - 埋め込み時のサイズは自分で直す
+ - スライドのデータは.pptx形式でダウンロード可能 (ログイン不要)
+- SlideShare
+ - スライド番号指定で気に入ったスライドから貼り付け可能
+ - 埋め込み時のサイズに選択肢がある
+ - スライドのデータはダウンロード可能 (要ログイン)
+- Speaker Deck
+ - スライド番号指定で気に入ったスライドから貼り付け可能
+ - 埋め込み時のサイズぐらい自分で直す

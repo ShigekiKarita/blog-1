@@ -1,0 +1,56 @@
+#+title: ASP.NET MVC 5でJasmineを使う (Visual Studio 2013版)
+#+date: 2015-02-05T11:35:50+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+Javascriptのテストフレームワークに**[Jasmine](https://github.com/jasmine/jasmine)**がある。これをVisual Studio 2013で利用する方法について下記に示す。(とりあえずお試しなので、RSpec感を無視してテストの雰囲気を使むことを優先した。)
+
+なお、Visual Studio 2012でJasminを使いたい場合は「[Visual Studio 2012 と QUnit / Jasmine でおこなう JavaScript 単体テスト - THE TRUTH IS OUT THERE - Site Home - MSDN Blogs](http://blogs.msdn.com/b/chack/archive/2013/01/09/unit-test-for-javascript-using-qunit-jasmine-on-visual-studio-2012.aspx)」が参考になるだろう。
+
+## 導入方法
+
+Jasminを使うためには、Visual Studioに下記の拡張機能の追加が必要だ。
+
+- [Chutzpah Test Adapter for the Test Explorer](https://visualstudiogallery.msdn.microsoft.com/f8741f04-bae4-4900-81c7-7c9bfb9ed1fe)
+- [Chutzpah Test Runner Context Menu Extension](https://visualstudiogallery.msdn.microsoft.com/71a4e9bd-f660-448f-bd92-f5a65d39b7f0?SRC=VSIDE)
+
+これらの拡張機能をインストールする方法は以下の通りだ。インストール後はVisual Studio再起動を促される。
+
+1. Visual Studio 2013を起動
+2. メニューバーの「ツール」 をクリック
+3. 「拡張機能と更新プログラム...」をクリック
+4. 検索してインストール
+
+## コーディング方法
+
+下記の動画で雰囲気が掴める。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/meJ94rAN7P8" frameborder="0" allowfullscreen></iframe>
+
+空のASP.NET MVCプロジェクトを作るところが肝だ。この動画とは異なるアプローチだが、jasmineの感触がつかめたら、「[Setting up Jasmine for an ASP.NET MVC project](http://www.layerstack.net/blog/posts/setting-up-jasmine-for-an-aspnet-mvc-project)」を参考にプロジェクト構成を検討してみるのも良いだろう。
+
+## jasmine-jquery
+
+jQueryを使って動的にHTMLを生成するjavascriptをテストする場合は、[jasmine-jquery](https://github.com/velesin/jasmine-jquery)の利用がおすすめだ。これを使うと、テスト用に
+用意したHTMLを読み込むことができる。
+
+1. jasmine-jquery.jsを追加
+2. loadFixtures()で読み込ませるHTMLファイルを記述する
+3. HTMLファイルはjasmine-jquery.jsがあるディレクトリを基準にして以下の場所に置く
+
+例：
+
+> spec/javascripts/loadFixtures/hoge.html
+
+私が確認した時はMITランセンスだったが、この点については利用する前に各自で一度確認してほしい。
+
+## 参考資料
+
+- [Setting up Jasmine for an ASP.NET MVC project](http://www.layerstack.net/blog/posts/setting-up-jasmine-for-an-aspnet-mvc-project)
+- [Visual Studio 2012 Javascript Testing with Jasmine and Chutzpah - YouTube](https://www.youtube.com/watch?v=meJ94rAN7P8)
+- [jasmine-jqueryというかloadFixturesが便利 ::ハブろぐ](http://havelog.ayumusato.com/develop/javascript/e309-jasmine_jquery_fixtures.html)
+- [Visual Studio 2012 と QUnit / Jasmine でおこなう JavaScript 単体テスト - THE TRUTH IS OUT THERE - Site Home - MSDN Blogs](http://blogs.msdn.com/b/chack/archive/2013/01/09/unit-test-for-javascript-using-qunit-jasmine-on-visual-studio-2012.aspx)
+- [asp.net mvc - Jasmine in a separate test project - Stack Overflow](http://stackoverflow.com/questions/16526209/jasmine-in-a-separate-test-project)
+- [5分で分かる jasmine テストフレームワーク - モンモンブログ](http://monmon.hatenablog.com/entry/2013/12/10/080051)
+- [JavaScriptのテスト駆動型開発 【Jasmine vs Qunit】（前編） | f-labo blog](http://flabo.io/code/20140620/01-javascript-tdd-jasmine-vs-qunit/)
+- [JavaScriptのテスト駆動型開発 【Jasmine vs Qunit】（後編） | f-labo blog](http://flabo.io/code/20140627/01-javascript-tdd-jasmine-vs-qunit-2/)

@@ -1,0 +1,36 @@
+#+title: ウェブブラウザでHTMLソースが見れるようになったのは何時からか
+#+date: 2015-02-12T18:53:12+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+今では当たり前のことだが、ウェブブラウザではHTMLソースを見ることができる。が、この機能はいつから存在していたのだろうか。Wikipediaベースの情報だが、ウェブブラウザの最初のころの歴史はこんな感じだ。
+
+- 1991年にWorldWideWebが登場。これが世界初のウェブブラウザ、かな
+- 1993年にNCSA Mosaicが登場。画像が表示できるようになった、らしい
+- 1994年にNetscape Navigatorが登場。Firefoxの先祖
+
+その後、1998年にはNetscape Navigator 5のソースコードが一般公開された。これは[ウェブアーカイブ](http://web.archive.org/web/20080124072823/http://cgi.netscape.com/newsref/pr/newsrelease591.html)や[Netscape、予告通りCommunicatorのソースコードを公開](http://internet.watch.impress.co.jp/www/article/980401/ntscape.htm)で確認できる。実際のソースコードは下記から入手可能だ。
+
+- [http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/](http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/)
+
+mozilla-19980331-unix.tar.gzというファイルが一般公開されたもので最も古いようなので、これをダウンロードして中身を確認した。すると、ns/cmd/xfe/src に気になるファイルが見つかる。
+
+- Menu.h の79行目
+- BrowserFrame.cpp の120行目
+- xfe_commands の148行目
+
+なお、Netscapeより前にリリースされているmosaicをGitHubで公開している人物がいる。
+
+- [https://github.com/alandipert/ncsa-mosaic](https://github.com/alandipert/ncsa-mosaic)
+
+多少手を加えているかもしれないが、[gui-menubar.c](https://github.com/alandipert/ncsa-mosaic/blob/master/src/gui-menubar.c) の1509行目にはこのように書いてある。
+
+`DEFINE_MENUBAR("View Source..." ,"V",menubar_cb,mo_document_source,NULL) `
+
+以上のことから、ウェブブラウザの初期から存在していた機能だったのだろうと思うに至った。WorldWideWebのコードが手に入れば、また調べてみたいと思う。
+
+ちなみに私は他人が作ったウェブサイトのコードを見るのが好きだ。
+
+## 参考資料
+
+- [Source code of Netscape 5.0 - where to get? ? mozillaZine Forums](http://forums.mozillazine.org/viewtopic.php?f=34&t=2054063)

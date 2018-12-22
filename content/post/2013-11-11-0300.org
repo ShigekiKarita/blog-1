@@ -1,0 +1,6 @@
+#+title: Windowsのセキュリティアップデートスケジュールを知る
+#+date: 2013-11-11T23:52:56+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>最近、Windowsで開発作業をすることが増えてきました。普段の作業で使っているMacと異なっているせいか、単純に操作に慣れていないせいか「あたふた」しています。</p><p>さて、そのWindowsは定期的なアップデートがあります。特にセキュリティに関しては、緊急性がない限り、<span style="line-height: 1.5;">毎月第2ないし第3水曜に情報が公開されます。</span>下記のリンク先に具体的な日程が載っています。<a href="http://technet.microsoft.com/ja-jp/security/hh224643">Microsoft セキュリティ情報リリース スケジュール</a>このスケジュールをみてみると、今週の13日になんらかのアップデート通知がことがわかります。他にも、Microsoftのセキュリティに関する問題についてはいくつも情報発信がされています。下記のRSSフィードから辿れます。</p><ul>	<li><a href="http://technet.microsoft.com/ja-jp/security/rss/bulletin">Microsoft Security Bulletins</a></li>	<li><a href="http://technet.microsoft.com/ja-jp/security/rss/comprehensive">Microsoft Security Content: Comprehensive Edition</a></li>	<li><a href="http://technet.microsoft.com/ja-jp/security/rss/advisory">Latest Security Advisories</a></li></ul><p>個人的には流し読み程度で良いかなと思っています。セキュリティ担当者でもない限り、業務にそこまで役に立つことはないでしょうから。</p>

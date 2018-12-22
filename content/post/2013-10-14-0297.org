@@ -1,0 +1,6 @@
+#+title: MacにPostgreSQLをインストールする
+#+date: 2013-10-14T17:47:14+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<p>開発環境のMacにpostgres.appを使い、PostgreSQLをインストールする。</p><ol><li><a href="http://postgresapp.com">postgresapp.com</a>から最新のインストーラを取得する。</li><li>ウェブサイトを開くと「Download the latest version」と書かれたボタンがあるので、そこをクリックする。</li><li>Zipファイルのダウンロードが始まる。ダウンロードが完了したら、それを解凍した後に、/Applicationフォルダに移す。</li><li>このままではまだ動かないので、環境変数を通す必要がある。エディタでログインシェルの設定ファイルに下記のパスを環境変数に追加する。</li></ol><blockquote>PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"</blockquote><p>上記の設定が完了したら、ステータスバーに表示されている像アイコンをクリックして"Running on Port 5432"と反応があることを確認する。最後にコマンドラインでも動作確認をする。</p><blockquote>$ which psql // パスが通せたか確認$ psql // PostgreSQLにログインできるか確認</blockquote><p>その他に関しては、下記のドキュメントを参照のこと。</p><ul>	<li><a href="http://postgresapp.com/documentation">Postgres.app | Documentation</a></li></ul>

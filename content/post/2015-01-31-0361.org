@@ -1,0 +1,30 @@
+#+title: Office 365のメールでフィルタをかける方法
+#+date: 2015-01-31T21:45:57+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+Office 365 (Microsoft Exchange Online) のメールでフィルタをかける方法について下記に示す。この方法を使うと、「メール受信時にそれを所定のフォルダにしまう」といったことができるため、受信トレイのゴチャゴチャ感が取り除ける。
+
+なお、この方法は既存のメールは自動仕分けされない。これはOutlook Web AppもしくはMicrosoft Exchange Onlineの仕様のようだ。受信時のメールが自動仕分けの対象となっている。
+
+既存のメールを整理したい場合はメールクライアント側で処理しなければならない。例えば、私はMozilla Thunderbirdのメッセージフィルタを利用して既存のメールを整理した。
+
+## ルール作成手順
+
+以下にルール作成手順を示す。
+
+1. Outlook Web Appにログインする
+2. 画面右側に位置する歯車アイコンをクリックする
+3. 表示されたメニューから、「オプション」を選択する (図2を参照)
+4. 「メールの整理」をクリックする
+5. プラス記号をクリックする
+6. 表示されたメニューから「受信メッセージに対する新しいルールを作成する…」をクリックする
+
+図1 : オプションをクリックする
+<a href="https://www.flickr.com/photos/130437776@N03/16472689685" title="photo1 by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7392/16472689685_a31d41c3cf_z.jpg" width="640" height="329" alt="photo1"></a>
+
+図2 : ルールを追加する
+<a href="https://www.flickr.com/photos/130437776@N03/15852604083" title="photo2 by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7412/15852604083_0df99f2b46_z.jpg" width="640" height="401" alt="photo2"></a>
+
+図3 : 受信メッセージに対する新しいルールを作成する…
+<a href="https://www.flickr.com/photos/130437776@N03/15850184344" title="photo3 by hiroakit, on Flickr"><img src="https://farm8.staticflickr.com/7390/15850184344_aa58e32975_z.jpg" width="640" height="401" alt="photo3"></a>

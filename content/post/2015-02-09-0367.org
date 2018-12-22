@@ -1,0 +1,12 @@
+#+title: AzCopy
+#+date: 2015-02-09T12:04:45+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+AzCopyはMicrosoftが提供するAzureストレージのBLOB操作用コマンドラインツールだ。これのインストール方法、使い方については[Microsoft Azure Storage で AzCopy を使用する方法](http://azure.microsoft.com/ja-jp/documentation/articles/storage-use-azcopy/#install)にまとまっているので、そちらを参照されたい。
+
+インストール後、「Windows Azure Storage command line」を開けばAzCopyの操作ができる。
+
+## 使い方
+
+[Microsoft Azure Storage で AzCopy を使用する方法](http://azure.microsoft.com/ja-jp/documentation/articles/storage-use-azcopy)に解説があるが、[AzCopyを使ったBLOBの操作 | Microsoft Azure(マイクロソフトアジュール）24時間365日運用監視サービス「cloud.config」の技術Crew Blogcloud.config メニュー](http://www.cloud-config.jp/27471)でも紹介されている。

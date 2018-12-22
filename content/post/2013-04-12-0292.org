@@ -1,0 +1,6 @@
+#+title: ServerMonitor 1.1 release
+#+date: 2013-04-12T19:30:16+09:00
+#+draft: false
+#+tags: 過去記事インポート
+
+<h2>ABOUT</h2>This app can check server using HTTP (HTTPS) GET.<ol>	<li>Resist server</li>	<li>Connect to server</li>	<li>Check status. Red is maybe insecurity. Green is stable</li></ol><h2>DIFFERENCE FROM PREVIOUS</h2><ul>	<li>support "self-signed certificate" on https</li></ul><h2>HOW TO GET</h2>ServerMonitor is available from an <a href="https://itunes.apple.com/jp/app/servermonitor/id623861083?mt=8">AppStore</a>.<a href="https://itunes.apple.com/jp/app/servermonitor/id623861083?mt=8&amp;uo=4" target="itunes_store"><img style="border:0;" alt="ServerMonitor - hiroakit.com" src="http://r.mzstatic.com/images/web/linkmaker/badge_appstore-lrg.gif" /></a><h2>HOW TO USE</h2>[youtube=http://www.youtube.com/watch?v=7Qkazmcezb8]<h2>NEXT ISSUE</h2><ol>	<li>export server list to something cloud service</li>	<li>import server list from something cloud service</li></ol>
