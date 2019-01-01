@@ -1,0 +1,72 @@
+#+TITLE: Emacs Lisp (elisp) をEdebugでデバッグする
+#+AUTHOR: Hiroaki ENDOH
+#+DATE: 2018-12-31
+#+DRAFT: false
+#+TAGS: Emacs macOS
+
+EdebugはEmacs Lispプログラム用のソースレベルデバッガで、Emacs Lispのステップ実行などが可能です。
+このデバッガは標準のEmacsで利用可能です。
+
+# more
+
+* はじめに
+
+この記事では以下の環境を想定しています。
+
+#+BEGIN_SRC sh
+$ sw_vers
+ProductName:	Mac OS X
+ProductVersion:	10.14    // macOS Mojave
+BuildVersion:	18A391
+
+// Emacs.app (https://emacsformacosx.com/emacs-builds/Emacs-26.1-2-universal.dmg)
+M-x emacs-version
+GNU Emacs 26.1 (build 1, x86_64-apple-darwin14.5.0, NS appkit-1348.17 Version 10.10.5 (Build 14F2511)) of 2018-05-31
+#+END_SRC
+
+* Edebugの簡単な使い方
+
+Edebugの操作方法を簡単な例を使い説明します。説明範囲はごく一部ですが、これをマスターすればEmacs Lispを追い易くなると考えています。
+
+下図がその例で、Emacsのメジャーバージョンをチェックして26であれば、helloとMessageバッファに表示されるというEmacs Lispです。
+
+[[file:./fig-01.png]]
+
+#+BEGIN_SRC elisp
+(defun sample ()
+(when (equal emacs-major-version 26)
+  (message "hello")))
+
+(sample)
+#+END_SRC
+
+デバッグを開始したい箇所で ~C-u C-M-x~ をタイプします。そうすると、Emacsのフレーム左端に三角 (矢尻) が表示されます。
+この状態で例えばステップ実行したい場合は ~SPC~ を押します。
+
+[[file:./fig-02.png]]
+
+ステップ実行したのでカーソルが ~equal~ の前で止まりました。 ~SPC~ を押していくと順番に追っていけますが、ブレイクポイントを打ち、指定した箇所で止めたいこともあります。
+
+[[file:./fig-03.png]]
+
+Edebugでデバッグ中もカーソルは動かせます。ブレイクポイントは ~b~ を押すと打てますので、カーソルを任意のところまで移動させます。
+
+[[file:./fig-04.png]]
+
+~g~ を押すとブレイクポイントがある場所まで実行します。
+
+[[file:./fig-05.png]]
+
+以上がEdebugの説明です。
+
+最後にショートカットキーを載せて終わります。
+
+| キー | 効果                         |
+|------+------------------------------|
+| q    | edebugを離脱する             |
+| SPC  | ステップ実行                 |
+| i    | ステップイン                 |
+| o    | ステップアウト               |
+| g    | 次のブレイクポイントまで実行 |
+| b    | ブレイクポイントを設置する   |
+| u    | ブレイクポイントを削除する   |
