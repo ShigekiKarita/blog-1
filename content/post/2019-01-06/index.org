@@ -1,0 +1,74 @@
+#+title: BlenderのソースコードをXcodeで読む Part4
+#+author: Hiroaki ENDOH
+#+date: 2019-01-06
+#+draft: false
+#+tags: Blender macOS Xcode
+
+[[https://www.hiroakit.com/2018/12/blender_macos_04/][前回の記事]]は ~gpu_texture.c~ の ~GPUTexture~ で中断しましたが、今回は寄り道をしてオブジェクトを選択した時の振る舞いを追ってみたいと思います。
+
+# more
+
+「オブジェクトを選択した時」というのはこれのことで、マウスカーソルでクリックした時のことです。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6JNK21cM-_M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Object Mode時にマウスカーソルでオブジェクトをクリックすると、以下のコードで選択なのか選択解除なのか引数 ~base~ のフラグを操作します。
+
+#+BEGIN_SRC c
+// blender/editors/object/object_select.c L100
+void ED_object_base_select(Base *base, eObjectSelect_Mode mode)
+{
+	if (mode == BA_INVERT) {
+		mode = (base->flag & BASE_SELECTED) != 0 ? BA_DESELECT : BA_SELECT;
+	}
+
+	if (base) {
+		switch (mode) {
+			case BA_SELECT:
+				if ((base->flag & BASE_SELECTABLE) != 0) {
+					base->flag |= BASE_SELECTED;
+				}
+				break;
+			case BA_DESELECT:
+				base->flag &= ~BASE_SELECTED;
+				break;
+			case BA_INVERT:
+				/* Never happens. */
+				break;
+		}
+		BKE_scene_object_base_flag_sync_from_base(base);
+	}
+}
+#+END_SRC
+
+この引数の型 ~Base~ は ~Object~ を持っていて、この ~Object~ にロケーションやサイズなど色んな情報がぶら下がっています。 (~Object~ は色々と情報を持っているので読解は次回に飛ばします。)
+
+#+BEGIN_SRC c
+// blender/makesdna/DNA_layer_types.h L37
+typedef struct Base {
+	struct Base *next, *prev;
+	short flag;
+	unsigned short local_view_bits;
+	short sx, sy;
+	struct Object *object;
+	unsigned int lay DNA_DEPRECATED;
+	int flag_legacy;
+} Base;
+#+END_SRC
+
+~ED_object_base_select~ 関数のもう一つの引数 ~mode~ があり、この引数の型 ~eObjectSelect_Mode~ は以下で定義されています。
+
+#+BEGIN_SRC c
+// blender/editors/include/ED_object.h L96
+typedef enum eObjectSelect_Mode {
+	BA_DESELECT = 0,
+	BA_SELECT = 1,
+	BA_INVERT = 2,
+} eObjectSelect_Mode;
+#+END_SRC
+
+ ~BA_DESELECT~ は選択解除の時で ~BA_SELECT~ は選択した時というのはデバッグ実行していて分かったのですが、残りの ~BA_INVERT~ はよくわからず。下図の赤枠の所をクリックしたら選択が反転するのですが、ボタン押したらブレイクポイントに来ると思っていたのですが到達せず。てっきりここで使っていると思っていたのですが違うのかもしれません。
+
+[[file:fig-01.png]]
+
+さて、今日はこの辺で。
