@@ -1,0 +1,93 @@
+#+title: BlenderのソースコードをXcodeで読む Part5
+#+author: Hiroaki ENDOH
+#+date: 2019-01-07
+#+draft: false
+#+tags: Blender macOS Xcode
+
+[[https://www.hiroakit.com/2019/01/2019-01-06/][前回の記事]]はオブジェクトの選択を追いかけましたが、今度は面の選択の箇所を読み進めたいと思います。
+
+# more
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GeZq4N0_B_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+面を選択すると色々と経て ~drawobject.c~ の ~draw_object_backbufsel~ が動きます。
+
+#+BEGIN_SRC c
+void draw_object_backbufsel(
+        Depsgraph *depsgraph, Scene *scene, View3D *v3d, RegionView3D *rv3d, Object *ob,
+        short select_mode)
+{
+	ToolSettings *ts = scene->toolsettings;
+	if (select_mode == -1) {
+		select_mode = ts->selectmode;
+	}
+
+	GPU_matrix_mul(ob->obmat);
+
+	glClearDepth(1.0); GPU_clear(GPU_DEPTH_BIT);
+	GPU_depth_test(true);
+
+	switch (ob->type) {
+		case OB_MESH:
+			if (ob->mode & OB_MODE_EDIT) {
+				Mesh *me = ob->data;
+				BMEditMesh *em = me->edit_btmesh;
+
+				BM_mesh_elem_table_ensure(em->bm, BM_VERT | BM_EDGE | BM_FACE);
+
+				bbs_mesh_solid_EM(em, scene, v3d, ob, (select_mode & SCE_SELECT_FACE) != 0);
+				if (select_mode & SCE_SELECT_FACE)
+					bm_solidoffs = 1 + em->bm->totface;
+				else {
+					bm_solidoffs = 1;
+				}
+
+				ED_view3d_polygon_offset(rv3d, 1.0);
+
+				/* we draw edges if edge select mode */
+				if (select_mode & SCE_SELECT_EDGE) {
+					bbs_mesh_wire(em, bm_solidoffs);
+					bm_wireoffs = bm_solidoffs + em->bm->totedge;
+				}
+				else {
+					/* `bm_vertoffs` is calculated from `bm_wireoffs`. (otherwise see T53512) */
+					bm_wireoffs = bm_solidoffs;
+				}
+
+				/* we draw verts if vert select mode. */
+				if (select_mode & SCE_SELECT_VERTEX) {
+					bbs_mesh_verts(em, bm_wireoffs);
+					bm_vertoffs = bm_wireoffs + em->bm->totvert;
+				}
+				else {
+					bm_vertoffs = bm_wireoffs;
+				}
+
+				ED_view3d_polygon_offset(rv3d, 0.0);
+			}
+			else {
+				Mesh *me = ob->data;
+				if ((me->editflag & ME_EDIT_PAINT_VERT_SEL) &&
+				    /* currently vertex select supports weight paint and vertex paint*/
+				    ((ob->mode & OB_MODE_WEIGHT_PAINT) || (ob->mode & OB_MODE_VERTEX_PAINT)))
+				{
+					bbs_mesh_solid_verts(depsgraph, scene, ob);
+				}
+				else {
+					bbs_mesh_solid_faces(scene, ob);
+				}
+			}
+			break;
+		case OB_CURVE:
+		case OB_SURF:
+			break;
+	}
+
+	GPU_matrix_set(rv3d->viewmat);
+}
+#+END_SRC
+
+ ~Object~ の ~type~ が使われています。
+
+
+今日はここまで。
