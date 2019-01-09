@@ -1,0 +1,72 @@
+#+title: BlenderのソースコードをXcodeで読む Part6
+#+author: Hiroaki ENDOH
+#+date: 2019-01-09
+#+draft: false
+#+tags: Blender macOS Xcode OpenGL
+
+[[https://www.hiroakit.com/2019/01/2019-01-07/][前回の記事]]では面の選択でした。今回もその続きです。
+
+# more
+
+面を選択すると色々と経て ~drawobject.c~ の ~draw_object_backbufsel~ が動きます。
+
+#+BEGIN_SRC c
+void draw_object_backbufsel(
+        Depsgraph *depsgraph, Scene *scene, View3D *v3d, RegionView3D *rv3d, Object *ob,
+        short select_mode)
+{
+	ToolSettings *ts = scene->toolsettings;
+	if (select_mode == -1) {
+		select_mode = ts->selectmode;
+	}
+
+	GPU_matrix_mul(ob->obmat);
+
+	glClearDepth(1.0); GPU_clear(GPU_DEPTH_BIT);
+	GPU_depth_test(true);
+:
+:
+:
+#+END_SRC
+
+~ToolSettings~ は後回し。
+
+~GPU_matrix_mul~ は追っかけてみたけど、途中で辛くなったので諦めました。
+
+ ~glClearDepth~ は ~glew.h~ に宣言があって、下記リンクのドキュメントに解説があります。
+
+- [[https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glClearDepth.xhtml][glClearDepth - OpenGL 4 Reference Pages]]
+
+解説には初期値は1とあるので、Blenderのコードはこれに沿って ~glClearDepth(1.0)~ としているのだと思います。
+
+#+BEGIN_SRC txt
+Specifies the depth value used when the depth buffer is cleared. The initial value is 1.
+#+END_SRC
+
+ ~GPU_clear~ は ~gpu_framebuffer.c~ に宣言があります。
+
+#+BEGIN_SRC c
+void GPU_clear(GPUFrameBufferBits flags)
+{
+	glClear(convert_buffer_bits_to_gl(flags));
+}
+#+END_SRC
+
+ ~GPUFrameBufferBits~ は ~GPU_framebuffer.h~ に宣言があります。
+
+#+BEGIN_SRC c
+typedef enum GPUFrameBufferBits {
+	GPU_COLOR_BIT    = (1 << 0),
+	GPU_DEPTH_BIT    = (1 << 1),
+	GPU_STENCIL_BIT  = (1 << 2),
+} GPUFrameBufferBits;
+#+END_SRC
+
+ ~glClear~ は以下に解説があります。
+
+- [[https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glClear.xhtml][glClear - OpenGL 4 Reference Pages]]
+
+ ~glClear~ は引数にGLbitfieldを渡すことになっているので、 ~convert_buffer_bits_to_gl~ で BlenderのGPUFrameBufferBitsからOpenGLのGLbitfieldに変換します。
+
+さて、今回はここまで。
+
