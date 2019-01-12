@@ -25,3 +25,6 @@ pygmentsCodefences = true
 
 [params.assets]
   customCSS = ["custom.css"]
+
+[params.sections_left]
+"/post" = "記事一覧"
